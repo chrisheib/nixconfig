@@ -56,6 +56,7 @@
   # Enable KDE Plasma 
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.defaultSession = "plasma"; # echo "$XDG_SESSION_TYPE"
 
   # Configure keymap in X11
   services.xserver.xkb = {
