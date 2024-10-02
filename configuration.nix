@@ -9,7 +9,9 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./software.nix
-      ./nvidia.nix
+
+      # https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/default.nix
+      ./nvidia
     ];
 
   # Bootloader.

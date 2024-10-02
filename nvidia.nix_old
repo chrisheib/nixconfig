@@ -15,7 +15,8 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     nvidiaSettings = true;
-  }
+  };
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   # hardware.nvidia = {
 
