@@ -8,7 +8,14 @@
 
   # Load nvidia driver for Xorg and Wayland
   # breaks everything :(
-  # services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    nvidiaSettings = true;
+  }
 
   # hardware.nvidia = {
 
