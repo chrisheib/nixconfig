@@ -28,22 +28,21 @@ in
   };
 
   # See https://github.com/elFarto/nvidia-vaapi-driver#configuration
-  config = lib.mkIf cfg.enable {
-    environment.variables =
-      {
-        NVD_BACKEND = "direct";
-      }
-      // lib.optionalAttrs (cfg.maxInstances != null) { NVD_MAX_INSTANCES = toString cfg.maxInstances; }
-      // lib.optionalAttrs cfg.firefox.enable { MOZ_DISABLE_RDD_SANDBOX = "1"; };
-
-    # TODO(tlater): Find a way to properly integrate this so we can
-    # upstream it.
-    home-manager.users.tlater.programs.firefox.profiles.tlater.settings = lib.mkIf cfg.firefox.enable {
-      "media.ffmpeg.vaapi.enabled" = true;
-      "media.rdd-ffmpeg.enabled" = true;
-      "media.av1.enabled" = cfg.firefox.av1Support;
-      "gfx.x11-egl.force-enabled" = true;
-      "widget.dmabuf.force-enabled" = true;
-    };
-  };
+  # config = lib.mkIf cfg.enable {
+  #   environment.variables =
+  #     {
+  #       NVD_BACKEND = "direct";
+  #     }
+  #     // lib.optionalAttrs (cfg.maxInstances != null) { NVD_MAX_INSTANCES = toString cfg.maxInstances; }
+  #     // lib.optionalAttrs cfg.firefox.enable { MOZ_DISABLE_RDD_SANDBOX = "1"; };
+  #   # TODO(tlater): Find a way to properly integrate this so we can
+  #   # upstream it.
+  #   home-manager.users.tlater.programs.firefox.profiles.tlater.settings = lib.mkIf cfg.firefox.enable {
+  #     "media.ffmpeg.vaapi.enabled" = true;
+  #     "media.rdd-ffmpeg.enabled" = true;
+  #     "media.av1.enabled" = cfg.firefox.av1Support;
+  #     "gfx.x11-egl.force-enabled" = true;
+  #     "widget.dmabuf.force-enabled" = true;
+  #   };
+  # };
 }

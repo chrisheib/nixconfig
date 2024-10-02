@@ -35,9 +35,9 @@
     };
   };
 
-  programs.sway.package = pkgs.sway.override {
-    inherit (flake-inputs.nixpkgs-wayland.packages.${pkgs.system}) sway-unwrapped;
-  };
+  # programs.sway.package = pkgs.sway.override {
+  #  inherit (flake-inputs.nixpkgs-wayland.packages.${pkgs.system}) sway-unwrapped;
+  # };
 
   boot = {
     kernelParams = [ "nvidia-drm.fbdev=1" ];
@@ -50,7 +50,7 @@
         "NVreg_UsePageAttributeTable=1"
         # This is sometimes needed for ddc/ci support, see
         # https://www.ddcutil.com/nvidia/
-        #
+        #ff
         # Current monitor does not support it, but this is useful for
         # the future
         "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
