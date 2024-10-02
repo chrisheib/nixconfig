@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-  boot.kernelPackages = pkgs.linuxPackages_6_10; 
+  # boot.kernelPackages = pkgs.linuxPackages_6_10; 
 
   programs.bash.shellAliases = {
     l = "ls -alh";
