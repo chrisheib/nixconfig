@@ -9,8 +9,9 @@
     nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur";
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsu = "sudo nix-channel --update && nrs";
-    nrsb = "nrs && reboot";
-    cur = "echo 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
+    nrsb = "nrs && gut";
+    cur = "sudo echo -n 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
+    gut = "qdbus org.kde.ksmserver /KSMServer logout 0 1 1";
   };
 
   boot.kernelModules = ["88XXau"];

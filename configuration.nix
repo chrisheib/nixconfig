@@ -11,7 +11,9 @@
       ./software.nix
 
       # https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/default.nix
-      ./nvidia
+      #./nvidia
+
+      ./nvidia.nix
     ];
 
   # Bootloader.
