@@ -34,7 +34,7 @@
       persistencedSha256 = lib.fakeSha256;
     };
     modesetting.enable = true;
-    powerManagement.enable = false;
+    powerManagement.enable = true; # required for sleep on 555.58
     powerManagement.finegrained = false;
     nvidiaSettings = true;
   };
