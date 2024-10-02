@@ -11,7 +11,7 @@
     nrsu = "sudo nix-channel --update && nrs";
     nrsb = "nrs && gut";
     cur = "sudo echo -n 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
-    gut = "sudo qdbus org.kde.ksmserver /KSMServer logout 0 1 1";
+    gut = "qdbus org.kde.Shutdown /Shutdown  org.kde.Shutdown.logoutAndReboot";
     gcp = "(cd ~/nixconfig && git add . && git commit -m 'Current generation: $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$1}\")' && git push)";
   };
 
