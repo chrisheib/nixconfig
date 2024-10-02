@@ -6,8 +6,10 @@
     l = "ls -alh";
     ll = "ls -l";
     ls = "ls --color=tty";
-    nrs = "sudo nix-channel --update && sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix";
+    nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
+    nrsu = "sudo nix-channel --update && nrs";
+    nrsb = "nrs && reboot";
   };
 
   boot.kernelModules = ["88XXau"];
