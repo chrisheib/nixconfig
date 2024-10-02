@@ -10,6 +10,7 @@
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsu = "sudo nix-channel --update && nrs";
     nrsb = "nrs && reboot";
+    cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
   };
 
   boot.kernelModules = ["88XXau"];
