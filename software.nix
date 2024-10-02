@@ -6,12 +6,12 @@
     l = "ls -alh";
     ll = "ls -l";
     ls = "ls --color=tty";
-    nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur";
+    nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur && gcp";
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsu = "sudo nix-channel --update && nrs";
     nrsb = "nrs && gut";
     cur = "sudo echo -n 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
-    gut = "qdbus org.kde.ksmserver /KSMServer logout 0 1 1";
+    gut = "sudo qdbus org.kde.ksmserver /KSMServer logout 0 1 1";
     gcp = "(cd ~/nixconfig && git add . && git commit -m 'Current generation: $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$1}\")' && git push)";
   };
 
