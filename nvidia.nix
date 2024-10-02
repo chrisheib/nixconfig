@@ -10,7 +10,7 @@
   # breaks everything :(
   services.xserver.videoDrivers = ["nvidia"];
 
-  boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=1"];
+  # boot.kernelParams = ["nvidia.NVreg_PreserveVideoMemoryAllocations=0"];
 
   hardware.nvidia = {
     # package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
