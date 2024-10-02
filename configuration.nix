@@ -49,6 +49,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "schiff";
+
   # Enable the GNOME Desktop Environment.
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
@@ -56,7 +60,8 @@
   # Enable KDE Plasma 
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  services.displayManager.defaultSession = "plasma"; # echo "$XDG_SESSION_TYPE"
+  # services.xserver.desktopManager.plasma5.enable = true;
+  services.displayManager.defaultSession = "plasmax11"; # echo "$XDG_SESSION_TYPE"
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -99,9 +104,6 @@
     ];
   };
 
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "schiff";
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
@@ -112,7 +114,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
