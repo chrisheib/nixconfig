@@ -24,7 +24,13 @@
   # $ nix search wget  
   environment.systemPackages = with pkgs; [
     git
-    chromium
+    (chromium.override {
+      commandLineArgs = [
+        "--enable-features=VaapiVideoDecodeLinuxGL"
+        "--ignore-gpu-blocklist"
+        "--enable-zero-copy"
+      ];
+    })
     usbutils    
     lshw
     (vscode-with-extensions.override {
