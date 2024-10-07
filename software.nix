@@ -27,6 +27,7 @@
     git
     libva-utils
     nil
+    # nvidia-smi
     (chromium.override {
       commandLineArgs = [
         "--enable-features=VaapiVideoDecodeLinuxGL"
