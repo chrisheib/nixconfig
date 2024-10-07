@@ -25,6 +25,8 @@
   # $ nix search wget  
   environment.systemPackages = with pkgs; [
     git
+    libva-utils
+    nil
     (chromium.override {
       commandLineArgs = [
         "--enable-features=VaapiVideoDecodeLinuxGL"
