@@ -1,20 +1,21 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./software.nix
+  # config,
+  # pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./software.nix
 
-      # https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/default.nix
-      #./nvidia
+    # https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/default.nix
+    #./nvidia
 
-      ./nvidia.nix
-    ];
+    ./nvidia.nix
+  ];
 
   system.autoUpgrade.enable = true;
 
@@ -61,7 +62,7 @@
   # services.xserver.displayManager.gdm.enable = true;
   # services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable KDE Plasma 
+  # Enable KDE Plasma
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   # services.xserver.desktopManager.plasma5.enable = true;
@@ -102,12 +103,11 @@
   users.users.schiff = {
     isNormalUser = true;
     description = "schiff";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    extraGroups = ["networkmanager" "wheel"];
+    # packages = with pkgs; [
+    #   #  thunderbird
+    # ];
   };
-
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
@@ -145,5 +145,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }

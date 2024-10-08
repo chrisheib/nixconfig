@@ -1,7 +1,10 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   # boot.kernelPackages = pkgs.linuxPackages_6_10;
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; 
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
 
   programs.bash.shellAliases = {
     l = "ls -alh";
@@ -22,7 +25,7 @@
   ];
 
   # List packages installed in system profile. To search, run:
-  # $ nix search wget  
+  # $ nix search wget
   environment.systemPackages = with pkgs; [
     git
     libva-utils
@@ -36,25 +39,27 @@
         "--enable-zero-copy"
       ];
     })
-    usbutils    
+    usbutils
     lshw
     (vscode-with-extensions.override {
       vscode = vscodium;
-      vscodeExtensions = with vscode-extensions; [
-        bbenoist.nix
-        ms-python.python
-        ms-azuretools.vscode-docker
-        ms-vscode-remote.remote-ssh
-        jnoortheen.nix-ide
-        kamadorueda.alejandra
-      ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          name = "remote-ssh-edit";
-          publisher = "ms-vscode-remote";
-          version = "0.47.2";
-          sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
-        }
-      ];
+      vscodeExtensions = with vscode-extensions;
+        [
+          bbenoist.nix
+          ms-python.python
+          ms-azuretools.vscode-docker
+          ms-vscode-remote.remote-ssh
+          jnoortheen.nix-ide
+          kamadorueda.alejandra
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "remote-ssh-edit";
+            publisher = "ms-vscode-remote";
+            version = "0.47.2";
+            sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
+          }
+        ];
     })
   ];
 }
