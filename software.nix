@@ -26,7 +26,8 @@
   environment.systemPackages = with pkgs; [
     git
     libva-utils
-    nil
+    nil # nix lsp
+    alejandra # nix formatter
     # nvidia-smi
     (chromium.override {
       commandLineArgs = [
@@ -45,6 +46,7 @@
         ms-azuretools.vscode-docker
         ms-vscode-remote.remote-ssh
         jnoortheen.nix-ide
+        kamadorueda.alejandra
       ] ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "remote-ssh-edit";
