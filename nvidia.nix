@@ -46,6 +46,7 @@
       nvidia-vaapi-driver
       vaapiVdpau
       intel-media-driver
+      libvdpau-va-gl
     ];
   };
 
