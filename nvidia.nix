@@ -42,13 +42,18 @@
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
+    driSupport = true;
+    driSupport32Bit = true;
+    setLdLibraryPath = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
       vaapiVdpau
-      intel-media-driver
+      # intel-media-driver
       libvdpau-va-gl
     ];
   };
+
+  environment.sessionVariables = {LIBVA_DRIVER_NAME = "nvidia";};
 
   nixpkgs.config.packageOverrides = pkgs: {inherit (pkgs) linuxPackages_latest nvidia_x11;};
 
