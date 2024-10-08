@@ -35,7 +35,8 @@
     # nvidia-smi
     (chromium.override {
       commandLineArgs = [
-        "--enable-features=VaapiVideoDecodeLinuxGL"
+        "--enable-features=VaapiVideoDecodeLinuxGL,VaapiVideoDecoder"
+        "--disable-features=UseChromeOSDirectVideoDecoder"
         "--ignore-gpu-blocklist"
         "--enable-zero-copy"
       ];

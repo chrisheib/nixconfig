@@ -53,7 +53,10 @@
     ];
   };
 
-  environment.sessionVariables = {LIBVA_DRIVER_NAME = "nvidia";};
+  environment.sessionVariables = {
+    LIBVA_DRIVER_NAME = "nvidia";
+    LIBVA_DRI3_DISABLE = "1";
+  };
 
   nixpkgs.config.packageOverrides = pkgs: {inherit (pkgs) linuxPackages_latest nvidia_x11;};
 
