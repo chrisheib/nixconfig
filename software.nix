@@ -30,6 +30,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    nvtopPackages.intel # nvtop
     git
     libva-utils
     vdpauinfo # sudo vainfo
