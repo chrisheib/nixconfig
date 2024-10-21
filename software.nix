@@ -26,13 +26,16 @@
   ];
 
   programs.kdeconnect.enable = true;
+  programs.firefox.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nvtopPackages.intel # nvtop
     git
+    # firefox-vaapi
     libva-utils
+    google-chrome
     vdpauinfo # sudo vainfo
     nil # nix lsp
     alejandra # nix formatter
