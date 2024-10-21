@@ -32,7 +32,7 @@
   environment.systemPackages = with pkgs; [
     git
     libva-utils
-    vdpauinfo
+    vdpauinfo # sudo vainfo
     nil # nix lsp
     alejandra # nix formatter
     # nvidia-smi

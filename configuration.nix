@@ -67,7 +67,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   # services.xserver.desktopManager.plasma5.enable = true;
-  services.displayManager.defaultSession = "plasmax11"; # echo "$XDG_SESSION_TYPE"
+  # services.displayManager.defaultSession = "plasmax11"; # echo "$XDG_SESSION_TYPE"
 
   # Configure keymap in X11
   services.xserver.xkb = {
