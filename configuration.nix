@@ -14,7 +14,8 @@
     # https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/default.nix
     #./nvidia
 
-    ./nvidia.nix
+    # ./nvidia.nix
+    ./intel.nix
   ];
 
   system.autoUpgrade.enable = true;
