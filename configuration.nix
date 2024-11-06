@@ -15,7 +15,8 @@
     #./nvidia
 
     # ./nvidia.nix
-    ./intel.nix
+    # ./intel.nix
+    ./amd.nix
   ];
 
   system.autoUpgrade.enable = true;
