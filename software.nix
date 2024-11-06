@@ -5,12 +5,13 @@
 }: {
   # boot.kernelPackages = pkgs.linuxPackages_6_10;
   # boot.kernelPackages = pkgs.linuxPackages_6_9;
-  # boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable;
 
   programs.bash.shellAliases = {
     l = "ls -alh";
     ll = "ls -l";
     ls = "ls --color=tty";
+    nrt = "sudo nixos-rebuild test -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur && gcp";
     nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur && gcp";
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsu = "sudo nix-channel --update && nrs";
