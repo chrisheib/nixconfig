@@ -22,6 +22,7 @@
   };
 
   boot.kernelModules = ["88XXau"];
+  boot.supportedFilesystems = ["ntfs"];
   boot.extraModulePackages = with config.boot.kernelPackages; [
     rtl88xxau-aircrack
   ];
