@@ -11,7 +11,7 @@
     l = "ls -alh";
     ll = "ls -l";
     ls = "ls --color=tty";
-    nrt = "sudo nixos-rebuild test -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur && gcp";
+    nrt = "sudo nixos-rebuild test -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur && gcp";
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsu = "sudo nix-channel --update && nrs";
@@ -40,6 +40,7 @@
     vdpauinfo # sudo vainfo
     nil # nix lsp
     alejandra # nix formatter
+    bashmount # mount ssds for recovery
     # nvidia-smi
     (chromium.override {
       commandLineArgs = [
