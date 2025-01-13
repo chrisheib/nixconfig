@@ -27,6 +27,10 @@
     rtl88xxau-aircrack
   ];
 
+  nix.extraOptions = ''
+    experimental-features = nix-command
+  '';
+
   programs.kdeconnect.enable = true;
   programs.firefox.enable = true;
 
@@ -41,7 +45,10 @@
     vdpauinfo # sudo vainfo
     nil # nix lsp
     alejandra # nix formatter
-    bashmount # mount ssds for recovery
+    # bashmount # mount ssds for recovery
+    testdisk
+    # 7
+    # zip
     # nvidia-smi
     (chromium.override {
       commandLineArgs = [
@@ -55,7 +62,7 @@
     usbutils
     lshw
     (vscode-with-extensions.override {
-      vscode = vscodium;
+      # vscode = vscodium;
       vscodeExtensions = with vscode-extensions;
         [
           bbenoist.nix
