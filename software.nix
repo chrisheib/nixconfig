@@ -46,8 +46,9 @@
     nil # nix lsp
     alejandra # nix formatter
     # bashmount # mount ssds for recovery
-    testdisk
-    p7zip
+    testdisk # disk recovery
+    p7zip # 7zip
+    k4dirstat # windirstat clone
     # nvidia-smi
     (chromium.override {
       commandLineArgs = [
