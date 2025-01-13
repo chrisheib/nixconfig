@@ -47,8 +47,7 @@
     alejandra # nix formatter
     # bashmount # mount ssds for recovery
     testdisk
-    # 7
-    # zip
+    p7zip
     # nvidia-smi
     (chromium.override {
       commandLineArgs = [
