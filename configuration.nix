@@ -12,23 +12,52 @@
     ./hardware-configuration.nix
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
-  boot.extraModprobeConfig =
-    "options nvidia "
-    + lib.concatStringsSep " " [
-      # nvidia assume that by default your CPU does not support PAT,
-      # but this is effectively never the case in 2023
-      "NVreg_UsePageAttributeTable=1"
-      # This is sometimes needed for ddc/ci support, see
-      # https://www.ddcutil.com/nvidia/
-      #
-      # Current monitor does not support it, but this is useful for
-      # the future
-      "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
+  boot = {
+    # Bootloader.
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    extraModprobeConfig =
+      "options nvidia "
+      + lib.concatStringsSep " " [
+        # nvidia assume that by default your CPU does not support PAT,
+        # but this is effectively never the case in 2023
+        "NVreg_UsePageAttributeTable=1"
+        # This is sometimes needed for ddc/ci support, see
+        # https://www.ddcutil.com/nvidia/
+        #
+        # Current monitor does not support it, but this is useful for
+        # the future
+        "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
+      ];
+    plymouth = {
+      enable = true;
+      theme = "rings";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = ["rings"];
+        })
+      ];
+    };
+
+    # Enable "Silent Boot"
+    consoleLogLevel = 0;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "loglevel=3"
+      "rd.systemd.show_status=false"
+      "rd.udev.log_level=3"
+      "udev.log_priority=3"
     ];
+    # Hide the OS choice for bootloaders.
+    # It's still possible to open the bootloader list by pressing any key
+    # It will just not appear on screen unless a key is pressed
+    loader.timeout = 0;
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -138,11 +167,14 @@
       carapace
       tealdeer #tldr
       neofetch
+      stow
 
       p7zip # 7zip
 
       nil # nix lsp
       alejandra # nix formatter
+
+      obsidian
     ];
   };
 
