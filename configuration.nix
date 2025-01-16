@@ -1,0 +1,267 @@
+# Edit this configuration file to define what should be installed on
+# your system.  Help is available in the configuration.nix(5) man page
+# and in the NixOS manual (accessible by running ‘nixos-help’).
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
+
+  # Bootloader.
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+  boot.extraModprobeConfig =
+    "options nvidia "
+    + lib.concatStringsSep " " [
+      # nvidia assume that by default your CPU does not support PAT,
+      # but this is effectively never the case in 2023
+      "NVreg_UsePageAttributeTable=1"
+      # This is sometimes needed for ddc/ci support, see
+      # https://www.ddcutil.com/nvidia/
+      #
+      # Current monitor does not support it, but this is useful for
+      # the future
+      "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
+    ];
+
+  networking.hostName = "nixos"; # Define your hostname.
+  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+
+  # Configure network proxy if necessary
+  # networking.proxy.default = "http://user:password@proxy:port/";
+  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+
+  # Enable networking
+  networking.networkmanager.enable = true;
+
+  # Set your time zone.
+  time.timeZone = "Europe/Berlin";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "de_DE.UTF-8";
+    LC_IDENTIFICATION = "de_DE.UTF-8";
+    LC_MEASUREMENT = "de_DE.UTF-8";
+    LC_MONETARY = "de_DE.UTF-8";
+    LC_NAME = "de_DE.UTF-8";
+    LC_NUMERIC = "de_DE.UTF-8";
+    LC_PAPER = "de_DE.UTF-8";
+    LC_TELEPHONE = "de_DE.UTF-8";
+    LC_TIME = "de_DE.UTF-8";
+  };
+
+  # Enable the X11 windowing system.
+  # You can disable this if you're only using the Wayland session.
+  services.xserver.enable = true;
+
+  # Enable the KDE Plasma Desktop Environment.
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
+
+  # Configure keymap in X11
+  services.xserver.xkb = {
+    layout = "de";
+    variant = "";
+  };
+
+  # Configure console keymap
+  console.keyMap = "de";
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable sound with pipewire.
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+
+    # use the example session manager (no others are packaged yet so this is enabled by default,
+    # no need to redefine it in your config for now)
+    #media-session.enable = true;
+  };
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  # services.xserver.libinput.enable = true;
+
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.stschiff = {
+    isNormalUser = true;
+    description = "stschiff";
+    extraGroups = ["networkmanager" "wheel"];
+    packages = with pkgs; [
+      kdePackages.kate # editor with sudo
+      thunderbird
+      (vscode-with-extensions.override {
+        # vscode = vscodium;
+        vscodeExtensions = with vscode-extensions;
+          [
+            bbenoist.nix
+            ms-python.python
+            ms-azuretools.vscode-docker
+            ms-vscode-remote.remote-ssh
+            jnoortheen.nix-ide
+            kamadorueda.alejandra
+          ]
+          ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+            {
+              name = "remote-ssh-edit";
+              publisher = "ms-vscode-remote";
+              version = "0.47.2";
+              sha256 = "1hp6gjh4xp2m1xlm1jsdzxw9d8frkiidhph6nvl24d0h8z34w49g";
+            }
+          ];
+      })
+      bitwarden
+      vesktop
+      dolphin-emu
+      lutris # gaming launcher
+      heroic # gaming launcher (epic)
+      teamspeak3
+      libstrangle # frame limiter: steam command: strangle 140 %command%
+      bottom
+
+      nushell
+      carapace
+      tealdeer #tldr
+      neofetch
+
+      p7zip # 7zip
+
+      nil # nix lsp
+      alejandra # nix formatter
+    ];
+  };
+
+  programs.bash.shellAliases = {
+    l = "ls -alh";
+    ll = "ls -l";
+    ls = "ls --color=tty";
+    nrt = "sudo nixos-rebuild test";
+    nrs = "sudo nixos-rebuild switch && cur && gcp";
+    nrsrepair = "sudo nixos-rebuild switch --repair";
+    nrsu = "sudo nix-channel --update && nrs";
+    nrsb = "nrs && gut";
+    cur = "sudo echo -n 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
+    gut = "qdbus org.kde.Shutdown /Shutdown  org.kde.Shutdown.logoutAndReboot";
+    gcp = "(cd ~/nixconfig && git add . && git commit -m \"Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')\" && git push)";
+  };
+
+  programs.partition-manager.enable = true;
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+  ];
+
+  services.udev.packages = [pkgs.dolphin-emu];
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  };
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-unwrapped"
+      "steam-original"
+      "steam-run"
+    ];
+
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vdpauinfo # sudo vainfo
+      libva-utils # sudo vainfo
+      nvidia-vaapi-driver # nvidia-smi dmon
+    ];
+  };
+
+  environment.variables = {
+    MOZ_DISABLE_RDD_SANDBOX = "1";
+    LIBVA_DRIVER_NAME = "nvidia";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    NVD_BACKEND = "direct";
+    EGL_PLATFORM = "wayland";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    modesetting.enable = lib.mkDefault true;
+    # Power management is nearly always required to get nvidia GPUs to
+    # behave on suspend, due to firmware bugs.
+    powerManagement.enable = true;
+    open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
+  };
+
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "stschiff";
+
+  # Install firefox.
+  programs.firefox.enable = true;
+
+  # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
+  programs.firefox.preferences = {
+    "media.ffmpeg.vaapi.enabled" = true;
+    "media.rdd-ffmpeg.enabled" = true;
+    "media.av1.enabled" = true;
+    "gfx.x11-egl.force-enabled" = true;
+    "widget.dmabuf.force-enabled" = true;
+  };
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+    vdpauinfo # sudo vainfo
+    libva-utils # sudo vainfo
+    # nvidia-vaapi-driver
+    git
+  ];
+
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
+
+  # List services that you want to enable:
+
+  # Enable the OpenSSH daemon.
+  # services.openssh.enable = true;
+
+  # Open ports in the firewall.
+  # networking.firewall.allowedTCPPorts = [ ... ];
+  # networking.firewall.allowedUDPPorts = [ ... ];
+  # Or disable the firewall altogether.
+  # networking.firewall.enable = false;
+
+  # This value determines the NixOS release from which the default
+  # settings for stateful data, like file locations and database versions
+  # on your system were taken. It‘s perfectly fine and recommended to leave
+  # this value at the release version of the first install of this system.
+  # Before changing this value read the documentation for this option
+  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+  system.stateVersion = "24.11"; # Did you read the comment?
+}
