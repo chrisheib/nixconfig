@@ -175,6 +175,7 @@
       neofetch
       stow
       devenv
+      direnv
 
       p7zip # 7zip
 
