@@ -148,6 +148,7 @@
             rust-lang.rust-analyzer
             usernamehw.errorlens
             tamasfe.even-better-toml
+            mkhl.direnv
             # filiptibell.tooling-language-server
           ]
           ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
@@ -182,11 +183,11 @@
 
       obsidian
 
+      # for rustdev: use devenv
+      # devenv init
+      # -> copy file from ststat
+      # devenv shell
       rustup
-      gcc
-      openssl.dev
-      libpkgconf
-      pkg-config
 
       orca-slicer
     ];
