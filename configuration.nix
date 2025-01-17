@@ -41,6 +41,11 @@
       # ];
     };
 
+    # Hide the OS choice for bootloaders.
+    # It's still possible to open the bootloader list by pressing any key
+    # It will just not appear on screen unless a key is pressed
+    loader.timeout = 0;
+
     # Enable "Silent Boot"
     consoleLogLevel = 0;
     initrd.verbose = false;
@@ -53,10 +58,6 @@
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
-    # Hide the OS choice for bootloaders.
-    # It's still possible to open the bootloader list by pressing any key
-    # It will just not appear on screen unless a key is pressed
-    loader.timeout = 0;
   };
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -144,6 +145,10 @@
             ms-vscode-remote.remote-ssh
             jnoortheen.nix-ide
             kamadorueda.alejandra
+            rust-lang.rust-analyzer
+            usernamehw.errorlens
+            tamasfe.even-better-toml
+            # filiptibell.tooling-language-server
           ]
           ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
             {
@@ -168,6 +173,7 @@
       tealdeer #tldr
       neofetch
       stow
+      devenv
 
       p7zip # 7zip
 
