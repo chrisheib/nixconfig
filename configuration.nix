@@ -186,6 +186,7 @@
       gcc
       openssl
       libpkgconf
+      pkg-config
 
       orca-slicer
     ];
