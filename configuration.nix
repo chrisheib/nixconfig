@@ -194,6 +194,10 @@
     ];
   };
 
+  nix.extraOptions = ''
+    trusted-users = root stschiff
+  '';
+
   programs.bash.shellAliases = {
     l = "ls -alh";
     ll = "ls -l";
