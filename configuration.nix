@@ -178,6 +178,7 @@
 
       rustup
       gcc
+      openssl
 
       orca-slicer
     ];
