@@ -177,6 +177,7 @@
       obsidian
 
       rustup
+      gcc
 
       orca-slicer
     ];
