@@ -179,6 +179,7 @@
       rustup
       gcc
       openssl
+      libpkgconf
 
       orca-slicer
     ];
