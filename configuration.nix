@@ -184,7 +184,7 @@
 
       rustup
       gcc
-      openssl
+      openssl.dev
       libpkgconf
       pkg-config
 
