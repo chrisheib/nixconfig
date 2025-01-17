@@ -175,6 +175,10 @@
       alejandra # nix formatter
 
       obsidian
+
+      rustup
+
+      orca-slicer
     ];
   };
 
