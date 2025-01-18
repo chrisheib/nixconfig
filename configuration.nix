@@ -214,6 +214,7 @@
     trusted-users = root stschiff
   '';
 
+  # Also change config.nu! (in nushell: config nu)
   programs.bash.shellAliases = {
     l = "ls -alh";
     ll = "ls -l";
