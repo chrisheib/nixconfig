@@ -161,14 +161,16 @@
           ];
       })
       bitwarden
+
       vesktop
+      teamspeak3
+
       dolphin-emu
       lutris # gaming launcher
       heroic # gaming launcher (epic)
-      teamspeak3
       libstrangle # frame limiter: steam command: strangle 140 %command%
-      bottom
 
+      bottom
       nushell
       carapace
       tealdeer #tldr
@@ -183,6 +185,7 @@
       alejandra # nix formatter
 
       obsidian
+      libreoffice
 
       # for rustdev: use devenv
       # devenv init
@@ -193,6 +196,19 @@
       orca-slicer
     ];
   };
+
+  # LD_LIBRARY_PATH = with pkgs;
+  #   lib.makeLibraryPath [
+  #     libGL
+  #     libxkbcommon
+  #     wayland
+  #     xorg.libX11
+  #     xorg.libXcursor
+  #     xorg.libXi
+  #     xorg.libXrandr
+  #   ];
+  # ...
+  # LD_LIBRARY_PATH = libPath;
 
   nix.extraOptions = ''
     trusted-users = root stschiff
