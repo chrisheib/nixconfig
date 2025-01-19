@@ -169,6 +169,7 @@
       lutris # gaming launcher
       heroic # gaming launcher (epic)
       libstrangle # frame limiter: steam command: strangle 140 %command%
+      gamescope
 
       bottom
       nushell
