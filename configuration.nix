@@ -194,6 +194,9 @@
       rustup
 
       orca-slicer
+
+      vlc
+      streamlink-twitch-gui-bin
     ];
   };
 
