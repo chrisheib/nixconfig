@@ -200,7 +200,7 @@
       vlc
       streamlink-twitch-gui-bin
 
-      transmission_4
+      transmission
     ];
   };
 
