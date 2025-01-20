@@ -169,7 +169,8 @@
       lutris # gaming launcher
       heroic # gaming launcher (epic)
       libstrangle # frame limiter: steam command: strangle 140 %command%
-      gamescope
+      gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
+      # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
 
       bottom
       nushell
@@ -198,6 +199,8 @@
 
       vlc
       streamlink-twitch-gui-bin
+
+      transmission
     ];
   };
 
