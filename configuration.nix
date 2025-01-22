@@ -139,6 +139,7 @@
         # vscode = vscodium;
         vscodeExtensions = with vscode-extensions;
           [
+            tauri-apps.tauri-vscode
             bbenoist.nix
             ms-python.python
             ms-azuretools.vscode-docker
