@@ -182,6 +182,7 @@
       stow
       devenv
       direnv
+      nvd
 
       p7zip # 7zip
 
