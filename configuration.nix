@@ -185,6 +185,7 @@
       nvd
 
       p7zip # 7zip
+      unrar
 
       nil # nix lsp
       alejandra # nix formatter
