@@ -316,6 +316,7 @@
     libva-utils # sudo vainfo
     # nvidia-vaapi-driver
     git
+    ntfs3g # allow read write ntfs mounts
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
