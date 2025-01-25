@@ -264,6 +264,8 @@
       "steam-run"
     ];
 
+  programs.gamemode.enable = true; # https://wiki.nixos.org/wiki/GameMode
+
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
