@@ -281,6 +281,8 @@
     NVD_BACKEND = "direct";
     EGL_PLATFORM = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
+    MANGOHUD_CONFIG = "fps_limit=140,no_display";
+    MANGOHUD = "1";
   };
 
   services.xserver.videoDrivers = ["nvidia"];
