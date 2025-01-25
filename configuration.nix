@@ -193,6 +193,7 @@
 
       obsidian
       libreoffice
+      pinta # graphic
 
       # for rustdev: use devenv
       # devenv init
