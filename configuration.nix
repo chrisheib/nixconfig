@@ -27,6 +27,12 @@ in
       ./hardware-configuration.nix
     ];
 
+    # To switch to unstable nixpgks:
+    # sudo nix-channel --list
+    # sudo nix-channel --remove nixos
+    # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+    # Or as overlay: https://www.reddit.com/r/NixOS/comments/17v4o9i/comment/k9akqcv
+
     boot = {
       # Bootloader.
       loader.systemd-boot.enable = true;
@@ -300,6 +306,7 @@ in
       WLR_NO_HARDWARE_CURSORS = "1";
       MANGOHUD_CONFIG = "fps_limit=140,no_display";
       MANGOHUD = "1";
+      KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
     };
 
     services.xserver.videoDrivers = ["nvidia"];
