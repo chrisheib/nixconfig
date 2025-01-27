@@ -37,7 +37,7 @@ in
       # Bootloader.
       loader.systemd-boot.enable = true;
       loader.efi.canTouchEfiVariables = true;
-      kernelPackages = pkgs.linuxPackages_xanmod;
+      kernelPackages = pkgs.linuxPackages_xanmod_latest;
       extraModprobeConfig =
         "options nvidia "
         + lib.concatStringsSep " " [
