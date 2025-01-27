@@ -91,6 +91,8 @@ in
     # Enable networking
     networking.networkmanager.enable = true;
 
+    virtualisation.docker.enable = true;
+
     # Set your time zone.
     time.timeZone = "Europe/Berlin";
 
@@ -345,6 +347,7 @@ in
       # nvidia-vaapi-driver
       git
       ntfs3g # allow read write ntfs mounts
+      docker-compose
     ];
 
     # Some programs need SUID wrappers, can be configured further or are
