@@ -188,7 +188,7 @@ in
         })
         bitwarden
 
-        vesktop
+        unstable.vesktop
         teamspeak3
 
         dolphin-emu
