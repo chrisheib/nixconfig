@@ -12,6 +12,8 @@ let
     filiptibell.tooling-language-server
     # rust-lang.rust-analyzer
   ];
+
+  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
 in
   # Edit this configuration file to define what should be installed on
   # your system.  Help is available in the configuration.nix(5) man page
@@ -190,7 +192,7 @@ in
         teamspeak3
 
         dolphin-emu
-        lutris # gaming launcher
+        # lutris # gaming launcher -> added as system package
         heroic # gaming launcher (epic)
         libstrangle # frame limiter: steam command: strangle 140 %command%
         gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
@@ -348,6 +350,11 @@ in
       git
       ntfs3g # allow read write ntfs mounts
       docker-compose
+      (lutris.override {
+        extraPkgs = pkgs: [
+          unstable.umu-launcher
+        ];
+      })
     ];
 
     # Some programs need SUID wrappers, can be configured further or are
