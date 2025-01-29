@@ -190,6 +190,8 @@ in
 
         unstable.vesktop
         teamspeak3
+        alsa-utils #amixer
+        pamixer
 
         dolphin-emu
         # lutris # gaming launcher -> added as system package
