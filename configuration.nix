@@ -357,6 +357,7 @@ in
           unstable.umu-launcher
         ];
       })
+      wineWowPackages.stable
     ];
 
     # Some programs need SUID wrappers, can be configured further or are
