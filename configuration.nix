@@ -362,6 +362,8 @@ in
       winetricks
 
       brlaser # printer
+
+      kdePackages.konqueror # for orcaslicer
     ];
 
     # Some programs need SUID wrappers, can be configured further or are
