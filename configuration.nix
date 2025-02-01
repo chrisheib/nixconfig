@@ -229,7 +229,7 @@ in
         # devenv shell
         rustup
 
-        orca-slicer
+        unstable.orca-slicer
 
         vlc
         streamlink-twitch-gui-bin
