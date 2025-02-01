@@ -196,9 +196,9 @@ in
 
         dolphin-emu
         # lutris # gaming launcher -> added as system package
-        heroic # gaming launcher (epic)
-        libstrangle # frame limiter: steam command: strangle 140 %command%
-        gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
+        # heroic # gaming launcher (epic)
+        # libstrangle # frame limiter: steam command: strangle 140 %command%
+        # gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
         # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
         mangohud
 
@@ -363,8 +363,15 @@ in
 
       brlaser # printer
 
-      kdePackages.konqueror # for orcaslicer
+      # kdePackages.konqueror # for orcaslicer
     ];
+
+    # Resolve local hostnames via ip4: https://discourse.nixos.org/t/help-with-local-dns-resolution/20305/5
+    system.nssModules = pkgs.lib.optional true pkgs.nssmdns;
+    system.nssDatabases.hosts = pkgs.lib.optionals true (pkgs.lib.mkMerge [
+      (pkgs.lib.mkBefore ["mdns4_minimal [NOTFOUND=return]"]) # before resolve
+      (pkgs.lib.mkAfter ["mdns4"]) # after dns
+    ]);
 
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
