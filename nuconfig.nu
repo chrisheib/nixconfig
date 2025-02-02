@@ -1,1 +1,0 @@
-/home/stschiff/.config/nushell/config.nu
