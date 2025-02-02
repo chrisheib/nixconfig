@@ -229,8 +229,6 @@ in
         # devenv shell
         rustup
 
-        unstable.orca-slicer
-
         vlc
         streamlink-twitch-gui-bin
 
@@ -362,6 +360,8 @@ in
       winetricks
 
       brlaser # printer
+
+      unstable.orca-slicer
 
       # kdePackages.konqueror # for orcaslicer
     ];
