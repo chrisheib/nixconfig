@@ -235,6 +235,8 @@ in
         transmission_4-qt
 
         prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
+
+        kdePackages.kalk # calculator
       ];
     };
 
