@@ -176,6 +176,7 @@ in
               usernamehw.errorlens
               tamasfe.even-better-toml
               mkhl.direnv
+              thenuprojectcontributors.vscode-nushell-lang
             ]
             ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
               {

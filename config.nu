@@ -916,4 +916,35 @@ def top [] { btm }
 def up [] { sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | save -f nixdiff.txt; cat nixdiff.txt }
 def gc [] { nix-collect-garbage --delete-older-than 7d }
 
+# def direnv_hook [ ]: { ||
+#     if (which direnv | is-empty) {
+#         return
+#     }
+#
+#     print hi
+#
+#     direnv export json | from json | default {} | load-env
+# }
+#
+# $env.config.hooks.env_change.PWD = (
+#     $env.config.hooks.env_change.PWD | append direnv_hook
+# )
 
+$env.config = {
+  hooks: {
+    pre_prompt: [{ ||
+      if (which direnv | is-empty) {
+        return
+      }
+
+      if ('devenv.nix' | path exists) {
+        devenv build
+      }
+
+      direnv export json | from json | default {} | load-env
+      if 'ENV_CONVERSIONS' in $env and 'PATH' in $env.ENV_CONVERSIONS {
+        $env.PATH = do $env.ENV_CONVERSIONS.PATH.from_string $env.PATH
+      }
+    }]
+  }
+}
