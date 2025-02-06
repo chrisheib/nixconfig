@@ -322,6 +322,7 @@ in
       KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
     };
 
+    # https://wiki.nixos.org/wiki/NVIDIA
     services.xserver.videoDrivers = ["nvidia"];
     hardware.nvidia = {
       modesetting.enable = lib.mkDefault true;
@@ -329,6 +330,13 @@ in
       # behave on suspend, due to firmware bugs.
       powerManagement.enable = true;
       open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
+      prime = {
+        offload.enable = true;
+        offload.enableOffloadCmd = true;
+
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
     };
 
     # Enable automatic login for the user.
