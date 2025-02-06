@@ -212,6 +212,7 @@ in
         devenv
         direnv
         nvd
+        stress
 
         p7zip # 7zip
         unrar
