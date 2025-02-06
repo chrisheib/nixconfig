@@ -213,6 +213,7 @@ in
         direnv
         nvd
         stress
+        pciutils
 
         p7zip # 7zip
         unrar
@@ -286,6 +287,7 @@ in
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
       dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+      localNetworkGameTransfers.openFirewall = true;
     };
 
     nixpkgs.config.allowUnfreePredicate = pkg:
