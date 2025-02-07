@@ -309,13 +309,16 @@ in {
       vdpauinfo # sudo vainfo
       libva-utils # sudo vainfo
       nvidia-vaapi-driver # nvidia-smi dmon
-      intel-media-driver
+      # intel-media-driver
+      intel-vaapi-driver
+      intel-media-sdk
     ];
   };
 
   environment.variables = {
     MOZ_DISABLE_RDD_SANDBOX = "1";
-    LIBVA_DRIVER_NAME = "iHD";
+    LIBVA_DRIVER_NAME = "i965";
+    # LIBVA_DRIVER_NAME = "iHD";
     # LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
@@ -329,7 +332,7 @@ in {
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = ["nvidia" "intel"];
   hardware.nvidia = {
     modesetting.enable = lib.mkDefault true;
     # Power management is nearly always required to get nvidia GPUs to
