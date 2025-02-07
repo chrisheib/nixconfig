@@ -21,6 +21,7 @@
     # rust-lang.rust-analyzer
   ];
 
+  # Wrap vscode with --no-sandbox args, so it can run sudo from within the terminal.
   my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
@@ -189,7 +190,7 @@ in {
           ]
           ++ extensionsList;
       })
-      bitwarden
+      unstable.bitwarden
 
       unstable.vesktop
       teamspeak3
