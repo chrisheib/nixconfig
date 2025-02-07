@@ -123,8 +123,9 @@ in {
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  # services.xserver.enable = true;
-  programs.xwayland.enable = true;
+  services.xserver.enable = true;
+  services.displayManager.defaultSession = "plasmax11";
+  # programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -310,21 +311,21 @@ in {
       libva-utils # sudo vainfo
       nvidia-vaapi-driver # nvidia-smi dmon
       # intel-media-driver
-      intel-vaapi-driver
-      intel-media-sdk
+      # intel-vaapi-driver
+      # intel-media-sdk
     ];
   };
 
   environment.variables = {
     MOZ_DISABLE_RDD_SANDBOX = "1";
-    LIBVA_DRIVER_NAME = "i965";
+    # LIBVA_DRIVER_NAME = "i965";
     # LIBVA_DRIVER_NAME = "iHD";
-    # LIBVA_DRIVER_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
 
     NVD_BACKEND = "direct";
-    EGL_PLATFORM = "wayland";
+    # EGL_PLATFORM = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
     MANGOHUD_CONFIG = "fps_limit=140,no_display";
     MANGOHUD = "1";
@@ -332,20 +333,21 @@ in {
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
-  services.xserver.videoDrivers = ["nvidia" "intel"];
+  services.xserver.videoDrivers = ["nvidia"];
+  # services.xserver.videoDrivers = ["nvidia" "intel"];
   hardware.nvidia = {
     modesetting.enable = lib.mkDefault true;
     # Power management is nearly always required to get nvidia GPUs to
     # behave on suspend, due to firmware bugs.
     powerManagement.enable = true;
     open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
-    prime = {
-      offload.enable = true;
-      offload.enableOffloadCmd = true;
+    # prime = {
+    # offload.enable = true;
+    # offload.enableOffloadCmd = true;
 
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
+    # intelBusId = "PCI:0:2:0";
+    # nvidiaBusId = "PCI:1:0:0";
+    # };
   };
 
   # Enable automatic login for the user.
