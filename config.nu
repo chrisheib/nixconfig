@@ -910,7 +910,7 @@ def nrsrepair [] { sudo nixos-rebuild switch --repair }
 def nrsu [] { sudo nix-channel --update; nrs }
 def nrsb [] { nrs; gut }
 def gut [] { qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot }
-def gcp [] { cd ~/.nixos; git add .; git commit -m "Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | where current | get 0)"; git push }
+def gcp [] { cd ~/.nixos; git add .; git commit -m $"Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | where current | get 0)"; git push }
 def cur [] { sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | find current | split column " " | get column3.0 }
 def top [] { btm }
 def up [] { sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | save -f nixdiff.txt; cat nixdiff.txt }

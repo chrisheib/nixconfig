@@ -75,7 +75,7 @@ in {
     # Hide the OS choice for bootloaders.
     # It's still possible to open the bootloader list by pressing any key
     # It will just not appear on screen unless a key is pressed
-    loader.timeout = 0;
+    loader.timeout = 1;
 
     # Enable "Silent Boot"
     consoleLogLevel = 0;
@@ -123,7 +123,8 @@ in {
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
+  programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -308,14 +309,17 @@ in {
       vdpauinfo # sudo vainfo
       libva-utils # sudo vainfo
       nvidia-vaapi-driver # nvidia-smi dmon
+      intel-media-driver
     ];
   };
 
   environment.variables = {
     MOZ_DISABLE_RDD_SANDBOX = "1";
-    LIBVA_DRIVER_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "iHD";
+    # LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+
     NVD_BACKEND = "direct";
     EGL_PLATFORM = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
