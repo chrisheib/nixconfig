@@ -391,6 +391,7 @@ in {
     brlaser # printer
 
     unstable.orca-slicer
+    bambu-studio
 
     # kdePackages.konqueror # for orcaslicer
   ];
