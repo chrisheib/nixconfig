@@ -330,6 +330,8 @@ in {
     MANGOHUD_CONFIG = "fps_limit=140,no_display";
     MANGOHUD = "1";
     KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
+
+    WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
