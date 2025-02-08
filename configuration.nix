@@ -392,6 +392,7 @@ in {
 
     unstable.orca-slicer
     bambu-studio
+    prusa-slicer
 
     # kdePackages.konqueror # for orcaslicer
   ];
