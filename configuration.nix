@@ -123,9 +123,9 @@ in {
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-  services.displayManager.defaultSession = "plasmax11";
-  # programs.xwayland.enable = true;
+  # services.xserver.enable = true;
+  # services.displayManager.defaultSession = "plasmax11";
+  programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -325,7 +325,7 @@ in {
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
 
     NVD_BACKEND = "direct";
-    # EGL_PLATFORM = "wayland";
+    EGL_PLATFORM = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
     MANGOHUD_CONFIG = "fps_limit=140,no_display";
     MANGOHUD = "1";
