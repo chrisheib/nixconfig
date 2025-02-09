@@ -407,6 +407,10 @@ in {
     (pkgs.lib.mkAfter ["mdns4"]) # after dns
   ]);
 
+  services.udev.extraRules = ''
+    SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", ATTR{energy_uj}=="*", MODE="0444"
+  '';
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
