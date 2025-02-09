@@ -1,31 +1,35 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U.]  #1  vesktop  1.5.4 -> 1.5.5
-Selection state changes:
-[C-]  #1  setxkbmap    1.3.4
-[C-]  #2  xauth        1.1.3
-[C-]  #3  xorg-server  21.1.14
-[C-]  #4  xrandr       1.5.2
-[C-]  #5  xrdb         1.2.2
-[C-]  #6  xsetroot     1.1.3
-Removed packages:
-[R.]  #01  Xresources-Xft                         <none>
-[R.]  #02  Xsetup                                 <none>
-[R.]  #03  Xstop                                  <none>
-[R.]  #04  font-adobe                             75dpi-1.0.4, 100dpi-1.0.4
-[R.]  #05  font-cursor-misc                       1.0.4
-[R.]  #06  font-misc-misc                         1.1.3
-[R-]  #07  iceauth                                1.0.10
-[R.]  #08  ksshaskpass                            6.2.5
-[R.]  #09  unit-script-display-manager-pre-start  <none>
-[R-]  #10  xf86-input-evdev                       2.11.0
-[R-]  #11  xinput                                 1.6.4
-[R-]  #12  xlsclients                             1.1.5
-[R-]  #13  xprop                                  1.2.7
-[R.]  #14  xserver-wrapper                        <none>
-[R.]  #15  xserver.conf                           <none>
-[R.]  #16  xsession-wrapper                       <none>
-[R-]  #17  xset                                   1.2.5
-[R-]  #18  xterm                                  395
-Closure size: 2905 -> 2886 (41 paths added, 60 paths removed, delta -19, disk usage -19.3MiB).
+[C*]  #01  curl                8.11.1 x3, 8.11.1-bin x2, 8.11.1-man -> 8.11.1 x4, 8.11.1-bin x3, 8.11.1-man x2
+[C.]  #02  gdk-pixbuf          2.42.12 x3, 2.42.12-dev -> 2.42.12 x3, 2.42.12-dev, 2.42.12-man
+[C.]  #03  glew                2.2.0 x3, 2.2.0-bin -> 1.10.0, 2.2.0 x3, 2.2.0-bin
+[C.]  #04  ldconfig            <none> x2 -> <none> x3
+[C.]  #05  libarchive          3.7.7-lib x3 -> 3.7.7, 3.7.7-lib x3
+[C.]  #06  libcaca             0.99.beta20 x3 -> 0.99.beta20 x3, 0.99.beta20-bin, 0.99.beta20-man
+[C.]  #07  libidn              1.42 x2 -> 1.42 x2, 1.42-bin
+[C.]  #08  libmikmod           3.3.11.1 -> 3.3.11.1, 3.3.11.1-man
+[C.]  #09  libpng              1.6.43 x2 -> 1.2.59, 1.2.59-man, 1.6.43 x2
+[C.]  #10  libvpx              1.15.0 x3 -> 1.15.0 x3, 1.15.0-bin
+[C.]  #11  openssl             3.3.2 x3 -> 3.3.2 x3, 3.3.2-bin, 3.3.2-man
+[C.]  #12  util-linux-minimal  2.39.4-bin, 2.39.4-lib x3, 2.39.4-login x3, 2.39.4-mount x3, 2.39.4-swap x3 -> 2.39.4, 2.39.4-bin, 2.39.4-lib x3, 2.39.4-login x3, 2.39.4-man, 2.39.4-mount x3, 2.39.4-swap x3
+Added packages:
+[A.]  #01  SDL2_image                   2.8.2
+[A.]  #02  SDL2_mixer                   2.8.0
+[A.]  #03  SDL_mixer                    1.2.12
+[A.]  #04  SDL_ttf                      2.0.11
+[A.]  #05  appimage-exec.sh             <none>
+[A+]  #06  appimage-run                 <none>
+[A.]  #07  appimage-run-bwrap           <none>
+[A.]  #08  appimage-run-fhsenv-profile  <none>
+[A.]  #09  appimage-run-fhsenv-rootfs   <none>
+[A.]  #10  appimage-run-init            <none>
+[A.]  #11  imlib2                       1.12.3
+[A.]  #12  libappindicator-gtk2         12.10.1+20.10.20200706.1
+[A.]  #13  libdbusmenu-gtk2             16.04.0
+[A.]  #14  libid3tag                    0.15.1b
+[A.]  #15  pv                           1.8.14
+[A.]  #16  smpeg                        0.4.5
+[A.]  #17  squashfs                     4.6.1
+[A.]  #18  timidity                     2.15.0
+Closure size: 2886 -> 2922 (48 paths added, 12 paths removed, delta +36, disk usage +33.0MiB).
