@@ -395,6 +395,7 @@ in {
     prusa-slicer
     # unstable.cura # currently broken due to python
     appimage-run # for cura
+    unstable.cura-appimage
 
     # kdePackages.konqueror # for orcaslicer
   ];
