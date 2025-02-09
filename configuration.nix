@@ -410,8 +410,10 @@ in {
   ]);
 
   # services.udev.extraRules = ''
-  #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="/bin/chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
+  #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
   # '';
+
+  system.activationScripts.script.text = ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj'';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
