@@ -28,12 +28,6 @@
     options = ["fmask=0077" "dmask=0077"];
   };
 
-  fileSystems."/run/media/stschiff/Alt-Alt-C F" = {
-    device = "/dev/disk/by-uuid/366275AC6275720B";
-    fsType = "ntfs-3g";
-    options = ["rw" "uid=1000" "nofail"];
-  };
-
   fileSystems."/run/media/stschiff/D" = {
     device = "/dev/disk/by-uuid/C4CA75E0CA75CEE4";
     fsType = "ntfs-3g";
@@ -42,6 +36,12 @@
 
   fileSystems."/run/media/stschiff/E" = {
     device = "/dev/disk/by-uuid/16088A52088A30B3";
+    fsType = "ntfs-3g";
+    options = ["rw" "uid=1000" "nofail"];
+  };
+
+  fileSystems."/run/media/stschiff/F Alt-Alt-C" = {
+    device = "/dev/disk/by-uuid/366275AC6275720B";
     fsType = "ntfs-3g";
     options = ["rw" "uid=1000" "nofail"];
   };
