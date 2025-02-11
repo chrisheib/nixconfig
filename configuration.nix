@@ -249,6 +249,8 @@ in {
     ];
   };
 
+  virtualisation.waydroid.enable = true;
+
   # LD_LIBRARY_PATH = with pkgs;
   #   lib.makeLibraryPath [
   #     libGL
