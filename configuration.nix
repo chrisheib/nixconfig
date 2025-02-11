@@ -405,7 +405,9 @@ in {
     appimage-run # for cura
     unstable.cura-appimage
 
-    smartgithg
+    smartgithg #
+
+    swtpm # tpm emulator for qemu
 
     # kdePackages.konqueror # for orcaslicer
   ];
