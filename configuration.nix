@@ -167,7 +167,7 @@ in {
   users.users.stschiff = {
     isNormalUser = true;
     description = "stschiff";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "libvirtd"];
     packages = with pkgs; [
       kdePackages.kate # editor with sudo
       thunderbird
@@ -374,6 +374,10 @@ in {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # https://wiki.nixos.org/wiki/Virt-manager
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

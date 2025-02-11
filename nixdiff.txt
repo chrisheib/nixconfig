@@ -1,17 +1,74 @@
 <<< /run/current-system
 >>> result
-Removed packages:
-[R.]  #01  etc-lxc-default.conf             <none>
-[R.]  #02  etc-lxc-lxc-net                  <none>
-[R.]  #03  etc-lxc-lxc-usernet              <none>
-[R.]  #04  etc-lxc-lxc.conf                 <none>
-[R.]  #05  libgbinder                       1.1.40
-[R.]  #06  libglibutil                      1.0.79
-[R-]  #07  lxc                              6.0.3
-[R.]  #08  python3.12-gbinder-python        1.1.1
-[R.]  #09  python3.12-pyclip                0.7.0
-[R.]  #10  unit-waydroid-container.service  <none>
-[R-]  #11  waydroid                         1.4.3
-[R.]  #12  waydroid.conf                    <none>
-[R.]  #13  wl-clipboard                     2.2.1
-Closure size: 3075 -> 3062 (20 paths added, 33 paths removed, delta -13, disk usage -11.5MiB).
+Version changes:
+[C.]  #1  gtksourceview       3.24.11 -> 3.24.11, 4.8.4
+[C.]  #2  libxml2             2.13.5 x3, 2.13.5-bin -> 2.13.5 x3, 2.13.5-bin, 2.13.5-dev, 2.13.5-py
+[U.]  #3  nixos-system-nixos  24.11.714287.a45fa362d887 -> 24.11.714363.44534bc021b8
+[C.]  #4  nss                 3.101.2 x3, 3.101.2-man, 3.107 -> 3.101.2 x3, 3.101.2-man, 3.108
+Added packages:
+[A.]  #01  OVMF                                                           202408.01-fd
+[A.]  #02  bridge-utils                                                   1.7.1
+[A.]  #03  canokey-qemu                                                   0-unstable-2023-06-06
+[A.]  #04  capstone                                                       5.0.3
+[A.]  #05  cloud-hypervisor                                               42.0
+[A.]  #06  dconf-db                                                       <none>
+[A.]  #07  dconf-system-config                                            <none>
+[A.]  #08  dtc                                                            1.7.2
+[A.]  #09  etc-qemu-bridge.conf                                           <none>
+[A.]  #10  gfxstream                                                      0.1.2
+[A.]  #11  gtk-vnc                                                        1.3.1
+[A.]  #12  hostname-net-tools                                             2.10
+[A.]  #13  inetutils                                                      2.5
+[A.]  #14  ipxe                                                           1.21.1-unstable-2024-09-27
+[A.]  #15  libburn                                                        1.5.6
+[A.]  #16  libcacard                                                      2.8.1
+[A.]  #17  libiscsi                                                       1.20.0
+[A.]  #18  libisoburn                                                     1.5.6, 1.5.6-lib
+[A.]  #19  libisofs                                                       1.5.6.pl01
+[A.]  #20  libosinfo                                                      1.11.0
+[A+]  #21  libvirt                                                        10.9.0
+[A.]  #22  libvirt-glib                                                   5.0.0
+[A.]  #23  libvirtd.conf                                                  <none>
+[A.]  #24  multipath-tools                                                0.9.8
+[A.]  #25  nbd                                                            3.25
+[A.]  #26  nfs-utils                                                      2.7.1, 2.7.1-lib
+[A.]  #27  numad                                                          0.5-unstable-2023-09-06
+[A.]  #28  openvswitch                                                    3.4.0
+[A.]  #29  osinfo-db                                                      20240701
+[A.]  #30  phodav                                                         3.0-lib
+[A.]  #31  pm-utils                                                       1.4.1
+[A.]  #32  python3.12-libvirt                                             10.9.0
+[A+]  #33  qemu                                                           9.1.2, 9.1.2-ga
+[A.]  #34  qemu-ovmf                                                      <none>
+[A.]  #35  qemu.conf                                                      <none>
+[A.]  #36  rutabaga_gfx                                                   0.1.2
+[A.]  #37  seabios                                                        1.16.3
+[A.]  #38  security-wrapper-qemu-bridge-helper-x86_64-unknown-linux-musl  <none>
+[A.]  #39  smartmontools                                                  7.4
+[A.]  #40  spice                                                          0.15.2
+[A.]  #41  spice-gtk                                                      0.42
+[A.]  #42  syslinux-unstable                                              2019-02-07
+[A.]  #43  sysstat                                                        12.7.4
+[A.]  #44  tcpdump                                                        4.99.5
+[A.]  #45  unit-libvirt-guests.service                                    <none>
+[A.]  #46  unit-libvirtd-config.service                                   <none>
+[A.]  #47  unit-libvirtd.service                                          <none>
+[A.]  #48  unit-libvirtd.socket                                           <none>
+[A.]  #49  unit-script-libvirtd-config-start                              <none>
+[A.]  #50  unit-virtchd.service                                           <none>
+[A.]  #51  unit-virtlockd.service                                         <none>
+[A.]  #52  unit-virtlockd.socket                                          <none>
+[A.]  #53  unit-virtlogd.service                                          <none>
+[A.]  #54  unit-virtlogd.socket                                           <none>
+[A.]  #55  usbredir                                                       0.13.0
+[A.]  #56  user                                                           <none>
+[A.]  #57  vde2                                                           2.3.3
+[A.]  #58  vhost-user                                                     <none>
+[A.]  #59  virglrenderer                                                  1.1.0
+[A+]  #60  virt-manager                                                   5.0.0
+[A.]  #61  vte                                                            0.78.2
+[A.]  #62  wolfssl-all                                                    5.7.2-lib
+[A.]  #63  xen                                                            4.19.1
+[A.]  #64  yajl                                                           2.1.0-unstable-2024-02-01
+[A.]  #65  zfs-user                                                       2.2.7
+Closure size: 3062 -> 3133 (113 paths added, 42 paths removed, delta +71, disk usage +1.1GiB).
