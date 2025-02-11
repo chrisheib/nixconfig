@@ -244,6 +244,8 @@ in {
       prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
 
       kdePackages.kalk # calculator
+
+      waydroid
     ];
   };
 

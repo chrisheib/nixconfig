@@ -1,4 +1,11 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3062 -> 3062 (3 paths added, 3 paths removed, delta +0, disk usage +0B).
+Added packages:
+[A.]  #1  libgbinder                 1.1.40
+[A.]  #2  libglibutil                1.0.79
+[A.]  #3  lxc                        6.0.3
+[A.]  #4  python3.12-gbinder-python  1.1.1
+[A.]  #5  python3.12-pyclip          0.7.0
+[A.]  #6  waydroid                   1.4.3
+[A.]  #7  wl-clipboard               2.2.1
+Closure size: 3062 -> 3069 (10 paths added, 3 paths removed, delta +7, disk usage +11.5MiB).
