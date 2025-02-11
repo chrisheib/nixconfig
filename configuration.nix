@@ -245,11 +245,11 @@ in {
 
       kdePackages.kalk # calculator
 
-      waydroid
+      # waydroid # also enable virtualisation.waydroid.enable
     ];
   };
 
-  virtualisation.waydroid.enable = true;
+  # virtualisation.waydroid.enable = true;
 
   # LD_LIBRARY_PATH = with pkgs;
   #   lib.makeLibraryPath [

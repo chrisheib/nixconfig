@@ -1,13 +1,17 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  lxc       6.0.3
-[C+]  #2  waydroid  1.4.3
-Added packages:
-[A.]  #1  etc-lxc-default.conf             <none>
-[A.]  #2  etc-lxc-lxc-net                  <none>
-[A.]  #3  etc-lxc-lxc-usernet              <none>
-[A.]  #4  etc-lxc-lxc.conf                 <none>
-[A.]  #5  unit-waydroid-container.service  <none>
-[A.]  #6  waydroid.conf                    <none>
-Closure size: 3069 -> 3075 (26 paths added, 20 paths removed, delta +6, disk usage +45.8KiB).
+Removed packages:
+[R.]  #01  etc-lxc-default.conf             <none>
+[R.]  #02  etc-lxc-lxc-net                  <none>
+[R.]  #03  etc-lxc-lxc-usernet              <none>
+[R.]  #04  etc-lxc-lxc.conf                 <none>
+[R.]  #05  libgbinder                       1.1.40
+[R.]  #06  libglibutil                      1.0.79
+[R-]  #07  lxc                              6.0.3
+[R.]  #08  python3.12-gbinder-python        1.1.1
+[R.]  #09  python3.12-pyclip                0.7.0
+[R.]  #10  unit-waydroid-container.service  <none>
+[R-]  #11  waydroid                         1.4.3
+[R.]  #12  waydroid.conf                    <none>
+[R.]  #13  wl-clipboard                     2.2.1
+Closure size: 3075 -> 3062 (20 paths added, 33 paths removed, delta -13, disk usage -11.5MiB).
