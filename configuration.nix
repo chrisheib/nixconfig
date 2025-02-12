@@ -376,6 +376,8 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   # https://wiki.nixos.org/wiki/Virt-manager
+  # https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm
+  # https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
@@ -406,6 +408,8 @@ in {
     unstable.cura-appimage
 
     smartgithg #
+
+    webkitgtk_6_0
 
     swtpm # tpm emulator for qemu
 

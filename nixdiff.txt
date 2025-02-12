@@ -1,7 +1,6 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #1  libtpms  0.10.0 -> 0.9.6, 0.10.0
-Added packages:
-[A+]  #1  swtpm  0.8.2, 0.8.2-man
-Closure size: 3133 -> 3136 (15 paths added, 12 paths removed, delta +3, disk usage +1.6MiB).
+[C.]  #1  libadwaita  1.6.2, 1.6.3 -> 1.6.2, 1.6.4
+[C+]  #2  webkitgtk   2.46.5+abi=4.0 x2, 2.46.5+abi=4.1 -> 2.46.5+abi=4.0, 2.46.5+abi=4.1, 2.46.5+abi=6.0, 2.46.6+abi=4.0
+Closure size: 3136 -> 3137 (25 paths added, 24 paths removed, delta +1, disk usage +140.3MiB).
