@@ -209,6 +209,7 @@ in {
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
+  fonts.fontDir.enable = true;
 
   services.udev.packages = [pkgs.dolphin-emu];
 
