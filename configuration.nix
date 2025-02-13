@@ -168,85 +168,6 @@ in {
     isNormalUser = true;
     description = "stschiff";
     extraGroups = ["networkmanager" "wheel" "libvirtd"];
-    packages = with pkgs; [
-      kdePackages.kate # editor with sudo
-      thunderbird
-      (my-vscode-no-sandbox.override {
-        # vscode = vscodium;
-        # extraArguments = "--no-sandbox";
-        vscodeExtensions = with vscode-extensions;
-          [
-            tauri-apps.tauri-vscode
-            bbenoist.nix
-            ms-python.python
-            ms-azuretools.vscode-docker
-            ms-vscode-remote.remote-ssh
-            ms-vscode-remote.remote-ssh-edit
-            jnoortheen.nix-ide
-            kamadorueda.alejandra
-            rust-lang.rust-analyzer
-            usernamehw.errorlens
-            tamasfe.even-better-toml
-            mkhl.direnv
-            thenuprojectcontributors.vscode-nushell-lang
-          ]
-          ++ extensionsList;
-      })
-      unstable.bitwarden
-
-      unstable.vesktop
-      teamspeak3
-      alsa-utils #amixer
-      pamixer
-
-      dolphin-emu
-      # lutris # gaming launcher -> added as system package
-      # heroic # gaming launcher (epic)
-      # libstrangle # frame limiter: steam command: strangle 140 %command%
-      # gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
-      # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
-      mangohud
-
-      bottom
-      nushell
-      carapace
-      tealdeer #tldr
-      neofetch
-      stow
-      devenv
-      direnv
-      nvd
-      stress
-      pciutils
-
-      p7zip # 7zip
-      unrar
-      k4dirstat # windirstat clone
-
-      nil # nix lsp
-      alejandra # nix formatter
-
-      obsidian
-      libreoffice
-      pinta # graphic
-
-      # for rustdev: use devenv
-      # devenv init
-      # -> copy file from ststat
-      # devenv shell
-      rustup
-
-      vlc
-      streamlink-twitch-gui-bin
-
-      transmission_4-qt
-
-      prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
-
-      kdePackages.kalk # calculator
-
-      # waydroid # also enable virtualisation.waydroid.enable
-    ];
   };
 
   # virtualisation.waydroid.enable = true;
@@ -384,6 +305,84 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    kdePackages.kate # editor with sudo
+    thunderbird
+    (my-vscode-no-sandbox.override {
+      # vscode = vscodium;
+      # extraArguments = "--no-sandbox";
+      vscodeExtensions = with vscode-extensions;
+        [
+          tauri-apps.tauri-vscode
+          bbenoist.nix
+          ms-python.python
+          ms-azuretools.vscode-docker
+          ms-vscode-remote.remote-ssh
+          ms-vscode-remote.remote-ssh-edit
+          jnoortheen.nix-ide
+          kamadorueda.alejandra
+          rust-lang.rust-analyzer
+          usernamehw.errorlens
+          tamasfe.even-better-toml
+          mkhl.direnv
+          thenuprojectcontributors.vscode-nushell-lang
+        ]
+        ++ extensionsList;
+    })
+    unstable.bitwarden
+
+    unstable.vesktop
+    teamspeak3
+    alsa-utils #amixer
+    pamixer
+
+    dolphin-emu
+    # lutris # gaming launcher -> added as system package
+    # heroic # gaming launcher (epic)
+    # libstrangle # frame limiter: steam command: strangle 140 %command%
+    # gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
+    # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
+    mangohud
+
+    bottom
+    nushell
+    carapace
+    tealdeer #tldr
+    neofetch
+    stow
+    devenv
+    direnv
+    nvd
+    stress
+    pciutils
+
+    p7zip # 7zip
+    unrar
+    k4dirstat # windirstat clone
+
+    nil # nix lsp
+    alejandra # nix formatter
+
+    obsidian
+    libreoffice
+    pinta # graphic
+
+    # for rustdev: use devenv
+    # devenv init
+    # -> copy file from ststat
+    # devenv shell
+    rustup
+
+    vlc
+    streamlink-twitch-gui-bin
+
+    transmission_4-qt
+
+    prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
+
+    kdePackages.kalk # calculator
+
+    # waydroid # also enable virtualisation.waydroid.enable
+
     vdpauinfo # sudo vainfo
     libva-utils # sudo vainfo
     # nvidia-vaapi-driver
@@ -400,7 +399,10 @@ in {
 
     brlaser # printer
 
+    # Orca segfaults if not run with mesa: https://github.com/SoftFever/OrcaSlicer/issues/6433#issuecomment-2552029299
+    # __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json orca-slicer
     unstable.orca-slicer
+
     bambu-studio
     prusa-slicer
     # unstable.cura # currently broken due to python
@@ -422,6 +424,8 @@ in {
     (pkgs.lib.mkBefore ["mdns4_minimal [NOTFOUND=return]"]) # before resolve
     (pkgs.lib.mkAfter ["mdns4"]) # after dns
   ]);
+
+  services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
 
   # services.udev.extraRules = ''
   #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
