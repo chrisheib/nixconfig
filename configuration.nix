@@ -381,6 +381,7 @@ in {
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
 
     kdePackages.kalk # calculator
+    kde-rounded-corners
 
     # waydroid # also enable virtualisation.waydroid.enable
 
