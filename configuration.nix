@@ -406,7 +406,7 @@ in {
     unstable.orca-slicer
 
     bambu-studio
-    prusa-slicer
+    prusa-slicer # expensive to build o.o
     # unstable.cura # currently broken due to python
     appimage-run # for cura
     unstable.cura-appimage
@@ -418,6 +418,8 @@ in {
     swtpm # tpm emulator for qemu
 
     # kdePackages.konqueror # for orcaslicer
+
+    onedrivegui
   ];
 
   # Resolve local hostnames via ip4: https://discourse.nixos.org/t/help-with-local-dns-resolution/20305/5

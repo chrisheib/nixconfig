@@ -1,24 +1,27 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #1  electron             33.3.2, 33.4.0, 34.0.2 -> 33.4.0 x2, 34.1.1
-[C.]  #2  electron-unwrapped   33.3.2, 33.4.0 -> 33.4.0 x2
-[U.]  #3  initrd-linux-xanmod  6.12.8 -> 6.12.12
-[U.]  #4  linux-firmware       20250109-zstd -> 20250211-zstd
-[U.]  #5  linux-xanmod         6.12.8, 6.12.8-modules, 6.12.8-modules-shrunk -> 6.12.12, 6.12.12-modules, 6.12.12-modules-shrunk
-[U.]  #6  nixos-system-nixos   24.11.714433.0ff09db9d034 -> 24.11.714486.0b73e36b1962
-[U.]  #7  nvidia-open          6.12.8-565.77 -> 6.12.12-565.77
-[U*]  #8  nvidia-x11           565.77-6.12.8, 565.77-6.12.8-bin, 565.77-6.12.8-firmware, 565.77-6.12.8-lib32 -> 565.77-6.12.12, 565.77-6.12.12-bin, 565.77-6.12.12-firmware, 565.77-6.12.12-lib32
-[C.]  #9  udev-rules           <none> x2 -> <none>
+[C.]  #1  binutils-wrapper        2.43.1 -> 2.43.1 x2
+[C.]  #2  clang                   19.1.7-lib -> 18.1.8, 18.1.8-lib, 19.1.7-lib
+[C.]  #3  expand-response-params  <none> -> <none> x2
+[U.]  #4  nixos-system-nixos      24.11.714486.0b73e36b1962 -> 24.11.714533.a60651b217d2
+[C.]  #5  python3                 3.11.11, 3.12.8 x5, 3.12.8-env x3 -> 3.11.11, 3.12.8 x5, 3.12.8-env x4
+[C.]  #6  qtlocation              5.15.15, 5.15.15-bin -> 5.15.15, 5.15.15-bin, 6.8.1
+[C*]  #7  webkitgtk               2.46.5+abi=4.0, 2.46.5+abi=4.1, 2.46.5+abi=6.0, 2.46.6+abi=4.0 -> 2.46.6+abi=4.0 x2, 2.46.6+abi=4.1, 2.46.6+abi=6.0
 Added packages:
-[A.]  #1  ldc                                 1.39.0-include
-[A+]  #2  onedrive                            2.5.3, 2.5.3-doc, 2.5.3-man
-[A.]  #3  onedrive-launcher                   <none>
-[A.]  #4  unit-onedrive-.service              <none>
-[A.]  #5  unit-onedrive-launcher.service      <none>
-[A.]  #6  unit-systemd-journald-audit.socket  <none>
-Removed packages:
-[R.]  #1  extra-utils    <none>
-[R.]  #2  initrd-fsinfo  <none>
-[R.]  #3  stage          1-init.sh
-Closure size: 3151 -> 3155 (93 paths added, 89 paths removed, delta +4, disk usage +12.6MiB).
+[A.]  #01  assimp            5.4.3-lib
+[A.]  #02  clang-wrapper     18.1.8
+[A.]  #03  compiler-rt-libc  18.1.8, 18.1.8-dev
+[A+]  #04  onedrivegui       1.1.1a
+[A.]  #05  pyside6           6.8.0.2
+[A.]  #06  qt3d              6.8.1
+[A.]  #07  qtcharts          6.8.1
+[A.]  #08  qtconnectivity    6.8.1
+[A.]  #09  qtdatavis3d       6.8.1
+[A.]  #10  qtgraphs          6.8.1
+[A.]  #11  qthttpserver      6.8.1
+[A.]  #12  qtremoteobjects   6.8.1
+[A.]  #13  qtscxml           6.8.1
+[A.]  #14  qtserialbus       6.8.1
+[A.]  #15  shiboken6         6.8.0.2
+Closure size: 3155 -> 3177 (62 paths added, 40 paths removed, delta +22, disk usage +1,005.9MiB).
