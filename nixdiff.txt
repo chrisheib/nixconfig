@@ -1,5 +1,24 @@
 <<< /run/current-system
 >>> result
+Version changes:
+[C.]  #1  electron             33.3.2, 33.4.0, 34.0.2 -> 33.4.0 x2, 34.1.1
+[C.]  #2  electron-unwrapped   33.3.2, 33.4.0 -> 33.4.0 x2
+[U.]  #3  initrd-linux-xanmod  6.12.8 -> 6.12.12
+[U.]  #4  linux-firmware       20250109-zstd -> 20250211-zstd
+[U.]  #5  linux-xanmod         6.12.8, 6.12.8-modules, 6.12.8-modules-shrunk -> 6.12.12, 6.12.12-modules, 6.12.12-modules-shrunk
+[U.]  #6  nixos-system-nixos   24.11.714433.0ff09db9d034 -> 24.11.714486.0b73e36b1962
+[U.]  #7  nvidia-open          6.12.8-565.77 -> 6.12.12-565.77
+[U*]  #8  nvidia-x11           565.77-6.12.8, 565.77-6.12.8-bin, 565.77-6.12.8-firmware, 565.77-6.12.8-lib32 -> 565.77-6.12.12, 565.77-6.12.12-bin, 565.77-6.12.12-firmware, 565.77-6.12.12-lib32
+[C.]  #9  udev-rules           <none> x2 -> <none>
 Added packages:
-[A+]  #1  kde-rounded-corners  0.6.7
-Closure size: 3150 -> 3151 (13 paths added, 12 paths removed, delta +1, disk usage +339.7KiB).
+[A.]  #1  ldc                                 1.39.0-include
+[A+]  #2  onedrive                            2.5.3, 2.5.3-doc, 2.5.3-man
+[A.]  #3  onedrive-launcher                   <none>
+[A.]  #4  unit-onedrive-.service              <none>
+[A.]  #5  unit-onedrive-launcher.service      <none>
+[A.]  #6  unit-systemd-journald-audit.socket  <none>
+Removed packages:
+[R.]  #1  extra-utils    <none>
+[R.]  #2  initrd-fsinfo  <none>
+[R.]  #3  stage          1-init.sh
+Closure size: 3151 -> 3155 (93 paths added, 89 paths removed, delta +4, disk usage +12.6MiB).

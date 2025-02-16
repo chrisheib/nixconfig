@@ -428,6 +428,7 @@ in {
   ]);
 
   services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
+  services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
 
   # services.udev.extraRules = ''
   #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
