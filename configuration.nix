@@ -213,13 +213,6 @@ in {
 
   services.udev.packages = [pkgs.dolphin-emu];
 
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true;
-  };
-
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "steam"
@@ -282,26 +275,14 @@ in {
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "stschiff";
 
-  # Install firefox.
-  programs.firefox.enable = true;
-
-  # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
-  programs.firefox.preferences = {
-    "media.ffmpeg.vaapi.enabled" = true;
-    "media.rdd-ffmpeg.enabled" = true;
-    "media.av1.enabled" = true;
-    "gfx.x11-egl.force-enabled" = true;
-    "widget.dmabuf.force-enabled" = true;
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # https://wiki.nixos.org/wiki/Virt-manager
   # https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm
   # https://www.tomshardware.com/how-to/install-windows-11-without-microsoft-account
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
+  # virtualisation.libvirtd.enable = true;
+  # programs.virt-manager.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -329,9 +310,9 @@ in {
         ]
         ++ extensionsList;
     })
-    unstable.bitwarden
+    bitwarden
 
-    unstable.vesktop
+    vesktop # change autostart Exec to: Exec=sleep 5 && vesktop
     teamspeak3
     alsa-utils #amixer
     pamixer
@@ -403,24 +384,45 @@ in {
 
     # Orca segfaults if not run with mesa: https://github.com/SoftFever/OrcaSlicer/issues/6433#issuecomment-2552029299
     # __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json orca-slicer
-    unstable.orca-slicer
+    orca-slicer
 
-    bambu-studio
-    prusa-slicer # expensive to build o.o
+    # bambu-studio
+    # prusa-slicer # expensive to build o.o
     # unstable.cura # currently broken due to python
-    appimage-run # for cura
-    unstable.cura-appimage
+    # appimage-run # for cura
+    # unstable.cura-appimage
 
     smartgithg #
 
     webkitgtk_6_0
 
-    swtpm # tpm emulator for qemu
+    # swtpm # tpm emulator for qemu
 
     # kdePackages.konqueror # for orcaslicer
 
-    onedrivegui
+    # onedrivegui # ist unnötig, siehe onedrive-wiki
   ];
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true;
+  };
+
+  # Install firefox.
+  programs.firefox.enable = true;
+
+  # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
+  programs.firefox.preferences = {
+    "media.ffmpeg.vaapi.enabled" = true;
+    "media.rdd-ffmpeg.enabled" = true;
+    "media.av1.enabled" = true;
+    "gfx.x11-egl.force-enabled" = true;
+    "widget.dmabuf.force-enabled" = true;
+  };
+
+  ########## SERVICES ##########
 
   # Resolve local hostnames via ip4: https://discourse.nixos.org/t/help-with-local-dns-resolution/20305/5
   system.nssModules = pkgs.lib.optional true pkgs.nssmdns;
