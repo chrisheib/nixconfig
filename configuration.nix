@@ -401,6 +401,8 @@ in {
     # kdePackages.konqueror # for orcaslicer
 
     # onedrivegui # ist unnötig, siehe onedrive-wiki
+
+    sqlitestudio
   ];
 
   programs.steam = {
