@@ -17,7 +17,7 @@
     .extensions
     .${system};
   extensionsList = with extensions.vscode-marketplace; [
-    filiptibell.tooling-language-server
+    # filiptibell.tooling-language-server
     # rust-lang.rust-analyzer
   ];
 
@@ -307,6 +307,7 @@ in {
           tamasfe.even-better-toml
           mkhl.direnv
           thenuprojectcontributors.vscode-nushell-lang
+          mechatroner.rainbow-csv
         ]
         ++ extensionsList;
     })

@@ -1,11 +1,7 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U.]  #1  initrd-linux-xanmod  6.12.12 -> 6.12.13
-[U.]  #2  linux-xanmod         6.12.12, 6.12.12-modules, 6.12.12-modules-shrunk -> 6.12.13, 6.12.13-modules, 6.12.13-modules-shrunk
-[U.]  #3  nixos-system-nixos   24.11.714533.a60651b217d2 -> 24.11.714614.c618e28f7025
-[U.]  #4  nvidia-open          6.12.12-565.77 -> 6.12.13-565.77
-[U*]  #5  nvidia-x11           565.77-6.12.12, 565.77-6.12.12-bin, 565.77-6.12.12-firmware, 565.77-6.12.12-lib32 -> 565.77-6.12.13, 565.77-6.12.13-bin, 565.77-6.12.13-firmware, 565.77-6.12.13-lib32
 Added packages:
-[A+]  #1  sqlitestudio  3.4.4
-Closure size: 2537 -> 2538 (60 paths added, 59 paths removed, delta +1, disk usage +13.6MiB).
+[A.]  #1  vscode-extension-mechatroner-rainbow-csv  3.12.0
+Removed packages:
+[R.]  #1  vscode-extension-filiptibell-tooling-language-server  0.4.1
+Closure size: 2538 -> 2538 (16 paths added, 16 paths removed, delta +0, disk usage -7.0MiB).
