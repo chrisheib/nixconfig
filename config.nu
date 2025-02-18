@@ -910,8 +910,8 @@ def nrsrepair [] { sudo nixos-rebuild switch --repair }
 def nrsu [] { sudo nix-channel --update; nrs "System Update" }
 def nrsb [msg] { nrs $msg; gut }
 def gut [] { qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot }
-def gcp [msg] { cd ~/.nixos; git add .; git commit -m $"Generation $(cur): ($msg)"; git push }
-def cur [] { sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | find current | split column " " | get column3.0 }
+def gcp [msg] { cd ~/.nixos; git add .; git commit -m $"Generation (cur): ($msg)"; git push }
+def cur [] { sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | find current | split column " " | get column2.0 }
 # def top [] { btm }
 def up [] { sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | save -f nixdiff.txt; cat nixdiff.txt }
 def gc [] { nix-collect-garbage --delete-older-than 7d }
