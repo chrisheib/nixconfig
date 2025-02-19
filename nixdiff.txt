@@ -1,7 +1,7 @@
 <<< /run/current-system
 >>> result
 Added packages:
-[A.]  #1  vscode-extension-mechatroner-rainbow-csv  3.12.0
-Removed packages:
-[R.]  #1  vscode-extension-filiptibell-tooling-language-server  0.4.1
-Closure size: 2538 -> 2538 (16 paths added, 16 paths removed, delta +0, disk usage -7.0MiB).
+[A+]  #1  gnome-software  47.2
+[A.]  #2  gspell          1.14.0
+[A.]  #3  malcontent      0.12.0-lib
+Closure size: 2538 -> 2541 (23 paths added, 20 paths removed, delta +3, disk usage +14.1MiB).

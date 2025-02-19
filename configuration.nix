@@ -209,7 +209,7 @@ in {
   fonts.packages = with pkgs; [
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
-  fonts.fontDir.enable = true;
+  fonts.fontDir.enable = true; # https://wiki.nixos.org/wiki/Fonts#Flatpak_applications_can't_find_system_fonts
 
   services.udev.packages = [pkgs.dolphin-emu];
 
@@ -404,6 +404,8 @@ in {
     # onedrivegui # ist unnötig, siehe onedrive-wiki
 
     sqlitestudio
+
+    gnome-software # for flatpaks
   ];
 
   programs.steam = {
