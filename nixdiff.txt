@@ -1,7 +1,17 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  gnome-software  47.2
-[A.]  #2  gspell          1.14.0
-[A.]  #3  malcontent      0.12.0-lib
-Closure size: 2538 -> 2541 (23 paths added, 20 paths removed, delta +3, disk usage +14.1MiB).
+Version changes:
+[U.]  #01  electron                33.4.0 -> 33.4.1
+[U.]  #02  electron-unwrapped      33.4.0 -> 33.4.1
+[U*]  #03  firefox                 135.0 -> 135.0.1
+[U.]  #04  firefox-unwrapped       135.0 -> 135.0.1
+[U.]  #05  nixos-system-nixos      24.11.714614.c618e28f7025 -> 24.11.714685.36864ed72f23
+[U.]  #06  nvidia-open             6.12.13-565.77 -> 6.12.13-570.86.16
+[U*]  #07  nvidia-settings         565.77 -> 570.86.16
+[U*]  #08  nvidia-x11              565.77-6.12.13, 565.77-6.12.13-bin, 565.77-6.12.13-firmware, 565.77-6.12.13-lib32 -> 570.86.16-6.12.13, 570.86.16-6.12.13-bin, 570.86.16-6.12.13-firmware, 570.86.16-6.12.13-lib32
+[U*]  #09  openssh                 9.9p1 -> 9.9p2
+[U.]  #10  vscode                  1.96.2 -> 1.97.2
+[U*]  #11  vscode-with-extensions  1.96.2 -> 1.97.2
+Removed packages:
+[R.]  #1  keymap  <none>
+Closure size: 2541 -> 2540 (78 paths added, 79 paths removed, delta -1, disk usage +170.8MiB).
