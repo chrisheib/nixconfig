@@ -19,6 +19,8 @@
   extensionsList = with extensions.vscode-marketplace; [
     # filiptibell.tooling-language-server
     # rust-lang.rust-analyzer
+    github.copilot-chat
+    github.copilot
   ];
 
   # Wrap vscode with --no-sandbox args, so it can run sudo from within the terminal.
