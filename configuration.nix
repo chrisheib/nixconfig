@@ -347,6 +347,8 @@ in {
     nvd
     stress
     pciutils
+    btop
+    warp-terminal
 
     p7zip # 7zip
     unrar

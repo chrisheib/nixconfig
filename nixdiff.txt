@@ -1,6 +1,67 @@
 <<< /run/current-system
 >>> result
+Version changes:
+[C.]  #01  audit                              4.0 x2, 4.0-bin, 4.0.2-lib -> 4.0 x2, 4.0-bin, 4.0.3-lib
+[C*]  #02  bash-interactive                   5.2p37 x4, 5.2p37-doc, 5.2p37-info, 5.2p37-man x3 -> 5.2p37 x5, 5.2p37-doc, 5.2p37-info, 5.2p37-man x3
+[C.]  #03  brotli                             1.1.0, 1.1.0-dev, 1.1.0-lib x2 -> 1.1.0, 1.1.0-dev, 1.1.0-lib x3
+[C.]  #04  coreutils                          9.5 x3 -> 9.5 x2, 9.6
+[U.]  #05  dotnet-runtime                     8.0.12 -> 8.0.13
+[U.]  #06  dotnet-runtime-wrapped             8.0.12 -> 8.0.13
+[C*]  #07  ncurses                            6.4.20221231 x3, 6.4.20221231-man -> 6.4.20221231 x2, 6.4.20221231-man, 6.5
+[U.]  #08  nixos-system-nixos                 24.11.714685.36864ed72f23 -> 24.11.714876.5d7db4668d7a
+[C.]  #09  nss-cacert                         3.107, 3.107-p11kit -> 3.107, 3.107-p11kit, 3.108
+[U.]  #10  openfortivpn                       1.22.1 -> 1.23.1
+[C.]  #11  openssl                            3.3.2 x3 -> 3.3.2 x2, 3.4.1
+[C.]  #12  python3                            3.11.11, 3.12.8 x5, 3.12.8-env x3 -> 3.11.11, 3.12.8 x4, 3.12.8-env x3, 3.12.9
+[C.]  #13  python3.12-attrs                   24.2.0 -> 24.2.0, 24.3.0
+[C.]  #14  python3.12-brotlicffi              1.1.0.0 -> 1.1.0.0 x2
+[C.]  #15  python3.12-certifi                 2024.08.30 -> 2024.08.30, 2024.12.14
+[C.]  #16  python3.12-cffi                    1.17.1 -> 1.17.1 x2
+[C.]  #17  python3.12-charset-normalizer      3.3.2 -> 3.3.2, 3.4.1
+[C.]  #18  python3.12-h11                     0.14.0 -> 0.14.0 x2
+[C.]  #19  python3.12-idna                    3.10 -> 3.10 x2
+[C.]  #20  python3.12-pycparser               2.22 -> 2.22 x2
+[C.]  #21  python3.12-requests                2.32.3 -> 2.32.3 x2
+[C.]  #22  python3.12-sniffio                 1.3.1 -> 1.3.1 x2
+[C.]  #23  python3.12-typing-extensions       4.12.2 -> 4.12.2 x2
+[U.]  #24  python3.12-umu-launcher-unwrapped  1.1.4 -> 1.2.5
+[C.]  #25  python3.12-urllib3                 2.2.3 -> 2.2.3, 2.3.0
+[C.]  #26  sqlite                             3.46.1 x2, 3.46.1-bin, 3.46.1-man, 3.47.2 -> 3.46.1 x2, 3.46.1-bin, 3.46.1-man, 3.48.0
+[U*]  #27  thunderbird                        128.6.1esr -> 128.7.1esr
+[U.]  #28  thunderbird-unwrapped              128.6.1esr -> 128.7.1esr
+[C.]  #29  udev-rules                         <none> -> <none> x2
+[U.]  #30  umu-launcher                       1.1.4, 1.1.4-bwrap, 1.1.4-fhsenv-profile, 1.1.4-fhsenv-rootfs, 1.1.4-init -> 1.2.5, 1.2.5-bwrap, 1.2.5-fhsenv-profile, 1.2.5-fhsenv-rootfs, 1.2.5-init
+[C.]  #31  util-linux-minimal                 2.39.4-bin, 2.39.4-lib x2, 2.39.4-login x2, 2.39.4-mount x2, 2.39.4-swap x2 -> 2.39.4-bin, 2.39.4-lib x2, 2.39.4-login x2, 2.39.4-mount x2, 2.39.4-swap x2, 2.40.4-lib
+[C*]  #32  xz                                 5.6.3 x3, 5.6.3-bin x3, 5.6.3-dev, 5.6.3-doc, 5.6.3-man x2 -> 5.6.3 x2, 5.6.3-bin x2, 5.6.3-dev, 5.6.3-doc, 5.6.3-man, 5.6.4, 5.6.4-bin, 5.6.4-man
+[C*]  #33  zstd                               1.5.6 x2, 1.5.6-bin x2, 1.5.6-dev, 1.5.6-man -> 1.5.6 x3, 1.5.6-bin x2, 1.5.6-dev, 1.5.6-man
 Added packages:
-[A.]  #1  vscode-extension-github-copilot       1.259.1335
-[A.]  #2  vscode-extension-github-copilot-chat  0.24.2025012402
-Closure size: 2540 -> 2542 (17 paths added, 15 paths removed, delta +2, disk usage +88.2MiB).
+[A+]  #01  btop                         1.4.0
+[A.]  #02  extra-utils                  <none>
+[A.]  #03  initrd-fsinfo                <none>
+[A.]  #04  llhttp                       9.2.1, 9.2.1-dev
+[A.]  #05  python3.12-aiodns            3.2.0
+[A.]  #06  python3.12-aiohappyeyeballs  2.4.4
+[A.]  #07  python3.12-aiohttp           3.11.12
+[A.]  #08  python3.12-aiosignal         1.3.2
+[A.]  #09  python3.12-anyio             4.8.0
+[A.]  #10  python3.12-async-timeout     5.0.1
+[A.]  #11  python3.12-brotli            1.1.0
+[A.]  #12  python3.12-cbor2             5.6.5
+[A.]  #13  python3.12-cryptography      44.0.0
+[A.]  #14  python3.12-frozenlist        1.5.0
+[A.]  #15  python3.12-httpcore          1.0.7
+[A.]  #16  python3.12-httpx             0.28.1
+[A.]  #17  python3.12-multidict         6.1.0
+[A.]  #18  python3.12-propcache         0.2.1
+[A.]  #19  python3.12-pycares           4.5.0
+[A.]  #20  python3.12-pyopenssl         24.3.0, 24.3.0-dev
+[A.]  #21  python3.12-pyzstd            0.16.2
+[A.]  #22  python3.12-trustme           1.2.1
+[A.]  #23  python3.12-truststore        0.10.1
+[A.]  #24  python3.12-xxhash            3.5.0
+[A.]  #25  python3.12-yarl              1.18.3
+[A+]  #26  warp-terminal                0.2025.02.19.08.02.stable_05
+Removed packages:
+[R.]  #1  link-units           <none>
+[R.]  #2  python3.12-filelock  3.16.1
+Closure size: 2542 -> 2586 (227 paths added, 183 paths removed, delta +44, disk usage +213.1MiB).
