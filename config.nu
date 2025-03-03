@@ -911,7 +911,7 @@ def nrsrepair [] { sudo nixos-rebuild switch --repair }
 def gut [] { qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot }
 def gcp [msg] { cd ~/.nixos; git add .; git commit -m $"Generation (cur): ($msg)"; git push }
 def cur [] { sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | find current | split column " " | get column2.0 }
-def up [] { sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | save -f nixdiff.txt; cat nixdiff.txt }
+def up [] { sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | save -f /home/stschiff/.nixos/nixdiff.txt; cat /home/stschiff/.nixos/nixdiff.txt }
 def gc [] { nix-collect-garbage --delete-older-than 7d }
 
 # prevent circular: add config reload to https://github.com/nushell/nushell/tree/main/crates/nu-command/src/env/config
