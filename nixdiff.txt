@@ -1,53 +1,59 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #01  at-spi2-core         2.54.0 x2 -> 2.54.1 x2
-[U*]  #02  curl                 8.11.1 x2, 8.11.1-bin x2, 8.11.1-man -> 8.12.1 x2, 8.12.1-bin x2, 8.12.1-man
-[U.]  #03  ell                  0.69 x2 -> 0.70 x2
-[U*]  #04  getent-glibc         2.40-36 x2 -> 2.40-66 x2
-[U.]  #05  glib-networking      2.80.0 -> 2.80.1
-[C*]  #06  glibc                2.40-36 x2, 2.40-36-bin x2, 2.40-36-dev, 2.40-36-getent x2, 2.40-66 x2, 2.40-66-bin x2 -> 2.40-66 x4, 2.40-66-bin x4, 2.40-66-dev, 2.40-66-getent x2
-[C*]  #07  glibc-locales        2.40-36 x2, 2.40-66 -> 2.40-66 x3
-[C.]  #08  glibc-multi          2.40-36, 2.40-36-bin, 2.40-66, 2.40-66-bin -> 2.40-66 x2, 2.40-66-bin x2
-[U.]  #09  gtk4                 4.16.7 -> 4.16.12
-[U.]  #10  initrd-linux-xanmod  6.12.15 -> 6.13.5
-[U.]  #11  libopenmpt           0.7.12 x2 -> 0.7.13 x2
-[U.]  #12  libsecret            0.21.4 -> 0.21.6
-[U.]  #13  libtasn1             4.19.0 x2 -> 4.20.0 x2
-[U.]  #14  libxml2              2.13.5 x2, 2.13.5-bin -> 2.13.6 x2, 2.13.6-bin
-[U.]  #15  linux-xanmod         6.12.15, 6.12.15-modules, 6.12.15-modules-shrunk -> 6.13.5, 6.13.5-modules, 6.13.5-modules-shrunk
-[U.]  #16  nixos-system-nixos   24.11.715057.5ef6c4259808 -> 24.11.715262.6af28b834dac
-[C.]  #17  nss-cacert           3.107, 3.107-p11kit, 3.108 -> 3.108 x2, 3.108-p11kit
-[U.]  #18  nvidia-open          6.12.15-570.86.16 -> 6.13.5-570.86.16
-[U*]  #19  nvidia-x11           570.86.16-6.12.15, 570.86.16-6.12.15-bin, 570.86.16-6.12.15-firmware, 570.86.16-6.12.15-lib32 -> 570.86.16-6.13.5, 570.86.16-6.13.5-bin, 570.86.16-6.13.5-firmware, 570.86.16-6.13.5-lib32
-[U.]  #20  openh264             2.4.1 x2 -> 2.6.0 x2
-[C.]  #21  openssl              3.3.2 x2, 3.4.1 -> 3.3.3 x2, 3.4.1
-[U.]  #22  postgresql           16.6-lib -> 16.8-lib
-[U.]  #23  qt5compat            6.8.1 -> 6.8.2
-[C.]  #24  qtbase               5.15.15, 5.15.15-bin, 6.8.1, 6.8.1-only-plugins-qml -> 5.15.15, 5.15.15-bin, 6.8.2, 6.8.2-only-plugins-qml
-[C.]  #25  qtdeclarative        5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
-[U.]  #26  qtimageformats       6.8.1 -> 6.8.2
-[C.]  #27  qtmultimedia         5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
-[U.]  #28  qtnetworkauth        6.8.1 -> 6.8.2
-[U.]  #29  qtpositioning        6.8.1 -> 6.8.2
-[U.]  #30  qtquick3d            6.8.1 -> 6.8.2
-[U.]  #31  qtsensors            6.8.1 -> 6.8.2
-[U.]  #32  qtserialport         6.8.1 -> 6.8.2
-[U.]  #33  qtshadertools        6.8.1 -> 6.8.2
-[U.]  #34  qtspeech             6.8.1 -> 6.8.2
-[C*]  #35  qtsvg                5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
-[C*]  #36  qttools              5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
-[C.]  #37  qttranslations       5.15.15, 6.8.1 -> 5.15.15, 6.8.2
-[U.]  #38  qtvirtualkeyboard    6.8.1 -> 6.8.2
-[C*]  #39  qtwayland            5.15.15, 5.15.15-bin, 6.8.1, 6.8.1-only-plugins-qml -> 5.15.15, 5.15.15-bin, 6.8.2, 6.8.2-only-plugins-qml
-[C.]  #40  qtwebchannel         5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
-[C.]  #41  qtwebengine          5.15.17, 5.15.17-bin, 6.8.1 -> 5.15.17, 5.15.17-bin, 6.8.2
-[C.]  #42  qtwebsockets         5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
-[U.]  #43  qtwebview            6.8.1 -> 6.8.2
-[U.]  #44  unbound              1.21.1-lib x2 -> 1.22.0-lib x2
-[U*]  #45  warp-terminal        0.2025.02.19.08.02.stable_05 -> 0.2025.02.26.08.02.stable_02
-[U.]  #46  xorg-server          21.1.14 -> 21.1.16
+[U*]  #01  at-spi2-core                         2.54.0 x2 -> 2.54.1 x2
+[U*]  #02  curl                                 8.11.1 x2, 8.11.1-bin x2, 8.11.1-man -> 8.12.1 x2, 8.12.1-bin x2, 8.12.1-man
+[U.]  #03  electron                             33.4.1 -> 33.4.2
+[U.]  #04  electron-unwrapped                   33.4.1 -> 33.4.2
+[U.]  #05  ell                                  0.69 x2 -> 0.70 x2
+[U*]  #06  firefox                              135.0.1 -> 136.0
+[U.]  #07  firefox-unwrapped                    135.0.1 -> 136.0
+[U*]  #08  getent-glibc                         2.40-36 x2 -> 2.40-66 x2
+[U.]  #09  glib-networking                      2.80.0 -> 2.80.1
+[C*]  #10  glibc                                2.40-36 x2, 2.40-36-bin x2, 2.40-36-dev, 2.40-36-getent x2, 2.40-66 x2, 2.40-66-bin x2 -> 2.40-66 x4, 2.40-66-bin x4, 2.40-66-dev, 2.40-66-getent x2
+[C*]  #11  glibc-locales                        2.40-36 x2, 2.40-66 -> 2.40-66 x3
+[C.]  #12  glibc-multi                          2.40-36, 2.40-36-bin, 2.40-66, 2.40-66-bin -> 2.40-66 x2, 2.40-66-bin x2
+[U.]  #13  gtk4                                 4.16.7 -> 4.16.12
+[U.]  #14  initrd-linux-xanmod                  6.12.15 -> 6.13.5
+[U.]  #15  libopenmpt                           0.7.12 x2 -> 0.7.13 x2
+[U.]  #16  libsecret                            0.21.4 -> 0.21.6
+[U.]  #17  libtasn1                             4.19.0 x2 -> 4.20.0 x2
+[U.]  #18  libxml2                              2.13.5 x2, 2.13.5-bin -> 2.13.6 x2, 2.13.6-bin
+[U.]  #19  linux-xanmod                         6.12.15, 6.12.15-modules, 6.12.15-modules-shrunk -> 6.13.5, 6.13.5-modules, 6.13.5-modules-shrunk
+[U.]  #20  nixos-system-nixos                   24.11.715057.5ef6c4259808 -> 24.11.715401.20755fa05115
+[C.]  #21  nss                                  3.101.2 x2, 3.108 -> 3.101.2 x2, 3.109
+[C.]  #22  nss-cacert                           3.107, 3.107-p11kit, 3.108 -> 3.108 x2, 3.108-p11kit
+[U.]  #23  nvidia-open                          6.12.15-570.86.16 -> 6.13.5-570.86.16
+[U*]  #24  nvidia-x11                           570.86.16-6.12.15, 570.86.16-6.12.15-bin, 570.86.16-6.12.15-firmware, 570.86.16-6.12.15-lib32 -> 570.86.16-6.13.5, 570.86.16-6.13.5-bin, 570.86.16-6.13.5-firmware, 570.86.16-6.13.5-lib32
+[U.]  #25  openh264                             2.4.1 x2 -> 2.6.0 x2
+[C.]  #26  openssl                              3.3.2 x2, 3.4.1 -> 3.3.3 x2, 3.4.1
+[U.]  #27  postgresql                           16.6-lib -> 16.8-lib
+[U.]  #28  qt5compat                            6.8.1 -> 6.8.2
+[C.]  #29  qtbase                               5.15.15, 5.15.15-bin, 6.8.1, 6.8.1-only-plugins-qml -> 5.15.15, 5.15.15-bin, 6.8.2, 6.8.2-only-plugins-qml
+[C.]  #30  qtdeclarative                        5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
+[U.]  #31  qtimageformats                       6.8.1 -> 6.8.2
+[C.]  #32  qtmultimedia                         5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
+[U.]  #33  qtnetworkauth                        6.8.1 -> 6.8.2
+[U.]  #34  qtpositioning                        6.8.1 -> 6.8.2
+[U.]  #35  qtquick3d                            6.8.1 -> 6.8.2
+[U.]  #36  qtsensors                            6.8.1 -> 6.8.2
+[U.]  #37  qtserialport                         6.8.1 -> 6.8.2
+[U.]  #38  qtshadertools                        6.8.1 -> 6.8.2
+[U.]  #39  qtspeech                             6.8.1 -> 6.8.2
+[C*]  #40  qtsvg                                5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
+[C*]  #41  qttools                              5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
+[C.]  #42  qttranslations                       5.15.15, 6.8.1 -> 5.15.15, 6.8.2
+[U.]  #43  qtvirtualkeyboard                    6.8.1 -> 6.8.2
+[C*]  #44  qtwayland                            5.15.15, 5.15.15-bin, 6.8.1, 6.8.1-only-plugins-qml -> 5.15.15, 5.15.15-bin, 6.8.2, 6.8.2-only-plugins-qml
+[C.]  #45  qtwebchannel                         5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
+[C.]  #46  qtwebengine                          5.15.17, 5.15.17-bin, 6.8.1 -> 5.15.17, 5.15.17-bin, 6.8.2
+[C.]  #47  qtwebsockets                         5.15.15, 5.15.15-bin, 6.8.1 -> 5.15.15, 5.15.15-bin, 6.8.2
+[U.]  #48  qtwebview                            6.8.1 -> 6.8.2
+[U.]  #49  unbound                              1.21.1-lib x2 -> 1.22.0-lib x2
+[U.]  #50  vscode-extension-jnoortheen-nix-ide  0.3.1 -> 0.4.12
+[U*]  #51  warp-terminal                        0.2025.02.19.08.02.stable_05 -> 0.2025.02.26.08.02.stable_02
+[U.]  #52  xorg-server                          21.1.14 -> 21.1.16
 Added packages:
 [A.]  #1  link-units  <none>
 [A.]  #2  stage       1-init.sh
-Closure size: 2587 -> 2589 (2449 paths added, 2447 paths removed, delta +2, disk usage +9.2MiB).
+Closure size: 2587 -> 2589 (2454 paths added, 2452 paths removed, delta +2, disk usage +27.8MiB).
