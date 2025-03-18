@@ -1,28 +1,14 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C+]  #01  avahi                        0.8 x2 -> 0.8 x2, 0.8-man
-[C.]  #02  electron                     33.4.2 -> 33.4.2, 34.3.2
-[C.]  #03  electron-unwrapped           33.4.2 -> 33.4.2, 34.3.2
-[U*]  #04  firefox                      136.0 -> 136.0.1
-[U.]  #05  firefox-unwrapped            136.0 -> 136.0.1
-[U.]  #06  initrd-linux-xanmod          6.13.5 -> 6.13.7
-[C.]  #07  libselinux                   3.7 x3, 3.7-bin, 3.7-man -> 3.7 x2, 3.7-bin, 3.7-man, 3.8
-[U.]  #08  linux-firmware               20250211-zstd -> 20250311-zstd
-[U.]  #09  linux-xanmod                 6.13.5, 6.13.5-modules, 6.13.5-modules-shrunk -> 6.13.7, 6.13.7-modules, 6.13.7-modules-shrunk
-[U.]  #10  nixos-system-nixos           24.11.715519.ebe2788eafd5 -> 24.11.715814.da044451c6a7
-[U.]  #11  nvidia-open                  6.13.5-570.86.16 -> 6.13.7-570.86.16
-[U*]  #12  nvidia-x11                   570.86.16-6.13.5, 570.86.16-6.13.5-bin, 570.86.16-6.13.5-firmware, 570.86.16-6.13.5-lib32 -> 570.86.16-6.13.7, 570.86.16-6.13.7-bin, 570.86.16-6.13.7-firmware, 570.86.16-6.13.7-lib32
-[U.]  #13  python3.12-aiohappyeyeballs  2.4.4 -> 2.4.6
-[U.]  #14  python3.12-aiohttp           3.11.12 -> 3.11.13
-[U.]  #15  python3.12-cryptography      44.0.0 -> 44.0.1
-Selection state changes:
-[C+]  #1  qtimageformats  6.8.2
-Added packages:
-[A.]  #1  X-Restart-Triggers-cups-browsed  <none>
-[A.]  #2  avahi-daemon.conf                <none>
-[A.]  #3  cups-browsed.conf                <none>
-[A.]  #4  unit-avahi-daemon.service        <none>
-[A.]  #5  unit-avahi-daemon.socket         <none>
-[A.]  #6  unit-cups-browsed.service        <none>
-Closure size: 2589 -> 2598 (224 paths added, 215 paths removed, delta +9, disk usage +375.0MiB).
+[U.]  #1  nvidia-open      6.13.7-570.86.16 -> 6.13.7-570.124.04
+[U*]  #2  nvidia-settings  570.86.16 -> 570.124.04
+[U*]  #3  nvidia-x11       570.86.16-6.13.7, 570.86.16-6.13.7-bin, 570.86.16-6.13.7-firmware, 570.86.16-6.13.7-lib32 -> 570.124.04-6.13.7, 570.124.04-6.13.7-bin, 570.124.04-6.13.7-firmware, 570.124.04-6.13.7-lib32
+[C.]  #4  udev-rules       <none> x2 -> <none>
+Removed packages:
+[R.]  #1  extra-utils    <none>
+[R.]  #2  initrd-fsinfo  <none>
+[R.]  #3  keymap         <none>
+[R.]  #4  link-units     <none>
+[R.]  #5  stage          1-init.sh
+Closure size: 2598 -> 2592 (41 paths added, 47 paths removed, delta -6, disk usage -38.4MiB).
