@@ -443,11 +443,26 @@ in {
   ########## SERVICES ##########
 
   # Resolve local hostnames via ip4: https://discourse.nixos.org/t/help-with-local-dns-resolution/20305/5
-  system.nssModules = pkgs.lib.optional true pkgs.nssmdns;
-  system.nssDatabases.hosts = pkgs.lib.optionals true (pkgs.lib.mkMerge [
-    (pkgs.lib.mkBefore ["mdns4_minimal [NOTFOUND=return]"]) # before resolve
-    (pkgs.lib.mkAfter ["mdns4"]) # after dns
-  ]);
+
+  # Doesnt work:
+  # system.nssModules = pkgs.lib.optional true pkgs.nssmdns;
+  # system.nssDatabases.hosts = pkgs.lib.optionals true (pkgs.lib.mkMerge [
+  #   (pkgs.lib.mkBefore ["mdns4_minimal [NOTFOUND=return]"]) # before resolve
+  #   (pkgs.lib.mkAfter ["mdns4"]) # after dns
+  # ]);
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      domain = true;
+      hinfo = true;
+      userServices = true;
+      workstation = true;
+    };
+  };
 
   services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
   services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
