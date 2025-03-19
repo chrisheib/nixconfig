@@ -1,14 +1,14 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U.]  #1  nvidia-open      6.13.7-570.86.16 -> 6.13.7-570.124.04
-[U*]  #2  nvidia-settings  570.86.16 -> 570.124.04
-[U*]  #3  nvidia-x11       570.86.16-6.13.7, 570.86.16-6.13.7-bin, 570.86.16-6.13.7-firmware, 570.86.16-6.13.7-lib32 -> 570.124.04-6.13.7, 570.124.04-6.13.7-bin, 570.124.04-6.13.7-firmware, 570.124.04-6.13.7-lib32
-[C.]  #4  udev-rules       <none> x2 -> <none>
-Removed packages:
-[R.]  #1  extra-utils    <none>
-[R.]  #2  initrd-fsinfo  <none>
-[R.]  #3  keymap         <none>
-[R.]  #4  link-units     <none>
-[R.]  #5  stage          1-init.sh
-Closure size: 2598 -> 2592 (41 paths added, 47 paths removed, delta -6, disk usage -38.4MiB).
+[U.]  #1  nvidia-open      6.13.7-570.124.04 -> 6.13.7-570.133.07
+[U*]  #2  nvidia-settings  570.124.04 -> 570.133.07
+[U*]  #3  nvidia-x11       570.124.04-6.13.7, 570.124.04-6.13.7-bin, 570.124.04-6.13.7-firmware, 570.124.04-6.13.7-lib32 -> 570.133.07-6.13.7, 570.133.07-6.13.7-bin, 570.133.07-6.13.7-firmware, 570.133.07-6.13.7-lib32
+[C.]  #4  udev-rules       <none> -> <none> x2
+Added packages:
+[A.]  #1  extra-utils    <none>
+[A.]  #2  initrd-fsinfo  <none>
+[A.]  #3  keymap         <none>
+[A.]  #4  link-units     <none>
+[A.]  #5  stage          1-init.sh
+Closure size: 2592 -> 2598 (47 paths added, 41 paths removed, delta +6, disk usage +39.2MiB).
