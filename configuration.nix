@@ -470,8 +470,18 @@ in {
   # services.udev.extraRules = ''
   #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
   # '';
+  # system.activationScripts.script.text = ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj'';
 
-  system.activationScripts.script.text = ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj'';
+  systemd.services.make_cpu_energy_readable = {
+    description = "Make energy_uj readable for all users to allow displaying cpu power usage in ststat";
+    wantedBy = ["multi-user.target"];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj''}";
+      # It’s often a good idea to mark the service active after the command finishes.
+      RemainAfterExit = true;
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
