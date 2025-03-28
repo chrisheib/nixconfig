@@ -1,5 +1,5 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  make_cpu_energy_readable  <none>
-Closure size: 2597 -> 2598 (5 paths added, 4 paths removed, delta +1, disk usage +280B).
+Version changes:
+[U.]  #1  nixos-system-nixos  24.11.716027.f0946fa5f1fb -> 24.11.716288.d02d88f8de5b
+Closure size: 2599 -> 2599 (60 paths added, 60 paths removed, delta +0, disk usage +5.3KiB).
