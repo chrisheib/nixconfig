@@ -1,15 +1,12 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #1  firefox              136.0.2 -> 136.0.3
-[U.]  #2  firefox-unwrapped    136.0.2 -> 136.0.3
-[U.]  #3  initrd-linux-xanmod  6.13.7 -> 6.13.8
-[U.]  #4  linux-xanmod         6.13.7, 6.13.7-modules, 6.13.7-modules-shrunk -> 6.13.8, 6.13.8-modules, 6.13.8-modules-shrunk
-[C*]  #5  nix                  2.24-devenv, 2.24-devenv-man, 2.24.12, 2.24.12-doc, 2.24.12-man -> 2.24-devenv, 2.24-devenv-man, 2.24.13, 2.24.13-doc, 2.24.13-man
-[U.]  #6  nixos-system-nixos   24.11.716288.d02d88f8de5b -> 24.11.716389.c570c1f53044
-[U.]  #7  nvidia-open          6.13.7-570.133.07 -> 6.13.8-570.133.07
-[U*]  #8  nvidia-x11           570.133.07-6.13.7, 570.133.07-6.13.7-bin, 570.133.07-6.13.7-firmware, 570.133.07-6.13.7-lib32 -> 570.133.07-6.13.8, 570.133.07-6.13.8-bin, 570.133.07-6.13.8-firmware, 570.133.07-6.13.8-lib32
-[U*]  #9  strace               6.13 -> 6.14, 6.14-man
+[U.]  #1  initrd-linux-xanmod  6.13.8 -> 6.13.9
+[U.]  #2  linux-xanmod         6.13.8, 6.13.8-modules, 6.13.8-modules-shrunk -> 6.13.9, 6.13.9-modules, 6.13.9-modules-shrunk
+[U.]  #3  nixos-system-nixos   24.11.716389.c570c1f53044 -> 24.11.716471.02f2af8c8a8c
+[C.]  #4  nss                  3.101.2 x2, 3.109 -> 3.101.2 x2, 3.110
+[U.]  #5  nvidia-open          6.13.8-570.133.07 -> 6.13.9-570.133.07
+[U*]  #6  nvidia-x11           570.133.07-6.13.8, 570.133.07-6.13.8-bin, 570.133.07-6.13.8-firmware, 570.133.07-6.13.8-lib32 -> 570.133.07-6.13.9, 570.133.07-6.13.9-bin, 570.133.07-6.13.9-firmware, 570.133.07-6.13.9-lib32
 Added packages:
-[A+]  #1  brave  1.76.74
-Closure size: 2599 -> 2601 (89 paths added, 87 paths removed, delta +2, disk usage +388.8MiB).
+[A+]  #1  bambu-studio  01.10.02.76
+Closure size: 2601 -> 2602 (57 paths added, 56 paths removed, delta +1, disk usage +168.8MiB).
