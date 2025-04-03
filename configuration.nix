@@ -298,7 +298,10 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    brave
+    # brave
+    mullvad-browser
+    ungoogled-chromium
+
     kdePackages.kate # editor with sudo
     thunderbird
     (my-vscode-no-sandbox.override {
@@ -407,7 +410,7 @@ in {
     # appimage-run # for cura
     # unstable.cura-appimage
 
-    smartgithg #
+    unstable.smartgit #
 
     webkitgtk_6_0
 
