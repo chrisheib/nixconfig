@@ -341,6 +341,7 @@ in {
     # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
     mangohud
 
+    alacritty
     bottom
     nushell
     carapace
