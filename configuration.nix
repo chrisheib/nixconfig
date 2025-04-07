@@ -425,6 +425,7 @@ in {
 
     gnome-software # for flatpaks
 
+    lm_sensors
     linuxKernel.packages.linux_xanmod_latest.turbostat
   ];
 

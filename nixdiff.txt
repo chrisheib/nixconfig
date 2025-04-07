@@ -1,5 +1,5 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  turbostat  6.13.9
-Closure size: 2730 -> 2731 (14 paths added, 13 paths removed, delta +1, disk usage -9.0MiB).
+Selection state changes:
+[C+]  #1  lm-sensors  3.6.0 x2
+Closure size: 2731 -> 2731 (12 paths added, 12 paths removed, delta +0, disk usage +7.9KiB).
