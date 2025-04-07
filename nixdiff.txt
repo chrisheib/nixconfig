@@ -1,5 +1,5 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  lm-sensors  3.6.0 x2
-Closure size: 2731 -> 2731 (12 paths added, 12 paths removed, delta +0, disk usage +7.9KiB).
+Added packages:
+[A+]  #1  geekbench  6.3.0
+Closure size: 2731 -> 2732 (13 paths added, 12 paths removed, delta +1, disk usage +476.5MiB).

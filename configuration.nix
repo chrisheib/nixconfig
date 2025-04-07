@@ -427,6 +427,8 @@ in {
 
     lm_sensors
     linuxKernel.packages.linux_xanmod_latest.turbostat
+
+    geekbench
   ];
 
   # linuxKernel.packages.linux_xanmod_latest.turbostat.enable = true;
