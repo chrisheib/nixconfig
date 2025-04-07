@@ -1,19 +1,5 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #01  docker                        27.3.1 -> 27.5.1
-[U.]  #02  docker-containerd             27.3.1 -> 27.5.1
-[U.]  #03  docker-init                   27.3.1 -> 27.5.1
-[U.]  #04  docker-runc                   27.3.1 -> 27.5.1
-[C.]  #05  electron                      33.4.5, 34.3.3 -> 33.4.8, 34.4.1
-[C.]  #06  electron-unwrapped            33.4.5, 34.3.3 -> 33.4.8, 34.4.1
-[U.]  #07  moby                          27.3.1 -> 27.5.1
-[U*]  #08  mullvad-browser               14.0.7 -> 14.0.9
-[U.]  #09  nixos-system-nixos            24.11.716632.44a69ed68878 -> 24.11.716716.7819a0d29d1d
-[U*]  #10  thunderbird                   128.8.0esr -> 128.8.1esr
-[U.]  #11  thunderbird-unwrapped         128.8.0esr -> 128.8.1esr
-[U*]  #12  ungoogled-chromium            134.0.6998.165, 134.0.6998.165-sandbox -> 135.0.7049.52, 135.0.7049.52-sandbox
-[U.]  #13  ungoogled-chromium-unwrapped  134.0.6998.165, 134.0.6998.165-sandbox -> 135.0.7049.52, 135.0.7049.52-sandbox
 Added packages:
-[A+]  #1  alacritty  0.14.0, 0.14.0-terminfo
-Closure size: 2728 -> 2730 (56 paths added, 54 paths removed, delta +2, disk usage +18.9MiB).
+[A+]  #1  turbostat  6.13.9
+Closure size: 2730 -> 2731 (14 paths added, 13 paths removed, delta +1, disk usage -9.0MiB).

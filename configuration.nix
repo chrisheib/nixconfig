@@ -341,7 +341,7 @@ in {
     # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
     mangohud
 
-    alacritty
+    alacritty # https://alacritty.org/config-alacritty.html
     bottom
     nushell
     carapace
@@ -424,7 +424,11 @@ in {
     sqlitestudio
 
     gnome-software # for flatpaks
+
+    linuxKernel.packages.linux_xanmod_latest.turbostat
   ];
+
+  # linuxKernel.packages.linux_xanmod_latest.turbostat.enable = true;
 
   programs.steam = {
     enable = true;
