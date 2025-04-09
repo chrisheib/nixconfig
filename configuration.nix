@@ -24,16 +24,16 @@
     platformio.platformio-ide
   ];
 
+  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
+
   # Wrap vscode with --no-sandbox args, so it can run sudo from within the terminal.
-  my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
+  my-vscode-no-sandbox = unstable.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
         wrapProgram $out/bin/executable-name \
           --run "code --no-sandbox"
     '';
   });
-
-  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
 in {
   imports = [
     # Include the results of the hardware scan.
@@ -322,6 +322,7 @@ in {
           mkhl.direnv
           thenuprojectcontributors.vscode-nushell-lang
           mechatroner.rainbow-csv
+          ms-vscode.cpptools
         ]
         ++ extensionsList;
     })
