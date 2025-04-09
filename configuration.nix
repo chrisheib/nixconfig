@@ -21,6 +21,7 @@
     # rust-lang.rust-analyzer
     github.copilot-chat
     github.copilot
+    platformio.platformio-ide
   ];
 
   # Wrap vscode with --no-sandbox args, so it can run sudo from within the terminal.
@@ -213,8 +214,6 @@ in {
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
   ];
   fonts.fontDir.enable = true; # https://wiki.nixos.org/wiki/Fonts#Flatpak_applications_can't_find_system_fonts
-
-  services.udev.packages = [pkgs.dolphin-emu];
 
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
@@ -480,6 +479,12 @@ in {
 
   services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
   services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
+
+  services.udev.packages = [
+    pkgs.platformio-core # embedded dev
+    pkgs.openocd # embedded debugger
+    pkgs.dolphin-emu
+  ];
 
   # services.udev.extraRules = ''
   #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
