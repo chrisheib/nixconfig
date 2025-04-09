@@ -1,5 +1,50 @@
 <<< /run/current-system
 >>> result
+Version changes:
+[C.]  #01  boost               1.80.0, 1.81.0 -> 1.80.0, 1.81.0, 1.86.0
+[C*]  #02  curl                8.12.1 x3, 8.12.1-bin x2, 8.12.1-man -> 8.12.1 x3, 8.12.1-bin x2, 8.12.1-dev, 8.12.1-man
+[C.]  #03  djvulibre           3.5.28 -> 3.5.28, 3.5.28-bin, 3.5.28-dev
+[C.]  #04  file                5.45 x2, 5.45-man, 5.46 -> 5.45 x2, 5.45-dev, 5.45-man, 5.46
+[C.]  #05  graphite2           1.3.14 x3 -> 1.3.14 x3, 1.3.14-dev
+[C.]  #06  harfbuzz            10.0.1 x2, 10.2.0 -> 10.0.1 x2, 10.0.1-dev, 10.2.0
+[C.]  #07  krb5                1.21.3, 1.21.3-lib x3 -> 1.21.3, 1.21.3-dev, 1.21.3-lib x3
+[C.]  #08  lcms2               2.16 x2, 2.16-bin, 2.17 -> 2.16 x2, 2.16-bin, 2.16-dev, 2.17
+[C.]  #09  libSM               1.2.4 x2 -> 1.2.4 x2, 1.2.4-dev
+[C.]  #10  libXft              2.3.8 x3 -> 2.3.8 x3, 2.3.8-dev
+[C.]  #11  libXt               1.3.0 x2 -> 1.3.0 x2, 1.3.0-dev
+[C.]  #12  libheif             1.18.2 -> 1.18.2, 1.18.2-bin, 1.18.2-dev
+[C.]  #13  libidn2             2.3.7 x4 -> 2.3.7 x4, 2.3.7-bin, 2.3.7-dev
+[C.]  #14  libjxl              0.11.1 -> 0.11.1, 0.11.1-dev
+[C.]  #15  libpsl              0.21.5 x3 -> 0.21.5 x3, 0.21.5-bin, 0.21.5-dev
+[C.]  #16  libraw              0.21.3-lib -> 0.21.3, 0.21.3-dev, 0.21.3-lib
+[C.]  #17  libssh2             1.11.1 x3 -> 1.11.1 x3, 1.11.1-dev
+[C.]  #18  libxml2             2.13.6 x3, 2.13.6-bin -> 2.13.6 x3, 2.13.6-bin, 2.13.6-dev
+[C.]  #19  nghttp2             1.64.0-lib x3 -> 1.64.0, 1.64.0-dev, 1.64.0-lib x3
+[C*]  #20  nix                 2.24-devenv, 2.24-devenv-man, 2.24.13, 2.24.13-doc, 2.24.13-man -> 2.24-devenv, 2.24-devenv-man, 2.24.14, 2.24.14-doc, 2.24.14-man
+[U.]  #21  nixos-system-nixos  24.11.716716.7819a0d29d1d -> 24.11.716868.60e405b241ed
+[C.]  #22  openexr             2.5.10, 3.2.4 x2 -> 2.5.10, 3.2.4 x2, 3.2.4-bin, 3.2.4-dev
+[C.]  #23  openjpeg            2.5.2 x2 -> 2.5.2 x2, 2.5.2-dev
+[C.]  #24  openssl             3.3.3 x2, 3.4.1 -> 3.3.3 x2, 3.3.3-bin, 3.3.3-dev, 3.4.1
+[C.]  #25  pango               1.54.0 x2, 1.54.0-bin, 1.56.1 -> 1.54.0 x2, 1.54.0-bin, 1.54.0-dev, 1.56.1
+[U*]  #26  smartgit            24.1.2 -> 24.1.3
 Added packages:
-[A+]  #1  geekbench  6.3.0
-Closure size: 2731 -> 2732 (13 paths added, 12 paths removed, delta +1, disk usage +476.5MiB).
+[A.]  #01  ayatana-ido                 0.10.4
+[A.]  #02  c-ares                      1.27.0
+[A.]  #03  fftw-double                 3.3.10, 3.3.10-dev
+[A.]  #04  gexiv2                      0.14.3
+[A.]  #05  imagemagick                 7.1.1-45, 7.1.1-45-dev, 7.1.1-45-doc
+[A.]  #06  libayatana-appindicator     0.5.92
+[A.]  #07  libayatana-indicator        0.9.4
+[A.]  #08  libev                       4.33
+[A.]  #09  libhwy                      1.0.7
+[A.]  #10  liblqr                      1-0.4.2, 1-0.4.2-dev
+[A+]  #11  orca-slicer-v2.3.0          <none>
+[A.]  #12  potrace                     1.16
+[A.]  #13  python3.12-configobj        5.0.9
+[A.]  #14  python3.12-distutils-extra  2.50
+[A.]  #15  python3.12-httplib2         0.22.0
+[A.]  #16  python3.12-pyparsing        3.1.4
+[A+]  #17  variety                     0.8.12
+Removed packages:
+[R-]  #1  orca-slicer  2.2.0
+Closure size: 2732 -> 2783 (97 paths added, 46 paths removed, delta +51, disk usage +33.9MiB).

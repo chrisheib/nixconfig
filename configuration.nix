@@ -429,6 +429,8 @@ in {
     linuxKernel.packages.linux_xanmod_latest.turbostat
 
     geekbench
+
+    variety # wallpaper changer
   ];
 
   # linuxKernel.packages.linux_xanmod_latest.turbostat.enable = true;
