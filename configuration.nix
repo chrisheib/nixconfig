@@ -372,6 +372,7 @@ in {
     # -> copy file from ststat
     # devenv shell
     rustup
+    python3
 
     vlc
     streamlink-twitch-gui-bin

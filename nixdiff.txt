@@ -1,23 +1,7 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C.]  #01  binutils-wrapper        2.43.1 -> 2.43.1 x2
-[C.]  #02  expand-response-params  <none> -> <none> x2
-[C.]  #03  glib                    2.82.1 x2, 2.82.1-bin x2, 2.82.1-dev, 2.82.5 -> 2.82.1 x2, 2.82.1-bin x2, 2.82.1-dev, 2.82.5, 2.82.5-bin
-[C.]  #04  hwdata                  0.390 x2 -> 0.390 x2, 0.393
-[C.]  #05  libdrm                  2.4.123 x2, 2.4.123-bin -> 2.4.123 x2, 2.4.123-bin, 2.4.124, 2.4.124-bin, 2.4.124-dev
-[C.]  #06  libpciaccess            0.18.1 x2 -> 0.18.1 x3
-[C.]  #07  libsecret               0.21.6 -> 0.21.6 x2
-[C.]  #08  libxkbfile              1.1.3 -> 1.1.3 x2
-[C.]  #09  nspr                    4.36 x2 -> 4.36 x3
-[C.]  #10  nss                     3.101.2 x2, 3.110 -> 3.101.2 x3, 3.110
-[U.]  #11  vscode                  1.98.2 -> 1.99.0
-[U*]  #12  vscode-with-extensions  1.98.2 -> 1.99.0
+Selection state changes:
+[C+]  #1  python3  3.11.11, 3.12.8 x4, 3.12.8-env x3, 3.12.9
 Added packages:
-[A.]  #1  clang                                18.1.8, 18.1.8-lib
-[A.]  #2  clang-tools                          18.1.8
-[A.]  #3  clang-wrapper                        18.1.8
-[A.]  #4  compiler-rt-libc                     18.1.8, 18.1.8-dev
-[A.]  #5  mesa-libgbm                          25.0.1
-[A.]  #6  vscode-extension-ms-vscode-cpptools  1.22.2
-Closure size: 2784 -> 2804 (38 paths added, 18 paths removed, delta +20, disk usage +1.0GiB).
+[A+]  #1  python3.12  3.12.8-doc
+Closure size: 2804 -> 2805 (13 paths added, 12 paths removed, delta +1, disk usage +55.3MiB).
