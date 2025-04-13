@@ -1,7 +1,11 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  python3  3.11.11, 3.12.8 x4, 3.12.8-env x3, 3.12.9
+Version changes:
+[U.]  #1  linux-firmware      20250311-zstd -> 20250410-zstd
+[U.]  #2  nixos-system-nixos  24.11.716906.f9ebe33a928b -> 24.11.716947.26d499fc9f1d
+[C.]  #3  udev-rules          <none> -> <none> x2
 Added packages:
-[A+]  #1  python3.12  3.12.8-doc
-Closure size: 2804 -> 2805 (13 paths added, 12 paths removed, delta +1, disk usage +55.3MiB).
+[A.]  #1  extra-utils  <none>
+[A.]  #2  stage        1-init.sh
+[A+]  #3  zellij       0.41.1
+Closure size: 2805 -> 2809 (38 paths added, 34 paths removed, delta +4, disk usage +105.1MiB).

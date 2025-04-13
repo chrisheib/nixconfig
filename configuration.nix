@@ -355,6 +355,7 @@ in {
     pciutils
     btop
     warp-terminal
+    zellij # ctrl p n for new pane
 
     p7zip # 7zip
     unrar

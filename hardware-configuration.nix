@@ -35,9 +35,9 @@
   };
 
   fileSystems."/run/media/stschiff/E" = {
-    device = "/dev/disk/by-uuid/16088A52088A30B3";
-    fsType = "ntfs-3g";
-    options = ["rw" "uid=1000" "nofail"];
+    device = "/dev/disk/by-uuid/59cbd08f-78ed-4ab8-b9db-6d9e18a32a4e";
+    fsType = "xfs";
+    options = ["nofail"];
   };
 
   fileSystems."/run/media/stschiff/F Alt-Alt-C" = {
