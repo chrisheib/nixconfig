@@ -174,6 +174,8 @@ in {
     extraGroups = ["networkmanager" "wheel" "libvirtd"];
   };
 
+  users.defaultUserShell = pkgs.nushell;
+
   # virtualisation.waydroid.enable = true;
 
   # LD_LIBRARY_PATH = with pkgs;
@@ -253,8 +255,6 @@ in {
     KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
 
     WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
-
-    SHELL = "/run/current-system/sw/bin/nu";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
