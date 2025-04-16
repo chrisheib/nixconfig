@@ -1,14 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C.]  #1  graphics-drivers  <none> -> <none>, 32bit
-[C.]  #2  mesa              24.2.8 x2, 24.2.8-drivers, 24.2.8-osmesa x2 -> 24.2.8 x2, 24.2.8-drivers x2, 24.2.8-osmesa x2
-[C*]  #3  nvidia-x11        570.133.07-6.13.9, 570.133.07-6.13.9-bin, 570.133.07-6.13.9-firmware -> 570.133.07-6.13.9, 570.133.07-6.13.9-bin, 570.133.07-6.13.9-firmware, 570.133.07-6.13.9-lib32
-[C.]  #4  xcb-util-keysyms  0.4.1 -> 0.4.1 x2
-Added packages:
-[A+]  #1  steam-run                 <none> x2
-[A.]  #2  steam-run-bwrap           <none>
-[A.]  #3  steam-run-fhsenv-profile  <none>
-[A.]  #4  steam-run-fhsenv-rootfs   <none>
-[A.]  #5  steam-run-init            <none>
-Closure size: 3249 -> 3259 (36 paths added, 26 paths removed, delta +10, disk usage +499.1MiB).
+No version or selection state changes.
+Closure size: 3259 -> 3259 (4 paths added, 4 paths removed, delta +0, disk usage +40B).

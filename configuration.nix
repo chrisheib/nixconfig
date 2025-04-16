@@ -253,6 +253,8 @@ in {
     KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
 
     WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
+
+    SHELL = "/run/current-system/sw/bin/nu";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
