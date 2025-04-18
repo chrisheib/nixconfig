@@ -283,6 +283,11 @@ in {
     # };
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    settings.General.Experimental = true;
+  };
+
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "stschiff";
@@ -463,14 +468,6 @@ in {
   ########## SERVICES ##########
 
   # Resolve local hostnames via ip4: https://discourse.nixos.org/t/help-with-local-dns-resolution/20305/5
-
-  # Doesnt work:
-  # system.nssModules = pkgs.lib.optional true pkgs.nssmdns;
-  # system.nssDatabases.hosts = pkgs.lib.optionals true (pkgs.lib.mkMerge [
-  #   (pkgs.lib.mkBefore ["mdns4_minimal [NOTFOUND=return]"]) # before resolve
-  #   (pkgs.lib.mkAfter ["mdns4"]) # after dns
-  # ]);
-
   services.avahi = {
     enable = true;
     nssmdns4 = true;
@@ -492,11 +489,6 @@ in {
     pkgs.openocd # embedded debugger
     pkgs.dolphin-emu
   ];
-
-  # services.udev.extraRules = ''
-  #   SUBSYSTEM=="powercap", KERNEL=="intel-rapl:0", RUN+="chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"
-  # '';
-  # system.activationScripts.script.text = ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj'';
 
   systemd.services.make_cpu_energy_readable = {
     description = "Make energy_uj readable for all users to allow displaying cpu power usage in ststat";

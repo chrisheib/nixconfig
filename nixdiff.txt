@@ -1,4 +1,15 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3259 -> 3259 (16 paths added, 16 paths removed, delta +0, disk usage -48B).
+Selection state changes:
+[C+]  #1  bluez  5.78 x2, 5.79
+Added packages:
+[A+]  #1  bluedevil               6.2.5
+[A+]  #2  bluez-qt                6.8.0
+[A.]  #3  input.conf              <none>
+[A.]  #4  main.conf               <none>
+[A.]  #5  network.conf            <none>
+[A+]  #6  obexftp                 0.24.2
+[A+]  #7  openobex                1.7.2
+[A.]  #8  unit-bluetooth.service  <none>
+[A.]  #9  unit-obex.service       <none>
+Closure size: 3259 -> 3268 (28 paths added, 19 paths removed, delta +9, disk usage +5.2MiB).
