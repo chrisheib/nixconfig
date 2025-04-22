@@ -171,7 +171,7 @@ in {
   users.users.stschiff = {
     isNormalUser = true;
     description = "stschiff";
-    extraGroups = ["networkmanager" "wheel" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
   };
 
   users.defaultUserShell = pkgs.nushell;
