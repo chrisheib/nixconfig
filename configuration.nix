@@ -285,7 +285,7 @@ in {
 
   hardware.bluetooth = {
     enable = true;
-    settings.General.Experimental = true;
+    # settings.General.Experimental = true;
   };
 
   # Enable automatic login for the user.
