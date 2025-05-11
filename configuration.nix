@@ -93,6 +93,8 @@ in {
       "rd.udev.log_level=3"
       "udev.log_priority=3"
     ];
+
+    kernelModules = ["amdgpu" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
   };
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -233,6 +235,7 @@ in {
       vdpauinfo # sudo vainfo
       libva-utils # sudo vainfo
       nvidia-vaapi-driver # nvidia-smi dmon
+      vaapiVdpau
       # intel-media-driver
       # intel-vaapi-driver
       # intel-media-sdk
@@ -243,9 +246,12 @@ in {
     MOZ_DISABLE_RDD_SANDBOX = "1";
     # LIBVA_DRIVER_NAME = "i965";
     # LIBVA_DRIVER_NAME = "iHD";
-    LIBVA_DRIVER_NAME = "nvidia";
+    # LIBVA_DRIVER_NAME = "nvidia";
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+
+    LIBVA_DRIVER_NAME = "radeonsi";
+    VDPAU_DRIVER = "radeonsi";
 
     NVD_BACKEND = "direct";
     EGL_PLATFORM = "wayland";
@@ -273,6 +279,7 @@ in {
     # Power management is nearly always required to get nvidia GPUs to
     # behave on suspend, due to firmware bugs.
     powerManagement.enable = true;
+    powerManagement.finegrained = true; # requires offload to be enabled
     open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
     # prime = {
     # offload.enable = true;
@@ -281,6 +288,11 @@ in {
     # intelBusId = "PCI:0:2:0";
     # nvidiaBusId = "PCI:1:0:0";
     # };
+    prime = {
+      offload.enable = true;
+      nvidiaBusId = "PCI:1:0:0"; # Adjust based on your hardware
+      amdgpuBusId = "PCI:0:2:0"; # Adjust based on your hardware
+    };
   };
 
   hardware.bluetooth = {
@@ -443,6 +455,8 @@ in {
     unstable.steam
 
     variety # wallpaper changer
+
+    unstable.firefox-wayland
   ];
 
   programs.steam = {
@@ -462,6 +476,9 @@ in {
     "media.av1.enabled" = true;
     "gfx.x11-egl.force-enabled" = true;
     "widget.dmabuf.force-enabled" = true;
+    "media.ffvpx.enabled" = false;
+    "media.rdd-vpx.enabled" = true;
+    "media.hardware-video-decoding.enabled" = true;
   };
 
   ########## SERVICES ##########
