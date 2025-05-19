@@ -1,6 +1,5 @@
 <<< /run/current-system
 >>> result
 Added packages:
-[A.]  #1  zsh-autosuggestions      0.7.0
-[A+]  #2  zsh-syntax-highlighting  0.8.0
-Closure size: 3277 -> 3279 (15 paths added, 13 paths removed, delta +2, disk usage +206.0KiB).
+[A+]  #1  starship  1.22.1
+Closure size: 3279 -> 3280 (14 paths added, 13 paths removed, delta +1, disk usage +10.9MiB).

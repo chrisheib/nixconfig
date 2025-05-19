@@ -207,6 +207,7 @@ in {
     # Enable direnv integration with Zsh
     shellInit = ''
       eval "$(direnv hook zsh)"
+      eval "$(starship init zsh)"
     '';
   };
   # virtualisation.waydroid.enable = true;
@@ -394,6 +395,7 @@ in {
 
     alacritty # https://alacritty.org/config-alacritty.html
     bottom
+    starship
     # nushell
     zsh # link .zshrc to ~/.zshrc
     carapace
