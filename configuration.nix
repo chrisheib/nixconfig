@@ -49,7 +49,7 @@ in {
   boot = {
     # Bootloader.
     loader.systemd-boot.enable = true;
-    loader.systemd-boot.configurationLimit = 10;
+    loader.systemd-boot.configurationLimit = 5;
     loader.efi.canTouchEfiVariables = true;
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     extraModprobeConfig =
@@ -178,6 +178,11 @@ in {
 
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+
+  # Enable direnv integration with Zsh
+  programs.zsh.shellInit = ''
+    eval "$(direnv hook zsh)"
+  '';
 
   # virtualisation.waydroid.enable = true;
 
