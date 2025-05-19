@@ -176,7 +176,8 @@ in {
     extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
   };
 
-  users.defaultUserShell = pkgs.nushell;
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   # virtualisation.waydroid.enable = true;
 
@@ -363,7 +364,8 @@ in {
 
     alacritty # https://alacritty.org/config-alacritty.html
     bottom
-    nushell
+    # nushell
+    zsh # link .zshrc to ~/.zshrc
     carapace
     tealdeer #tldr
     neofetch

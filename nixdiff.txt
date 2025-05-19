@@ -1,58 +1,68 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #01  adwaita-icon-theme            47.0 -> 47.0 x2
-[C.]  #02  ayatana-ido                   0.10.4 -> 0.10.4 x2
-[C.]  #03  coreutils                     9.5 x2, 9.6 x2 -> 9.5 x2, 9.7 x2
-[C*]  #04  diffutils                     3.10 x2, 3.10-info -> 3.10, 3.10-info, 3.12
-[C.]  #05  dns-root-data                 2024-06-20 x4 -> 2024-06-20 x2, 2025-04-14 x2
-[C.]  #06  ell                           0.70 x2, 0.71 -> 0.70 x2, 0.73
-[C.]  #07  ethtool                       6.11 x4 -> 6.11 x2, 6.14 x2
-[C.]  #08  ffmpeg                        6.1.2-data, 6.1.2-lib, 7.1-bin, 7.1-data x2, 7.1-lib x2, 7.1-man -> 6.1.2-data, 6.1.2-lib, 7.1-bin, 7.1-data x2, 7.1-lib x2, 7.1-man, 7.1.1-data, 7.1.1-lib
-[C*]  #09  firefox                       138.0.1 -> 138.0.1 x2
-[C.]  #10  firefox-unwrapped             138.0.1 -> 138.0.1 x2
-[C*]  #11  gawk                          5.3.1 x4, 5.3.1-info, 5.3.1-man x2 -> 5.3.1 x2, 5.3.1-info, 5.3.1-man, 5.3.2 x2, 5.3.2-man
-[C.]  #12  gdbm                          1.24-lib x3 -> 1.24-lib x2, 1.25-lib
-[C*]  #13  gzip                          1.13 x4, 1.13-info, 1.13-man x2 -> 1.13 x2, 1.13-info, 1.13-man, 1.14 x2, 1.14-man
-[C*]  #14  hicolor-icon-theme            0.18 -> 0.18 x2
-[U.]  #15  initrd-linux-xanmod           6.13.12 -> 6.14.5
-[C.]  #16  libXScrnSaver                 1.2.4 x2 -> 1.2.4 x3
-[C.]  #17  libapparmor                   4.0.3 x4 -> 4.0.3 x2, 4.1.0 x2
-[C.]  #18  libayatana-appindicator       0.5.92 -> 0.5.92 x2
-[C.]  #19  libayatana-indicator          0.9.4 -> 0.9.4 x2
-[C.]  #20  libcanberra                   0.30 x4 -> 0.30 x5
-[C.]  #21  libdbusmenu-gtk3              16.04.0 -> 16.04.0 x2
-[C.]  #22  libdecor                      0.2.2 x2 -> 0.2.2 x3
-[C.]  #23  libffi                        3.4.6 x2, 3.4.6-dev, 3.4.7 x2 -> 3.4.6 x2, 3.4.6-dev, 3.4.8 x2
-[C.]  #24  libnotify                     0.8.3 -> 0.8.3, 0.8.4
-[C.]  #25  libqmi                        1.34.0 x4 -> 1.34.0 x2, 1.36.0 x2
-[C.]  #26  libselinux                    3.7 x2, 3.7-bin, 3.7-man, 3.8 x2 -> 3.7 x2, 3.7-bin, 3.7-man, 3.8.1 x2
-[C.]  #27  libvdpau                      1.5 x2 -> 1.5 x3
-[C.]  #28  libxml2                       2.13.6 x4, 2.13.6-bin, 2.13.6-dev -> 2.13.6 x2, 2.13.6-bin, 2.13.6-dev, 2.13.8 x2
-[U.]  #29  linux-firmware                20250410-zstd -> 20250509-zstd
-[U.]  #30  linux-xanmod                  6.13.12, 6.13.12-modules, 6.13.12-modules-shrunk -> 6.14.5, 6.14.5-modules, 6.14.5-modules-shrunk
-[C.]  #31  mbedtls                       2.28.9, 3.6.2 x3 -> 2.28.9, 3.6.2 x2, 3.6.3
-[U*]  #32  mkpasswd                      5.5.23 -> 5.6.0
-[U.]  #33  nixos-system-nixos            24.11.717703.5b35d248e920 -> 24.11.717822.0c0bf9c05738
-[C.]  #34  nss                           3.101.2 x3, 3.111 -> 3.101.2 x3, 3.111 x2
-[U.]  #35  nvidia-open                   6.13.12-570.133.07 -> 6.14.5-570.133.07
-[U*]  #36  nvidia-x11                    570.133.07-6.13.12, 570.133.07-6.13.12-bin, 570.133.07-6.13.12-firmware, 570.133.07-6.13.12-lib32 -> 570.133.07-6.14.5, 570.133.07-6.14.5-bin, 570.133.07-6.14.5-firmware, 570.133.07-6.14.5-lib32
-[C.]  #37  openjdk                       8u442-b06, 8u442-b06-jre, 17.0.14+7, 21.0.5+11 x2 -> 8u442-b06, 8u442-b06-jre, 17.0.14+7, 21.0.5+11, 21.0.7+6
-[C*]  #38  pipewire                      1.2.7 x2, 1.2.7-doc, 1.2.7-man, 1.4.1 -> 1.2.7 x2, 1.2.7-doc, 1.2.7-man, 1.4.2
-[C*]  #39  python3                       3.11.11, 3.12.8 x4, 3.12.8-env x3, 3.12.9 -> 3.11.11, 3.12.8 x4, 3.12.8-env x3, 3.12.10
-[C.]  #40  sndio                         1.10.0 -> 1.10.0 x2
-[C*]  #41  speech-dispatcher             0.11.5 x2 -> 0.11.5 x3
-[C*]  #42  systemd                       <none>, 256.10 x2, 256.10-man, 257.3 x2 -> <none>, 256.10 x2, 256.10-man, 257.5 x2
-[C.]  #43  systemd-minimal               256.10 x2, 257.3 x2 -> 256.10 x2, 257.5 x2
-[C.]  #44  systemd-minimal-libs          256.10 x2, 257.3 x2 -> 256.10 x2, 257.5 x2
-[U*]  #45  turbostat                     6.13.12 -> 6.14.5
-[U*]  #46  ungoogled-chromium            136.0.7103.59, 136.0.7103.59-sandbox -> 136.0.7103.92, 136.0.7103.92-sandbox
-[U.]  #47  ungoogled-chromium-unwrapped  136.0.7103.59, 136.0.7103.59-sandbox -> 136.0.7103.92, 136.0.7103.92-sandbox
-[C.]  #48  util-linux-minimal            2.39.4-bin, 2.39.4-lib x2, 2.39.4-login x2, 2.39.4-mount x2, 2.39.4-swap x2, 2.40.4-lib x2, 2.40.4-login x2, 2.40.4-mount x2, 2.40.4-swap x2 -> 2.39.4-bin, 2.39.4-lib x2, 2.39.4-login x2, 2.39.4-mount x2, 2.39.4-swap x2, 2.41-lib x2, 2.41-login x2, 2.41-mount x2, 2.41-swap x2
-[C.]  #49  zxing-cpp                     2.2.1 x3 -> 2.2.1 x2, 2.3.0
+[C.]  #01  adwaita-icon-theme            47.0 x2 -> 47.0, 48.0
+[C*]  #02  at-spi2-core                  2.54.1 x4 -> 2.54.1 x2, 2.56.2 x2
+[U*]  #03  bitwarden-desktop             2025.1.1 -> 2025.2.0
+[C*]  #04  curl                          8.12.1 x4, 8.12.1-bin x2, 8.12.1-dev, 8.12.1-man -> 8.12.1 x2, 8.12.1-bin x2, 8.12.1-dev, 8.12.1-man, 8.13.0 x2
+[U.]  #05  electron                      33.4.10, 34.5.3 -> 34.5.5
+[U.]  #06  electron-unwrapped            33.4.10, 34.5.3 -> 34.5.5
+[C.]  #07  ell                           0.70 x2, 0.73 -> 0.70 x2, 0.76
+[U*]  #08  firefox                       138.0.1 x2 -> 138.0.3 x2
+[U.]  #09  firefox-unwrapped             138.0.1 x2 -> 138.0.3 x2
+[C.]  #10  glib                          2.82.1 x2, 2.82.1-bin x2, 2.82.1-dev, 2.82.5 x2, 2.82.5-bin x2 -> 2.82.1 x2, 2.82.1-bin x2, 2.82.1-dev, 2.84.1 x2, 2.84.1-bin x2
+[C.]  #11  glibmm                        2.66.7 x3 -> 2.66.7 x2, 2.66.8
+[C.]  #12  gobject-introspection         1.82.0 x4, 1.82.0-dev -> 1.82.0 x2, 1.82.0-dev, 1.84.0 x2
+[C.]  #13  gsettings-desktop-schemas     47.1 x4 -> 47.1 x2, 48.0 x2
+[C.]  #14  gssdp                         1.4.1 x3 -> 1.4.1 x2, 1.6.3
+[C.]  #15  gtk4                          4.16.12 x2 -> 4.16.12, 4.18.5
+[C.]  #16  gupnp                         1.4.4 x3 -> 1.4.4 x2, 1.6.8
+[C.]  #17  gupnp-igd                     1.2.0 x3 -> 1.2.0 x2, 1.6.0
+[C.]  #18  icu4c                         73.2, 74.2 x2, 76.1 x2 -> 73.2, 74.2 x2, 76.1 x3, 77.1
+[U.]  #19  initrd-linux-xanmod           6.14.5 -> 6.14.6
+[C.]  #20  libXft                        2.3.8 x4, 2.3.8-dev -> 2.3.8 x2, 2.3.8-dev, 2.3.9 x2
+[C.]  #21  libadwaita                    1.6.4 x2 -> 1.6.4, 1.7.2
+[C.]  #22  libcamera                     0.3.2 x2, 0.4.0 -> 0.3.2 x2, 0.5.0
+[C.]  #23  libconfig                     1.7.3 x3 -> 1.7.3 x2, 1.8
+[C.]  #24  libnftnl                      1.2.8 x4 -> 1.2.8 x2, 1.2.9 x2
+[C.]  #25  libnotify                     0.8.3, 0.8.4 -> 0.8.3, 0.8.6
+[C.]  #26  librsvg                       2.58.3 x2, 2.58.3-dev, 2.59.2 -> 2.58.3 x2, 2.58.3-dev, 2.60.0
+[C.]  #27  libsoup                       2.74.3 x3, 3.6.1 x2, 3.6.4 x2 -> 2.74.3 x2, 3.6.1 x2, 3.6.5 x2
+[C.]  #28  libtheora                     1.1.1 x3 -> 1.1.1 x2, 1.2.0
+[U.]  #29  linux-xanmod                  6.14.5, 6.14.5-modules, 6.14.5-modules-shrunk -> 6.14.6, 6.14.6-modules, 6.14.6-modules-shrunk
+[C.]  #30  nftables                      1.1.1 x4 -> 1.1.1 x2, 1.1.3 x2
+[U.]  #31  nixos-system-nixos            24.11.717822.0c0bf9c05738 -> 24.11.718051.9b5ac7ad4529
+[C.]  #32  nss-cacert                    3.108 x2, 3.108-p11kit -> 3.108, 3.108-p11kit, 3.111
+[U.]  #33  nvidia-open                   6.14.5-570.133.07 -> 6.14.6-570.133.07
+[U*]  #34  nvidia-x11                    570.133.07-6.14.5, 570.133.07-6.14.5-bin, 570.133.07-6.14.5-firmware, 570.133.07-6.14.5-lib32 -> 570.133.07-6.14.6, 570.133.07-6.14.6-bin, 570.133.07-6.14.6-firmware, 570.133.07-6.14.6-lib32
+[C.]  #35  pango                         1.54.0 x2, 1.54.0-bin, 1.54.0-dev, 1.56.2 x2 -> 1.54.0 x2, 1.54.0-bin, 1.54.0-dev, 1.56.3 x2
+[C.]  #36  pcre                          8.45 x4, 8.45-bin, 8.45-man -> 8.45 x2, 8.45-bin, 8.45-man
+[C.]  #37  python3.12-h11                0.14.0 x2 -> 0.14.0, 0.16.0
+[U.]  #38  python3.12-httpcore           1.0.7 -> 1.0.9
+[U.]  #39  python3.12-pyzstd             0.16.2 -> 0.17.0
+[C.]  #40  python3.12-typing-extensions  4.12.2, 4.13.0 -> 4.12.2, 4.13.2
+[U.]  #41  sdl2-compat                   2.32.54 -> 2.32.56
+[U.]  #42  sdl3                          3.2.10-lib -> 3.2.12-lib
+[C*]  #43  speech-dispatcher             0.11.5 x3 -> 0.11.5 x2, 0.12.1
+[U*]  #44  thunderbird                   128.9.2esr -> 128.10.0esr
+[U.]  #45  thunderbird-unwrapped         128.9.2esr -> 128.10.0esr
+[C.]  #46  tinysparql                    3.8.1 x2, 3.8.2 x2 -> 3.8.1 x2, 3.9.2 x2
+[U*]  #47  turbostat                     6.14.5 -> 6.14.6
+[C.]  #48  unbound                       1.22.0-lib x4 -> 1.22.0-lib x2, 1.23.0-lib x2
+[U*]  #49  ungoogled-chromium            136.0.7103.92, 136.0.7103.92-sandbox -> 136.0.7103.113, 136.0.7103.113-sandbox
+[U.]  #50  ungoogled-chromium-unwrapped  136.0.7103.92, 136.0.7103.92-sandbox -> 136.0.7103.113, 136.0.7103.113-sandbox
+[U.]  #51  vscode                        1.99.3 -> 1.100.1
+[U*]  #52  vscode-with-extensions        1.99.3 -> 1.100.1
+[U.]  #53  vulkan-headers                1.4.309.0 -> 1.4.313.0
+[C.]  #54  vulkan-loader                 1.3.296.0 x2, 1.4.309.0 x2 -> 1.3.296.0 x2, 1.4.313.0 x2
+[C.]  #55  zenity                        4.0.3, 4.0.5 -> 4.0.3, 4.1.90
 Added packages:
-[A.]  #1  libva-vdpau-driver  0.7.4
-[A.]  #2  sdl2-compat         2.32.54
-[A.]  #3  sdl3                3.2.10-lib
-[A.]  #4  vulkan-headers      1.4.309.0
-Closure size: 3250 -> 3272 (804 paths added, 782 paths removed, delta +22, disk usage +392.8MiB).
+[A.]  #1  etc-zinputrc         <none>
+[A.]  #2  etc-zprofile         <none>
+[A.]  #3  etc-zshenv           <none>
+[A.]  #4  etc-zshrc            <none>
+[A+]  #5  nix-zsh-completions  0.5.1
+[A+]  #6  zsh                  5.9, 5.9-doc, 5.9-info, 5.9-man
+Removed packages:
+[R-]  #1  nushell  0.100.0
+Closure size: 3272 -> 3277 (809 paths added, 804 paths removed, delta +5, disk usage -351.5MiB).
