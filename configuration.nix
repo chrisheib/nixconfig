@@ -174,6 +174,7 @@ in {
     isNormalUser = true;
     description = "stschiff";
     extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
+    shell = pkgs.zsh;
   };
 
   users.defaultUserShell = pkgs.zsh;
@@ -188,12 +189,12 @@ in {
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "up; sudo nixos-rebuild switch; cur; gcp \"$1\"; gc";
+      nrs = "() {up; sudo nixos-rebuild switch; cur; gcp \"$1\"; gc; }";
       nrsu = "sudo nix-channel --update; nrs \"System Update\"";
       nrsb = "nrs \"$1\"; gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
-      gcp = "cd ~/.nixos; git add .; git commit -m \"Generation (cur): $1\"; git push";
+      gcp = "() {cd ~/.nixos; git add .; git commit -m \"Generation (cur): $1\"; git push;}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$2}\"";
       up = "sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt; cat /home/stschiff/.nixos/nixdiff.txt";
       gc = "nix-collect-garbage --delete-older-than 7d";
@@ -203,9 +204,13 @@ in {
     histFile = "$HOME/.zsh_history";
     setOptions = [
       "HIST_IGNORE_ALL_DUPS"
+      "INC_APPEND_HISTORY"
+      "HIST_REDUCE_BLANKS"
     ];
+
     # Enable direnv integration with Zsh
     shellInit = ''
+      echo hi
       eval "$(direnv hook zsh)"
       eval "$(starship init zsh)"
     '';
