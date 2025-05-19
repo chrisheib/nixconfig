@@ -211,8 +211,10 @@ in {
     # Enable direnv integration with Zsh
     shellInit = ''
       echo hi
-      eval "$(direnv hook zsh)"
       eval "$(starship init zsh)"
+      echo starship done
+      eval "$(direnv hook zsh)"
+      echo direnv done
     '';
   };
   # virtualisation.waydroid.enable = true;
