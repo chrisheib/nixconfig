@@ -1,4 +1,6 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3277 -> 3277 (5 paths added, 5 paths removed, delta +0, disk usage +24B).
+Added packages:
+[A.]  #1  zsh-autosuggestions      0.7.0
+[A+]  #2  zsh-syntax-highlighting  0.8.0
+Closure size: 3277 -> 3279 (15 paths added, 13 paths removed, delta +2, disk usage +206.0KiB).

@@ -177,13 +177,38 @@ in {
   };
 
   users.defaultUserShell = pkgs.zsh;
-  programs.zsh.enable = true;
 
-  # Enable direnv integration with Zsh
-  programs.zsh.shellInit = ''
-    eval "$(direnv hook zsh)"
-  '';
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
 
+    shellAliases = {
+      l = "ls";
+      ll = "ls";
+      nrt = "sudo nixos-rebuild test";
+      nrs = "up; sudo nixos-rebuild switch; cur; gcp \"$1\"; gc";
+      nrsu = "sudo nix-channel --update; nrs \"System Update\"";
+      nrsb = "nrs \"$1\"; gut";
+      nrsrepair = "sudo nixos-rebuild switch --repair";
+      gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
+      gcp = "cd ~/.nixos; git add .; git commit -m \"Generation (cur): $1\"; git push";
+      cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$2}\"";
+      up = "sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt; cat /home/stschiff/.nixos/nixdiff.txt";
+      gc = "nix-collect-garbage --delete-older-than 7d";
+    };
+
+    histSize = 10000;
+    histFile = "$HOME/.zsh_history";
+    setOptions = [
+      "HIST_IGNORE_ALL_DUPS"
+    ];
+    # Enable direnv integration with Zsh
+    shellInit = ''
+      eval "$(direnv hook zsh)"
+    '';
+  };
   # virtualisation.waydroid.enable = true;
 
   # LD_LIBRARY_PATH = with pkgs;
