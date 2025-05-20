@@ -180,6 +180,7 @@ in {
   users.defaultUserShell = pkgs.zsh;
 
   programs.starship.enable = true;
+  programs.direnv.enable = true;
 
   programs.zsh = {
     enable = true;
@@ -211,13 +212,13 @@ in {
     ];
 
     # Enable direnv integration with Zsh
-    shellInit = ''
-      echo hi
-      source <(starship init zsh)
-      echo starship done
-      source <(direnv hook zsh)
-      echo direnv done
-    '';
+    # shellInit = ''
+    #   echo hi
+    #   source <(starship init zsh)
+    #   echo starship done
+    #   source <(direnv hook zsh)
+    #   echo direnv done
+    # '';
   };
   # virtualisation.waydroid.enable = true;
 

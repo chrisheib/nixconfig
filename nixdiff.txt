@@ -1,5 +1,7 @@
 <<< /run/current-system
 >>> result
 Added packages:
-[A.]  #1  starship.toml  <none>
-Closure size: 3280 -> 3281 (5 paths added, 4 paths removed, delta +1, disk usage +392B).
+[A.]  #1  etc-direnv-direnvrc        <none>
+[A.]  #2  etc-direnv-lib-zz-user.sh  <none>
+[A.]  #3  nix-direnv                 3.0.6
+Closure size: 3281 -> 3284 (20 paths added, 17 paths removed, delta +3, disk usage +19.3KiB).
