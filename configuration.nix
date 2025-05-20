@@ -211,11 +211,9 @@ in {
     # Enable direnv integration with Zsh
     shellInit = ''
       echo hi
-      echo "$(starship init zsh)"
-      eval "$(starship init zsh)"
+      source <(starship init zsh)
       echo starship done
-      echo "$(direnv hook zsh)"
-      eval "$(direnv hook zsh)"
+      source <(direnv hook zsh)
       echo direnv done
     '';
   };
