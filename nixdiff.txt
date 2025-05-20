@@ -1,4 +1,5 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3280 -> 3280 (3 paths added, 3 paths removed, delta +0, disk usage -56B).
+Added packages:
+[A.]  #1  starship.toml  <none>
+Closure size: 3280 -> 3281 (5 paths added, 4 paths removed, delta +1, disk usage +392B).

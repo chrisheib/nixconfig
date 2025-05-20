@@ -179,6 +179,8 @@ in {
 
   users.defaultUserShell = pkgs.zsh;
 
+  programs.starship.enable = true;
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
