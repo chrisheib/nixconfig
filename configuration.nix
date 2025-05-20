@@ -505,13 +505,17 @@ in {
 
   programs.steam = {
     enable = true;
+    package = unstable.steam;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true;
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    package = unstable.firefox-wayland;
+  };
 
   # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
   programs.firefox.preferences = {
