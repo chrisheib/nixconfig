@@ -1,7 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C.]  #1  firefox-unwrapped  138.0.3 x2 -> 138.0.3
-[C.]  #2  icu4c              73.2, 74.2 x2, 76.1 x3, 77.1 -> 73.2, 74.2 x2, 76.1 x2, 77.1
-[C.]  #3  nss                3.101.2 x3, 3.111 x2 -> 3.101.2 x3, 3.111
-Closure size: 3284 -> 3281 (19 paths added, 22 paths removed, delta -3, disk usage -326.5MiB).
+No version or selection state changes.
+Closure size: 3281 -> 3281 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
