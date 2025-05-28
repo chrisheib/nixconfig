@@ -194,14 +194,14 @@ in {
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() {up&& sudo nixos-rebuild switch&& cur&& gcp \"$1\"&& gc&& }";
-      nrsu = "sudo nix-channel --update&& nrs \"System Update\"";
-      nrsb = "nrs \"$1\"&& gut";
+      nrs = "() {up && sudo nixos-rebuild switch --upgrade && cur && gcp \"$1\" && gc }";
+      nrsu = "sudo nix-channel --update && nrs \"System Update\"";
+      nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
-      gcp = "() {cd ~/.nixos&& git add .&& git commit -m \"Generation $(cur): $1\"&& git push&&}";
+      gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$2}\"";
-      up = "sudo nix-channel --update&& nixos-rebuild build --upgrade&& nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt&& cat /home/stschiff/.nixos/nixdiff.txt";
+      up = "sudo nix-channel --update && nixos-rebuild build --upgrade && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
       gc = "nix-collect-garbage --delete-older-than 7d";
     };
 
@@ -247,13 +247,13 @@ in {
     ll = "ls -l";
     ls = "ls --color=tty";
     nrt = "sudo nixos-rebuild test";
-    nrs = "sudo nixos-rebuild switch && cur && gcp";
+    nrs = "sudo nixos-rebuild switch  && cur  && gcp";
     nrsrepair = "sudo nixos-rebuild switch --repair";
-    nrsu = "sudo nix-channel --update && nrs";
-    nrsb = "nrs && gut";
-    cur = "sudo echo -n 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
+    nrsu = "sudo nix-channel --update  && nrs";
+    nrsb = "nrs  && gut";
+    cur = "sudo echo -n 'Current Generation: '  && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
     gut = "qdbus org.kde.Shutdown /Shutdown  org.kde.Shutdown.logoutAndReboot";
-    gcp = "(cd ~/.nixos && git add . && git commit -m \"Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')\" && git push)";
+    gcp = "(cd ~/.nixos  && git add .  && git commit -m \"Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')\"  && git push)";
   };
 
   programs.partition-manager.enable = true;
@@ -392,7 +392,7 @@ in {
     })
     bitwarden
 
-    vesktop # change autostart Exec to: Exec=sleep 5 && vesktop
+    vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
     teamspeak3
     alsa-utils #amixer
     pamixer
