@@ -15,7 +15,9 @@
       rev = "cb0aee6840fb29b70439880656ca6a313a6af101";
     }))
     .extensions
-    .${system};
+    .${
+      system
+    };
   extensionsList = with extensions.vscode-marketplace; [
     # filiptibell.tooling-language-server
     # rust-lang.rust-analyzer
@@ -24,10 +26,10 @@
     platformio.platformio-ide
   ];
 
-  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
+  # unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
 
   # Wrap vscode with --no-sandbox args, so it can run sudo from within the terminal.
-  my-vscode-no-sandbox = unstable.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
+  my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
         wrapProgram $out/bin/executable-name \
@@ -459,7 +461,7 @@ in {
     # docker-compose
     (lutris.override {
       extraPkgs = pkgs: [
-        unstable.umu-launcher
+        umu-launcher
       ];
     })
     wineWowPackages.stable
@@ -477,7 +479,7 @@ in {
     # appimage-run # for cura
     # unstable.cura-appimage
 
-    unstable.smartgit #
+    smartgit #
 
     webkitgtk_6_0
 
@@ -496,16 +498,16 @@ in {
 
     geekbench
 
-    unstable.steam
+    steam
 
     variety # wallpaper changer
 
-    unstable.firefox-wayland
+    firefox-wayland
   ];
 
   programs.steam = {
     enable = true;
-    package = unstable.steam;
+    # package = unstable.steam;
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true;
@@ -514,7 +516,7 @@ in {
   # Install firefox.
   programs.firefox = {
     enable = true;
-    package = unstable.firefox-wayland;
+    package = pkgs.firefox-wayland;
   };
 
   # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix

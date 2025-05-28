@@ -1,28 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U.]  #01  freerdp                              3.15.0 -> 3.15.0-unstable-2025-05-16
-[U.]  #02  kirigami                             6.14.0 -> 6.14.1
-[U.]  #03  kirigami-addons                      1.7.0 -> 1.8.1
-[C*]  #04  kwallet                              5.116.0, 5.116.0-bin, 6.14.0 -> 5.116.0, 5.116.0-bin, 6.14.1
-[C.]  #05  libXNVCtrl                           390.157, 570.144 -> 390.157, 570.153.02
-[U.]  #06  libcerf                              2.4 -> 3.0
-[U.]  #07  libcpuid                             0.7.1 -> 0.8.0
-[U.]  #08  libinput                             1.27.1 -> 1.28.1
-[U.]  #09  libmikmod                            3.3.12 -> 3.3.13
-[U.]  #10  libndctl                             79, 79-man -> 81, 81-man
-[U.]  #11  mesa                                 25.0.6 x2 -> 25.1.1 x2
-[U.]  #12  nixos-system-nixos                   25.05.802674.7848cd8c982f -> 25.11pre806853.4faa5f532132
-[U.]  #13  noto-fonts                           2025.04.01 -> 2025.05.01
-[U*]  #14  rustup                               1.27.1 -> 1.28.2
-[U.]  #15  vscode-extension-jnoortheen-nix-ide  0.4.16 -> 0.4.18
-[U*]  #16  warp-terminal                        0.2025.05.07.08.12.stable_02 -> 0.2025.05.14.08.11.stable_03
-[U.]  #17  zziplib                              0.13.78 x2 -> 0.13.79 x2
-Added packages:
-[A.]  #1  cubeb          0-unstable-2025-04-02-lib
-[A.]  #2  jack2          1.9.22
-[A.]  #3  libtraceevent  1.8.4
-[A.]  #4  libtracefs     1.8.1
-Removed packages:
-[R.]  #1  cubeb-unstable  2022-10-18
-Closure size: 2615 -> 2618 (226 paths added, 223 paths removed, delta +3, disk usage +47.2MiB).
+No version or selection state changes.
+Closure size: 2618 -> 2618 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
