@@ -390,7 +390,7 @@ in {
         ]
         ++ extensionsList;
     })
-    bitwarden
+    # bitwarden
 
     vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
     teamspeak3
@@ -420,7 +420,7 @@ in {
     stress
     pciutils
     btop
-    warp-terminal
+    # warp-terminal
     zellij # ctrl p n for new pane
 
     p7zip # 7zip
