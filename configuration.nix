@@ -151,7 +151,7 @@ in {
   services.printing.drivers = [pkgs.brlaser];
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -192,14 +192,14 @@ in {
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() {up; sudo nixos-rebuild switch; cur; gcp \"$1\"; gc; }";
-      nrsu = "sudo nix-channel --update; nrs \"System Update\"";
-      nrsb = "nrs \"$1\"; gut";
+      nrs = "() {up&& sudo nixos-rebuild switch&& cur&& gcp \"$1\"&& gc&& }";
+      nrsu = "sudo nix-channel --update&& nrs \"System Update\"";
+      nrsb = "nrs \"$1\"&& gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
-      gcp = "() {cd ~/.nixos; git add .; git commit -m \"Generation $(cur): $1\"; git push;}";
+      gcp = "() {cd ~/.nixos&& git add .&& git commit -m \"Generation $(cur): $1\"&& git push&&}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$2}\"";
-      up = "sudo nix-channel --update; nixos-rebuild build --upgrade; nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt; cat /home/stschiff/.nixos/nixdiff.txt";
+      up = "sudo nix-channel --update&& nixos-rebuild build --upgrade&& nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt&& cat /home/stschiff/.nixos/nixdiff.txt";
       gc = "nix-collect-garbage --delete-older-than 7d";
     };
 
@@ -257,7 +257,7 @@ in {
   programs.partition-manager.enable = true;
 
   fonts.packages = with pkgs; [
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    nerd-fonts.jetbrains-mono
   ];
   fonts.fontDir.enable = true; # https://wiki.nixos.org/wiki/Fonts#Flatpak_applications_can't_find_system_fonts
 
