@@ -201,7 +201,7 @@ in {
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
       gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk \"{print \$2}\"";
-      up = "sudo nix-channel --update && nixos-rebuild build --upgrade && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
+      up = "sudo nix-channel --update && sudo nixos-rebuild build --upgrade && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
       gc = "nix-collect-garbage --delete-older-than 7d";
     };
 
