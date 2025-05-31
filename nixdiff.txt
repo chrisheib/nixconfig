@@ -1,12 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  X-Restart-Triggers-sshd        <none>
-[A.]  #2  ssh-root-provision.conf        <none>
-[A.]  #3  sshd.conf-final                <none>
-[A.]  #4  sshd.pam                       <none>
-[A.]  #5  unit-script-sshd-keygen-start  <none>
-[A.]  #6  unit-sshd-.service             <none>
-[A.]  #7  unit-sshd-keygen.service       <none>
-[A.]  #8  unit-sshd.service              <none>
-Closure size: 2614 -> 2622 (28 paths added, 20 paths removed, delta +8, disk usage +12.6KiB).
+No version or selection state changes.
+Closure size: 2622 -> 2622 (7 paths added, 7 paths removed, delta +0, disk usage -144B).
