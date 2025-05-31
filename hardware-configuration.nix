@@ -8,6 +8,7 @@
   modulesPath,
   ...
 }: {
+  # Set during insall: Loads bare metal redistributable firmware
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -47,10 +48,6 @@
     fsType = "ntfs-3g";
     options = ["rw" "uid=1000" "nofail"];
   };
-
-  swapDevices = [
-    {device = "/dev/disk/by-uuid/67dd1211-5950-4526-8c03-0c2f1e73f647";}
-  ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
