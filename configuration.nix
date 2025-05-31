@@ -205,7 +205,7 @@ in {
       gc = "nix-collect-garbage --delete-older-than 7d";
     };
 
-    histSize = 10000;
+    histSize = 10001;
     histFile = "$HOME/.zsh_history";
     setOptions = [
       "HIST_IGNORE_ALL_DUPS"
