@@ -1,4 +1,14 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2622 -> 2622 (3 paths added, 3 paths removed, delta +0, disk usage +0B).
+Version changes:
+[U.]  #01  electron                           35.3.0 -> 35.5.0
+[U.]  #02  electron-unwrapped                 35.3.0 -> 35.5.0
+[U*]  #03  firefox                            139.0 x2 -> 139.0.1 x2
+[U.]  #04  firefox-unwrapped                  139.0 -> 139.0.1
+[U.]  #05  libetebase                         0.5.7 -> 0.5.8
+[U.]  #06  nixos-system-nixos                 25.11pre807377.96ec055edbe5 -> 25.11pre808478.910796cabe43
+[C.]  #07  openjdk                            8u442-b06, 8u442-b06-jre, 17.0.14+7, 21.0.7+6 -> 8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6
+[U*]  #08  ungoogled-chromium                 136.0.7103.113, 136.0.7103.113-sandbox -> 137.0.7151.55, 137.0.7151.55-sandbox
+[U.]  #09  ungoogled-chromium-unwrapped       136.0.7103.113, 136.0.7103.113-sandbox -> 137.0.7151.55, 137.0.7151.55-sandbox
+[U.]  #10  vscode-extension-ms-python-python  2025.6.0 -> 2025.6.1
+Closure size: 2622 -> 2622 (60 paths added, 60 paths removed, delta +0, disk usage +10.8MiB).
