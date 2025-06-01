@@ -499,6 +499,7 @@ in {
     geekbench
 
     steam
+    protontricks
 
     variety # wallpaper changer
 

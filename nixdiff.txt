@@ -1,14 +1,12 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U.]  #01  electron                           35.3.0 -> 35.5.0
-[U.]  #02  electron-unwrapped                 35.3.0 -> 35.5.0
-[U*]  #03  firefox                            139.0 x2 -> 139.0.1 x2
-[U.]  #04  firefox-unwrapped                  139.0 -> 139.0.1
-[U.]  #05  libetebase                         0.5.7 -> 0.5.8
-[U.]  #06  nixos-system-nixos                 25.11pre807377.96ec055edbe5 -> 25.11pre808478.910796cabe43
-[C.]  #07  openjdk                            8u442-b06, 8u442-b06-jre, 17.0.14+7, 21.0.7+6 -> 8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6
-[U*]  #08  ungoogled-chromium                 136.0.7103.113, 136.0.7103.113-sandbox -> 137.0.7151.55, 137.0.7151.55-sandbox
-[U.]  #09  ungoogled-chromium-unwrapped       136.0.7103.113, 136.0.7103.113-sandbox -> 137.0.7151.55, 137.0.7151.55-sandbox
-[U.]  #10  vscode-extension-ms-python-python  2025.6.0 -> 2025.6.1
-Closure size: 2622 -> 2622 (60 paths added, 60 paths removed, delta +0, disk usage +10.8MiB).
+[C*]  #1  steam-run                <none> x2 -> <none> x3
+[C.]  #2  steam-run-bwrap          <none> -> <none> x2
+[C.]  #3  steam-run-fhsenv-rootfs  <none> -> <none> x2
+Added packages:
+[A+]  #1  protontricks    1.12.1
+[A.]  #2  python3.12-vdf  3.4
+[A.]  #3  steam-run-bash  <none>
+[A.]  #4  yad             14.1
+Closure size: 2622 -> 2629 (19 paths added, 12 paths removed, delta +7, disk usage +10.8MiB).
