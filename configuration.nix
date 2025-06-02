@@ -53,6 +53,7 @@ in {
     loader.systemd-boot.enable = true;
     loader.systemd-boot.configurationLimit = 5;
     loader.efi.canTouchEfiVariables = true;
+    # cachyos: https://www.nyx.chaotic.cx/
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     extraModprobeConfig =
       "options nvidia "
@@ -69,31 +70,20 @@ in {
       ];
     plymouth = {
       enable = true;
-      # theme = "rings";
-      # themePackages = with pkgs; [
-      #   # By default we would install all themes
-      #   (adi1090x-plymouth-themes.override {
-      #     selected_themes = ["rings"];
-      #   })
-      # ];
     };
 
-    # Hide the OS choice for bootloaders.
-    # It's still possible to open the bootloader list by pressing any key
-    # It will just not appear on screen unless a key is pressed
+    # decrease display time of systemd-boot menu
     loader.timeout = 1;
 
-    # Enable "Silent Boot"
-    consoleLogLevel = 0;
+    # Enable "Silent boot"
+    consoleLogLevel = 3;
     initrd.verbose = false;
     kernelParams = [
       "quiet"
       "splash"
       "boot.shell_on_fail"
-      "loglevel=3"
-      "rd.systemd.show_status=false"
-      "rd.udev.log_level=3"
       "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
     ];
 
     kernelModules = ["amdgpu" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
@@ -101,10 +91,6 @@ in {
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -162,14 +148,7 @@ in {
     pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.stschiff = {
@@ -212,49 +191,12 @@ in {
       "INC_APPEND_HISTORY"
       "HIST_REDUCE_BLANKS"
     ];
-
-    # Enable direnv integration with Zsh
-    # shellInit = ''
-    #   echo hi
-    #   source <(starship init zsh)
-    #   echo starship done
-    #   source <(direnv hook zsh)
-    #   echo direnv done
-    # '';
   };
   # virtualisation.waydroid.enable = true;
-
-  # LD_LIBRARY_PATH = with pkgs;
-  #   lib.makeLibraryPath [
-  #     libGL
-  #     libxkbcommon
-  #     wayland
-  #     xorg.libX11
-  #     xorg.libXcursor
-  #     xorg.libXi
-  #     xorg.libXrandr
-  #   ];
-  # ...
-  # LD_LIBRARY_PATH = libPath;
 
   nix.extraOptions = ''
     trusted-users = root stschiff
   '';
-
-  # Also change config.nu! (in nushell: config nu)
-  programs.bash.shellAliases = {
-    l = "ls -alh";
-    ll = "ls -l";
-    ls = "ls --color=tty";
-    nrt = "sudo nixos-rebuild test";
-    nrs = "sudo nixos-rebuild switch  && cur  && gcp";
-    nrsrepair = "sudo nixos-rebuild switch --repair";
-    nrsu = "sudo nix-channel --update  && nrs";
-    nrsb = "nrs  && gut";
-    cur = "sudo echo -n 'Current Generation: '  && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
-    gut = "qdbus org.kde.Shutdown /Shutdown  org.kde.Shutdown.logoutAndReboot";
-    gcp = "(cd ~/.nixos  && git add .  && git commit -m \"Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')\"  && git push)";
-  };
 
   programs.partition-manager.enable = true;
 
@@ -309,7 +251,6 @@ in {
 
   # https://wiki.nixos.org/wiki/NVIDIA
   services.xserver.videoDrivers = ["nvidia"];
-  # services.xserver.videoDrivers = ["nvidia" "intel"];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
       version = "570.133.07"; # use new 570 drivers
@@ -387,6 +328,7 @@ in {
           thenuprojectcontributors.vscode-nushell-lang
           mechatroner.rainbow-csv
           ms-vscode.cpptools
+          redhat.vscode-xml
         ]
         ++ extensionsList;
     })
