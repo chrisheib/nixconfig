@@ -504,7 +504,15 @@ in {
     variety # wallpaper changer
 
     firefox-wayland
+
+    adwaita-icon-theme
+    gtk3
+
+    minion
   ];
+
+  # Enable GNOME settings manager
+  programs.dconf.enable = true;
 
   programs.steam = {
     enable = true;
@@ -583,8 +591,14 @@ in {
   services.openssh.settings.PasswordAuthentication = false;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [11100];
-  networking.firewall.allowedUDPPorts = [11100];
+  networking.firewall.allowedTCPPorts = [
+    # Risk of Rain 2013
+    11100
+  ];
+  networking.firewall.allowedUDPPorts = [
+    # Risk of Rain 2013
+    11100
+  ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 

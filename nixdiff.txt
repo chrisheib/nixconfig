@@ -1,12 +1,10 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C*]  #1  steam-run                <none> x2 -> <none> x3
-[C.]  #2  steam-run-bwrap          <none> -> <none> x2
-[C.]  #3  steam-run-fhsenv-rootfs  <none> -> <none> x2
+[C.]  #1  openjdk  8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6 -> 8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6 x2
+Selection state changes:
+[C+]  #1  adwaita-icon-theme  48.0
+[C+]  #2  gtk+3               3.24.49 x2
 Added packages:
-[A+]  #1  protontricks    1.12.1
-[A.]  #2  python3.12-vdf  3.4
-[A.]  #3  steam-run-bash  <none>
-[A.]  #4  yad             14.1
-Closure size: 2622 -> 2629 (19 paths added, 12 paths removed, delta +7, disk usage +10.8MiB).
+[A+]  #1  minion  3.0.12
+Closure size: 2629 -> 2631 (14 paths added, 12 paths removed, delta +2, disk usage +758.3MiB).
