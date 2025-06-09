@@ -36,6 +36,21 @@
           --run "code --no-sandbox"
     '';
   });
+
+  orca-slicer = pkgs.orca-slicer.overrideAttrs (oldAttrs: {
+    cmakeFlags =
+      oldAttrs.cmakeFlags
+      ++ [
+        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${pkgs.cudaPackages.cudatoolkit}")
+      ];
+  });
+  bambu-studio = pkgs.orca-slicer.overrideAttrs (oldAttrs: {
+    cmakeFlags =
+      oldAttrs.cmakeFlags
+      ++ [
+        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${pkgs.cudaPackages.cudatoolkit}")
+      ];
+  });
 in {
   imports = [
     # Include the results of the hardware scan.
@@ -198,6 +213,11 @@ in {
     trusted-users = root stschiff
   '';
 
+  nix.settings = {
+    cores = 6;
+    max-jobs = 2;
+  };
+
   programs.partition-manager.enable = true;
 
   fonts.packages = with pkgs; [
@@ -205,13 +225,14 @@ in {
   ];
   fonts.fontDir.enable = true; # https://wiki.nixos.org/wiki/Fonts#Flatpak_applications_can't_find_system_fonts
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "steam"
-      "steam-unwrapped"
-      "steam-original"
-      "steam-run"
-    ];
+  # ignore because of global allow unfree
+  # nixpkgs.config.allowUnfreePredicate = pkg:
+  #   builtins.elem (lib.getName pkg) [
+  #     "steam"
+  #     "steam-unwrapped"
+  #     "steam-original"
+  #     "steam-run"
+  #   ];
 
   programs.gamemode.enable = true; # https://wiki.nixos.org/wiki/GameMode
 
@@ -232,12 +253,15 @@ in {
     MOZ_DISABLE_RDD_SANDBOX = "1";
     # LIBVA_DRIVER_NAME = "i965";
     # LIBVA_DRIVER_NAME = "iHD";
-    # LIBVA_DRIVER_NAME = "nvidia";
+
+    LIBVA_DRIVER_NAME = "nvidia";
+    VDPAU_DRIVER = "nvidia";
+
     GBM_BACKEND = "nvidia-drm";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
 
-    LIBVA_DRIVER_NAME = "radeonsi";
-    VDPAU_DRIVER = "radeonsi";
+    # LIBVA_DRIVER_NAME = "radeonsi";
+    # VDPAU_DRIVER = "radeonsi";
 
     NVD_BACKEND = "direct";
     EGL_PLATFORM = "wayland";
@@ -247,6 +271,7 @@ in {
     KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
 
     WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
+    CUDA_TOOLKIT_ROOT_DIR = "${pkgs.cudaPackages.cudatoolkit}";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
@@ -291,6 +316,9 @@ in {
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # build packages with cuda support
+  nixpkgs.config.cudaSupport = true;
 
   # https://wiki.nixos.org/wiki/Virt-manager
   # https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm
@@ -385,6 +413,7 @@ in {
 
     vlc
     streamlink-twitch-gui-bin
+    ffmpeg-full
 
     transmission_4-qt
 
@@ -397,7 +426,7 @@ in {
 
     vdpauinfo # sudo vainfo
     libva-utils # sudo vainfo
-    # nvidia-vaapi-driver
+    nvidia-vaapi-driver
     git
     ntfs3g # allow read write ntfs mounts
     # docker-compose
@@ -451,6 +480,8 @@ in {
     gtk3
 
     minion
+
+    cudaPackages.cudatoolkit
   ];
 
   # Enable GNOME settings manager
@@ -472,14 +503,16 @@ in {
 
   # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
   programs.firefox.preferences = {
-    "media.ffmpeg.vaapi.enabled" = true;
-    "media.rdd-ffmpeg.enabled" = true;
+    "gfx.webrender.all" = true;
+    # "gfx.x11-egl.force-enabled" = true;
     "media.av1.enabled" = true;
-    "gfx.x11-egl.force-enabled" = true;
-    "widget.dmabuf.force-enabled" = true;
+    "media.ffmpeg.vaapi.enabled" = true;
     "media.ffvpx.enabled" = false;
-    "media.rdd-vpx.enabled" = true;
     "media.hardware-video-decoding.enabled" = true;
+    "media.hardware-video-decoding.force-enabled" = true;
+    "media.rdd-ffmpeg.enabled" = true;
+    "media.rdd-vpx.enabled" = true;
+    "widget.dmabuf.force-enabled" = true;
   };
 
   ########## SERVICES ##########

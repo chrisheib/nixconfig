@@ -1,83 +1,59 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #01  akonadi                                       25.04.1 -> 25.04.2
-[U*]  #02  akonadi-calendar                              25.04.1 -> 25.04.2
-[U.]  #03  akonadi-contacts                              25.04.1 -> 25.04.2
-[U.]  #04  akonadi-mime                                  25.04.1 -> 25.04.2
-[U.]  #05  akonadi-search                                25.04.1 -> 25.04.2
-[U*]  #06  ark                                           25.04.1 -> 25.04.2
-[U*]  #07  baloo-widgets                                 25.04.1 -> 25.04.2
-[U.]  #08  bootspec                                      1.0.0 -> 1.0.1
-[U.]  #09  cachix                                        1.7.8-bin -> 1.7.9-bin
-[U*]  #10  cpupower                                      6.14.8 -> 6.14.9
-[U.]  #11  cubeb                                         0-unstable-2025-04-02-lib -> 0-unstable-2025-05-29-lib
-[U*]  #12  dolphin                                       25.04.1 -> 25.04.2
-[U*]  #13  dolphin-emu                                   2503a -> 2506
-[U*]  #14  dolphin-plugins                               25.04.1 -> 25.04.2
-[U.]  #15  electron                                      35.5.0 -> 35.5.1
-[U.]  #16  electron-unwrapped                            35.5.0 -> 35.5.1
-[U*]  #17  elisa                                         25.04.1 -> 25.04.2
-[U*]  #18  ffmpegthumbs                                  25.04.1 -> 25.04.2
-[U.]  #19  grantleetheme                                 25.04.1 -> 25.04.2
-[U*]  #20  gwenview                                      25.04.1 -> 25.04.2
-[U.]  #21  initrd-linux-xanmod                           6.14.8 -> 6.14.9
-[U.]  #22  kaccounts-integration                         25.04.1 -> 25.04.2
-[U*]  #23  kalk                                          25.04.1 -> 25.04.2
-[U*]  #24  kate                                          25.04.1 -> 25.04.2
-[U.]  #25  kcalutils                                     25.04.1 -> 25.04.2
-[U*]  #26  kde-inotify-survey                            25.04.1 -> 25.04.2
-[U.]  #27  kdegraphics-mobipocket                        25.04.1 -> 25.04.2
-[U*]  #28  kdegraphics-thumbnailers                      25.04.1 -> 25.04.2
-[U*]  #29  kdepim-runtime                                25.04.1 -> 25.04.2
-[U*]  #30  khelpcenter                                   25.04.1 -> 25.04.2
-[U*]  #31  kidentitymanagement                           25.04.1 -> 25.04.2
-[U.]  #32  kimap                                         25.04.1 -> 25.04.2
-[U*]  #33  kio-admin                                     25.04.1 -> 25.04.2
-[U*]  #34  kio-extras                                    25.04.1 -> 25.04.2
-[U.]  #35  kldap                                         25.04.1 -> 25.04.2
-[U.]  #36  kmailtransport                                25.04.1 -> 25.04.2
-[U.]  #37  kmbox                                         25.04.1 -> 25.04.2
-[U.]  #38  kmime                                         25.04.1 -> 25.04.2
-[U*]  #39  konsole                                       25.04.1 -> 25.04.2
-[U.]  #40  kpimtextedit                                  25.04.1 -> 25.04.2
-[U*]  #41  kpmcore                                       25.04.1 -> 25.04.2
-[U.]  #42  ksmtp                                         25.04.1 -> 25.04.2
-[U*]  #43  kunifiedpush                                  25.04.1 -> 25.04.2
-[U*]  #44  kwalletmanager                                25.04.1 -> 25.04.2
-[U.]  #45  libgravatar                                   25.04.1 -> 25.04.2
-[U.]  #46  libkate                                       0.4.1 -> 0.4.3
-[U.]  #47  libkdcraw                                     25.04.1 -> 25.04.2
-[U*]  #48  libkdepim                                     25.04.1 -> 25.04.2
-[C.]  #49  libkexiv2                                     23.08.5, 25.04.1 -> 23.08.5, 25.04.2
-[U.]  #50  libkgapi                                      25.04.1 -> 25.04.2
-[U.]  #51  libkleo                                       25.04.1 -> 25.04.2
-[U.]  #52  linux-xanmod                                  6.14.8, 6.14.8-modules, 6.14.8-modules-shrunk -> 6.14.9, 6.14.9-modules, 6.14.9-modules-shrunk
-[U.]  #53  mariadb-server                                10.11.11 -> 10.11.13
-[C.]  #54  mbedtls                                       2.28.9, 3.6.3 x2 -> 2.28.10, 3.6.3 x2
-[U.]  #55  mesa                                          25.1.1 x2 -> 25.1.2 x2
-[U.]  #56  messagelib                                    25.04.1 -> 25.04.2
-[U.]  #57  miniupnpc                                     2.3.2 -> 2.3.3
-[U*]  #58  mullvad-browser                               14.5.2 -> 14.5.3
-[U.]  #59  nix-direnv                                    3.0.7 -> 3.1.0
-[U.]  #60  nixos-system-nixos                            25.11pre808478.910796cabe43 -> 25.11pre811950.3e3afe5174c5
-[U.]  #61  nvidia-open                                   6.14.8-570.133.07 -> 6.14.9-570.133.07
-[U*]  #62  nvidia-x11                                    570.133.07-6.14.8, 570.133.07-6.14.8-bin, 570.133.07-6.14.8-firmware, 570.133.07-6.14.8-lib32 -> 570.133.07-6.14.9, 570.133.07-6.14.9-bin, 570.133.07-6.14.9-firmware, 570.133.07-6.14.9-lib32
-[U*]  #63  okular                                        25.04.1 -> 25.04.2
-[U*]  #64  partitionmanager                              25.04.1 -> 25.04.2
-[U.]  #65  pimcommon                                     25.04.1 -> 25.04.2
-[U.]  #66  samba                                         4.20.4 x2, 4.20.4-man -> 4.20.8 x2, 4.20.8-man
-[U.]  #67  steam-unwrapped                               1.0.0.82 -> 1.0.0.83
-[U*]  #68  turbostat                                     6.14.8 -> 6.14.9
-[C.]  #69  udev-rules                                    <none> -> <none> x2
-[U*]  #70  ungoogled-chromium                            137.0.7151.55, 137.0.7151.55-sandbox -> 137.0.7151.68, 137.0.7151.68-sandbox
-[U.]  #71  ungoogled-chromium-unwrapped                  137.0.7151.55, 137.0.7151.55-sandbox -> 137.0.7151.68, 137.0.7151.68-sandbox
-[U.]  #72  vscode-extension-ms-azuretools-vscode-docker  1.29.6 -> 2.0.0
-[U*]  #73  webkitgtk                                     2.48.2+abi=4.0, 2.48.2+abi=4.1, 2.48.2+abi=6.0 -> 2.48.3+abi=4.0, 2.48.3+abi=4.1, 2.48.3+abi=6.0
-[U*]  #74  xdg-desktop-portal                            1.20.0 -> 1.20.3
+[C.]  #1  gcc          14.2.1.20250322, 14.2.1.20250322-lib x3, 14.2.1.20250322-libgcc x3, 14.2.1.20250322-man -> 14.2.1.20250322 x2, 14.2.1.20250322-lib x4, 14.2.1.20250322-libgcc x4, 14.2.1.20250322-man
+[C.]  #2  gcc-wrapper  14.2.1.20250322, 14.2.1.20250322-man -> 14.2.1.20250322 x2, 14.2.1.20250322-man
+[C.]  #3  isl          0.20 -> 0.20 x2
+[C.]  #4  libmpc       1.3.1 -> 1.3.1 x2
+[C.]  #5  libplacebo   5.264.1 -> 5.264.1, 7.351.0
+[C*]  #6  python3      3.11.12, 3.12.10 x4, 3.12.10-env x4 -> 3.10.17, 3.11.12, 3.12.10 x4, 3.12.10-env x4
+Selection state changes:
+[C+]  #1  nvidia-vaapi-driver  0.0.13
 Added packages:
-[A.]  #1  initrd-fsinfo                       <none>
-[A.]  #2  link-units                          <none>
-[A.]  #3  stage                               1-init.sh
-[A.]  #4  vscode-extension-redhat-vscode-xml  0.29.0
-Closure size: 2631 -> 2636 (221 paths added, 216 paths removed, delta +5, disk usage +73.7MiB).
+[A.]  #01  aribb24             1.0.4
+[A.]  #02  codec2              1.2.0-lib
+[A+]  #03  cuda-merged         12.8
+[A.]  #04  cuda_cccl           12.8.90, 12.8.90-dev
+[A.]  #05  cuda_cudart         12.8.90, 12.8.90-dev, 12.8.90-lib, 12.8.90-static, 12.8.90-stubs
+[A.]  #06  cuda_cuobjdump      12.8.90, 12.8.90-bin
+[A.]  #07  cuda_cupti          12.8.90, 12.8.90-dev, 12.8.90-lib, 12.8.90-sample, 12.8.90-static
+[A.]  #08  cuda_cuxxfilt       12.8.90, 12.8.90-bin, 12.8.90-dev, 12.8.90-static
+[A.]  #09  cuda_gdb            12.8.90, 12.8.90-bin
+[A.]  #10  cuda_nvcc           12.8.93, 12.8.93-static
+[A.]  #11  cuda_nvdisasm       12.8.90-bin
+[A.]  #12  cuda_nvml_dev       12.8.90, 12.8.90-dev, 12.8.90-lib, 12.8.90-static
+[A.]  #13  cuda_nvprune        12.8.90-bin
+[A.]  #14  cuda_nvrtc          12.8.93, 12.8.93-dev, 12.8.93-lib, 12.8.93-static
+[A.]  #15  cuda_nvtx           12.8.90, 12.8.90-dev, 12.8.90-lib
+[A.]  #16  cuda_profiler_api   12.8.90, 12.8.90-dev
+[A.]  #17  cuda_sanitizer_api  12.8.93
+[A+]  #18  ffmpeg-full         7.1.1-bin, 7.1.1-data, 7.1.1-doc, 7.1.1-lib, 7.1.1-man
+[A.]  #19  frei0r-plugins      2.3.3
+[A.]  #20  gnumake             4.4.1
+[A.]  #21  intel-media-sdk     23.2.2
+[A.]  #22  kvazaar             2.3.1-lib
+[A.]  #23  libaribcaption      1.1.1
+[A.]  #24  libcdio-paranoia    2.0.2
+[A.]  #25  libcublas           12.8.4.1, 12.8.4.1-dev, 12.8.4.1-lib, 12.8.4.1-static
+[A.]  #26  libcufft            11.3.3.83, 11.3.3.83-dev, 11.3.3.83-lib, 11.3.3.83-static
+[A.]  #27  libcurand           10.3.9.90, 10.3.9.90-dev, 10.3.9.90-lib, 10.3.9.90-static
+[A.]  #28  libcusolver         11.7.3.90, 11.7.3.90-dev, 11.7.3.90-lib, 11.7.3.90-static
+[A.]  #29  libcusparse         12.5.8.93, 12.5.8.93-dev, 12.5.8.93-lib, 12.5.8.93-static
+[A.]  #30  libilbc             3.0.4
+[A.]  #31  libnpp              12.3.3.100, 12.3.3.100-dev, 12.3.3.100-lib, 12.3.3.100-static
+[A.]  #32  libnvjitlink        12.8.93-lib
+[A.]  #33  quirc               1.2
+[A.]  #34  rav1e               0.7.1
+[A.]  #35  rubberband          4.0.0
+[A.]  #36  setup-cuda-hook     <none>
+[A.]  #37  shine               3.1.1
+[A.]  #38  vamp-plugin-sdk     2.10
+[A.]  #39  vo-amrwbenc         0.1.3
+[A.]  #40  vvenc               1.13.1-lib
+[A.]  #41  xavs                55
+[A.]  #42  xevd                0.5.0-lib
+[A.]  #43  xeve                0.5.1-lib
+[A.]  #44  zeromq              4.3.5
+Removed packages:
+[R-]  #1  bambu-studio  01.10.02.76
+Closure size: 2636 -> 2733 (120 paths added, 23 paths removed, delta +97, disk usage +7.3GiB).
