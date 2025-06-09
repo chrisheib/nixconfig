@@ -1,10 +1,83 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #1  openjdk  8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6 -> 8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6 x2
-Selection state changes:
-[C+]  #1  adwaita-icon-theme  48.0
-[C+]  #2  gtk+3               3.24.49 x2
+[U*]  #01  akonadi                                       25.04.1 -> 25.04.2
+[U*]  #02  akonadi-calendar                              25.04.1 -> 25.04.2
+[U.]  #03  akonadi-contacts                              25.04.1 -> 25.04.2
+[U.]  #04  akonadi-mime                                  25.04.1 -> 25.04.2
+[U.]  #05  akonadi-search                                25.04.1 -> 25.04.2
+[U*]  #06  ark                                           25.04.1 -> 25.04.2
+[U*]  #07  baloo-widgets                                 25.04.1 -> 25.04.2
+[U.]  #08  bootspec                                      1.0.0 -> 1.0.1
+[U.]  #09  cachix                                        1.7.8-bin -> 1.7.9-bin
+[U*]  #10  cpupower                                      6.14.8 -> 6.14.9
+[U.]  #11  cubeb                                         0-unstable-2025-04-02-lib -> 0-unstable-2025-05-29-lib
+[U*]  #12  dolphin                                       25.04.1 -> 25.04.2
+[U*]  #13  dolphin-emu                                   2503a -> 2506
+[U*]  #14  dolphin-plugins                               25.04.1 -> 25.04.2
+[U.]  #15  electron                                      35.5.0 -> 35.5.1
+[U.]  #16  electron-unwrapped                            35.5.0 -> 35.5.1
+[U*]  #17  elisa                                         25.04.1 -> 25.04.2
+[U*]  #18  ffmpegthumbs                                  25.04.1 -> 25.04.2
+[U.]  #19  grantleetheme                                 25.04.1 -> 25.04.2
+[U*]  #20  gwenview                                      25.04.1 -> 25.04.2
+[U.]  #21  initrd-linux-xanmod                           6.14.8 -> 6.14.9
+[U.]  #22  kaccounts-integration                         25.04.1 -> 25.04.2
+[U*]  #23  kalk                                          25.04.1 -> 25.04.2
+[U*]  #24  kate                                          25.04.1 -> 25.04.2
+[U.]  #25  kcalutils                                     25.04.1 -> 25.04.2
+[U*]  #26  kde-inotify-survey                            25.04.1 -> 25.04.2
+[U.]  #27  kdegraphics-mobipocket                        25.04.1 -> 25.04.2
+[U*]  #28  kdegraphics-thumbnailers                      25.04.1 -> 25.04.2
+[U*]  #29  kdepim-runtime                                25.04.1 -> 25.04.2
+[U*]  #30  khelpcenter                                   25.04.1 -> 25.04.2
+[U*]  #31  kidentitymanagement                           25.04.1 -> 25.04.2
+[U.]  #32  kimap                                         25.04.1 -> 25.04.2
+[U*]  #33  kio-admin                                     25.04.1 -> 25.04.2
+[U*]  #34  kio-extras                                    25.04.1 -> 25.04.2
+[U.]  #35  kldap                                         25.04.1 -> 25.04.2
+[U.]  #36  kmailtransport                                25.04.1 -> 25.04.2
+[U.]  #37  kmbox                                         25.04.1 -> 25.04.2
+[U.]  #38  kmime                                         25.04.1 -> 25.04.2
+[U*]  #39  konsole                                       25.04.1 -> 25.04.2
+[U.]  #40  kpimtextedit                                  25.04.1 -> 25.04.2
+[U*]  #41  kpmcore                                       25.04.1 -> 25.04.2
+[U.]  #42  ksmtp                                         25.04.1 -> 25.04.2
+[U*]  #43  kunifiedpush                                  25.04.1 -> 25.04.2
+[U*]  #44  kwalletmanager                                25.04.1 -> 25.04.2
+[U.]  #45  libgravatar                                   25.04.1 -> 25.04.2
+[U.]  #46  libkate                                       0.4.1 -> 0.4.3
+[U.]  #47  libkdcraw                                     25.04.1 -> 25.04.2
+[U*]  #48  libkdepim                                     25.04.1 -> 25.04.2
+[C.]  #49  libkexiv2                                     23.08.5, 25.04.1 -> 23.08.5, 25.04.2
+[U.]  #50  libkgapi                                      25.04.1 -> 25.04.2
+[U.]  #51  libkleo                                       25.04.1 -> 25.04.2
+[U.]  #52  linux-xanmod                                  6.14.8, 6.14.8-modules, 6.14.8-modules-shrunk -> 6.14.9, 6.14.9-modules, 6.14.9-modules-shrunk
+[U.]  #53  mariadb-server                                10.11.11 -> 10.11.13
+[C.]  #54  mbedtls                                       2.28.9, 3.6.3 x2 -> 2.28.10, 3.6.3 x2
+[U.]  #55  mesa                                          25.1.1 x2 -> 25.1.2 x2
+[U.]  #56  messagelib                                    25.04.1 -> 25.04.2
+[U.]  #57  miniupnpc                                     2.3.2 -> 2.3.3
+[U*]  #58  mullvad-browser                               14.5.2 -> 14.5.3
+[U.]  #59  nix-direnv                                    3.0.7 -> 3.1.0
+[U.]  #60  nixos-system-nixos                            25.11pre808478.910796cabe43 -> 25.11pre811950.3e3afe5174c5
+[U.]  #61  nvidia-open                                   6.14.8-570.133.07 -> 6.14.9-570.133.07
+[U*]  #62  nvidia-x11                                    570.133.07-6.14.8, 570.133.07-6.14.8-bin, 570.133.07-6.14.8-firmware, 570.133.07-6.14.8-lib32 -> 570.133.07-6.14.9, 570.133.07-6.14.9-bin, 570.133.07-6.14.9-firmware, 570.133.07-6.14.9-lib32
+[U*]  #63  okular                                        25.04.1 -> 25.04.2
+[U*]  #64  partitionmanager                              25.04.1 -> 25.04.2
+[U.]  #65  pimcommon                                     25.04.1 -> 25.04.2
+[U.]  #66  samba                                         4.20.4 x2, 4.20.4-man -> 4.20.8 x2, 4.20.8-man
+[U.]  #67  steam-unwrapped                               1.0.0.82 -> 1.0.0.83
+[U*]  #68  turbostat                                     6.14.8 -> 6.14.9
+[C.]  #69  udev-rules                                    <none> -> <none> x2
+[U*]  #70  ungoogled-chromium                            137.0.7151.55, 137.0.7151.55-sandbox -> 137.0.7151.68, 137.0.7151.68-sandbox
+[U.]  #71  ungoogled-chromium-unwrapped                  137.0.7151.55, 137.0.7151.55-sandbox -> 137.0.7151.68, 137.0.7151.68-sandbox
+[U.]  #72  vscode-extension-ms-azuretools-vscode-docker  1.29.6 -> 2.0.0
+[U*]  #73  webkitgtk                                     2.48.2+abi=4.0, 2.48.2+abi=4.1, 2.48.2+abi=6.0 -> 2.48.3+abi=4.0, 2.48.3+abi=4.1, 2.48.3+abi=6.0
+[U*]  #74  xdg-desktop-portal                            1.20.0 -> 1.20.3
 Added packages:
-[A+]  #1  minion  3.0.12
-Closure size: 2629 -> 2631 (14 paths added, 12 paths removed, delta +2, disk usage +758.3MiB).
+[A.]  #1  initrd-fsinfo                       <none>
+[A.]  #2  link-units                          <none>
+[A.]  #3  stage                               1-init.sh
+[A.]  #4  vscode-extension-redhat-vscode-xml  0.29.0
+Closure size: 2631 -> 2636 (221 paths added, 216 paths removed, delta +5, disk usage +73.7MiB).
