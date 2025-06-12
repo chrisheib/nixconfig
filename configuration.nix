@@ -36,21 +36,6 @@
           --run "code --no-sandbox"
     '';
   });
-
-  orca-slicer = pkgs.orca-slicer.overrideAttrs (oldAttrs: {
-    cmakeFlags =
-      oldAttrs.cmakeFlags
-      ++ [
-        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${pkgs.cudaPackages.cudatoolkit}")
-      ];
-  });
-  bambu-studio = pkgs.orca-slicer.overrideAttrs (oldAttrs: {
-    cmakeFlags =
-      oldAttrs.cmakeFlags
-      ++ [
-        (lib.cmakeFeature "CUDA_TOOLKIT_ROOT_DIR" "${pkgs.cudaPackages.cudatoolkit}")
-      ];
-  });
 in {
   imports = [
     # Include the results of the hardware scan.
@@ -442,9 +427,9 @@ in {
 
     # Orca segfaults if not run with mesa: https://github.com/SoftFever/OrcaSlicer/issues/6433#issuecomment-2552029299
     # __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json orca-slicer
-    orca-slicer
+    # orca-slicer # broken cuda
 
-    bambu-studio
+    # bambu-studio # broken cuda
     # prusa-slicer # expensive to build o.o
     # unstable.cura # currently broken due to python
     # appimage-run # for cura
@@ -482,6 +467,10 @@ in {
     minion
 
     cudaPackages.cudatoolkit
+
+    rclone
+    restic
+    backrest
   ];
 
   # Enable GNOME settings manager
@@ -548,6 +537,25 @@ in {
       ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj''}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
+    };
+  };
+
+  # defaults to port 9898
+  systemd.services.backrest = {
+    description = "Launch backrest to take care of backups";
+    wantedBy = ["multi-user.target"];
+    requires = ["network-online.target"];
+    script = "backrest";
+    path = [pkgs.backrest];
+    environment = {
+      BACKREST_PORT = "0.0.0.0:9898";
+    };
+    serviceConfig = {
+      Type = "simple";
+      User = "stschiff";
+      # ExecStart = "backrest";
+      # It’s often a good idea to mark the service active after the command finishes.
+      # RemainAfterExit = true;
     };
   };
 
