@@ -1,4 +1,5 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2727 -> 2727 (4 paths added, 4 paths removed, delta +0, disk usage +120B).
+Version changes:
+[C+]  #1  libnotify  0.8.6 -> 0.8.6, 0.8.6-man
+Closure size: 2727 -> 2728 (13 paths added, 12 paths removed, delta +1, disk usage +4.0KiB).

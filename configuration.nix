@@ -471,6 +471,8 @@ in {
     rclone
     restic
     backrest
+
+    libnotify # enables notify-send
   ];
 
   # Enable GNOME settings manager
