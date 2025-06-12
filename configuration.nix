@@ -546,7 +546,7 @@ in {
     wantedBy = ["multi-user.target"];
     requires = ["network-online.target"];
     script = "backrest";
-    path = [pkgs.backrest];
+    path = [pkgs.backrest pkgs.rclone];
     environment = {
       BACKREST_PORT = "0.0.0.0:9898";
     };
