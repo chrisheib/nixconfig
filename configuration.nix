@@ -7,28 +7,10 @@
   lib,
   ...
 }: let
-  system = builtins.currentSystem;
-  extensions =
-    (import (builtins.fetchGit {
-      url = "https://github.com/nix-community/nix-vscode-extensions";
-      ref = "refs/heads/master";
-      rev = "cb0aee6840fb29b70439880656ca6a313a6af101";
-    }))
-    .extensions
-    .${
-      system
-    };
-  extensionsList = with extensions.vscode-marketplace; [
-    # filiptibell.tooling-language-server
-    # rust-lang.rust-analyzer
-    github.copilot-chat
-    github.copilot
-    platformio.platformio-ide
-  ];
+  nix-vscode-extensions = import (builtins.fetchTarball {
+    url = "https://github.com/nix-community/nix-vscode-extensions/archive/master.tar.gz";
+  });
 
-  # unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
-
-  # Wrap vscode with --no-sandbox args, so it can run sudo from within the terminal.
   my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
@@ -40,6 +22,10 @@ in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+  ];
+
+  nixpkgs.overlays = [
+    nix-vscode-extensions.overlays.default
   ];
 
   # To switch to unstable nixpgks:
@@ -314,37 +300,37 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (my-vscode-no-sandbox.override {
+      vscodeExtensions = with vscode-extensions; [
+        tauri-apps.tauri-vscode
+        bbenoist.nix
+        ms-python.python
+        ms-azuretools.vscode-docker
+        ms-vscode-remote.remote-ssh
+        ms-vscode-remote.remote-ssh-edit
+        ms-vscode-remote.remote-containers
+        jnoortheen.nix-ide
+        kamadorueda.alejandra
+        rust-lang.rust-analyzer
+        usernamehw.errorlens
+        tamasfe.even-better-toml
+        mkhl.direnv
+        thenuprojectcontributors.vscode-nushell-lang
+        mechatroner.rainbow-csv
+        ms-vscode.cpptools
+        redhat.vscode-xml
+        github.copilot-chat
+        github.copilot
+      ];
+    })
+
     # brave
     mullvad-browser
     ungoogled-chromium
 
     kdePackages.kate # editor with sudo
     thunderbird
-    (my-vscode-no-sandbox.override {
-      # vscode = vscodium;
-      # extraArguments = "--no-sandbox";
-      vscodeExtensions = with vscode-extensions;
-        [
-          tauri-apps.tauri-vscode
-          bbenoist.nix
-          ms-python.python
-          ms-azuretools.vscode-docker
-          ms-vscode-remote.remote-ssh
-          ms-vscode-remote.remote-ssh-edit
-          ms-vscode-remote.remote-containers
-          jnoortheen.nix-ide
-          kamadorueda.alejandra
-          rust-lang.rust-analyzer
-          usernamehw.errorlens
-          tamasfe.even-better-toml
-          mkhl.direnv
-          thenuprojectcontributors.vscode-nushell-lang
-          mechatroner.rainbow-csv
-          ms-vscode.cpptools
-          redhat.vscode-xml
-        ]
-        ++ extensionsList;
-    })
+    # my-vscode
     # bitwarden
 
     vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
@@ -409,9 +395,6 @@ in {
 
     # waydroid # also enable virtualisation.waydroid.enable
 
-    vdpauinfo # sudo vainfo
-    libva-utils # sudo vainfo
-    nvidia-vaapi-driver
     git
     ntfs3g # allow read write ntfs mounts
     # docker-compose
@@ -427,7 +410,7 @@ in {
 
     # Orca segfaults if not run with mesa: https://github.com/SoftFever/OrcaSlicer/issues/6433#issuecomment-2552029299
     # __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json orca-slicer
-    # orca-slicer # broken cuda
+    orca-slicer # broken cuda
 
     # bambu-studio # broken cuda
     # prusa-slicer # expensive to build o.o
