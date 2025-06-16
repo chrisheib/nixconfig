@@ -14,8 +14,7 @@
   my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
-        wrapProgram $out/bin/executable-name \
-          --run "code --no-sandbox"
+        wrapProgram $out/bin/code --add-flags "--no-sandbox"
     '';
   });
 in {
@@ -347,6 +346,7 @@ in {
     mangohud
 
     alacritty # https://alacritty.org/config-alacritty.html
+    kitty
     bottom
     starship
     # nushell

@@ -1,4 +1,8 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2740 -> 2740 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
+Version changes:
+[C*]  #1  ncurses  6.5 x2, 6.5-man -> 6.5 x2, 6.5-dev, 6.5-man
+Added packages:
+[A+]  #1  kitty                    0.42.1, 0.42.1-terminfo
+[A.]  #2  libstartup-notification  0.12
+Closure size: 2740 -> 2744 (17 paths added, 13 paths removed, delta +4, disk usage +56.9MiB).
