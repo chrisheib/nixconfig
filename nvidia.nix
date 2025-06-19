@@ -42,9 +42,9 @@
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-    setLdLibraryPath = true;
+    #driSupport = true;
+    #driSupport32Bit = true;
+    #setLdLibraryPath = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
       vaapiVdpau
@@ -58,13 +58,13 @@
     LIBVA_DRI3_DISABLE = "1";
   };
 
-  nixpkgs.config.packageOverrides = pkgs: {inherit (pkgs) linuxPackages_latest nvidia_x11;};
+  # nixpkgs.config.packageOverrides = pkgs: {inherit (pkgs) linuxPackages_latest nvidia_x11;};
 
   hardware.nvidia = {
     modesetting.enable = true;
     powerManagement.enable = true;
-    open = false;
-    nvidiaSettings = false;
+    open = true;
+    # nvidiaSettings = false;
     package = config.boot.kernelPackages.nvidiaPackages.production;
 
     # package = config.boot.kernelPackages.nvidiaPackages.beta;

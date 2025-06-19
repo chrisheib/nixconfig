@@ -11,14 +11,15 @@
     l = "ls -alh";
     ll = "ls -l";
     ls = "ls --color=tty";
-    nrt = "sudo nixos-rebuild test -I nixos-config=/home/schiff/nixconfig/configuration.nix";
-    nrs = "sudo nixos-rebuild switch -I nixos-config=/home/schiff/nixconfig/configuration.nix && cur && gcp";
+    nrt = "sudo nixos-rebuild test";
+    nrs = "sudo nixos-rebuild switch && cur && gcp && gc";
     nrsrepair = "sudo nixos-rebuild switch --repair -I nixos-config=/home/schiff/nixconfig/configuration.nix";
     nrsu = "sudo nix-channel --update && nrs";
     nrsb = "nrs && gut";
     cur = "sudo echo -n 'Current Generation: ' && sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}'";
     gut = "qdbus org.kde.Shutdown /Shutdown  org.kde.Shutdown.logoutAndReboot";
     gcp = "(cd ~/nixconfig && git add . && git commit -m \"Generation $(sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | awk '{print $1}')\" && git push)";
+    gc = "nix-collect-garbage --delete-older-then 7d";
   };
 
   boot.kernelModules = ["88XXau"];
@@ -36,15 +37,21 @@
   programs.kdeconnect.enable = true;
   programs.firefox.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
+  programs.steam.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nvtopPackages.intel # nvtop
     git
+    neofetch
     # firefox-vaapi
     libva-utils
     google-chrome
     vdpauinfo # sudo vainfo
+    vlc
     nil # nix lsp
     alejandra # nix formatter
     # bashmount # mount ssds for recovery

@@ -12,17 +12,18 @@
     ./software.nix
 
     # https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/default.nix
-    #./nvidia
+    ./nvidia.nix
 
     # ./nvidia.nix
     # ./intel.nix
-    ./amd.nix
+    # ./amd.nix
   ];
 
-  system.autoUpgrade.enable = true;
+  system.autoUpgrade.enable = false;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 5;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixtv"; # Define your hostname.
@@ -68,7 +69,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   # services.xserver.desktopManager.plasma5.enable = true;
-  services.displayManager.defaultSession = "plasmax11"; # echo "$XDG_SESSION_TYPE"
+  # services.displayManager.defaultSession = "plasmax11"; # echo "$XDG_SESSION_TYPE"
 
   # Configure keymap in X11
   services.xserver.xkb = {
