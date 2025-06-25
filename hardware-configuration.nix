@@ -49,6 +49,12 @@
     options = ["rw" "uid=1000" "nofail"];
   };
 
+  fileSystems."/run/media/stschiff/win-2025-05" = {
+    device = "/dev/disk/by-uuid/7C248AD4248A9136";
+    fsType = "ntfs-3g";
+    options = ["rw" "uid=1000" "nofail"];
+  };
+
   swapDevices = [
     {device = "/dev/disk/by-uuid/2d1cca01-26a6-4f29-bccf-d5e472751981";}
   ];

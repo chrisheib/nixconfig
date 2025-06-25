@@ -192,6 +192,7 @@ in {
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    google-fonts
   ];
   fonts.fontDir.enable = true; # https://wiki.nixos.org/wiki/Fonts#Flatpak_applications_can't_find_system_fonts
 
@@ -247,19 +248,20 @@ in {
   # https://wiki.nixos.org/wiki/NVIDIA
   services.xserver.videoDrivers = ["nvidia"];
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-      version = "570.133.07"; # use new 570 drivers
-      sha256_64bit = "sha256-LUPmTFgb5e9VTemIixqpADfvbUX1QoTT2dztwI3E3CY="; # "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # .run.drv
-      openSha256 = "sha256-9l8N83Spj0MccA8+8R1uqiXBS0Ag4JrLPjrU3TaXHnM=";
-      settingsSha256 = "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # src.drv
-      usePersistenced = false;
-    };
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    #  {
+    #   version = "570.133.07"; # use new 570 drivers
+    #   sha256_64bit = "sha256-LUPmTFgb5e9VTemIixqpADfvbUX1QoTT2dztwI3E3CY="; # "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # .run.drv
+    #   openSha256 = "sha256-9l8N83Spj0MccA8+8R1uqiXBS0Ag4JrLPjrU3TaXHnM=";
+    #   settingsSha256 = "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # src.drv
+    #   usePersistenced = false;
+    # };
 
     modesetting.enable = lib.mkDefault true;
     # Power management is nearly always required to get nvidia GPUs to
     # behave on suspend, due to firmware bugs.
     powerManagement.enable = true;
-    powerManagement.finegrained = true; # requires offload to be enabled
+    # powerManagement.finegrained = true; # requires offload to be enabled
     open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
     # prime = {
     # offload.enable = true;
@@ -268,11 +270,11 @@ in {
     # intelBusId = "PCI:0:2:0";
     # nvidiaBusId = "PCI:1:0:0";
     # };
-    prime = {
-      offload.enable = true;
-      nvidiaBusId = "PCI:1:0:0"; # Adjust based on your hardware
-      amdgpuBusId = "PCI:0:2:0"; # Adjust based on your hardware
-    };
+    # prime = {
+    #   offload.enable = true;
+    #   nvidiaBusId = "PCI:1:0:0"; # Adjust based on your hardware
+    #   amdgpuBusId = "PCI:0:2:0"; # Adjust based on your hardware
+    # };
   };
 
   hardware.bluetooth = {
@@ -288,7 +290,7 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   # build packages with cuda support
-  nixpkgs.config.cudaSupport = true;
+  # nixpkgs.config.cudaSupport = true;
 
   # https://wiki.nixos.org/wiki/Virt-manager
   # https://sysguides.com/install-a-windows-11-virtual-machine-on-kvm
@@ -391,6 +393,7 @@ in {
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
 
     kdePackages.kalk # calculator
+    krusader # file manager (like total commander) and ftp
     kde-rounded-corners
 
     # waydroid # also enable virtualisation.waydroid.enable
@@ -538,6 +541,8 @@ in {
     serviceConfig = {
       Type = "simple";
       User = "stschiff";
+      # AmbientCapabilities = "CAP_DAC_READ_SEARCH";
+      # CapabilityBoundingSet = "CAP_DAC_READ_SEARCH";
       # ExecStart = "backrest";
       # It’s often a good idea to mark the service active after the command finishes.
       # RemainAfterExit = true;
