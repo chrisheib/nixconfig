@@ -181,6 +181,7 @@ in {
 
   nix.extraOptions = ''
     trusted-users = root stschiff
+    experimental-features = nix-command flakes
   '';
 
   nix.settings = {
@@ -452,11 +453,14 @@ in {
 
     minion
 
-    cudaPackages.cudatoolkit
+    # cudaPackages.cudatoolkit
 
     rclone
     restic
+    restic-browser
     backrest
+
+    nh
 
     libnotify # enables notify-send
   ];
