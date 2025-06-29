@@ -158,15 +158,15 @@ in {
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() {up && sudo nixos-rebuild switch --upgrade && cur && gcp \"$1\" && gc }";
+      nrs = "() {up && sudo nh os switch --update --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
       gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
-      up = "sudo nix-channel --update && sudo nixos-rebuild build --upgrade && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
-      gc = "nix-collect-garbage --delete-older-than 7d";
+      up = "sudo nix-channel --update && sudo nh os build --update --file '<nixpkgs/nixos>' && nvdnh diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
+      gc = "nh clean all --keep 5 --keep-since 7d";
     };
 
     histSize = 10001;
@@ -460,9 +460,11 @@ in {
     restic-browser
     backrest
 
-    nh
+    nh # nix os helper
 
     libnotify # enables notify-send
+
+    cava # audio visualizer
   ];
 
   # Enable GNOME settings manager
