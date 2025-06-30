@@ -426,7 +426,8 @@ in {
     # appimage-run # for cura
     # unstable.cura-appimage
 
-    smartgit #
+    smartgit
+    github-desktop
 
     webkitgtk_6_0
 

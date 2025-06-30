@@ -1,5 +1,6 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #1  kurva  0.3.0 -> 0.3.1
-Closure size: 2923 -> 2923 (13 paths added, 13 paths removed, delta +0, disk usage +9.4KiB).
+Added packages:
+[A+]  #1  github-desktop  3.4.13
+[A.]  #2  gnome-keyring   48.0
+Closure size: 2923 -> 2925 (14 paths added, 12 paths removed, delta +2, disk usage +449.1MiB).
