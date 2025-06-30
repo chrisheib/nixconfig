@@ -471,6 +471,7 @@ in {
     cava # audio visualizer
 
     qt6.full # contains websockets for kurva
+    qt6.qtwebsockets
   ];
 
   # Enable GNOME settings manager

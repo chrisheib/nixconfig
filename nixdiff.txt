@@ -1,4 +1,5 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2921 -> 2921 (3 paths added, 3 paths removed, delta +0, disk usage +216B).
+Selection state changes:
+[C+]  #1  qtwebsockets  5.15.17, 5.15.17-bin, 6.9.0, 6.9.0-dev
+Closure size: 2921 -> 2921 (12 paths added, 12 paths removed, delta +0, disk usage +40B).
