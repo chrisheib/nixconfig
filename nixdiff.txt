@@ -1,5 +1,5 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[D*]  #1  kurva  0.3.1 -> 0.3.0
-Closure size: 2922 -> 2922 (13 paths added, 13 paths removed, delta +0, disk usage -9.3KiB).
+Added packages:
+[A+]  #1  plasmusic-toolbar  2.5.0
+Closure size: 2922 -> 2923 (13 paths added, 12 paths removed, delta +1, disk usage +68.2KiB).

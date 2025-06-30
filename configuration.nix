@@ -474,6 +474,8 @@ in {
     qt6.qtwebsockets
 
     (callPackage /home/stschiff/projects/plasma-audio-visualizer/derivation.nix {})
+
+    plasmusic-toolbar
   ];
 
   # Enable GNOME settings manager
