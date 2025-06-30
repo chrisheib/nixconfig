@@ -166,7 +166,7 @@ in {
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
       gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
-      up = "sudo nix-channel --update && nh os build --file '<nixpkgs/nixos>' && nvdnh diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
+      up = "sudo nix-channel --update && nh os build --file '<nixpkgs/nixos>' && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
       gc = "nh clean all --keep 5 --keep-since 7d";
     };
 
