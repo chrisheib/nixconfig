@@ -167,7 +167,9 @@ in {
       gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
       up = "sudo nix-channel --update && nh os build --file '<nixpkgs/nixos>' && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
-      gc = "nh clean all --keep 5 --keep-since 7d";
+      gc = "nh clean all --keep 5 --keep-since 7d && fixicons";
+      # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
+      fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell";
     };
 
     histSize = 10001;
