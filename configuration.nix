@@ -467,6 +467,8 @@ in {
     libnotify # enables notify-send
 
     cava # audio visualizer
+
+    qt6.full # contains websockets for kurva
   ];
 
   # Enable GNOME settings manager
