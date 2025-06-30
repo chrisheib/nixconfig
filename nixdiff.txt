@@ -1,5 +1,5 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  qtwebsockets  5.15.17, 5.15.17-bin, 6.9.0, 6.9.0-dev
-Closure size: 2921 -> 2921 (12 paths added, 12 paths removed, delta +0, disk usage +40B).
+Added packages:
+[A+]  #1  plasmusic-toolbar  2.5.0
+Closure size: 2921 -> 2922 (13 paths added, 12 paths removed, delta +1, disk usage +68.2KiB).
