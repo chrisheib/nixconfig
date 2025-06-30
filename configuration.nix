@@ -7,10 +7,9 @@
   lib,
   ...
 }: let
-  nix-vscode-extensions = import (builtins.fetchTarball {
-    url = "https://github.com/nix-community/nix-vscode-extensions/archive/master.tar.gz";
-  });
-
+  # nix-vscode-extensions = import (builtins.fetchTarball {
+  #   url = "https://github.com/nix-community/nix-vscode-extensions/archive/master.tar.gz";
+  # });
   my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
@@ -23,9 +22,11 @@ in {
     ./hardware-configuration.nix
   ];
 
-  nixpkgs.overlays = [
-    nix-vscode-extensions.overlays.default
-  ];
+  # nixpkgs.overlays = [
+  #   nix-vscode-extensions.overlays.default
+  # ];
+
+  # extensions = import nixpkgs { system = builtins.currentSystem; config.allowUnfree = true; overlays = [ nix-vscode-extensions.overlays.default ]; }
 
   # To switch to unstable nixpgks:
   # sudo nix-channel --list
@@ -323,6 +324,7 @@ in {
         redhat.vscode-xml
         github.copilot-chat
         github.copilot
+        # TheQtCompany.qt
       ];
     })
 
