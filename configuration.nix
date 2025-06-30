@@ -472,8 +472,6 @@ in {
 
     qt6.full # contains websockets for kurva
     qt6.qtwebsockets
-
-    plasmusic-toolbar
   ];
 
   # Enable GNOME settings manager
