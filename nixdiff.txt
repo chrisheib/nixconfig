@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  kurva  0.3.1
-Closure size: 2921 -> 2922 (13 paths added, 12 paths removed, delta +1, disk usage +95.8KiB).
+No version or selection state changes.
+Closure size: 2922 -> 2922 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
