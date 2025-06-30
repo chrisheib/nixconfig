@@ -472,6 +472,8 @@ in {
 
     qt6.full # contains websockets for kurva
     qt6.qtwebsockets
+
+    (callPackage /home/stschiff/projects/plasma-audio-visualizer/derivation.nix {})
   ];
 
   # Enable GNOME settings manager
