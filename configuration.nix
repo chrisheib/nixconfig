@@ -387,7 +387,6 @@ in {
     # -> copy file from ststat
     # devenv shell
     rustup
-    # (python3.withPackages (ps: [ps.websockets]))
 
     vlc
     streamlink-twitch-gui-bin
@@ -469,19 +468,17 @@ in {
 
     libnotify # enables notify-send
 
-    # cava # audio visualizer
-
-    # qt6.full # contains websockets for kurva
-    # qt6.qtwebsockets
-
+    (python3.withPackages (ps: [ps.websockets]))
+    cava # audio visualizer
+    qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix {})
 
     # plasmusic-toolbar
   ];
 
   # Enable GNOME settings manager
-  programs.dconf.enable = true;
 
+  programs.dconf.enable = true;
   programs.steam = {
     enable = true;
     # package = unstable.steam;
