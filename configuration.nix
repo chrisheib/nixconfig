@@ -468,9 +468,9 @@ in {
 
     libnotify # enables notify-send
 
-    (python3.withPackages (ps: [ps.websockets]))
-    cava # audio visualizer
-    qt6.qtwebsockets
+    # (python3.withPackages (ps: [ps.websockets]))
+    # cava # audio visualizer
+    # qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix {})
 
     # plasmusic-toolbar

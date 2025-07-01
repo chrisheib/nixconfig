@@ -1,9 +1,10 @@
 <<< /run/current-system
 >>> result
+Version changes:
+[C-]  #1  qtwebsockets  5.15.17, 5.15.17-bin, 6.9.0 -> 5.15.17, 5.15.17-bin, 6.9.0, 6.9.0-dev
 Selection state changes:
-[C+]  #1  python3       3.10.18, 3.11.13, 3.12.11, 3.13.4 x4, 3.13.4-env x5
-[C+]  #2  qtwebsockets  5.15.17, 5.15.17-bin, 6.9.0
-Added packages:
-[A+]  #1  cava        0.10.4
-[A+]  #2  python3.13  3.13.4-doc
-Closure size: 2839 -> 2841 (14 paths added, 12 paths removed, delta +2, disk usage +51.6MiB).
+[C-]  #1  cava     0.10.4
+[C-]  #2  python3  3.10.18, 3.11.13, 3.12.11, 3.13.4 x4, 3.13.4-env x5
+Removed packages:
+[R-]  #1  python3.13  3.13.4-doc
+Closure size: 2841 -> 2841 (14 paths added, 14 paths removed, delta +0, disk usage -51.5MiB).
