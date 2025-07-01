@@ -474,7 +474,7 @@ in {
     qt6.full # contains websockets for kurva
     qt6.qtwebsockets
 
-    (callPackage /home/stschiff/projects/plasma-audio-visualizer/derivation.nix {})
+    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix {})
 
     plasmusic-toolbar
   ];

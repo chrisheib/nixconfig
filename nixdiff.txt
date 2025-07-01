@@ -1,6 +1,26 @@
 <<< /run/current-system
 >>> result
+Version changes:
+[U*]  #01  cpupower                 6.14.11 -> 6.15.4
+[U.]  #02  electron                 35.5.1 -> 35.6.0
+[U.]  #03  electron-unwrapped       35.5.1 -> 35.6.0
+[U.]  #04  initrd-linux-xanmod      6.14.11 -> 6.15.4
+[U.]  #05  libndctl                 81, 81-man -> 82, 82-man
+[U.]  #06  libwacom                 2.15.0 -> 2.16.1
+[U.]  #07  linux-firmware           20250624-zstd -> 20250627-zstd
+[U.]  #08  linux-xanmod             6.14.11, 6.14.11-modules, 6.14.11-modules-shrunk -> 6.15.4, 6.15.4-modules, 6.15.4-modules-shrunk
+[U.]  #09  nixos-system-nixos       25.11pre822156.30e2e2857ba4 -> 25.11pre823481.3016b4b15d13
+[U.]  #10  nvidia-open              6.14.11-575.64 -> 6.15.4-575.64
+[U*]  #11  nvidia-x11               575.64-6.14.11, 575.64-6.14.11-bin, 575.64-6.14.11-firmware, 575.64-6.14.11-lib32 -> 575.64-6.15.4, 575.64-6.15.4-bin, 575.64-6.15.4-firmware, 575.64-6.15.4-lib32
+[U*]  #12  rclone                   1.70.1, 1.70.1-man -> 1.70.2, 1.70.2-man
+[U.]  #13  thin-provisioning-tools  1.1.0 -> 1.2.0
+[U*]  #14  turbostat                6.14.11 -> 6.15.4
+[C.]  #15  udev-rules               <none> x2 -> <none>
 Added packages:
-[A+]  #1  github-desktop  3.4.13
-[A.]  #2  gnome-keyring   48.0
-Closure size: 2923 -> 2925 (14 paths added, 12 paths removed, delta +2, disk usage +449.1MiB).
+[A+]  #1  kurve  0.4.0
+Removed packages:
+[R.]  #1  initrd-fsinfo  <none>
+[R-]  #2  kurva          0.3.1
+[R.]  #3  link-units     <none>
+[R.]  #4  stage          1-init.sh
+Closure size: 2925 -> 2921 (110 paths added, 114 paths removed, delta -4, disk usage +87.8MiB).
