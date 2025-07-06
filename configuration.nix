@@ -81,7 +81,7 @@ in {
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -169,7 +169,7 @@ in {
       up = "sudo nix-channel --update && nh os build --file '<nixpkgs/nixos>' && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
       gc = "nh clean all --keep 5 --keep-since 7d && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
-      fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell";
+      fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && sudo systemctl restart --user plasma-plasmashell";
     };
 
     histSize = 10001;
@@ -404,7 +404,7 @@ in {
 
     git
     ntfs3g # allow read write ntfs mounts
-    # docker-compose
+    docker-compose
     (lutris.override {
       extraPkgs = pkgs: [
         umu-launcher

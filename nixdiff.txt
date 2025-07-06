@@ -1,160 +1,21 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #001  akonadi                       25.04.2 -> 25.04.3
-[U.]  #002  akonadi-calendar              25.04.2 -> 25.04.3
-[U.]  #003  akonadi-contacts              25.04.2 -> 25.04.3
-[U.]  #004  akonadi-mime                  25.04.2 -> 25.04.3
-[U.]  #005  akonadi-search                25.04.2 -> 25.04.3
-[U*]  #006  ark                           25.04.2 -> 25.04.3
-[U*]  #007  aurorae                       6.4.1 -> 6.4.2
-[U*]  #008  baloo-widgets                 25.04.2 -> 25.04.3
-[U*]  #009  bind                          9.20.9-host, 9.20.9-lib, 9.20.9-man -> 9.20.10-host, 9.20.10-lib, 9.20.10-man
-[U*]  #010  bluedevil                     6.4.1 -> 6.4.2
-[U*]  #011  breeze                        6.4.1, 6.4.1-qt5 -> 6.4.2, 6.4.2-qt5
-[U*]  #012  breeze-gtk                    6.4.1 -> 6.4.2
-[U*]  #013  devenv                        1.6.1 -> 1.7
-[U*]  #014  discover                      6.4.1 -> 6.4.2
-[U*]  #015  dolphin                       25.04.2 -> 25.04.3
-[U*]  #016  dolphin-plugins               25.04.2 -> 25.04.3
-[U*]  #017  drkonqi                       6.4.1 -> 6.4.2
-[U*]  #018  elisa                         25.04.2 -> 25.04.3
-[C.]  #019  ffmpeg-headless               7.1.1-data x2, 7.1.1-lib x2 -> 7.1.1-bin, 7.1.1-data x2, 7.1.1-lib x2
-[U*]  #020  ffmpegthumbs                  25.04.2 -> 25.04.3
-[U*]  #021  firefox                       140.0.1 x2 -> 140.0.2 x2
-[U.]  #022  firefox-unwrapped             140.0.1 -> 140.0.2
-[U*]  #023  flatpak-kcm                   6.4.1 -> 6.4.2
-[U.]  #024  gnuplot                       6.0.2 -> 6.0.3
-[U.]  #025  grantleetheme                 25.04.2 -> 25.04.3
-[U*]  #026  gwenview                      25.04.2 -> 25.04.3
-[C*]  #027  iproute2                      6.14.0 x2 -> 6.14.0
-[U*]  #028  iputils                       20240905 x2 -> 20250605 x2
-[U.]  #029  kaccounts-integration         25.04.2 -> 25.04.3
-[U*]  #030  kactivitymanagerd             6.4.1 -> 6.4.2
-[U*]  #031  kalk                          25.04.2 -> 25.04.3
-[U*]  #032  kate                          25.04.2 -> 25.04.3
-[U.]  #033  kcalutils                     25.04.2 -> 25.04.3
-[U*]  #034  kde-cli-tools                 6.4.1 -> 6.4.2
-[U*]  #035  kde-gtk-config                6.4.1 -> 6.4.2
-[U*]  #036  kde-inotify-survey            25.04.2 -> 25.04.3
-[U.]  #037  kdecoration                   6.4.1 -> 6.4.2
-[U.]  #038  kdegraphics-mobipocket        25.04.2 -> 25.04.3
-[U*]  #039  kdegraphics-thumbnailers      25.04.2 -> 25.04.3
-[U*]  #040  kdepim-runtime                25.04.2 -> 25.04.3
-[U*]  #041  kdeplasma-addons              6.4.1 -> 6.4.2
-[U*]  #042  kglobalacceld                 6.4.1 -> 6.4.2
-[U*]  #043  khelpcenter                   25.04.2 -> 25.04.3
-[U.]  #044  kidentitymanagement           25.04.2 -> 25.04.3
-[U.]  #045  kimap                         25.04.2 -> 25.04.3
-[U*]  #046  kinfocenter                   6.4.1 -> 6.4.2
-[U*]  #047  kio-admin                     25.04.2 -> 25.04.3
-[U*]  #048  kio-extras                    25.04.2 -> 25.04.3
-[U.]  #049  kldap                         25.04.2 -> 25.04.3
-[U.]  #050  kmailtransport                25.04.2 -> 25.04.3
-[U.]  #051  kmbox                         25.04.2 -> 25.04.3
-[U*]  #052  kmenuedit                     6.4.1 -> 6.4.2
-[U.]  #053  kmime                         25.04.2 -> 25.04.3
-[U*]  #054  konsole                       25.04.2 -> 25.04.3
-[U.]  #055  kpimtextedit                  25.04.2 -> 25.04.3
-[U.]  #056  kpipewire                     6.4.1 -> 6.4.2
-[U*]  #057  kpmcore                       25.04.2 -> 25.04.3
-[U*]  #058  krdp                          6.4.1 -> 6.4.2
-[U*]  #059  kscreen                       6.4.1 -> 6.4.2
-[U*]  #060  kscreenlocker                 6.4.1 -> 6.4.2
-[U.]  #061  ksmtp                         25.04.2 -> 25.04.3
-[U*]  #062  ksystemstats                  6.4.1 -> 6.4.2
-[U*]  #063  kunifiedpush                  25.04.2 -> 25.04.3
-[U*]  #064  kwallet-pam                   6.4.1 -> 6.4.2
-[U*]  #065  kwalletmanager                25.04.2 -> 25.04.3
-[C.]  #066  kwayland                      5.116.0, 6.4.1 -> 5.116.0, 6.4.2
-[U*]  #067  kwin                          6.4.1 -> 6.4.2
-[U*]  #068  kwin-x11                      6.4.1 -> 6.4.2
-[U*]  #069  kwrited                       6.4.1 -> 6.4.2
-[U.]  #070  layer-shell-qt                6.4.1 -> 6.4.2
-[U.]  #071  libgravatar                   25.04.2 -> 25.04.3
-[U.]  #072  libimobiledevice-glue         1.3.1 -> 1.3.2
-[U.]  #073  libkdcraw                     25.04.2 -> 25.04.3
-[U.]  #074  libkdepim                     25.04.2 -> 25.04.3
-[C.]  #075  libkexiv2                     23.08.5, 25.04.2 -> 23.08.5, 25.04.3
-[U.]  #076  libkgapi                      25.04.2 -> 25.04.3
-[U.]  #077  libkleo                       25.04.2 -> 25.04.3
-[U*]  #078  libkscreen                    6.4.1 -> 6.4.2
-[U*]  #079  libksysguard                  6.4.1 -> 6.4.2
-[U*]  #080  libplasma                     6.4.1 -> 6.4.2
-[U.]  #081  libqalculate                  5.5.2 -> 5.6.0
-[U*]  #082  libressl                      4.0.0, 4.0.0-man, 4.0.0-nc -> 4.1.0, 4.1.0-man, 4.1.0-nc
-[U.]  #083  mesa                          25.1.4 x2 -> 25.1.5 x2
-[U.]  #084  messagelib                    25.04.2 -> 25.04.3
-[U*]  #085  milou                         6.4.1 -> 6.4.2
-[U*]  #086  mtools                        4.0.48 -> 4.0.49
-[C*]  #087  nix                           2.24-devenv, 2.24-devenv-man, 2.28.4, 2.28.4-doc, 2.28.4-man -> 2.28.4, 2.28.4-doc, 2.28.4-man, 2.30pre20250624_448cfb71, 2.30-devenv
-[U.]  #088  nixos-system-nixos            25.11pre823481.3016b4b15d13 -> 25.11pre824861.5c724ed1388e
-[U*]  #089  ocean-sound-theme             6.4.1 -> 6.4.2
-[U*]  #090  okular                        25.04.2 -> 25.04.3
-[C.]  #091  openconnect                   9.12 x2 -> 9.12
-[U*]  #092  orca                          48.2 -> 48.6
-[U*]  #093  partitionmanager              25.04.2 -> 25.04.3
-[U.]  #094  pimcommon                     25.04.2 -> 25.04.3
-[U*]  #095  plasma-activities             6.4.1 -> 6.4.2
-[U.]  #096  plasma-activities-stats       6.4.1 -> 6.4.2
-[U*]  #097  plasma-browser-integration    6.4.1 -> 6.4.2
-[U*]  #098  plasma-desktop                6.4.1 -> 6.4.2
-[U*]  #099  plasma-integration            6.4.1, 6.4.1-qt5 -> 6.4.2, 6.4.2-qt5
-[U.]  #100  plasma-nano                   6.4.1 -> 6.4.2
-[U*]  #101  plasma-nm                     6.4.1 -> 6.4.2
-[U*]  #102  plasma-pa                     6.4.1 -> 6.4.2
-[U*]  #103  plasma-systemmonitor          6.4.1 -> 6.4.2
-[U*]  #104  plasma-workspace              6.4.1 -> 6.4.2
-[U*]  #105  plasma-workspace-wallpapers   6.4.1 -> 6.4.2
-[U.]  #106  plasma5support                6.4.1 -> 6.4.2
-[U*]  #107  polkit-kde-agent              1-6.4.1 -> 1-6.4.2
-[U*]  #108  powerdevil                    6.4.1 -> 6.4.2
-[U*]  #109  print-manager                 6.4.1 -> 6.4.2
-[U*]  #110  qqc2-breeze-style             6.4.1 -> 6.4.2
-[U*]  #111  spectacle                     6.4.1 -> 6.4.2
-[C.]  #112  stoken                        0.93 x2 -> 0.93
-[U*]  #113  sudo                          1.9.17 -> 1.9.17p1
-[U*]  #114  systemsettings                6.4.1 -> 6.4.2
-[U.]  #115  tevent                        0.16.2 x2 -> 0.17.0 x2
-[U*]  #116  ungoogled-chromium            138.0.7204.49, 138.0.7204.49-sandbox -> 138.0.7204.96, 138.0.7204.96-sandbox
-[U.]  #117  ungoogled-chromium-unwrapped  138.0.7204.49, 138.0.7204.49-sandbox -> 138.0.7204.96, 138.0.7204.96-sandbox
-[C.]  #118  vpnc-scripts-unstable         2023-01-03 x2 -> 2023-01-03
-[U.]  #119  vscode                        1.101.1 -> 1.101.2
-[U*]  #120  vscode-with-extensions        1.101.1 -> 1.101.2
-[U*]  #121  xdg-desktop-portal-kde        6.4.1 -> 6.4.2
-[U*]  #122  xfsprogs                      6.13.0, 6.13.0-bin, 6.13.0-doc -> 6.15.0, 6.15.0-bin, 6.15.0-doc
 Added packages:
-[A.]  #01  atomicparsley             20240608.083822.1ed9031
-[A.]  #02  curl-impersonate-chrome   0.8.0
-[A.]  #03  link-units                <none>
-[A+]  #04  mp3gain                   1.6.2
-[A.]  #05  nix-cmd                   2.30pre20250624_448cfb71
-[A.]  #06  nix-expr                  2.30pre20250624_448cfb71
-[A.]  #07  nix-fetchers              2.30pre20250624_448cfb71
-[A.]  #08  nix-flake                 2.30pre20250624_448cfb71
-[A.]  #09  nix-main                  2.30pre20250624_448cfb71
-[A.]  #10  nix-store                 2.30pre20250624_448cfb71
-[A.]  #11  nix-util                  2.30pre20250624_448cfb71
-[A.]  #12  python3.13-curl-cffi      0.11.1
-[A.]  #13  python3.13-jeepney        0.9
-[A.]  #14  python3.13-mutagen        1.47.0
-[A.]  #15  python3.13-pycryptodomex  3.23.0
-[A.]  #16  python3.13-secretstorage  3.3.3
-[A+]  #17  yt-dlp                    2025.6.30
-Removed packages:
-[R-]  #01  NetworkManager-fortisslvpn-gnome  1.4.0
-[R-]  #02  NetworkManager-iodine-gnome       1.2.0-unstable-2024-11-02
-[R-]  #03  NetworkManager-l2tp-gnome         1.20.20
-[R-]  #04  NetworkManager-openconnect        1.2.10
-[R-]  #05  NetworkManager-openvpn            1.12.0
-[R-]  #06  NetworkManager-sstp-gnome         1.3.2
-[R-]  #07  NetworkManager-vpnc               1.4.0
-[R.]  #08  iodine                            0.8.0
-[R.]  #09  keymap                            <none>
-[R.]  #10  libnma                            1.10.6 x2
-[R.]  #11  openfortivpn                      1.23.1
-[R.]  #12  sstp-client-unstable              2023-03-25
-[R.]  #13  strongswan                        5.9.14
-[R.]  #14  vpnc-unstable                     2025-06-16
-[R.]  #15  xl2tpd                            1.3.19
-Closure size: 2841 -> 2839 (338 paths added, 340 paths removed, delta -2, disk usage +25.7MiB).
+[A.]  #01  daemon.json                <none>
+[A+]  #02  docker                     28.2.2
+[A.]  #03  docker-buildx              0.25.0
+[A+]  #04  docker-compose             2.38.1
+[A.]  #05  docker-containerd          28.2.2
+[A.]  #06  docker-init                28.2.2
+[A.]  #07  docker-plugins             <none>
+[A.]  #08  docker-runc                28.2.2
+[A.]  #09  fuse-overlayfs             1.15
+[A.]  #10  git-minimal                2.49.0
+[A.]  #11  libslirp                   4.9.1
+[A.]  #12  moby                       28.2.2
+[A.]  #13  rootlesskit                2.3.5
+[A.]  #14  slirp4netns                1.3.3
+[A.]  #15  unit-docker-prune.service  <none>
+[A.]  #16  unit-docker.service        <none>
+[A.]  #17  unit-docker.socket         <none>
+Closure size: 2839 -> 2856 (40 paths added, 23 paths removed, delta +17, disk usage +475.8MiB).
