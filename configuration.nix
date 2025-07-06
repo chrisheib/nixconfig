@@ -472,8 +472,10 @@ in {
     cava # audio visualizer
     qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix {})
-
     # plasmusic-toolbar
+
+    yt-dlp
+    mp3gain
   ];
 
   # Enable GNOME settings manager
