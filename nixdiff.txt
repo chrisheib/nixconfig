@@ -1,4 +1,5 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2855 -> 2855 (13 paths added, 13 paths removed, delta +0, disk usage +120B).
+Added packages:
+[A.]  #1  vscode-extension-bbenoist-qml  1.0.0
+Closure size: 2855 -> 2856 (17 paths added, 16 paths removed, delta +1, disk usage +63.7KiB).
