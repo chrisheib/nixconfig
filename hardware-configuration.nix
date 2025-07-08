@@ -2,12 +2,11 @@
 # and may be overwritten by future invocations.  Please make changes
 # to /etc/nixos/configuration.nix instead.
 {
-  config,
   lib,
-  pkgs,
   modulesPath,
   ...
-}: {
+}:
+{
   # Set during insall: Loads bare metal redistributable firmware
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -15,10 +14,17 @@
 
   powerManagement.cpuFreqGovernor = "performance";
 
-  boot.initrd.availableKernelModules = ["xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod"];
-  boot.initrd.kernelModules = [];
-  boot.kernelModules = ["kvm-intel"];
-  boot.extraModulePackages = [];
+  boot.initrd.availableKernelModules = [
+    "xhci_pci"
+    "ahci"
+    "nvme"
+    "usbhid"
+    "usb_storage"
+    "sd_mod"
+  ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
+  boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/f04329c0-e942-40fe-95b5-171396de2cac";
@@ -28,35 +34,50 @@
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/0CDE-55E5";
     fsType = "vfat";
-    options = ["fmask=0077" "dmask=0077"];
+    options = [
+      "fmask=0077"
+      "dmask=0077"
+    ];
   };
 
   fileSystems."/run/media/stschiff/D" = {
     device = "/dev/disk/by-uuid/C4CA75E0CA75CEE4";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1000" "nofail"];
+    options = [
+      "rw"
+      "uid=1000"
+      "nofail"
+    ];
   };
 
   fileSystems."/run/media/stschiff/E" = {
     device = "/dev/disk/by-uuid/59cbd08f-78ed-4ab8-b9db-6d9e18a32a4e";
     fsType = "xfs";
-    options = ["nofail"];
+    options = [ "nofail" ];
   };
 
   fileSystems."/run/media/stschiff/F Alt-Alt-C" = {
     device = "/dev/disk/by-uuid/366275AC6275720B";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1000" "nofail"];
+    options = [
+      "rw"
+      "uid=1000"
+      "nofail"
+    ];
   };
 
   fileSystems."/run/media/stschiff/win-2025-05" = {
     device = "/dev/disk/by-uuid/7C248AD4248A9136";
     fsType = "ntfs-3g";
-    options = ["rw" "uid=1000" "nofail"];
+    options = [
+      "rw"
+      "uid=1000"
+      "nofail"
+    ];
   };
 
   swapDevices = [
-    {device = "/dev/disk/by-uuid/2d1cca01-26a6-4f29-bccf-d5e472751981";}
+    { device = "/dev/disk/by-uuid/2d1cca01-26a6-4f29-bccf-d5e472751981"; }
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

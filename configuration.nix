@@ -6,14 +6,16 @@
   pkgs,
   lib,
   ...
-}: let
-  my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: rec {
+}:
+let
+  my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
         wrapProgram $out/bin/code --add-flags "--no-sandbox"
     '';
   });
-in {
+in
+{
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
@@ -63,7 +65,13 @@ in {
       "rd.systemd.show_status=auto"
     ];
 
-    kernelModules = ["amdgpu" "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm"];
+    kernelModules = [
+      "amdgpu"
+      "nvidia"
+      "nvidia_modeset"
+      "nvidia_uvm"
+      "nvidia_drm"
+    ];
   };
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -113,7 +121,7 @@ in {
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = [pkgs.brlaser];
+  services.printing.drivers = [ pkgs.brlaser ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -131,7 +139,12 @@ in {
   users.users.stschiff = {
     isNormalUser = true;
     description = "stschiff";
-    extraGroups = ["networkmanager" "wheel" "libvirtd" "docker"];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "libvirtd"
+      "docker"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -241,7 +254,7 @@ in {
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.latest;
     #  {
@@ -297,7 +310,8 @@ in {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     (my-vscode-no-sandbox.override {
-      vscodeExtensions = with vscode-extensions;
+      vscodeExtensions =
+        with vscode-extensions;
         [
           tauri-apps.tauri-vscode
           bbenoist.nix
@@ -341,7 +355,7 @@ in {
 
     vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
     teamspeak3
-    alsa-utils #amixer
+    alsa-utils # amixer
     pamixer
 
     dolphin-emu
@@ -359,7 +373,7 @@ in {
     # nushell
     zsh # link .zshrc to ~/.zshrc
     carapace
-    tealdeer #tldr
+    tealdeer # tldr
     neofetch
     stow
     devenv
@@ -472,7 +486,7 @@ in {
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
-    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix {})
+    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
     # plasmusic-toolbar
 
     yt-dlp
@@ -537,7 +551,7 @@ in {
 
   systemd.services.make_cpu_energy_readable = {
     description = "Make energy_uj readable for all users to allow displaying cpu power usage in ststat";
-    wantedBy = ["multi-user.target"];
+    wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj''}";
@@ -549,10 +563,13 @@ in {
   # defaults to port 9898
   systemd.services.backrest = {
     description = "Launch backrest to take care of backups";
-    wantedBy = ["multi-user.target"];
-    requires = ["network-online.target"];
+    wantedBy = [ "multi-user.target" ];
+    requires = [ "network-online.target" ];
     script = "backrest";
-    path = [pkgs.backrest pkgs.rclone];
+    path = [
+      pkgs.backrest
+      pkgs.rclone
+    ];
     environment = {
       BACKREST_PORT = "0.0.0.0:9898";
     };

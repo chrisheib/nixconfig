@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  nixfmt-unstable  2025-04-04
-Closure size: 2856 -> 2856 (12 paths added, 12 paths removed, delta +0, disk usage +272B).
+No version or selection state changes.
+Closure size: 2856 -> 2856 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
