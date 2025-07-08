@@ -1,17 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U.]  #1  nixos-system-nixos                        25.11pre824861.5c724ed1388e -> 25.11pre826054.1fd8bada0b61
-[U.]  #2  noto-fonts                                2025.06.01 -> 2025.07.01
-[U.]  #3  vscode-extension-github-copilot           1.336.0 -> 1.338.0
-[U.]  #4  vscode-extension-github-copilot-chat      0.28.2 -> 0.28.5
-[U.]  #5  vscode-extension-jnoortheen-nix-ide       0.4.21 -> 0.4.22
-[U.]  #6  vscode-extension-mechatroner-rainbow-csv  3.19.0 -> 3.20.0
-[U.]  #7  vscode-extension-ms-vscode-cpptools       1.25.3 -> 1.26.3
-Selection state changes:
-[C-]  #1  cava          0.10.4
-[C-]  #2  python3       3.10.18, 3.11.13, 3.12.11, 3.13.4 x4, 3.13.4-env x5
-[C-]  #3  qtwebsockets  5.15.17, 5.15.17-bin, 6.9.0
-Removed packages:
-[R-]  #1  python3.13  3.13.4-doc
-Closure size: 2856 -> 2855 (69 paths added, 70 paths removed, delta -1, disk usage -41.3MiB).
+No version or selection state changes.
+Closure size: 2855 -> 2855 (13 paths added, 13 paths removed, delta +0, disk usage +120B).
