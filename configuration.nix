@@ -377,6 +377,7 @@ in {
 
     nil # nix lsp
     alejandra # nix formatter
+    nixfmt-rfc-style
 
     obsidian
     libreoffice

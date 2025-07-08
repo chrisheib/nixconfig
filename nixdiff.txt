@@ -1,5 +1,5 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  vscode-extension-bbenoist-qml  1.0.0
-Closure size: 2855 -> 2856 (17 paths added, 16 paths removed, delta +1, disk usage +63.7KiB).
+Selection state changes:
+[C+]  #1  nixfmt-unstable  2025-04-04
+Closure size: 2856 -> 2856 (12 paths added, 12 paths removed, delta +0, disk usage +272B).
