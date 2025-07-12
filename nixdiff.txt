@@ -1,23 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #01  btop                               1.4.3 -> 1.4.4
-[U*]  #02  cpupower                           6.15.4 -> 6.15.5
-[U.]  #03  initrd-linux-xanmod                6.15.4 -> 6.15.5
-[U.]  #04  kirigami-addons                    1.8.1 -> 1.9.0
-[U.]  #05  linux-xanmod                       6.15.4, 6.15.4-modules, 6.15.4-modules-shrunk -> 6.15.5, 6.15.5-modules, 6.15.5-modules-shrunk
-[C.]  #06  make_cpu_energy_readable           <none> -> <none> x2
-[C-]  #07  net-tools                          2.10 x2 -> 2.10
-[U.]  #08  nixos-system-nixos                 25.11pre826054.1fd8bada0b61 -> 25.11pre826938.9807714d6944
-[U.]  #09  nvidia-open                        6.15.4-575.64 -> 6.15.5-575.64.03
-[U*]  #10  nvidia-settings                    575.64 -> 575.64.03
-[D*]  #11  nvidia-x11                         575.64-6.15.4, 575.64-6.15.4-bin, 575.64-6.15.4-firmware, 575.64-6.15.4-lib32 -> 575.64.03-6.15.5, 575.64.03-6.15.5-bin, 575.64.03-6.15.5-firmware, 575.64.03-6.15.5-lib32
-[U.]  #12  python3.13-umu-launcher-unwrapped  1.2.6 -> 1.2.7
-[U.]  #13  rust-analyzer                      2025-06-16 -> 2025-06-30
-[U.]  #14  rust-analyzer-unwrapped            2025-06-16 -> 2025-06-30
-[U*]  #15  turbostat                          6.15.4 -> 6.15.5
-[U.]  #16  umu-launcher                       1.2.6, 1.2.6-bwrap, 1.2.6-fhsenv-profile, 1.2.6-fhsenv-rootfs, 1.2.6-init -> 1.2.7, 1.2.7-bwrap, 1.2.7-fhsenv-profile, 1.2.7-fhsenv-rootfs, 1.2.7-init
-Added packages:
-[A+]  #1  hostname-debian               3.25 x2, 3.25-man
-[A.]  #2  unit-limit_gpu_power.service  <none>
-Closure size: 2856 -> 2860 (122 paths added, 118 paths removed, delta +4, disk usage +113.8KiB).
+No version or selection state changes.
+Closure size: 2860 -> 2860 (4 paths added, 4 paths removed, delta +0, disk usage +16B).
