@@ -563,6 +563,9 @@ in
   systemd.services.limit_gpu_power = {
     description = "Limit GPU power limit";
     wantedBy = [ "default.target" ];
+    path = [
+      pkgs.nvidia-vaapi-driver
+    ];
     serviceConfig = {
       Type = "oneshot";
       user = "root";
