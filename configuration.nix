@@ -564,12 +564,12 @@ in
     description = "Limit GPU power limit";
     wantedBy = [ "default.target" ];
     path = [
-      pkgs.nvidia-vaapi-driver
+      config.boot.kernelPackages.nvidiaPackages.latest
     ];
     serviceConfig = {
       Type = "oneshot";
       user = "root";
-      ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" ''nvidia-smi -pl 200''}";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" ''nvidia-smi -pl 200''}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };

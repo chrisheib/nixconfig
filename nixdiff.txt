@@ -1,4 +1,7 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2860 -> 2860 (4 paths added, 4 paths removed, delta +0, disk usage +144B).
+Version changes:
+[C.]  #1  make_cpu_energy_readable  <none> x2 -> <none>
+Added packages:
+[A.]  #1  set_gpu_powerlimit  <none>
+Closure size: 2860 -> 2860 (5 paths added, 5 paths removed, delta +0, disk usage +8B).
