@@ -569,7 +569,7 @@ in
     serviceConfig = {
       Type = "oneshot";
       user = "root";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" ''nvidia-smi -pl 200''}";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" ''nvidia-smi -pl 250''}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };
