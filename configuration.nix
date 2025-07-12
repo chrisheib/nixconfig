@@ -560,6 +560,17 @@ in
     };
   };
 
+  systemd.services.limit_gpu_power = {
+    description = "Limit GPU power limit";
+    wantedBy = [ "default.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" ''nvidia-smi -pl 200''}";
+      # It’s often a good idea to mark the service active after the command finishes.
+      RemainAfterExit = true;
+    };
+  };
+
   # defaults to port 9898
   systemd.services.backrest = {
     description = "Launch backrest to take care of backups";
