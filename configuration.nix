@@ -21,6 +21,13 @@ in
     ./hardware-configuration.nix
   ];
 
+  # Temporary fix for jdk 8 build as of https://github.com/NixOS/nixpkgs/issues/425323#issuecomment-3073475544
+  nixpkgs.overlays = [
+    (final: prev: {
+      jdk8 = final.openjdk8-bootstrap;
+    })
+  ];
+
   # To switch to unstable nixpgks:
   # sudo nix-channel --list
   # sudo nix-channel --remove nixos
@@ -608,6 +615,8 @@ in
   # };
 
   # List services that you want to enable:
+
+  programs.kdeconnect.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
