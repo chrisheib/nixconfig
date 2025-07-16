@@ -503,6 +503,10 @@ in
 
     yt-dlp
     mp3gain
+
+    # attempt gpu fix for orca-slicer
+    mesa
+    libglvnd
   ];
 
   # Enable GNOME settings manager

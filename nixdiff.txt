@@ -1,4 +1,6 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2865 -> 2865 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
+Selection state changes:
+[C+]  #1  libglvnd  1.7.0 x2, 1.7.0-dev x2
+[C+]  #2  mesa      25.1.5 x2
+Closure size: 2865 -> 2865 (12 paths added, 12 paths removed, delta +0, disk usage +17.5KiB).
