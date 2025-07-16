@@ -108,6 +108,7 @@ in
   };
 
   i18n.supportedLocales = [ "all" ];
+  i18n.extraLocales = [ "all" ];
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.

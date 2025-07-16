@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C*]  #1  glibc-locales  2.40-66 x3 -> 2.40-66 x2
-Closure size: 2866 -> 2865 (104 paths added, 105 paths removed, delta -1, disk usage -3.3MiB).
+No version or selection state changes.
+Closure size: 2865 -> 2865 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
