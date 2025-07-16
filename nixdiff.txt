@@ -1,6 +1,6 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  libglvnd  1.7.0 x2, 1.7.0-dev x2
-[C+]  #2  mesa      25.1.5 x2
-Closure size: 2865 -> 2865 (12 paths added, 12 paths removed, delta +0, disk usage +17.5KiB).
+Added packages:
+[A+]  #1  orca-slicer-dri.desktop    <none>
+[A.]  #2  orca-slicer-mimeapps.list  <none>
+Closure size: 2865 -> 2867 (14 paths added, 12 paths removed, delta +2, disk usage +3.4KiB).

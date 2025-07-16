@@ -19,6 +19,7 @@ in
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./orca.nix
   ];
 
   # Temporary fix for jdk 8 build as of https://github.com/NixOS/nixpkgs/issues/425323#issuecomment-3073475544
