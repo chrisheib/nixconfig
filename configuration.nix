@@ -107,6 +107,8 @@ in
     LC_TIME = "de_DE.UTF-8";
   };
 
+  i18n.supportedLocales = [ "all" ];
+
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   # services.xserver.enable = true;
