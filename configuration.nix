@@ -173,6 +173,7 @@ in
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      top = "htop";
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
@@ -379,9 +380,9 @@ in
     # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
     mangohud
 
-    alacritty # https://alacritty.org/config-alacritty.html
-    kitty
-    wezterm
+    # alacritty # https://alacritty.org/config-alacritty.html
+    # kitty
+    wezterm # link .wezterm.lua to ~/.wezterm.lua
     bottom
     starship
     # nushell
