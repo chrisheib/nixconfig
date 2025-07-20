@@ -174,6 +174,7 @@ in
 
     shellAliases = {
       top = "htop";
+      ls = "eza --oneline --all --icons --group-directories-first --color=always --total-size --no-permissions --no-user";
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
@@ -400,6 +401,7 @@ in
     htop
     # warp-terminal
     zellij # ctrl p n for new pane
+    eza # ls replacement
 
     p7zip # 7zip
     unrar

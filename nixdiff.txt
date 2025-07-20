@@ -1,9 +1,5 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C*]  #1  ncurses  6.5 x2, 6.5-dev, 6.5-man -> 6.5 x2, 6.5-man
-Removed packages:
-[R-]  #1  alacritty                0.15.1, 0.15.1-terminfo
-[R-]  #2  kitty                    0.42.2, 0.42.2-terminfo
-[R.]  #3  libstartup-notification  0.12
-Closure size: 2884 -> 2878 (13 paths added, 19 paths removed, delta -6, disk usage -70.3MiB).
+Added packages:
+[A+]  #1  eza  0.23.0, 0.23.0-man
+Closure size: 2878 -> 2880 (15 paths added, 13 paths removed, delta +2, disk usage +2.4MiB).
