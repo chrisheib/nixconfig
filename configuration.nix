@@ -328,7 +328,6 @@ in
         [
           tauri-apps.tauri-vscode
           bbenoist.nix
-          # bbenoist.qml
           ms-python.python
           ms-azuretools.vscode-docker
           ms-vscode-remote.remote-ssh
@@ -346,6 +345,7 @@ in
           redhat.vscode-xml
           github.copilot-chat
           github.copilot
+          sumneko.lua
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
