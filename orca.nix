@@ -3,6 +3,7 @@
   ...
 }:
 let
+  # https://github.com/NixOS/nixpkgs/issues/345590#issuecomment-2964363446
   orcaSlicerDesktopItem = pkgs.makeDesktopItem {
     name = "orca-slicer-dri";
     desktopName = "OrcaSlicer (DRI)";

@@ -381,6 +381,7 @@ in
 
     alacritty # https://alacritty.org/config-alacritty.html
     kitty
+    wezterm
     bottom
     starship
     # nushell
@@ -395,6 +396,7 @@ in
     stress
     pciutils
     btop
+    htop
     # warp-terminal
     zellij # ctrl p n for new pane
 
@@ -424,7 +426,9 @@ in
 
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
 
-    kdePackages.kalk # calculator
+    # kdePackages.kalk # wrong calculator!
+    gnome-calculator
+
     krusader # file manager (like total commander) and ftp
     kde-rounded-corners
 
@@ -504,6 +508,7 @@ in
 
     yt-dlp
     mp3gain
+    scdl # soundcloud-dl
 
     # attempt gpu fix for orca-slicer
     mesa
