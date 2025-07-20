@@ -11,6 +11,7 @@ end
 -- or for bash/zsh:
 -- default_prog = { "starship", "init", "bash", "--print-full-init" },
 config.font = wezterm.font 'JetBrainsMono Nerd Font';
+config.font_size = 11;
 config.keys = {
     {
         key = 'c',
@@ -33,9 +34,16 @@ config.keys = {
     {
         key = 'Backspace', mods = 'CTRL', action = act.SendKey { key = 'w', mods = 'CTRL' }
     },
+    {
+        key = 't', mods = 'CTRL', action = act.SpawnTab 'CurrentPaneDomain'
+    },
+    {
+        key = 'w', mods = 'CTRL', action = wezterm.action.CloseCurrentTab { confirm = true },
+    },
 };
-config.initial_rows = 40;
+config.initial_rows = 49;
 config.initial_cols = 110;
 config.enable_scroll_bar = true;
 config.scrollback_lines = 10000;
+config.hide_tab_bar_if_only_one_tab = true;
 return config

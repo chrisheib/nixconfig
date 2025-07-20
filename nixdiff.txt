@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  eza  0.23.0, 0.23.0-man
-Closure size: 2878 -> 2880 (15 paths added, 13 paths removed, delta +2, disk usage +2.4MiB).
+No version or selection state changes.
+Closure size: 2880 -> 2880 (3 paths added, 3 paths removed, delta +0, disk usage +40B).

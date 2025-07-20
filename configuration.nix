@@ -173,8 +173,10 @@ in
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      c = "clear";
+      cls = "clear";
       top = "htop";
-      ls = "eza --oneline --all --icons --group-directories-first --color=always --total-size --no-permissions --no-user";
+      ls = "eza --oneline --all --icons --group-directories-first --color=always --total-size --no-permissions --no-user --long";
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
