@@ -80,6 +80,10 @@ in
       "nvidia_uvm"
       "nvidia_drm"
     ];
+
+    kernel.sysctl = {
+      "vm.dirty_bytes" = 67108864; # File transfer buffer -> Lower to imrpove write-to-usb feedback. 64 * 1024 * 1024 = 67108864
+    };
   };
 
   networking.hostName = "nixos"; # Define your hostname.
