@@ -589,7 +589,7 @@ in
 
   systemd.services.limit_gpu_power = {
     description = "Limit GPU power limit";
-    wantedBy = [ "default.target" ];
+    wantedBy = [ "graphical.target" ];
     path = [
       config.boot.kernelPackages.nvidiaPackages.latest
     ];
@@ -605,7 +605,7 @@ in
   # defaults to port 9898
   systemd.services.backrest = {
     description = "Launch backrest to take care of backups";
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = [ "graphical.target" ];
     requires = [ "network-online.target" ];
     script = "backrest";
     path = [
@@ -618,8 +618,8 @@ in
     serviceConfig = {
       Type = "simple";
       User = "stschiff";
-      # AmbientCapabilities = "CAP_DAC_READ_SEARCH";
-      # CapabilityBoundingSet = "CAP_DAC_READ_SEARCH";
+      AmbientCapabilities = "CAP_DAC_READ_SEARCH";
+      CapabilityBoundingSet = "CAP_DAC_READ_SEARCH";
       # ExecStart = "backrest";
       # It’s often a good idea to mark the service active after the command finishes.
       # RemainAfterExit = true;
