@@ -1,4 +1,5 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2880 -> 2880 (16 paths added, 16 paths removed, delta +0, disk usage -280B).
+Added packages:
+[A+]  #1  nix-tree  0.6.3
+Closure size: 2880 -> 2881 (14 paths added, 13 paths removed, delta +1, disk usage +5.5MiB).

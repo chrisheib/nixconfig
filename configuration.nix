@@ -195,6 +195,7 @@ in
       gc = "nh clean all --keep 5 --keep-since 7d && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && sudo systemctl restart --user plasma-plasmashell";
+      nt = "nix-tree /nix/var/nix/profiles/system";
     };
 
     histSize = 10001;
@@ -506,6 +507,7 @@ in
     backrest
 
     nh # nix os helper
+    nix-tree
 
     libnotify # enables notify-send
 
