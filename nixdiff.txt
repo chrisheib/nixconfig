@@ -1,5 +1,28 @@
 <<< /run/current-system
 >>> result
+Version changes:
+[C*]  #01  curl                8.14.1 x2, 8.14.1-bin x2, 8.14.1-dev, 8.14.1-man -> 8.14.1 x3, 8.14.1-bin x3, 8.14.1-dev, 8.14.1-man x2
+[C.]  #02  gdk-pixbuf          2.42.12 x2, 2.42.12-dev -> 2.42.12 x2, 2.42.12-dev, 2.42.12-man
+[C.]  #03  glew                2.2.0 x2, 2.2.0-bin -> 1.10.0, 2.2.0 x2, 2.2.0-bin
+[C.]  #04  ldconfig            <none> -> <none> x2
+[C.]  #05  libarchive          3.8.1-lib x2 -> 3.8.1, 3.8.1-lib x2
+[C.]  #06  libcaca             0.99.beta20 x2 -> 0.99.beta20 x2, 0.99.beta20-bin, 0.99.beta20-man
+[C.]  #07  libidn              1.43 x2 -> 1.43 x2, 1.43-bin
+[C.]  #08  libmikmod           3.3.13 -> 3.3.13, 3.3.13-man
+[C.]  #09  libmpg123           1.33.0 x2 -> 1.33.0 x2, 1.33.0-man
+[C.]  #10  libpng              1.6.47 -> 1.2.59, 1.2.59-man, 1.6.47
+[C.]  #11  libvpx              1.15.2 x2 -> 1.15.2 x2, 1.15.2-bin
+[C.]  #12  openssl             3.5.1 x2, 3.5.1-bin, 3.5.1-dev -> 3.5.1 x2, 3.5.1-bin, 3.5.1-dev, 3.5.1-man
+[C.]  #13  util-linux-minimal  2.41-bin, 2.41-lib x2, 2.41-login x2, 2.41-mount x2, 2.41-swap x2 -> 2.41, 2.41-bin, 2.41-lib x2, 2.41-login x2, 2.41-man, 2.41-mount x2, 2.41-swap x2
 Added packages:
-[A+]  #1  nix-tree  0.6.3
-Closure size: 2880 -> 2881 (14 paths added, 13 paths removed, delta +1, disk usage +5.5MiB).
+[A.]  #01  SDL2_image        2.8.8
+[A.]  #02  SDL2_mixer        2.8.1
+[A.]  #03  appimage-exec.sh  <none>
+[A+]  #04  heynote           2.3.3, 2.3.3-bwrap, 2.3.3-extracted, 2.3.3-fhsenv-profile, 2.3.3-fhsenv-rootfs, 2.3.3-init
+[A.]  #05  imlib2            1.12.5
+[A.]  #06  libid3tag         0.16.3
+[A.]  #07  libxmp            4.6.3
+[A.]  #08  pv                1.9.31
+[A.]  #09  squashfs          4.6.1
+[A.]  #10  timidity          2.15.0
+Closure size: 2881 -> 2914 (45 paths added, 12 paths removed, delta +33, disk usage +314.0MiB).

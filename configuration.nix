@@ -524,6 +524,8 @@ in
     # attempt gpu fix for orca-slicer
     mesa
     libglvnd
+
+    heynote
   ];
 
   # Enable GNOME settings manager
