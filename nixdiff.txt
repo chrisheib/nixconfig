@@ -1,28 +1,22 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C*]  #01  curl                8.14.1 x2, 8.14.1-bin x2, 8.14.1-dev, 8.14.1-man -> 8.14.1 x3, 8.14.1-bin x3, 8.14.1-dev, 8.14.1-man x2
-[C.]  #02  gdk-pixbuf          2.42.12 x2, 2.42.12-dev -> 2.42.12 x2, 2.42.12-dev, 2.42.12-man
-[C.]  #03  glew                2.2.0 x2, 2.2.0-bin -> 1.10.0, 2.2.0 x2, 2.2.0-bin
-[C.]  #04  ldconfig            <none> -> <none> x2
-[C.]  #05  libarchive          3.8.1-lib x2 -> 3.8.1, 3.8.1-lib x2
-[C.]  #06  libcaca             0.99.beta20 x2 -> 0.99.beta20 x2, 0.99.beta20-bin, 0.99.beta20-man
-[C.]  #07  libidn              1.43 x2 -> 1.43 x2, 1.43-bin
-[C.]  #08  libmikmod           3.3.13 -> 3.3.13, 3.3.13-man
-[C.]  #09  libmpg123           1.33.0 x2 -> 1.33.0 x2, 1.33.0-man
-[C.]  #10  libpng              1.6.47 -> 1.2.59, 1.2.59-man, 1.6.47
-[C.]  #11  libvpx              1.15.2 x2 -> 1.15.2 x2, 1.15.2-bin
-[C.]  #12  openssl             3.5.1 x2, 3.5.1-bin, 3.5.1-dev -> 3.5.1 x2, 3.5.1-bin, 3.5.1-dev, 3.5.1-man
-[C.]  #13  util-linux-minimal  2.41-bin, 2.41-lib x2, 2.41-login x2, 2.41-mount x2, 2.41-swap x2 -> 2.41, 2.41-bin, 2.41-lib x2, 2.41-login x2, 2.41-man, 2.41-mount x2, 2.41-swap x2
+[U*]  #01  bind                                                 9.20.10-host, 9.20.10-lib, 9.20.10-man -> 9.20.11-host, 9.20.11-lib, 9.20.11-man
+[U*]  #02  direnv                                               2.37.0 x2 -> 2.37.1 x2
+[U*]  #03  dolphin-emu                                          2506 -> 2506a
+[U.]  #04  electron                                             35.7.2 -> 37.2.2
+[U.]  #05  electron-unwrapped                                   35.7.2 -> 37.2.2
+[U*]  #06  firefox                                              140.0.4 x2 -> 141.0 x2
+[U.]  #07  firefox-unwrapped                                    140.0.4 -> 141.0
+[U.]  #08  libtracefs                                           1.8.1 -> 1.8.2
+[U.]  #09  nixos-system-nixos                                   25.11pre832220.c87b95e25065 -> 25.11pre833752.fc02ee70efb8
+[C.]  #10  nss                                                  3.101.2 x2, 3.101.2-man, 3.113 -> 3.101.2 x2, 3.101.2-man, 3.114
+[U.]  #11  sfml                                                 3.0.0 -> 3.0.1
+[U.]  #12  vscode-extension-github-copilot                      1.338.0 -> 1.346.0
+[U.]  #13  vscode-extension-github-copilot-chat                 0.28.5 -> 0.29.1
+[U.]  #14  vscode-extension-ms-python-python                    2025.8.0 -> 2025.10.1
+[U.]  #15  vscode-extension-ms-vscode-remote-remote-containers  0.417.0 -> 0.422.1
+[U*]  #16  yt-dlp                                               2025.6.30 -> 2025.07.21
 Added packages:
-[A.]  #01  SDL2_image        2.8.8
-[A.]  #02  SDL2_mixer        2.8.1
-[A.]  #03  appimage-exec.sh  <none>
-[A+]  #04  heynote           2.3.3, 2.3.3-bwrap, 2.3.3-extracted, 2.3.3-fhsenv-profile, 2.3.3-fhsenv-rootfs, 2.3.3-init
-[A.]  #05  imlib2            1.12.5
-[A.]  #06  libid3tag         0.16.3
-[A.]  #07  libxmp            4.6.3
-[A.]  #08  pv                1.9.31
-[A.]  #09  squashfs          4.6.1
-[A.]  #10  timidity          2.15.0
-Closure size: 2881 -> 2914 (45 paths added, 12 paths removed, delta +33, disk usage +314.0MiB).
+[A+]  #1  sysstat  12.7.7
+Closure size: 2914 -> 2915 (102 paths added, 101 paths removed, delta +1, disk usage +16.0MiB).

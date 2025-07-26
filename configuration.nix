@@ -484,6 +484,7 @@ in
 
     lm_sensors
     linuxKernel.packages.linux_xanmod_latest.turbostat
+    sysstat
 
     geekbench
 
