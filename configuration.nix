@@ -418,6 +418,8 @@ in
     nil # nix lsp
     alejandra # nix formatter
     nixfmt-rfc-style
+    python3
+    ruff
 
     obsidian
     libreoffice

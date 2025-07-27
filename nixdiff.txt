@@ -1,8 +1,8 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C.]  #1  jemalloc  5.3.0 -> 5.3.0 x2
+Selection state changes:
+[C+]  #1  python3  3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5
+[C+]  #2  ruff     0.12.3
 Added packages:
-[A.]  #1  ruff                                 0.12.3
-[A.]  #2  vscode-extension-charliermarsh-ruff  2025.24.0
-Closure size: 2917 -> 2920 (18 paths added, 15 paths removed, delta +3, disk usage +42.9MiB).
+[A+]  #1  python3.13  3.13.5-doc
+Closure size: 2920 -> 2921 (13 paths added, 12 paths removed, delta +1, disk usage +51.4MiB).
