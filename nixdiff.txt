@@ -1,8 +1,6 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  python3  3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5
-[C+]  #2  ruff     0.12.3
 Added packages:
-[A+]  #1  python3.13  3.13.5-doc
-Closure size: 2920 -> 2921 (13 paths added, 12 paths removed, delta +1, disk usage +51.4MiB).
+[A.]  #1  vscode-extension-MS-python-vscode-pylance  2025.6.2
+[A.]  #2  vscode-extension-ms-python-debugpy         2025.10.0
+Closure size: 2921 -> 2923 (17 paths added, 15 paths removed, delta +2, disk usage +115.2MiB).

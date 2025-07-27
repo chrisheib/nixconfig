@@ -344,7 +344,10 @@ in
           mechatroner.rainbow-csv
           mkhl.direnv
           ms-azuretools.vscode-docker
+          ms-python.debugpy
           ms-python.python
+          ms-python.vscode-pylance
+          # ms-python.vscode-python-envs
           ms-vscode-remote.remote-containers
           ms-vscode-remote.remote-ssh
           ms-vscode-remote.remote-ssh-edit
