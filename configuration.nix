@@ -335,27 +335,26 @@ in
       vscodeExtensions =
         with vscode-extensions;
         [
-          tauri-apps.tauri-vscode
           bbenoist.nix
-          ms-python.python
-          ms-azuretools.vscode-docker
-          ms-vscode-remote.remote-ssh
-          ms-vscode-remote.remote-ssh-edit
-          ms-vscode-remote.remote-containers
+          github.copilot
+          github.copilot-chat
           jnoortheen.nix-ide
           kamadorueda.alejandra
-          rust-lang.rust-analyzer
-          usernamehw.errorlens
-          tamasfe.even-better-toml
-          mkhl.direnv
-          thenuprojectcontributors.vscode-nushell-lang
           mechatroner.rainbow-csv
+          mkhl.direnv
+          ms-azuretools.vscode-docker
+          ms-python.python
+          ms-vscode-remote.remote-containers
+          ms-vscode-remote.remote-ssh
+          ms-vscode-remote.remote-ssh-edit
           ms-vscode.cpptools
           redhat.vscode-xml
-          github.copilot-chat
-          github.copilot
+          rust-lang.rust-analyzer
           sumneko.lua
-          ms-python.python
+          tamasfe.even-better-toml
+          tauri-apps.tauri-vscode
+          thenuprojectcontributors.vscode-nushell-lang
+          usernamehw.errorlens
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
