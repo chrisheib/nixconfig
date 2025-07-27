@@ -267,7 +267,7 @@ in
     NVD_BACKEND = "direct";
     EGL_PLATFORM = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
-    MANGOHUD_CONFIG = "fps_limit=140,no_display";
+    MANGOHUD_CONFIG = "fps_limit=100,no_display";
     MANGOHUD = "1";
     KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
 

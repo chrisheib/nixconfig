@@ -1,22 +1,17 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #01  bind                                                 9.20.10-host, 9.20.10-lib, 9.20.10-man -> 9.20.11-host, 9.20.11-lib, 9.20.11-man
-[U*]  #02  direnv                                               2.37.0 x2 -> 2.37.1 x2
-[U*]  #03  dolphin-emu                                          2506 -> 2506a
-[U.]  #04  electron                                             35.7.2 -> 37.2.2
-[U.]  #05  electron-unwrapped                                   35.7.2 -> 37.2.2
-[U*]  #06  firefox                                              140.0.4 x2 -> 141.0 x2
-[U.]  #07  firefox-unwrapped                                    140.0.4 -> 141.0
-[U.]  #08  libtracefs                                           1.8.1 -> 1.8.2
-[U.]  #09  nixos-system-nixos                                   25.11pre832220.c87b95e25065 -> 25.11pre833752.fc02ee70efb8
-[C.]  #10  nss                                                  3.101.2 x2, 3.101.2-man, 3.113 -> 3.101.2 x2, 3.101.2-man, 3.114
-[U.]  #11  sfml                                                 3.0.0 -> 3.0.1
-[U.]  #12  vscode-extension-github-copilot                      1.338.0 -> 1.346.0
-[U.]  #13  vscode-extension-github-copilot-chat                 0.28.5 -> 0.29.1
-[U.]  #14  vscode-extension-ms-python-python                    2025.8.0 -> 2025.10.1
-[U.]  #15  vscode-extension-ms-vscode-remote-remote-containers  0.417.0 -> 0.422.1
-[U*]  #16  yt-dlp                                               2025.6.30 -> 2025.07.21
+[U.]  #01  fwupd                         2.0.12, 2.0.12-lib -> 2.0.13, 2.0.13-lib
+[U*]  #02  mullvad-browser               14.5.4 -> 14.5.5
+[U.]  #03  nixos-system-nixos            25.11pre833752.fc02ee70efb8 -> 25.11pre834672.7fd36ee82c02
+[U.]  #04  nvidia-open                   6.15.7-575.64.03 -> 6.15.7-575.64.05
+[U*]  #05  nvidia-settings               575.64.03 -> 575.64.05
+[U*]  #06  nvidia-x11                    575.64.03-6.15.7, 575.64.03-6.15.7-bin, 575.64.03-6.15.7-firmware, 575.64.03-6.15.7-lib32 -> 575.64.05-6.15.7, 575.64.05-6.15.7-bin, 575.64.05-6.15.7-firmware, 575.64.05-6.15.7-lib32
+[U.]  #07  rust-analyzer                 2025-07-14 -> 2025-07-21
+[U.]  #08  rust-analyzer-unwrapped       2025-07-14 -> 2025-07-21
+[U*]  #09  ungoogled-chromium            138.0.7204.157, 138.0.7204.157-sandbox -> 138.0.7204.168, 138.0.7204.168-sandbox
+[U.]  #10  ungoogled-chromium-unwrapped  138.0.7204.157, 138.0.7204.157-sandbox -> 138.0.7204.168, 138.0.7204.168-sandbox
 Added packages:
-[A+]  #1  sysstat  12.7.7
-Closure size: 2914 -> 2915 (102 paths added, 101 paths removed, delta +1, disk usage +16.0MiB).
+[A.]  #1  initrd-fsinfo  <none>
+[A.]  #2  keymap         <none>
+Closure size: 2915 -> 2917 (78 paths added, 76 paths removed, delta +2, disk usage +669.5KiB).
