@@ -336,6 +336,7 @@ in
         with vscode-extensions;
         [
           bbenoist.nix
+          charliermarsh.ruff # python linter
           github.copilot
           github.copilot-chat
           jnoortheen.nix-ide
