@@ -355,6 +355,7 @@ in
           github.copilot-chat
           github.copilot
           sumneko.lua
+          ms-python.python
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

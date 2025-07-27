@@ -1,17 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U.]  #01  fwupd                         2.0.12, 2.0.12-lib -> 2.0.13, 2.0.13-lib
-[U*]  #02  mullvad-browser               14.5.4 -> 14.5.5
-[U.]  #03  nixos-system-nixos            25.11pre833752.fc02ee70efb8 -> 25.11pre834672.7fd36ee82c02
-[U.]  #04  nvidia-open                   6.15.7-575.64.03 -> 6.15.7-575.64.05
-[U*]  #05  nvidia-settings               575.64.03 -> 575.64.05
-[U*]  #06  nvidia-x11                    575.64.03-6.15.7, 575.64.03-6.15.7-bin, 575.64.03-6.15.7-firmware, 575.64.03-6.15.7-lib32 -> 575.64.05-6.15.7, 575.64.05-6.15.7-bin, 575.64.05-6.15.7-firmware, 575.64.05-6.15.7-lib32
-[U.]  #07  rust-analyzer                 2025-07-14 -> 2025-07-21
-[U.]  #08  rust-analyzer-unwrapped       2025-07-14 -> 2025-07-21
-[U*]  #09  ungoogled-chromium            138.0.7204.157, 138.0.7204.157-sandbox -> 138.0.7204.168, 138.0.7204.168-sandbox
-[U.]  #10  ungoogled-chromium-unwrapped  138.0.7204.157, 138.0.7204.157-sandbox -> 138.0.7204.168, 138.0.7204.168-sandbox
-Added packages:
-[A.]  #1  initrd-fsinfo  <none>
-[A.]  #2  keymap         <none>
-Closure size: 2915 -> 2917 (78 paths added, 76 paths removed, delta +2, disk usage +669.5KiB).
+No version or selection state changes.
+Closure size: 2917 -> 2917 (15 paths added, 15 paths removed, delta +0, disk usage +648B).
