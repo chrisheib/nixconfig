@@ -22,11 +22,9 @@ in
     ./orca.nix
   ];
 
-  # Temporary fix for jdk 8 build as of https://github.com/NixOS/nixpkgs/issues/425323#issuecomment-3073475544
-  nixpkgs.overlays = [
-    (final: prev: {
-      jdk8 = final.openjdk8-bootstrap;
-    })
+  # See https://github.com/NixOS/nixpkgs/issues/360897
+  nixpkgs.config.permittedInsecurePackages = [
+    "libsoup-2.74.3"
   ];
 
   # To switch to unstable nixpgks:
@@ -335,6 +333,7 @@ in
       vscodeExtensions =
         with vscode-extensions;
         [
+          arrterian.nix-env-selector
           bbenoist.nix
           charliermarsh.ruff # python linter
           github.copilot
@@ -586,7 +585,7 @@ in
   services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
 
   services.udev.packages = [
-    pkgs.platformio-core # embedded dev
+    # pkgs.platformio-core # embedded dev
     pkgs.openocd # embedded debugger
     pkgs.dolphin-emu
   ];
