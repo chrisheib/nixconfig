@@ -394,7 +394,6 @@ in
     # alacritty # https://alacritty.org/config-alacritty.html
     # kitty
     wezterm # link .wezterm.lua to ~/.wezterm.lua
-    bottom
     starship
     # nushell
     zsh # link .zshrc to ~/.zshrc
@@ -402,12 +401,14 @@ in
     tealdeer # tldr
     neofetch
     stow
-    devenv
+    devenv # meh
     direnv
+    nix-direnv # https://github.com/nix-community/nix-direnv?tab=readme-ov-file#usage-example
     nvd
     stress
     pciutils
     btop
+    bottom
     htop
     # warp-terminal
     zellij # ctrl p n for new pane

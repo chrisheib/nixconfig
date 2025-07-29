@@ -1,49 +1,12 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #01  Pinta                 3.0.1 -> 3.0.2
-[U.]  #02  audit                 4.0.5-bin, 4.0.5-lib x2 -> 4.1.0-bin, 4.1.0-lib x2
-[U.]  #03  bash                  5.2p37 x2 -> 5.3p0 x2
-[U*]  #04  bash-interactive      5.2p37 x3, 5.2p37-doc, 5.2p37-info, 5.2p37-man x2 -> 5.3p0 x3, 5.3p0-doc, 5.3p0-info, 5.3p0-man x2
-[U.]  #05  ethtool               6.14 x2 -> 6.15 x2
-[U.]  #06  game-music-emu        0.6.3 x2 -> 0.6.4 x2
-[U.]  #07  gettext               0.25 x2, 0.25-man -> 0.25.1 x2, 0.25.1-man
-[U*]  #08  git                   2.50.0, 2.50.0-doc -> 2.50.1, 2.50.1-doc
-[U.]  #09  git-minimal           2.50.0 -> 2.50.1
-[U.]  #10  gnutls                3.8.9 x2, 3.8.9-bin, 3.8.9-man -> 3.8.10 x2, 3.8.10-bin, 3.8.10-man
-[U.]  #11  libde265              1.0.15 x2 -> 1.0.16 x2
-[U.]  #12  libffi                3.4.8 x2, 3.4.8-dev -> 3.5.1 x2, 3.5.1-dev
-[U.]  #13  libogg                1.3.5 x2 -> 1.3.6 x2
-[U.]  #14  libproxy              0.5.9, 0.5.9-dev -> 0.5.10, 0.5.10-dev
-[U.]  #15  libwebp               1.5.0 x4 -> 1.6.0 x4
-[U*]  #16  lvm2                  2.03.32, 2.03.32-bin, 2.03.32-lib x2, 2.03.32-man -> 2.03.33, 2.03.33-bin, 2.03.33-lib x2, 2.03.33-man
-[U.]  #17  neon                  0.32.5 x2 -> 0.34.2 x2
-[U.]  #18  nixos-system-nixos    25.11pre834672.7fd36ee82c02 -> 25.11pre835620.17f6bd177404
-[U.]  #19  nspr                  4.36 x2 -> 4.37 x2
-[C.]  #20  openjdk               17.0.15+6, 21.0.7+6 x2 -> 8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6 x2
-[U.]  #21  psqlodbc              17.00.0002 -> 17.00.0006
-[U.]  #22  python3.13-aiohttp    3.12.13 -> 3.12.14
-[U.]  #23  python3.13-aiosignal  1.3.2 -> 1.4.0
-[U.]  #24  python3.13-certifi    2025.04.26 -> 2025.06.15
-[U.]  #25  python3.13-pydantic   2.11.4 -> 2.11.7
-[U.]  #26  readline              8.2p13 x2, 8.2p13-man -> 8.3p1 x2, 8.3p1-man
-[U*]  #27  ruff                  0.12.3 -> 0.12.4
-[U.]  #28  s2n-tls               1.5.21 -> 1.5.22
-[U.]  #29  sdl3                  3.2.16-lib x2 -> 3.2.18-lib x2
-[U.]  #30  sqlite                3.50.1 x2, 3.50.1-bin, 3.50.1-dev, 3.50.1-man -> 3.50.2 x2, 3.50.2-bin, 3.50.2-dev, 3.50.2-man
-[C.]  #31  udev-rules            <none> -> <none> x2
-[U*]  #32  unrar                 7.1.8 -> 7.1.9
-[U.]  #33  wayland               1.23.1 x2, 1.23.1-dev x2, 1.23.1-man -> 1.24.0 x2, 1.24.0-dev x2, 1.24.0-man
-[U.]  #34  wayland-scanner       1.23.1 x2 -> 1.24.0 x2
-Added packages:
-[A.]  #1  davs2                                        1.7-lib
-[A.]  #2  link-units                                   <none>
-[A.]  #3  rtl8192su                                    0-unstable-2016-10-05-zstd
-[A.]  #4  stage                                        1-init.sh
-[A.]  #5  uavs3d                                       1.1-unstable-2023-02-23
-[A.]  #6  vscode-extension-arrterian-nix-env-selector  1.1.0
-[A.]  #7  xavs2                                        1.4-lib
-Removed packages:
-[R.]  #1  rtl8192su-unstable  2016-10-05-zstd
-[R.]  #2  temurin-bin         8.0.452
-Closure size: 2923 -> 2931 (2916 paths added, 2908 paths removed, delta +8, disk usage -3.4MiB).
+[U*]  #1  devenv                  1.8 -> 1.8.1
+[C.]  #2  gettext                 0.25.1 x2, 0.25.1-man -> 0.25.1, 0.25.1-man
+[U.]  #3  nixos-system-nixos      25.11pre835620.17f6bd177404 -> 25.11pre836203.dc9637876d0d
+[U.]  #4  pv                      1.9.31 -> 1.9.34
+[U.]  #5  vscode                  1.102.1 -> 1.102.2
+[U*]  #6  vscode-with-extensions  1.102.1 -> 1.102.2
+Selection state changes:
+[C+]  #1  nix-direnv  3.1.0
+Closure size: 2931 -> 2930 (46 paths added, 47 paths removed, delta -1, disk usage +5.2MiB).
