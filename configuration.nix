@@ -390,6 +390,7 @@ in
     # gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
     # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
     mangohud
+    goverlay # mangohud manager
 
     # alacritty # https://alacritty.org/config-alacritty.html
     # kitty

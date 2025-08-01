@@ -1,12 +1,35 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #1  devenv                  1.8 -> 1.8.1
-[C.]  #2  gettext                 0.25.1 x2, 0.25.1-man -> 0.25.1, 0.25.1-man
-[U.]  #3  nixos-system-nixos      25.11pre835620.17f6bd177404 -> 25.11pre836203.dc9637876d0d
-[U.]  #4  pv                      1.9.31 -> 1.9.34
-[U.]  #5  vscode                  1.102.1 -> 1.102.2
-[U*]  #6  vscode-with-extensions  1.102.1 -> 1.102.2
-Selection state changes:
-[C+]  #1  nix-direnv  3.1.0
-Closure size: 2931 -> 2930 (46 paths added, 47 paths removed, delta -1, disk usage +5.2MiB).
+[C.]  #01  audit                            4.1.0-bin, 4.1.0-lib x2 -> 4.1.0-lib x2
+[U*]  #02  cpupower                         6.15.7 -> 6.15.8
+[U.]  #03  electron                         37.2.2 -> 37.2.4
+[U.]  #04  electron-unwrapped               37.2.2 -> 37.2.4
+[U.]  #05  initrd-linux-xanmod              6.15.7 -> 6.15.8
+[U.]  #06  ktextaddons                      1.6.0 -> 1.7.0
+[U.]  #07  linux-xanmod                     6.15.7, 6.15.7-modules, 6.15.7-modules-shrunk -> 6.15.8, 6.15.8-modules, 6.15.8-modules-shrunk
+[U.]  #08  lowdown                          1.3.2-lib -> 2.0.2-lib
+[U*]  #09  mesa                             25.1.6 x2 -> 25.1.7 x2
+[U.]  #10  nixos-system-nixos               25.11pre836203.dc9637876d0d -> 25.11pre837094.94def634a204
+[U.]  #11  nvidia-open                      6.15.7-575.64.05 -> 6.15.8-575.64.05
+[U*]  #12  nvidia-x11                       575.64.05-6.15.7, 575.64.05-6.15.7-bin, 575.64.05-6.15.7-firmware, 575.64.05-6.15.7-lib32 -> 575.64.05-6.15.8, 575.64.05-6.15.8-bin, 575.64.05-6.15.8-firmware, 575.64.05-6.15.8-lib32
+[U*]  #13  steam                            <none> -> 1.0.0.83, 1.0.0.83-bwrap, 1.0.0.83-fhsenv-profile, 1.0.0.83-fhsenv-rootfs, 1.0.0.83-init
+[U*]  #14  sudo                             1.9.17p1 -> 1.9.17p2
+[U*]  #15  thunderbird                      140.0.1 -> 141.0
+[U.]  #16  thunderbird-unwrapped            140.0.1 -> 141.0
+[U*]  #17  turbostat                        6.15.7 -> 6.15.8
+[U.]  #18  vscode-extension-github-copilot  1.346.0 -> 1.350.0
+Added packages:
+[A+]  #1  goverlay                           1.3-2, 1.3-2-man
+[A.]  #2  libqtpas                           4.0-0
+[A.]  #3  unit-autovt-tty1.service-disabled  <none>
+[A.]  #4  unit-getty.target                  <none>
+Removed packages:
+[R.]  #1  audit-disable         <none>
+[R.]  #2  audit-stop            <none>
+[R.]  #3  steam-bwrap           <none>
+[R.]  #4  steam-fhsenv-profile  <none>
+[R.]  #5  steam-fhsenv-rootfs   <none>
+[R.]  #6  steam-init            <none>
+[R.]  #7  unit-audit.service    <none>
+Closure size: 2930 -> 2931 (147 paths added, 146 paths removed, delta +1, disk usage +34.3MiB).
