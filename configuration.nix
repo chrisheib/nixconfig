@@ -136,7 +136,7 @@ in
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.drivers = [ pkgs.brlaser ];
+  # services.printing.drivers = [ pkgs.brlaser ];
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -336,6 +336,7 @@ in
           arrterian.nix-env-selector
           bbenoist.nix
           charliermarsh.ruff # python linter
+          github.codespaces
           github.copilot
           github.copilot-chat
           jnoortheen.nix-ide
@@ -462,7 +463,7 @@ in
     wineWowPackages.stable
     winetricks
 
-    brlaser # printer
+    # brlaser # printer
 
     # Orca segfaults if not run with mesa: https://github.com/SoftFever/OrcaSlicer/issues/6433#issuecomment-2552029299
     # __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json orca-slicer
@@ -511,7 +512,7 @@ in
 
     rclone
     restic
-    restic-browser
+    # restic-browser # depends on webkit, takes forever to build
     backrest
 
     nh # nix os helper
@@ -534,6 +535,8 @@ in
     libglvnd
 
     heynote
+
+    flameshot # screenshot tool
   ];
 
   # Enable GNOME settings manager
