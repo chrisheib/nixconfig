@@ -1,7 +1,8 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C*]  #1  python3  3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x6
-Added packages:
-[A.]  #1  python3.13-monitorcontrol  4.1.1
-Closure size: 2931 -> 2933 (18 paths added, 16 paths removed, delta +2, disk usage +455.9KiB).
+[C-]  #1  python3  3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x6 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5
+Removed packages:
+[R-]  #1  python3.13                 3.13.5-doc
+[R.]  #2  python3.13-monitorcontrol  4.1.1
+Closure size: 2933 -> 2930 (16 paths added, 19 paths removed, delta -3, disk usage -51.8MiB).
