@@ -431,7 +431,6 @@ in
     nil # nix lsp
     alejandra # nix formatter
     nixfmt-rfc-style
-    python3
     ruff
 
     obsidian
@@ -528,6 +527,7 @@ in
 
     libnotify # enables notify-send
 
+    (python3.withPackages (ps: [ ps.monitorcontrol ]))
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
@@ -603,6 +603,10 @@ in
     dolphin-emu
     ddcutil
   ];
+
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTR{idVendor}=="05e3", ATTR{idProduct}=="0608", MODE="0666"
+  '';
 
   systemd.services.make_cpu_energy_readable = {
     description = "Make energy_uj readable for all users to allow displaying cpu power usage in ststat";
