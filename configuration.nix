@@ -71,8 +71,9 @@ in
       "rd.systemd.show_status=auto"
 
       # disable screen dimming
-      "drm.edid_firmware=DP-3:edid/no-dpms.bin"
-      "drm.edid_firmware=DP-4:edid/no-dpms.bin"
+      "NVreg_EnableBacklightHandler=0"
+      # "drm.edid_firmware=DP-3:edid/no-dpms.bin"
+      # "drm.edid_firmware=DP-4:edid/no-dpms.bin"
     ];
 
     kernelModules = [
@@ -81,6 +82,8 @@ in
       "nvidia_modeset"
       "nvidia_uvm"
       "nvidia_drm"
+      "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
+      "i2c-dev" # for ddc/ci support, see ddcutil
     ];
 
     kernel.sysctl = {
@@ -159,6 +162,7 @@ in
     isNormalUser = true;
     description = "stschiff";
     extraGroups = [
+      "i2c"
       "networkmanager"
       "wheel"
       "libvirtd"
@@ -593,10 +597,11 @@ in
   services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
   services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
 
-  services.udev.packages = [
+  services.udev.packages = with pkgs; [
     # pkgs.platformio-core # embedded dev
-    pkgs.openocd # embedded debugger
-    pkgs.dolphin-emu
+    openocd # embedded debugger
+    dolphin-emu
+    ddcutil
   ];
 
   systemd.services.make_cpu_energy_readable = {
