@@ -69,7 +69,10 @@ in
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
-      "drm.edid_firmware=eDP-1:edid/no-dpms.bin" # disable screen dimming
+
+      # disable screen dimming
+      "drm.edid_firmware=DP-3:edid/no-dpms.bin"
+      "drm.edid_firmware=DP-4:edid/no-dpms.bin"
     ];
 
     kernelModules = [
