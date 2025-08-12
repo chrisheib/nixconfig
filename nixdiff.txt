@@ -1,8 +1,94 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C-]  #1  python3  3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x6 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5
+[U*]  #01  alsa-utils                    1.2.13 -> 1.2.14
+[U*]  #02  aurorae                       6.4.3 -> 6.4.4
+[U*]  #03  bluedevil                     6.4.3 -> 6.4.4
+[U*]  #04  breeze                        6.4.3, 6.4.3-qt5 -> 6.4.4, 6.4.4-qt5
+[U*]  #05  breeze-gtk                    6.4.3 -> 6.4.4
+[U*]  #06  discover                      6.4.3 -> 6.4.4
+[U*]  #07  docker                        28.3.2 -> 28.3.3
+[U.]  #08  docker-buildx                 0.25.0 -> 0.26.1
+[U*]  #09  docker-compose                2.38.1 -> 2.39.1
+[U.]  #10  docker-containerd             28.3.2 -> 28.3.3
+[U.]  #11  docker-init                   28.3.2 -> 28.3.3
+[U.]  #12  docker-runc                   28.3.2 -> 28.3.3
+[U*]  #13  drkonqi                       6.4.3 -> 6.4.4
+[U.]  #14  electron                      37.2.4 -> 37.2.6
+[U.]  #15  electron-unwrapped            37.2.4 -> 37.2.6
+[U*]  #16  firefox                       141.0 x2 -> 141.0.3 x2
+[U.]  #17  firefox-unwrapped             141.0 -> 141.0.3
+[U*]  #18  flatpak-kcm                   6.4.3 -> 6.4.4
+[U*]  #19  heynote                       2.3.3, 2.3.3-bwrap, 2.3.3-extracted, 2.3.3-fhsenv-profile, 2.3.3-fhsenv-rootfs, 2.3.3-init -> 2.4.0, 2.4.0-bwrap, 2.4.0-extracted, 2.4.0-fhsenv-profile, 2.4.0-fhsenv-rootfs, 2.4.0-init
+[U*]  #20  kactivitymanagerd             6.4.3 -> 6.4.4
+[U*]  #21  kde-cli-tools                 6.4.3 -> 6.4.4
+[U*]  #22  kde-gtk-config                6.4.3 -> 6.4.4
+[U.]  #23  kdecoration                   6.4.3 -> 6.4.4
+[U*]  #24  kdeplasma-addons              6.4.3 -> 6.4.4
+[U*]  #25  kglobalacceld                 6.4.3 -> 6.4.4
+[U*]  #26  kinfocenter                   6.4.3 -> 6.4.4
+[U*]  #27  kmenuedit                     6.4.3 -> 6.4.4
+[U.]  #28  kpipewire                     6.4.3 -> 6.4.4
+[U*]  #29  krdp                          6.4.3 -> 6.4.4
+[U*]  #30  kscreen                       6.4.3 -> 6.4.4
+[U*]  #31  kscreenlocker                 6.4.3 -> 6.4.4
+[U*]  #32  ksystemstats                  6.4.3 -> 6.4.4
+[U*]  #33  kwallet-pam                   6.4.3 -> 6.4.4
+[C.]  #34  kwayland                      5.116.0, 6.4.3 -> 5.116.0, 6.4.4
+[U*]  #35  kwin                          6.4.3 -> 6.4.4
+[U*]  #36  kwin-x11                      6.4.3 -> 6.4.4
+[U*]  #37  kwrited                       6.4.3 -> 6.4.4
+[U.]  #38  layer-shell-qt                6.4.3 -> 6.4.4
+[C.]  #39  libXNVCtrl                    390.157, 570.172.08 -> 390.157, 570.181
+[U.]  #40  libgphoto2                    2.5.31 x2 -> 2.5.32 x2
+[U*]  #41  libkscreen                    6.4.3 -> 6.4.4
+[U*]  #42  libksysguard                  6.4.3 -> 6.4.4
+[U*]  #43  libplasma                     6.4.3 -> 6.4.4
+[U.]  #44  libqalculate                  5.6.0 -> 5.7.0
+[U.]  #45  linux-firmware                20250708-zstd -> 20250808-zstd
+[U*]  #46  mesa                          25.1.7 x2 -> 25.2.0 x2
+[U*]  #47  milou                         6.4.3 -> 6.4.4
+[U*]  #48  mkpasswd                      5.6.3 -> 5.6.4
+[U.]  #49  moby                          28.3.2 -> 28.3.3
+[U.]  #50  nixos-system-nixos            25.11pre838708.5b09dc45f24c -> 25.11pre841808.85dbfc7aaf52
+[U*]  #51  ocean-sound-theme             6.4.3 -> 6.4.4
+[U*]  #52  plasma-activities             6.4.3 -> 6.4.4
+[U.]  #53  plasma-activities-stats       6.4.3 -> 6.4.4
+[U*]  #54  plasma-browser-integration    6.4.3 -> 6.4.4
+[U*]  #55  plasma-desktop                6.4.3 -> 6.4.4
+[U*]  #56  plasma-integration            6.4.3, 6.4.3-qt5 -> 6.4.4, 6.4.4-qt5
+[U.]  #57  plasma-nano                   6.4.3 -> 6.4.4
+[U*]  #58  plasma-nm                     6.4.3 -> 6.4.4
+[U*]  #59  plasma-pa                     6.4.3 -> 6.4.4
+[U*]  #60  plasma-systemmonitor          6.4.3 -> 6.4.4
+[U*]  #61  plasma-workspace              6.4.3 -> 6.4.4
+[U*]  #62  plasma-workspace-wallpapers   6.4.3 -> 6.4.4
+[U.]  #63  plasma5support                6.4.3 -> 6.4.4
+[U*]  #64  polkit-kde-agent              1-6.4.3 -> 1-6.4.4
+[U.]  #65  poppler-glib                  25.05.0 x2 -> 25.07.0 x2
+[U.]  #66  poppler-qt6                   25.05.0 -> 25.07.0
+[U.]  #67  poppler-utils                 25.05.0 -> 25.07.0
+[U*]  #68  powerdevil                    6.4.3 -> 6.4.4
+[U*]  #69  print-manager                 6.4.3 -> 6.4.4
+[U.]  #70  python3.13-debugpy            1.8.15 -> 1.8.16
+[U*]  #71  qqc2-breeze-style             6.4.3 -> 6.4.4
+[U.]  #72  rust-analyzer                 2025-07-28 -> 2025-08-04
+[U.]  #73  rust-analyzer-unwrapped       2025-07-28 -> 2025-08-04
+[U*]  #74  spectacle                     6.4.3 -> 6.4.4
+[U*]  #75  systemsettings                6.4.3 -> 6.4.4
+[C.]  #76  udev-rules                    <none> x2 -> <none>
+[U*]  #77  ungoogled-chromium            138.0.7204.183, 138.0.7204.183-sandbox -> 139.0.7258.66, 139.0.7258.66-sandbox
+[U.]  #78  ungoogled-chromium-unwrapped  138.0.7204.183, 138.0.7204.183-sandbox -> 139.0.7258.66, 139.0.7258.66-sandbox
+[U*]  #79  unrar                         7.1.9 -> 7.1.10
+[U*]  #80  wezterm                       0-unstable-2025-06-24 -> 0-unstable-2025-07-10
+[U*]  #81  xdg-desktop-portal-kde        6.4.3 -> 6.4.4
+[U*]  #82  zellij                        0.42.2 -> 0.43.1
 Removed packages:
-[R-]  #1  python3.13                 3.13.5-doc
-[R.]  #2  python3.13-monitorcontrol  4.1.1
-Closure size: 2933 -> 2930 (16 paths added, 19 paths removed, delta -3, disk usage -51.8MiB).
+[R.]  #1  extra-utils                <none>
+[R.]  #2  initrd-fsinfo              <none>
+[R.]  #3  keymap                     <none>
+[R.]  #4  link-units                 <none>
+[R.]  #5  mount-pstore.sh            <none>
+[R.]  #6  stage                      1-init.sh
+[R.]  #7  unit-mount-pstore.service  <none>
+Closure size: 2930 -> 2922 (246 paths added, 254 paths removed, delta -8, disk usage +126.7MiB).
