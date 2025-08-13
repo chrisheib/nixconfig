@@ -361,7 +361,7 @@ in
           ms-vscode-remote.remote-ssh-edit
           ms-vscode.cpptools
           redhat.vscode-xml
-          rust-lang.rust-analyzer
+          # rust-lang.rust-analyzer
           sumneko.lua
           tamasfe.even-better-toml
           tauri-apps.tauri-vscode
@@ -530,7 +530,7 @@ in
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
-    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
+    # (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
     # plasmusic-toolbar
 
     yt-dlp
