@@ -115,12 +115,6 @@ in
     LC_PAPER = "de_DE.UTF-8";
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
-
-    # LANGUAGE = "de_DE.UTF-8";
-    # LC_ALL = "de_DE.UTF-8";
-    # LC_CTYPE = "de_DE.UTF-8";
-    # LC_COLLATE = "de_DE.UTF-8";
-    # LC_MESSAGES = "de_DE.UTF-8";
   };
 
   i18n.localeCharsets = {
@@ -559,7 +553,7 @@ in
 
     flameshot # screenshot tool
 
-    tuxclocker
+    tuxclocker-plugins-with-unfree
   ];
 
   # Enable GNOME settings manager
