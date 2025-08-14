@@ -1,13 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C*]  #1  nvidia-x11  575.64.05-6.15.9, 575.64.05-6.15.9-bin, 575.64.05-6.15.9-firmware, 575.64.05-6.15.9-lib32 -> 570.181-6.12.41, 575.64.05-6.15.9, 575.64.05-6.15.9-bin, 575.64.05-6.15.9-firmware, 575.64.05-6.15.9-lib32
-[C.]  #2  python3     3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x4 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5
-Added packages:
-[A.]  #1  python3.13-hwdata               2.4.1
-[A.]  #2  qtcharts                        5.15.17, 5.15.17-bin
-[A+]  #3  tuxclocker                      1.5.1 x2
-[A.]  #4  tuxclocker-nvidia-plugin        1.5.1
-[A.]  #5  tuxclocker-plugins              1.5.1
-[A.]  #6  tuxclocker-plugins-with-unfree  1.5.1
-Closure size: 2912 -> 2922 (25 paths added, 15 paths removed, delta +10, disk usage +748.3MiB).
+No version or selection state changes.
+Closure size: 2922 -> 2922 (7 paths added, 7 paths removed, delta +0, disk usage +432B).
