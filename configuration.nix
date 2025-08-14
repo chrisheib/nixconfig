@@ -105,6 +105,7 @@ in
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # KDE stores overrides in ~/.config/plasma-localerc
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "de_DE.UTF-8";
     LC_IDENTIFICATION = "de_DE.UTF-8";
@@ -234,6 +235,7 @@ in
 
   programs.partition-manager.enable = true;
 
+  fonts.enableDefaultPackages = true; # https://wiki.nixos.org/wiki/Fonts#Default_fonts
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     google-fonts

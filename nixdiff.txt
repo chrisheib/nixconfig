@@ -1,7 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C*]  #1  tuxclocker  1.5.1 x2 -> 1.5.1
-Selection state changes:
-[C+]  #1  tuxclocker-plugins-with-unfree  1.5.1
-Closure size: 2922 -> 2921 (12 paths added, 13 paths removed, delta -1, disk usage -1.2MiB).
+No version or selection state changes.
+Closure size: 2921 -> 2921 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
