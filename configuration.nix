@@ -126,8 +126,12 @@ in
     LC_MESSAGES = "de_DE.UTF-8";
   };
 
-  i18n.supportedLocales = [ "all" ];
-  i18n.extraLocales = [ "all" ];
+  # i18n.supportedLocales = [ "all" ];
+  i18n.supportedLocales = [
+    "en_US.UTF-8/UTF-8"
+    "de_DE.UTF-8/UTF-8"
+  ];
+  # i18n.extraLocales = [ "all" ];
 
   # i18n.glibcLocales = pkgs.glibcLocales;
 
@@ -289,6 +293,8 @@ in
 
     WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
     CUDA_TOOLKIT_ROOT_DIR = "${pkgs.cudaPackages.cudatoolkit}";
+
+    LANGUAGE = "en_US.UTF-8";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
