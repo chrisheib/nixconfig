@@ -116,17 +116,25 @@ in
     LC_TELEPHONE = "de_DE.UTF-8";
     LC_TIME = "de_DE.UTF-8";
 
-    LANGUAGE = ("de_DE.UTF-8");
-    LC_ALL = ("de_DE.UTF-8");
-    LC_CTYPE = ("de_DE.UTF-8");
-    LC_COLLATE = ("de_DE.UTF-8");
-    LC_MESSAGES = ("de_DE.UTF-8");
+    # LANGUAGE = "de_DE.UTF-8";
+    # LC_ALL = "de_DE.UTF-8";
+    # LC_CTYPE = "de_DE.UTF-8";
+    # LC_COLLATE = "de_DE.UTF-8";
+    # LC_MESSAGES = "de_DE.UTF-8";
+  };
+
+  i18n.localeCharsets = {
+    LANGUAGE = "de_DE.UTF-8";
+    LC_ALL = "de_DE.UTF-8";
+    LC_CTYPE = "de_DE.UTF-8";
+    LC_COLLATE = "de_DE.UTF-8";
+    LC_MESSAGES = "de_DE.UTF-8";
   };
 
   i18n.supportedLocales = [ "all" ];
   i18n.extraLocales = [ "all" ];
 
-  i18n.glibcLocales = pkgs.glibcLocales;
+  # i18n.glibcLocales = pkgs.glibcLocales;
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
