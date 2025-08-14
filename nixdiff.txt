@@ -1,95 +1,13 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #01  attica                  5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[U*]  #02  baloo                   6.16.0 -> 6.17.0
-[U*]  #03  bluez-qt                6.16.0 -> 6.17.0
-[C*]  #04  breeze-icons            5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #05  cubeb                   0-unstable-2025-07-10-lib -> 0-unstable-2025-08-05-lib
-[U.]  #06  dotnet-runtime          8.0.18 -> 8.0.19
-[U.]  #07  dotnet-runtime-wrapped  8.0.18 -> 8.0.19
-[U.]  #08  extra-cmake-modules     6.16.0 -> 6.17.0
-[C*]  #09  frameworkintegration    5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[U*]  #10  gnome-software          48.3 -> 48.4
-[C.]  #11  karchive                5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C*]  #12  kauth                   5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C.]  #13  kbookmarks              5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #14  kcalendarcore           6.16.0 -> 6.17.0
-[U*]  #15  kcmutils                6.16.0 -> 6.17.0
-[C.]  #16  kcodecs                 5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #17  kcolorscheme            6.16.0, 6.16.0-dev -> 6.17.0, 6.17.0-dev
-[C.]  #18  kcompletion             5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C.]  #19  kconfig                 5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C.]  #20  kconfigwidgets          5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #21  kcontacts               6.16.0 -> 6.17.0
-[C*]  #22  kcoreaddons             5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[C.]  #23  kcrash                  5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #24  kdav                    6.16.0 -> 6.17.0
-[C.]  #25  kdbusaddons             5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #26  kdeclarative            6.16.0 -> 6.17.0
-[C*]  #27  kded                    5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[U.]  #28  kdesu                   6.16.0 -> 6.17.0
-[C.]  #29  kdnssd                  5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[C.]  #30  kdoctools               5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U*]  #31  kfilemetadata           6.16.0 -> 6.17.0
-[C.]  #32  kglobalaccel            5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C*]  #33  kguiaddons              5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #34  kholidays               6.16.0 -> 6.17.0
-[C.]  #35  ki18n                   5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[C*]  #36  kiconthemes             5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[U.]  #37  kidletime               6.16.0 -> 6.17.0
-[U*]  #38  kimageformats           6.16.0 -> 6.17.0
-[C*]  #39  kio                     5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[U.]  #40  kirigami                6.16.0 -> 6.17.0
-[U.]  #41  kitemmodels             6.16.0 -> 6.17.0
-[C.]  #42  kitemviews              5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C.]  #43  kjobwidgets             5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[C.]  #44  knewstuff               5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[C.]  #45  knotifications          5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[U.]  #46  knotifyconfig           6.16.0 -> 6.17.0
-[C*]  #47  kpackage                5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[U.]  #48  kparts                  6.16.0, 6.16.0-dev -> 6.17.0, 6.17.0-dev
-[U.]  #49  kpeople                 6.16.0 -> 6.17.0
-[U.]  #50  kpty                    6.16.0 -> 6.17.0
-[U.]  #51  kquickcharts            6.16.0 -> 6.17.0
-[U.]  #52  krunner                 6.16.0 -> 6.17.0
-[C*]  #53  kservice                5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[U.]  #54  kstatusnotifieritem     6.16.0, 6.16.0-dev -> 6.17.0, 6.17.0-dev
-[U.]  #55  ksvg                    6.16.0 -> 6.17.0
-[U.]  #56  ktextaddons             1.7.0 -> 1.7.1
-[U*]  #57  ktexteditor             6.16.0 -> 6.17.0
-[U.]  #58  ktexttemplate           6.16.0 -> 6.17.0
-[C.]  #59  ktextwidgets            5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[U.]  #60  kunitconversion         6.16.0 -> 6.17.0
-[U.]  #61  kuserfeedback           6.16.0 -> 6.17.0
-[C*]  #62  kwallet                 5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[C.]  #63  kwidgetsaddons          5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C.]  #64  kwindowsystem           5.116.0, 6.16.0, 6.16.0-dev -> 5.116.0, 6.17.0, 6.17.0-dev
-[C.]  #65  kxmlgui                 5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[U.]  #66  libinput                1.28.1 -> 1.29.0
-[C.]  #67  libsoup                 2.74.3, 3.6.5 x2 -> 3.6.5 x2
-[U.]  #68  modemmanager-qt         6.16.0 -> 6.17.0
-[U.]  #69  networkmanager-qt       6.16.0 -> 6.17.0
-[U.]  #70  nixos-system-nixos      25.11pre841808.85dbfc7aaf52 -> 25.11pre843472.005433b926e1
-[U.]  #71  noto-fonts              2025.07.01 -> 2025.08.01
-[U.]  #72  prison                  6.16.0 -> 6.17.0
-[U.]  #73  purpose                 6.16.0 -> 6.17.0
-[C.]  #74  python3                 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x4
-[U*]  #75  qqc2-desktop-style      6.16.0 -> 6.17.0
-[C*]  #76  solid                   5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[C.]  #77  sonnet                  5.116.0, 5.116.0-bin, 6.16.0, 6.16.0-dev -> 5.116.0, 5.116.0-bin, 6.17.0, 6.17.0-dev
-[C.]  #78  syndication             5.116.0, 6.16.0 -> 5.116.0, 6.17.0
-[C.]  #79  syntax-highlighting     5.116.0, 5.116.0-bin, 6.16.0 -> 5.116.0, 5.116.0-bin, 6.17.0
-[U.]  #80  threadweaver            6.16.0 -> 6.17.0
-[U.]  #81  vscode                  1.102.3 -> 1.103.0
-[U*]  #82  vscode-with-extensions  1.102.3 -> 1.103.0
-[C*]  #83  webkitgtk               2.48.5+abi=4.0, 2.48.5+abi=4.1, 2.48.5+abi=6.0 -> 2.48.5+abi=4.1, 2.48.5+abi=6.0
-Removed packages:
-[R.]  #1  append-initrd-secrets           <none>
-[R.]  #2  cava                            0.10.4
-[R-]  #3  kurve                           1.1.0
-[R.]  #4  rust-analyzer                   2025-08-04
-[R.]  #5  rust-analyzer-unwrapped         2025-08-04
-[R.]  #6  rust-lib-src                    <none>
-[R.]  #7  vscode-extension-rust-analyzer  0.3.2308
-Closure size: 2922 -> 2912 (298 paths added, 308 paths removed, delta -10, disk usage -236.2MiB).
+[C*]  #1  nvidia-x11  575.64.05-6.15.9, 575.64.05-6.15.9-bin, 575.64.05-6.15.9-firmware, 575.64.05-6.15.9-lib32 -> 570.181-6.12.41, 575.64.05-6.15.9, 575.64.05-6.15.9-bin, 575.64.05-6.15.9-firmware, 575.64.05-6.15.9-lib32
+[C.]  #2  python3     3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x4 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5
+Added packages:
+[A.]  #1  python3.13-hwdata               2.4.1
+[A.]  #2  qtcharts                        5.15.17, 5.15.17-bin
+[A+]  #3  tuxclocker                      1.5.1 x2
+[A.]  #4  tuxclocker-nvidia-plugin        1.5.1
+[A.]  #5  tuxclocker-plugins              1.5.1
+[A.]  #6  tuxclocker-plugins-with-unfree  1.5.1
+Closure size: 2912 -> 2922 (25 paths added, 15 paths removed, delta +10, disk usage +748.3MiB).

@@ -544,6 +544,8 @@ in
     heynote
 
     flameshot # screenshot tool
+
+    tuxclocker
   ];
 
   # Enable GNOME settings manager
@@ -576,6 +578,11 @@ in
     "media.rdd-vpx.enabled" = true;
     "widget.dmabuf.force-enabled" = true;
   };
+
+  programs.tuxclocker.enable = true;
+  programs.tuxclocker.enabledNVIDIADevices = [
+    "0" # nvidia gpu
+  ];
 
   ########## SERVICES ##########
 
