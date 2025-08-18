@@ -1,5 +1,27 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C*]  #1  glibc-locales  2.40-66 x2 -> 2.40-66 x3
-Closure size: 2921 -> 2922 (106 paths added, 105 paths removed, delta +1, disk usage +3.3MiB).
+[U*]  #01  bottom                        0.10.2 -> 0.11.0
+[C.]  #02  libXNVCtrl                    390.157, 570.181 -> 390.157, 580.76.05
+[U.]  #03  libnvme                       1.11.1 -> 1.15
+[U.]  #04  mariadb-server                10.11.13 -> 10.11.14
+[U.]  #05  nixos-system-nixos            25.11pre843472.005433b926e1 -> 25.11pre844474.fbcf476f790d
+[U.]  #06  nvidia-open                   6.15.9-575.64.05 -> 6.15.9-580.76.05
+[U*]  #07  nvidia-settings               575.64.05 -> 580.76.05
+[U*]  #08  nvidia-x11                    570.181-6.12.41, 575.64.05-6.15.9, 575.64.05-6.15.9-bin, 575.64.05-6.15.9-firmware, 575.64.05-6.15.9-lib32 -> 580.76.05-6.12.41, 580.76.05-6.15.9, 580.76.05-6.15.9-bin, 580.76.05-6.15.9-firmware, 580.76.05-6.15.9-lib32
+[C.]  #09  openjdk                       8u442-b06, 8u442-b06-jre, 17.0.15+6, 21.0.7+6 x2 -> 8u462-b08, 8u462-b08-jre, 17.0.15+6, 21.0.7+6 x2
+[C.]  #10  udev-rules                    <none> -> <none> x2
+[U*]  #11  ungoogled-chromium            139.0.7258.66, 139.0.7258.66-sandbox -> 139.0.7258.127, 139.0.7258.127-sandbox
+[U.]  #12  ungoogled-chromium-unwrapped  139.0.7258.66, 139.0.7258.66-sandbox -> 139.0.7258.127, 139.0.7258.127-sandbox
+[U*]  #13  wezterm                       0-unstable-2025-07-10 -> 0-unstable-2025-07-30
+Added packages:
+[A.]  #1  extra-utils                     <none>
+[A.]  #2  initrd-fsinfo                   <none>
+[A.]  #3  keymap                          <none>
+[A.]  #4  link-units                      <none>
+[A.]  #5  rust-analyzer                   2025-08-11
+[A.]  #6  rust-analyzer-unwrapped         2025-08-11
+[A.]  #7  rust-lib-src                    <none>
+[A.]  #8  stage                           1-init.sh
+[A.]  #9  vscode-extension-rust-analyzer  0.3.2308
+Closure size: 2922 -> 2932 (122 paths added, 112 paths removed, delta +10, disk usage +271.0MiB).

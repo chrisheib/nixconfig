@@ -377,7 +377,7 @@ in
           ms-vscode-remote.remote-ssh-edit
           ms-vscode.cpptools
           redhat.vscode-xml
-          # rust-lang.rust-analyzer
+          rust-lang.rust-analyzer
           sumneko.lua
           tamasfe.even-better-toml
           tauri-apps.tauri-vscode
