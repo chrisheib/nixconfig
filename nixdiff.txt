@@ -1,6 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  set_gpu_overclock           <none>
-[A.]  #2  unit-gpu_overclock.service  <none>
-Closure size: 2932 -> 2934 (5 paths added, 3 paths removed, delta +2, disk usage +2.2KiB).
+No version or selection state changes.
+Closure size: 2934 -> 2934 (5 paths added, 5 paths removed, delta +0, disk usage +88B).

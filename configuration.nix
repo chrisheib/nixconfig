@@ -661,7 +661,7 @@ in
     serviceConfig = {
       Type = "oneshot";
       user = "root";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''/etc/nixos/py_nvid_oc 150 1000''}";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.latest} /etc/nixos/py_nvid_oc 150 1000''}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };
