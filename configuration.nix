@@ -652,6 +652,21 @@ in
     };
   };
 
+  systemd.services.gpu_overclock = {
+    description = "GPU overclock";
+    wantedBy = [ "graphical.target" ];
+    path = [
+      config.boot.kernelPackages.nvidiaPackages.latest
+    ];
+    serviceConfig = {
+      Type = "oneshot";
+      user = "root";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''/etc/nixos/py_nvid_oc 150 1000''}";
+      # It’s often a good idea to mark the service active after the command finishes.
+      RemainAfterExit = true;
+    };
+  };
+
   # defaults to port 9898
   systemd.services.backrest = {
     description = "Launch backrest to take care of backups";
