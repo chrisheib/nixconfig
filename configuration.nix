@@ -546,8 +546,9 @@ in
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
-    # (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
+    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
     # plasmusic-toolbar
+    # kurve
 
     yt-dlp
     mp3gain
@@ -653,6 +654,8 @@ in
   };
 
   systemd.services.gpu_overclock = {
+    # See https://github.com/chrisheib/py_nvid_oc
+    # Compile and put py_nvid_oc in /etc/nixos
     description = "GPU overclock";
     wantedBy = [ "graphical.target" ];
     path = [

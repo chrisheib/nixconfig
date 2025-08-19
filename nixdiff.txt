@@ -1,4 +1,8 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2934 -> 2934 (5 paths added, 5 paths removed, delta +0, disk usage +16B).
+Version changes:
+[C.]  #1  python3  3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x5 -> 3.10.18, 3.11.13, 3.12.11, 3.13.5 x4, 3.13.5-env x6
+Added packages:
+[A.]  #1  cava   0.10.4
+[A+]  #2  kurve  1.1.0
+Closure size: 2934 -> 2937 (15 paths added, 12 paths removed, delta +3, disk usage +560.2KiB).
