@@ -203,7 +203,7 @@ in
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() {up && nh os switch --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc }";
+      nrs = "() {up && nh os switch --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc && onedrivefix }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
@@ -215,6 +215,7 @@ in
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && sudo systemctl restart --user plasma-plasmashell";
       nt = "nix-tree /nix/var/nix/profiles/system";
+      onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service";
     };
 
     histSize = 10001;
@@ -232,10 +233,10 @@ in
     experimental-features = nix-command flakes
   '';
 
-  nix.settings = {
-    cores = 6;
-    max-jobs = 2;
-  };
+  # nix.settings = {
+  #   cores = 6;
+  #   max-jobs = 2;
+  # };
 
   programs.partition-manager.enable = true;
 
@@ -369,7 +370,7 @@ in
           mkhl.direnv
           ms-azuretools.vscode-docker
           ms-python.debugpy
-          ms-python.python
+          # ms-python.python # FIX
           ms-python.vscode-pylance
           # ms-python.vscode-python-envs
           ms-vscode-remote.remote-containers
@@ -562,7 +563,7 @@ in
 
     flameshot # screenshot tool
 
-    tuxclocker-plugins-with-unfree
+    # tuxclocker-plugins-with-unfree
   ];
 
   # Enable GNOME settings manager
@@ -596,10 +597,10 @@ in
     "widget.dmabuf.force-enabled" = true;
   };
 
-  programs.tuxclocker.enable = true;
-  programs.tuxclocker.enabledNVIDIADevices = [
-    "0" # nvidia gpu
-  ];
+  # programs.tuxclocker.enable = true;
+  # programs.tuxclocker.enabledNVIDIADevices = [
+  #   "0" # nvidia gpu
+  # ];
 
   ########## SERVICES ##########
 
