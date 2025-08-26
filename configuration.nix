@@ -301,7 +301,7 @@ in
   # https://wiki.nixos.org/wiki/NVIDIA
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.beta;
     #  {
     #   version = "570.133.07"; # use new 570 drivers
     #   sha256_64bit = "sha256-LUPmTFgb5e9VTemIixqpADfvbUX1QoTT2dztwI3E3CY="; # "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # .run.drv
@@ -643,7 +643,7 @@ in
     description = "Limit GPU power limit";
     wantedBy = [ "graphical.target" ];
     path = [
-      config.boot.kernelPackages.nvidiaPackages.latest
+      config.boot.kernelPackages.nvidiaPackages.beta
     ];
     serviceConfig = {
       Type = "oneshot";
@@ -660,12 +660,12 @@ in
     description = "GPU overclock";
     wantedBy = [ "graphical.target" ];
     path = [
-      config.boot.kernelPackages.nvidiaPackages.latest
+      config.boot.kernelPackages.nvidiaPackages.beta
     ];
     serviceConfig = {
       Type = "oneshot";
       user = "root";
-      Environment = "LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.latest}/lib";
+      Environment = "LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.beta}/lib";
       ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''/etc/nixos/py_nvid_oc 150 1000''}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
