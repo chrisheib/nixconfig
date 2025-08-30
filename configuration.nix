@@ -24,7 +24,7 @@ in
 
   # See https://github.com/NixOS/nixpkgs/issues/360897
   nixpkgs.config.permittedInsecurePackages = [
-    "libsoup-2.74.3"
+    "qtwebengine-5.15.19" # teamspeak
   ];
 
   # To switch to unstable nixpgks:
@@ -370,7 +370,7 @@ in
           mkhl.direnv
           ms-azuretools.vscode-docker
           ms-python.debugpy
-          # ms-python.python # FIX
+          ms-python.python
           ms-python.vscode-pylance
           # ms-python.vscode-python-envs
           ms-vscode-remote.remote-containers
