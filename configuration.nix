@@ -216,6 +216,7 @@ in
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && sudo systemctl restart --user plasma-plasmashell";
       nt = "nix-tree /nix/var/nix/profiles/system";
       onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service";
+      df = "dysk"; # better df
     };
 
     histSize = 10001;
@@ -296,6 +297,7 @@ in
     CUDA_TOOLKIT_ROOT_DIR = "${pkgs.cudaPackages.cudatoolkit}";
 
     LANGUAGE = "en_US.UTF-8";
+    NIXOS_OZONE_WL = "1";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
@@ -398,6 +400,7 @@ in
     # brave
     mullvad-browser
     ungoogled-chromium
+    widevine-cdm # streaming codec for chromium
 
     kdePackages.kate # editor with sudo
     thunderbird
@@ -440,6 +443,7 @@ in
     # warp-terminal
     zellij # ctrl p n for new pane
     eza # ls replacement
+    dysk # df replacement
 
     p7zip # 7zip
     unrar
@@ -577,7 +581,6 @@ in
     localNetworkGameTransfers.openFirewall = true;
   };
 
-  # Install firefox.
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-wayland;
