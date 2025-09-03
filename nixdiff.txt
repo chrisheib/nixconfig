@@ -1,27 +1,5 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #01  cpupower             6.15.11 -> 6.16.4
-[U.]  #02  cubeb                0-unstable-2025-08-13-lib -> 0-unstable-2025-08-21-lib
-[U*]  #03  eza                  0.23.0, 0.23.0-man -> 0.23.1, 0.23.1-man
-[U*]  #04  firefox              142.0 x2 -> 142.0.1 x2
-[U.]  #05  firefox-unwrapped    142.0 -> 142.0.1
-[U.]  #06  fwupd                2.0.13, 2.0.13-lib -> 2.0.14, 2.0.14-lib
-[U.]  #07  initrd-linux-xanmod  6.15.11 -> 6.16.4
-[U.]  #08  linux-xanmod         6.15.11, 6.15.11-modules x2, 6.15.11-modules-shrunk -> 6.16.4, 6.16.4-modules x2, 6.16.4-modules-shrunk
-[U.]  #09  nixos-system-nixos   25.11pre853093.dfb2f12e899d -> 25.11pre855242.d0fc30899600
-[U.]  #10  noto-fonts           2025.08.01 -> 2025.09.01
-[U.]  #11  nvidia-open          6.15.11-580.65.06 -> 6.16.4-580.65.06
-[U*]  #12  nvidia-x11           580.65.06-6.15.11, 580.65.06-6.15.11-bin, 580.65.06-6.15.11-firmware, 580.65.06-6.15.11-lib32 -> 580.65.06-6.16.4, 580.65.06-6.16.4-bin, 580.65.06-6.16.4-firmware, 580.65.06-6.16.4-lib32
-[U*]  #13  steam                1.0.0.83, 1.0.0.83-bwrap, 1.0.0.83-fhsenv-profile, 1.0.0.83-fhsenv-rootfs, 1.0.0.83-init -> 1.0.0.84, 1.0.0.84-bwrap, 1.0.0.84-fhsenv-profile, 1.0.0.84-fhsenv-rootfs, 1.0.0.84-init
-[U.]  #14  steam-unwrapped      1.0.0.83 -> 1.0.0.84
-[U*]  #15  turbostat            6.15.11 -> 6.16.4
-[U*]  #16  xfsprogs             6.15.0, 6.15.0-bin, 6.15.0-doc -> 6.16.0, 6.16.0-bin, 6.16.0-doc
-[U*]  #17  yt-dlp               2025.08.22 -> 2025.08.27
 Added packages:
-[A+]  #1  dysk          3.1.0
-[A.]  #2  link-units    <none>
-[A+]  #3  widevine-cdm  4.10.2891.0
-Removed packages:
-[R.]  #1  extra-utils  <none>
-Closure size: 2926 -> 2928 (141 paths added, 139 paths removed, delta +2, disk usage -18.8MiB).
+[A+]  #1  vivaldi  7.5.3735.66
+Closure size: 2928 -> 2929 (13 paths added, 12 paths removed, delta +1, disk usage +417.8MiB).

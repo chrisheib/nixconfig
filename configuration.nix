@@ -20,6 +20,7 @@ in
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./orca.nix
+    ./vivaldi-hook.nix
   ];
 
   # See https://github.com/NixOS/nixpkgs/issues/360897
@@ -401,6 +402,7 @@ in
     mullvad-browser
     ungoogled-chromium
     widevine-cdm # streaming codec for chromium
+    vivaldi
 
     kdePackages.kate # editor with sudo
     thunderbird
