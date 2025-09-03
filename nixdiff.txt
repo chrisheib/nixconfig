@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  vivaldi  7.5.3735.66
-Closure size: 2928 -> 2929 (13 paths added, 12 paths removed, delta +1, disk usage +417.8MiB).
+No version or selection state changes.
+Closure size: 2929 -> 2929 (13 paths added, 13 paths removed, delta +0, disk usage +608B).
