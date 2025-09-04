@@ -1,9 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  chromium            139.0.7258.154, 139.0.7258.154-sandbox
-[A.]  #2  chromium-unwrapped  139.0.7258.154, 139.0.7258.154-sandbox, 139.0.7258.154-wv
-Removed packages:
-[R-]  #1  ungoogled-chromium            139.0.7258.154, 139.0.7258.154-sandbox
-[R.]  #2  ungoogled-chromium-unwrapped  139.0.7258.154, 139.0.7258.154-sandbox
-Closure size: 2928 -> 2929 (17 paths added, 16 paths removed, delta +1, disk usage +589.8MiB).
+No version or selection state changes.
+Closure size: 2929 -> 2929 (0 paths added, 0 paths removed, delta +0, disk usage +0B).

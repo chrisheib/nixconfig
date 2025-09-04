@@ -589,6 +589,12 @@ in
     package = pkgs.firefox-wayland;
   };
 
+  programs.chromium = {
+    extraOpts = {
+      "ExtensionManifestV2Availability" = 2;
+    };
+  };
+
   # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
   programs.firefox.preferences = {
     "gfx.webrender.all" = true;
