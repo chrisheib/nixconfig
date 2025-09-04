@@ -240,13 +240,18 @@ in
       trusted-users = root stschiff
     '';
     settings = {
-      system-features = [ "gccarch-znver5" ];
+      system-features = [
+        "gccarch-znver5"
+        "nixos-test"
+        "benchmark"
+        "big-parallel"
+      ];
       experimental-features = [
         "nix-command"
         "flakes"
       ];
-      #   cores = 6;
-      #   max-jobs = 2;
+      cores = 16; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
+      max-jobs = 8; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
     };
   };
 
