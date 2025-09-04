@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  uutils-coreutils  0.1.0
-Closure size: 2929 -> 2930 (13 paths added, 12 paths removed, delta +1, disk usage +14.4MiB).
+No version or selection state changes.
+Closure size: 2930 -> 2930 (6 paths added, 6 paths removed, delta +0, disk usage +16B).

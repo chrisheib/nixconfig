@@ -87,7 +87,14 @@
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.eno1.useDHCP = lib.mkDefault true;
 
-  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  # https://github.com/NixOS/nixpkgs/blob/master/lib/systems/architectures.nix
+  # https://wiki.nixos.org/wiki/Build_flags#Building_the_whole_system_on_NixOS
+  nixpkgs.hostPlatform = {
+    # gcc.arch = "znver5";
+    # gcc.tune = "znver5";
+    system = "x86_64-linux";
+  };
+
   # hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.cpu.amd.updateMicrocode = true;
 }

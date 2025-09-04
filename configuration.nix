@@ -23,10 +23,15 @@ in
     # ./chromium-widevine-overlay.nix
   ];
 
-  # See https://github.com/NixOS/nixpkgs/issues/360897
-  nixpkgs.config.permittedInsecurePackages = [
-    "qtwebengine-5.15.19" # teamspeak
-  ];
+  nixpkgs = {
+    config = {
+      # Allow unfree packages
+      allowUnfree = true;
+      permittedInsecurePackages = [
+        "qtwebengine-5.15.19" # teamspeak
+      ];
+    };
+  };
 
   # To switch to unstable nixpgks:
   # sudo nix-channel --list
@@ -230,15 +235,20 @@ in
   };
   # virtualisation.waydroid.enable = true;
 
-  nix.extraOptions = ''
-    trusted-users = root stschiff
-    experimental-features = nix-command flakes
-  '';
-
-  # nix.settings = {
-  #   cores = 6;
-  #   max-jobs = 2;
-  # };
+  nix = {
+    extraOptions = ''
+      trusted-users = root stschiff
+    '';
+    settings = {
+      system-features = [ "gccarch-znver5" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      #   cores = 6;
+      #   max-jobs = 2;
+    };
+  };
 
   programs.partition-manager.enable = true;
 
@@ -341,9 +351,6 @@ in
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "stschiff";
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # build packages with cuda support
   # nixpkgs.config.cudaSupport = true;
