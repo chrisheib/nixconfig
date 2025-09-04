@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Removed packages:
-[R-]  #1  vivaldi  7.5.3735.66
-Closure size: 2929 -> 2928 (14 paths added, 15 paths removed, delta -1, disk usage -417.8MiB).
+No version or selection state changes.
+Closure size: 2928 -> 2928 (14 paths added, 14 paths removed, delta +0, disk usage +0B).
