@@ -20,7 +20,7 @@ in
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./orca.nix
-    ./chromium-widevine-overlay.nix
+    # ./chromium-widevine-overlay.nix
   ];
 
   # See https://github.com/NixOS/nixpkgs/issues/360897
@@ -400,7 +400,8 @@ in
 
     # brave
     mullvad-browser
-    ungoogled-chromium
+    # ungoogled-chromium
+    (chromium.override { enableWideVine = true; })
     widevine-cdm # streaming codec for chromium
     # vivaldi # crashes after a while https://github.com/NixOS/nixpkgs/issues/307424
 

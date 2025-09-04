@@ -6,16 +6,16 @@
         widevine = super.widevine-cdm;
       in
       {
-        ungoogled-chromium = super.ungoogled-chromium.overrideAttrs (oldAttrs: {
+        ungoogled-chromium = super.ungoogled-chromium.overrideAttrs (old: {
           # ensure we reference widevine so it becomes a dependency
-          buildInputs = (oldAttrs.buildInputs or [ ]) ++ [ widevine ];
+          buildInputs = (old.buildInputs or [ ]) ++ [ widevine ];
           proprietaryCodecs = true;
           enableWidevine = true;
           # share/google/chrome/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so
-          postInstall = ''
-            ${oldAttrs.postInstall or ""}
+          postInstall = (old.postInstall or "") + ''
+            mkdir -p $out/share/chromium
             cp ${widevine}/share/google/chrome/WidevineCdm/_platform_specific/linux_x64/libwidevinecdm.so $out/share/chromium/libwidevinecdm.so
-            # mkdir -p $out/share/chromium
+
             # copy any WidevineCdm* directory from the widevine package
             # cp -R "${widevine}/WidevineCdm" "$out/share/chromium/WidevineCdm/4.10.2891.0"
 
