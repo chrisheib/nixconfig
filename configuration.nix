@@ -424,6 +424,7 @@ in
     mangohud
     goverlay # mangohud manager
 
+    (lib.hiPrio uutils-coreutils-noprefix) # https://wiki.nixos.org/wiki/Uutils
     # alacritty # https://alacritty.org/config-alacritty.html
     # kitty
     wezterm # link .wezterm.lua to ~/.wezterm.lua
