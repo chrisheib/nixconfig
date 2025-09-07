@@ -17,7 +17,7 @@ let
   chromium = pkgs.chromium.overrideAttrs (oldAttrs: {
     postFixup = ''
       ${oldAttrs.postFixup or ""}
-        wrapProgram $out/bin/chrome --add-flags "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
+        wrapProgram $out/bin/chromium --add-flags "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
     '';
   });
 in
