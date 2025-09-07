@@ -31,6 +31,9 @@ in
         "qtwebengine-5.15.19" # teamspeak
       ];
     };
+    overlays = [
+      # (import /etc/nixos/overlays/plain-pkgs.nix)
+    ];
   };
 
   # To switch to unstable nixpgks:
@@ -75,6 +78,7 @@ in
       "boot.shell_on_fail"
       "udev.log_priority=3"
       "rd.systemd.show_status=auto"
+      "zswap.enabled=1" # enables zswap https://wiki.nixos.org/wiki/Swap
 
       # disable screen dimming
       "NVreg_EnableBacklightHandler=0"
@@ -94,6 +98,7 @@ in
 
     kernel.sysctl = {
       "vm.dirty_bytes" = 67108864; # File transfer buffer -> Lower to imrpove write-to-usb feedback. 64 * 1024 * 1024 = 67108864
+      "vm.swappiness" = 10; # default is 60, lower to reduce swap usage https://wiki.nixos.org/wiki/Swap#Adjusting_swap_usage_behaviour
     };
   };
 
@@ -251,8 +256,13 @@ in
         "flakes"
       ];
       cores = 16; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
-      max-jobs = 8; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
+      max-jobs = 4; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
     };
+    # nixPath = [
+    # "nixpkgs=/home/stschiff/projects/nixpkgs"
+    # "nixpkgs=https://nixos.org/channels/nixos-unstable"
+    # "nixos-config=/etc/nixos/configuration.nix"
+    # ];
   };
 
   programs.partition-manager.enable = true;
@@ -460,6 +470,7 @@ in
     zellij # ctrl p n for new pane
     eza # ls replacement
     dysk # df replacement
+    nix-output-monitor
 
     p7zip # 7zip
     unrar

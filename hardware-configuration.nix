@@ -77,8 +77,12 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/2d1cca01-26a6-4f29-bccf-d5e472751981"; }
+    {
+      device = "/dev/disk/by-uuid/2d1cca01-26a6-4f29-bccf-d5e472751981";
+      options = [ "discard" ];
+    }
   ];
+  zramSwap.enable = true; # https://wiki.nixos.org/wiki/Swap
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
