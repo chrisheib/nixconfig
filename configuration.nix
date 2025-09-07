@@ -14,12 +14,12 @@ let
         wrapProgram $out/bin/code --add-flags "--no-sandbox"
     '';
   });
-  chromium = pkgs.chromium.overrideAttrs (oldAttrs: {
-    postFixup = ''
-      ${oldAttrs.postFixup or ""}
-        wrapProgram $out/bin/chromium --add-flags "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
-    '';
-  });
+  # chromium = pkgs.chromium.overrideAttrs (oldAttrs: {
+  #   postFixup = ''
+  #     ${oldAttrs.postFixup or ""}
+  #       wrapProgram $out/bin/chromium --add-flags "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
+  #   '';
+  # });
 in
 {
   imports = [
@@ -427,9 +427,14 @@ in
     })
 
     # brave
-    mullvad-browser
+    # mullvad-browser
     # ungoogled-chromium
-    (chromium.override { enableWideVine = true; })
+    (chromium.override {
+      enableWideVine = true;
+      commandLineArgs = [
+        "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
+      ];
+    })
     widevine-cdm # streaming codec for chromium
     # vivaldi # crashes after a while https://github.com/NixOS/nixpkgs/issues/307424
 
