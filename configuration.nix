@@ -14,19 +14,12 @@ let
         wrapProgram $out/bin/code --add-flags "--no-sandbox"
     '';
   });
-  # chromium = pkgs.chromium.overrideAttrs (oldAttrs: {
-  #   postFixup = ''
-  #     ${oldAttrs.postFixup or ""}
-  #       wrapProgram $out/bin/chromium --add-flags "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
-  #   '';
-  # });
 in
 {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./orca.nix
-    # ./chromium-widevine-overlay.nix
   ];
 
   nixpkgs = {
@@ -433,6 +426,7 @@ in
       enableWideVine = true;
       commandLineArgs = [
         "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
+        "--disable-new-avatar-menu"
       ];
     })
     widevine-cdm # streaming codec for chromium

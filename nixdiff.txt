@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Removed packages:
-[R-]  #1  mullvad-browser  14.5.6
-Closure size: 2936 -> 2935 (14 paths added, 15 paths removed, delta -1, disk usage -239.3MiB).
+No version or selection state changes.
+Closure size: 2935 -> 2935 (14 paths added, 14 paths removed, delta +0, disk usage +24B).
