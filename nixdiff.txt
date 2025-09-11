@@ -1,4 +1,20 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2935 -> 2935 (14 paths added, 14 paths removed, delta +0, disk usage +24B).
+Version changes:
+[U*]  #01  bind                                9.20.11-host, 9.20.11-lib, 9.20.11-man -> 9.20.12-host, 9.20.12-lib, 9.20.12-man
+[U*]  #02  cpupower                            6.16.4 -> 6.16.5
+[U.]  #03  initrd-linux-xanmod                 6.16.4 -> 6.16.5
+[U.]  #04  linux-xanmod                        6.16.4, 6.16.4-modules x2, 6.16.4-modules-shrunk -> 6.16.5, 6.16.5-modules x2, 6.16.5-modules-shrunk
+[U.]  #05  nixos-system-nixos                  25.11pre856926.8eb28adfa3dc -> 25.11pre858212.b599843bad24
+[U.]  #06  nvidia-open                         6.16.4-580.65.06 -> 6.16.5-580.65.06
+[U*]  #07  nvidia-x11                          580.65.06-6.16.4, 580.65.06-6.16.4-bin, 580.65.06-6.16.4-firmware, 580.65.06-6.16.4-lib32 -> 580.65.06-6.16.5, 580.65.06-6.16.5-bin, 580.65.06-6.16.5-firmware, 580.65.06-6.16.5-lib32
+[U.]  #08  opencv                              4.11.0 x2 -> 4.12.0 x2
+[U*]  #09  turbostat                           6.16.4 -> 6.16.5
+[U*]  #10  uutils-coreutils                    0.1.0 -> 0.2.0
+[U.]  #11  vscode-extension-github-codespaces  1.17.3 -> 1.17.4
+[U*]  #12  webkitgtk                           2.48.5+abi=4.1, 2.48.5+abi=6.0 -> 2.48.6+abi=4.1, 2.48.6+abi=6.0
+[U*]  #13  yt-dlp                              2025.08.27 -> 2025.09.05
+Removed packages:
+[R.]  #1  libixion  0.19.0
+[R.]  #2  liborcus  0.19.2
+Closure size: 2935 -> 2933 (118 paths added, 120 paths removed, delta -2, disk usage -218.9KiB).
