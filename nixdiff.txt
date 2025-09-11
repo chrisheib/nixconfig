@@ -1,20 +1,198 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #01  bind                                9.20.11-host, 9.20.11-lib, 9.20.11-man -> 9.20.12-host, 9.20.12-lib, 9.20.12-man
-[U*]  #02  cpupower                            6.16.4 -> 6.16.5
-[U.]  #03  initrd-linux-xanmod                 6.16.4 -> 6.16.5
-[U.]  #04  linux-xanmod                        6.16.4, 6.16.4-modules x2, 6.16.4-modules-shrunk -> 6.16.5, 6.16.5-modules x2, 6.16.5-modules-shrunk
-[U.]  #05  nixos-system-nixos                  25.11pre856926.8eb28adfa3dc -> 25.11pre858212.b599843bad24
-[U.]  #06  nvidia-open                         6.16.4-580.65.06 -> 6.16.5-580.65.06
-[U*]  #07  nvidia-x11                          580.65.06-6.16.4, 580.65.06-6.16.4-bin, 580.65.06-6.16.4-firmware, 580.65.06-6.16.4-lib32 -> 580.65.06-6.16.5, 580.65.06-6.16.5-bin, 580.65.06-6.16.5-firmware, 580.65.06-6.16.5-lib32
-[U.]  #08  opencv                              4.11.0 x2 -> 4.12.0 x2
-[U*]  #09  turbostat                           6.16.4 -> 6.16.5
-[U*]  #10  uutils-coreutils                    0.1.0 -> 0.2.0
-[U.]  #11  vscode-extension-github-codespaces  1.17.3 -> 1.17.4
-[U*]  #12  webkitgtk                           2.48.5+abi=4.1, 2.48.5+abi=6.0 -> 2.48.6+abi=4.1, 2.48.6+abi=6.0
-[U*]  #13  yt-dlp                              2025.08.27 -> 2025.09.05
+[U*]  #001  aurorae                        6.4.4 -> 6.4.5
+[U*]  #002  bluedevil                      6.4.4 -> 6.4.5
+[U*]  #003  breeze                         6.4.4, 6.4.4-qt5 -> 6.4.5, 6.4.5-qt5
+[U*]  #004  breeze-gtk                     6.4.4 -> 6.4.5
+[U.]  #005  btrfs-progs                    6.15 -> 6.16
+[C*]  #006  bzip2                          1.0.8 x2, 1.0.8-bin x2, 1.0.8-dev, 1.0.8-man -> 1.0.8 x2, 1.0.8-bin, 1.0.8-dev, 1.0.8-man
+[U.]  #007  cryptsetup                     2.8.0 x2 -> 2.8.1 x2
+[U*]  #008  discover                       6.4.4 -> 6.4.5
+[U*]  #009  drkonqi                        6.4.4 -> 6.4.5
+[U*]  #010  flatpak-kcm                    6.4.4 -> 6.4.5
+[U.]  #011  fluidsynth                     2.4.6 x2, 2.4.6-man -> 2.4.7 x2, 2.4.7-man
+[C*]  #012  fuse                           2.9.9, 2.9.9-bin, 2.9.9-man, 3.17.2, 3.17.2-bin, 3.17.2-man -> 2.9.9, 2.9.9-bin, 2.9.9-man, 3.17.4, 3.17.4-bin, 3.17.4-man
+[U*]  #013  git                            2.50.1, 2.50.1-doc -> 2.51.0, 2.51.0-doc
+[U.]  #014  git-minimal                    2.50.1 -> 2.51.0
+[U.]  #015  glib                           2.84.3 x2, 2.84.3-bin x2, 2.84.3-dev -> 2.84.4 x2, 2.84.4-bin x2, 2.84.4-dev
+[U.]  #016  gst-libav                      1.26.3 x2 -> 1.26.5 x2
+[U.]  #017  gst-plugins-bad                1.26.3 x2 -> 1.26.5 x2
+[U.]  #018  gst-plugins-base               1.26.3 x2 -> 1.26.5 x2
+[U.]  #019  gst-plugins-good               1.26.3 x2 -> 1.26.5 x2
+[U.]  #020  gst-plugins-ugly               1.26.3 x2 -> 1.26.5 x2
+[U.]  #021  gstreamer                      1.26.3 x2, 1.26.3-bin -> 1.26.5 x2, 1.26.5-bin
+[U.]  #022  imath                          3.2.0 x2 -> 3.2.1 x2
+[U.]  #023  inih                           60 -> 61
+[U*]  #024  iproute2                       6.15.0 -> 6.16.0
+[C*]  #025  iptables                       1.8.11 x2, 1.8.11-man -> 1.8.11 x2, 1.8.11-lib x2, 1.8.11-man
+[U.]  #026  jasper                         4.2.5-lib -> 4.2.6-lib
+[U*]  #027  kactivitymanagerd              6.4.4 -> 6.4.5
+[U*]  #028  kbd                            2.8.0 x4, 2.8.0-man -> 2.8.0-unstable-2025-08-12 x4, 2.8.0-unstable-2025-08-12-man
+[U*]  #029  kde-cli-tools                  6.4.4 -> 6.4.5
+[U*]  #030  kde-gtk-config                 6.4.4 -> 6.4.5
+[U.]  #031  kdecoration                    6.4.4 -> 6.4.5
+[U*]  #032  kdeplasma-addons               6.4.4 -> 6.4.5
+[U*]  #033  kglobalacceld                  6.4.4 -> 6.4.5
+[U*]  #034  kinfocenter                    6.4.4 -> 6.4.5
+[U*]  #035  kmenuedit                      6.4.4 -> 6.4.5
+[U.]  #036  kpipewire                      6.4.4 -> 6.4.5
+[U.]  #037  krb5                           1.21.3, 1.21.3-dev, 1.21.3-lib x2 -> 1.22.1, 1.22.1-dev, 1.22.1-lib x2
+[U*]  #038  krdp                           6.4.4 -> 6.4.5
+[U*]  #039  kscreen                        6.4.4 -> 6.4.5
+[U*]  #040  kscreenlocker                  6.4.4 -> 6.4.5
+[U*]  #041  ksystemstats                   6.4.4 -> 6.4.5
+[U*]  #042  kwallet-pam                    6.4.4 -> 6.4.5
+[C.]  #043  kwayland                       5.116.0, 6.4.4 -> 5.116.0, 6.4.5
+[U*]  #044  kwayland-integration           6.4.4 -> 6.4.5
+[U*]  #045  kwin                           6.4.4 -> 6.4.5
+[U*]  #046  kwin-x11                       6.4.4 -> 6.4.5
+[U*]  #047  kwrited                        6.4.4 -> 6.4.5
+[U.]  #048  layer-shell-qt                 6.4.4 -> 6.4.5
+[U.]  #049  libadwaita                     1.7.5 x2 -> 1.7.6 x2
+[U.]  #050  libbpf                         1.6.1 x2 -> 1.6.2 x2
+[U*]  #051  libkscreen                     6.4.4 -> 6.4.5
+[U*]  #052  libksysguard                   6.4.4 -> 6.4.5
+[U.]  #053  libmbim                        1.30.0 x2 -> 1.32.0 x2
+[U.]  #054  libmpg123                      1.33.0 x2, 1.33.0-man -> 1.33.2 x2, 1.33.2-man
+[C.]  #055  libpcap                        1.10.5 x2 -> 1.10.5, 1.10.5-lib x2
+[U*]  #056  libplasma                      6.4.4 -> 6.4.5
+[U.]  #057  libpq                          17.5 -> 17.6
+[U.]  #058  liburing                       2.11 x2 -> 2.12 x2
+[U.]  #059  libxkbcommon                   1.10.0 x2, 1.10.0-dev x2 -> 1.11.0 x2, 1.11.0-dev x2
+[U.]  #060  libxml++                       3.0.1 x2 -> 3.2.5 x2
+[U.]  #061  libxmlb                        0.3.22-lib x2 -> 0.3.23-lib x2
+[U*]  #062  milou                          6.4.4 -> 6.4.5
+[U*]  #063  modemmanager                   1.22.0 x2 -> 1.24.0 x2
+[U.]  #064  mpg123                         1.33.0 x2, 1.33.0-man -> 1.33.2 x2, 1.33.2-man
+[U.]  #065  neon                           0.34.2 x2 -> 0.35.0 x2
+[U*]  #066  nh                             4.1.2 -> 4.2.0
+[U.]  #067  nixos-system-nixos             25.11pre858212.b599843bad24 -> 25.11pre859555.ab0f3607a6c7
+[C.]  #068  nss                            3.101.2 x2, 3.101.2-man, 3.114.1 -> 3.112.1 x2, 3.112.1-man, 3.114.1
+[U.]  #069  nss-cacert                     3.114, 3.114-p11kit -> 3.115, 3.115-p11kit
+[U*]  #070  ocean-sound-theme              6.4.4 -> 6.4.5
+[U.]  #071  openexr                        3.3.4 x2, 3.3.4-bin, 3.3.4-dev -> 3.3.5 x2, 3.3.5-bin, 3.3.5-dev
+[C.]  #072  openjdk                        8u462-b08, 8u462-b08-jre, 17.0.15+6, 21.0.7+6 x2 -> 8u462-b08, 8u462-b08-jre, 17.0.15+6, 21.0.8+9 x2
+[U.]  #073  openjdk-minimal-jre            21.0.7+6 -> 21.0.8+9
+[U.]  #074  patchelf                       0.15.0 -> 0.15.2
+[U.]  #075  perl5.40.0-Crypt-URandom       0.39 -> 0.54
+[U.]  #076  perl5.40.0-Digest-HMAC         1.04 -> 1.05
+[U*]  #077  plasma-activities              6.4.4 -> 6.4.5
+[U.]  #078  plasma-activities-stats        6.4.4 -> 6.4.5
+[U*]  #079  plasma-browser-integration     6.4.4 -> 6.4.5
+[U*]  #080  plasma-desktop                 6.4.4 -> 6.4.5
+[U*]  #081  plasma-integration             6.4.4, 6.4.4-qt5 -> 6.4.5, 6.4.5-qt5
+[U.]  #082  plasma-nano                    6.4.4 -> 6.4.5
+[U*]  #083  plasma-nm                      6.4.4 -> 6.4.5
+[U*]  #084  plasma-pa                      6.4.4 -> 6.4.5
+[U*]  #085  plasma-systemmonitor           6.4.4 -> 6.4.5
+[U*]  #086  plasma-workspace               6.4.4 -> 6.4.5
+[U*]  #087  plasma-workspace-wallpapers    6.4.4 -> 6.4.5
+[U.]  #088  plasma5support                 6.4.4 -> 6.4.5
+[U*]  #089  polkit-kde-agent               1-6.4.4 -> 1-6.4.5
+[U*]  #090  powerdevil                     6.4.4 -> 6.4.5
+[U*]  #091  print-manager                  6.4.4 -> 6.4.5
+[C.]  #092  protobuf                       21.12, 31.1 -> 21.12, 32.0
+[C.]  #093  python3                        3.10.18, 3.11.13, 3.12.11, 3.13.6 x2, 3.13.6-env x5 -> 3.10.18, 3.11.13, 3.12.11, 3.13.7 x2, 3.13.7-env x5
+[U.]  #094  python3.13-charset-normalizer  3.4.2 -> 3.4.3
+[U.]  #095  python3.13-multidict           6.6.3 -> 6.6.4
+[U.]  #096  python3.13-protobuf            6.31.1 -> 6.32.0
+[U*]  #097  qqc2-breeze-style              6.4.4 -> 6.4.5
+[U.]  #098  qt5compat                      6.9.1, 6.9.1-dev -> 6.9.2, 6.9.2-dev
+[C.]  #099  qtbase                         5.15.17, 5.15.17-bin, 6.9.1, 6.9.1-dev, 6.9.1-only-plugins-qml -> 5.15.17, 5.15.17-bin, 6.9.2, 6.9.2-dev, 6.9.2-only-plugins-qml
+[U.]  #100  qtconnectivity                 6.9.1 -> 6.9.2
+[C.]  #101  qtdeclarative                  5.15.17, 5.15.17-bin, 6.9.1, 6.9.1-dev -> 5.15.17, 5.15.17-bin, 6.9.2, 6.9.2-dev
+[U*]  #102  qtimageformats                 6.9.1 -> 6.9.2
+[U.]  #103  qtlanguageserver               6.9.1, 6.9.1-dev -> 6.9.2, 6.9.2-dev
+[C.]  #104  qtlocation                     5.15.17, 5.15.17-bin, 6.9.1 -> 5.15.17, 5.15.17-bin, 6.9.2
+[C.]  #105  qtmultimedia                   5.15.17, 5.15.17-bin, 6.9.1 -> 5.15.17, 5.15.17-bin, 6.9.2
+[U.]  #106  qtnetworkauth                  6.9.1 -> 6.9.2
+[U.]  #107  qtpositioning                  6.9.1 -> 6.9.2
+[U.]  #108  qtquick3d                      6.9.1 -> 6.9.2
+[U.]  #109  qtsensors                      6.9.1 -> 6.9.2
+[U.]  #110  qtserialport                   6.9.1 -> 6.9.2
+[U.]  #111  qtshadertools                  6.9.1, 6.9.1-dev -> 6.9.2, 6.9.2-dev
+[U.]  #112  qtspeech                       6.9.1 -> 6.9.2
+[C*]  #113  qtsvg                          5.15.17, 5.15.17-bin, 6.9.1, 6.9.1-dev -> 5.15.17, 5.15.17-bin, 6.9.2, 6.9.2-dev
+[C*]  #114  qttools                        5.15.17, 5.15.17-bin, 6.9.1 -> 5.15.17, 5.15.17-bin, 6.9.2
+[C.]  #115  qttranslations                 5.15.17, 6.9.1 -> 5.15.17, 6.9.2
+[U.]  #116  qtvirtualkeyboard              6.9.1 -> 6.9.2
+[C*]  #117  qtwayland                      5.15.17, 5.15.17-bin, 6.9.1, 6.9.1-only-plugins-qml -> 5.15.17, 5.15.17-bin, 6.9.2, 6.9.2-only-plugins-qml
+[C.]  #118  qtwebchannel                   5.15.17, 5.15.17-bin, 6.9.1 -> 5.15.17, 5.15.17-bin, 6.9.2
+[C.]  #119  qtwebengine                    5.15.19, 5.15.19-bin, 6.9.1 -> 5.15.19, 5.15.19-bin, 6.9.2
+[C.]  #120  qtwebsockets                   5.15.17, 5.15.17-bin, 6.9.1 -> 5.15.17, 5.15.17-bin, 6.9.2
+[U.]  #121  qtwebview                      6.9.1 -> 6.9.2
+[U*]  #122  ruff                           0.12.8 -> 0.12.10
+[U.]  #123  s2n-tls                        1.5.23 -> 1.5.24
+[C.]  #124  sddm-unwrapped                 0.21.0 -> 0.21.0, 0.21.0-man
+[U*]  #125  spectacle                      6.4.4 -> 6.4.5
+[C*]  #126  systemd                        <none>, 257.7 x2, 257.7-dev, 257.7-man -> <none>, 257.8 x2, 257.8-dev, 257.8-man
+[U.]  #127  systemd-minimal                257.7 x2 -> 257.8 x2
+[U.]  #128  systemd-minimal-libs           257.7 x2, 257.7-dev -> 257.8 x2, 257.8-dev
+[U*]  #129  systemsettings                 6.4.4 -> 6.4.5
+[C.]  #130  taglib                         1.13.1, 2.1 x2 -> 1.13.1, 2.1.1 x2
+[C.]  #131  udev-rules                     <none> x2 -> <none>
+[U.]  #132  umockdev                       0.19.2 -> 0.19.3
+[U*]  #133  uutils-coreutils               0.2.0 -> 0.2.2
+[U.]  #134  w3m                            0.5.3+git20230121 -> 0.5.5
+[U*]  #135  xdg-desktop-portal-kde         6.4.4 -> 6.4.5
+[U.]  #136  xgamma                         1.0.7 -> 1.0.8
+[C*]  #137  xz                             5.8.1 x2, 5.8.1-bin x2, 5.8.1-doc, 5.8.1-man -> 5.8.1 x2, 5.8.1-bin, 5.8.1-doc, 5.8.1-man
+[U.]  #138  zimg                           3.0.5 x2 -> 3.0.6 x2
+[U.]  #139  zlib-ng                        2.2.4 -> 2.2.5
+[C*]  #140  zstd                           1.5.7 x2, 1.5.7-bin x2, 1.5.7-dev, 1.5.7-man -> 1.5.7 x2, 1.5.7-bin, 1.5.7-dev, 1.5.7-man
+Added packages:
+[A.]  #01  chafa               1.16.2
+[A+]  #02  fastfetch           2.52.0, 2.52.0-man
+[A.]  #03  libelf              0.8.13
+[A.]  #04  libice              1.1.2 x2, 1.1.2-dev
+[A.]  #05  libsm               1.2.6 x2, 1.2.6-dev
+[A.]  #06  libsysprof-capture  48.0
+[A.]  #07  libxaw              1.0.16 x2
+[A.]  #08  libxcb-image        0.4.1, 0.4.1-dev
+[A.]  #09  libxcb-keysyms      0.4.1 x2, 0.4.1-dev
+[A.]  #10  libxcb-render-util  0.3.10, 0.3.10-dev
+[A.]  #11  libxcb-util         0.4.1, 0.4.1-dev
+[A.]  #12  libxcb-wm           0.4.2, 0.4.2-dev
+[A.]  #13  libxcursor          1.2.3 x2, 1.2.3-dev
+[A.]  #14  libxfce4util        4.20.1
+[A.]  #15  libxfixes           6.0.1 x2, 6.0.1-dev
+[A.]  #16  libxmu              1.2.1 x2
+[A.]  #17  libxpm              3.5.17 x2
+[A.]  #18  libxrandr           1.5.4 x2, 1.5.4-dev
+[A.]  #19  libxrender          0.9.12 x2, 0.9.12-dev
+[A.]  #20  libxt               1.3.1 x2, 1.3.1-dev
+[A.]  #21  libxv               1.0.13 x2
+[A.]  #22  libxxf86dga         1.1.6
+[A.]  #23  libxxf86vm          1.1.6 x2
+[A+]  #24  protonup-rs         0.9.1
+[A+]  #25  sddm-wrapped-man    <none>
+[A.]  #26  xfconf              4.20.0
+[A.]  #27  yyjson              0.12.0
 Removed packages:
-[R.]  #1  libixion  0.19.0
-[R.]  #2  liborcus  0.19.2
-Closure size: 2935 -> 2933 (118 paths added, 120 paths removed, delta -2, disk usage -218.9KiB).
+[R.]  #01  extra-utils          <none>
+[R.]  #02  libICE               1.1.2 x2, 1.1.2-dev
+[R.]  #03  libSM                1.2.6 x2, 1.2.6-dev
+[R.]  #04  libXaw               1.0.16 x2
+[R.]  #05  libXcursor           1.2.3 x2, 1.2.3-dev
+[R.]  #06  libXfixes            6.0.1 x2, 6.0.1-dev
+[R.]  #07  libXmu               1.2.1 x2
+[R.]  #08  libXpm               3.5.17 x2
+[R.]  #09  libXrandr            1.5.4 x2, 1.5.4-dev
+[R.]  #10  libXrender           0.9.12 x2, 0.9.12-dev
+[R.]  #11  libXres              1.2.2
+[R.]  #12  libXt                1.3.1 x2, 1.3.1-dev
+[R.]  #13  libXv                1.0.13 x2
+[R.]  #14  libXxf86dga          1.1.6
+[R.]  #15  libXxf86vm           1.1.6 x2
+[R-]  #16  neofetch-unstable    2021-12-10, 2021-12-10-man
+[R.]  #17  python3.13-docopt    0.6.2
+[R.]  #18  python3.13-ueberzug  18.3.1
+[R.]  #19  xcb-util             0.4.1, 0.4.1-dev
+[R.]  #20  xcb-util-image       0.4.1, 0.4.1-dev
+[R.]  #21  xcb-util-keysyms     0.4.1 x2, 0.4.1-dev
+[R.]  #22  xcb-util-renderutil  0.3.10, 0.3.10-dev
+[R.]  #23  xcb-util-wm          0.4.2, 0.4.2-dev
+[R.]  #24  xtrans               1.6.0
+[R-]  #25  zellij               0.43.1
+Closure size: 2933 -> 2935 (2920 paths added, 2918 paths removed, delta +2, disk usage -72.8MiB).

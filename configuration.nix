@@ -229,7 +229,7 @@ in
       df = "dysk"; # better df
     };
 
-    histSize = 10001;
+    histSize = 50000;
     histFile = "$HOME/.zsh_history";
     setOptions = [
       "HIST_IGNORE_ALL_DUPS"
@@ -460,7 +460,7 @@ in
     zsh # link .zshrc to ~/.zshrc
     carapace
     tealdeer # tldr
-    neofetch
+    fastfetch
     stow
     devenv # meh
     direnv
@@ -472,9 +472,12 @@ in
     bottom
     htop
     # warp-terminal
-    zellij # ctrl p n for new pane
+    # zellij # ctrl p n for new pane
     eza # ls replacement
     dysk # df replacement
+
+    nh # nix os helper
+    nix-tree
     nix-output-monitor
 
     p7zip # 7zip
@@ -500,13 +503,9 @@ in
     streamlink-twitch-gui-bin
     ffmpeg-full
 
-    transmission_4-qt
-
-    prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
-
     # kdePackages.kalk # wrong calculator!
     gnome-calculator
-
+    transmission_4-qt
     krusader # file manager (like total commander) and ftp
     kde-rounded-corners
 
@@ -515,6 +514,9 @@ in
     git
     ntfs3g # allow read write ntfs mounts
     docker-compose
+
+    steam
+    protontricks
     (lutris.override {
       extraPkgs = pkgs: [
         umu-launcher
@@ -522,6 +524,8 @@ in
     })
     wineWowPackages.stable
     winetricks
+    prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
+    protonup-rs
 
     # brlaser # printer
 
@@ -556,9 +560,6 @@ in
 
     geekbench
 
-    steam
-    protontricks
-
     variety # wallpaper changer
 
     firefox-wayland
@@ -574,9 +575,6 @@ in
     restic
     # restic-browser # depends on webkit, takes forever to build
     backrest
-
-    nh # nix os helper
-    nix-tree
 
     libnotify # enables notify-send
 
@@ -598,12 +596,9 @@ in
     heynote
 
     flameshot # screenshot tool
-
-    # tuxclocker-plugins-with-unfree
   ];
 
   # Enable GNOME settings manager
-
   programs.dconf.enable = true;
   programs.steam = {
     enable = true;
@@ -707,7 +702,7 @@ in
       Type = "oneshot";
       user = "root";
       Environment = "LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.beta}/lib";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''/etc/nixos/py_nvid_oc 150 1000''}";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''/etc/nixos/py_nvid_oc 125 800''}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };
