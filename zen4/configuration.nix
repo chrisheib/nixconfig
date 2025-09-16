@@ -11,12 +11,12 @@
   ...
 }:
 let
-  # my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: {
-  #   postFixup = ''
-  #     ${oldAttrs.postFixup or ""}
-  #       wrapProgram $out/bin/code --add-flags "--no-sandbox"
-  #   '';
-  # });
+  my-vscode-no-sandbox = pkgs.vscode-with-extensions.overrideAttrs (oldAttrs: {
+    postFixup = ''
+      ${oldAttrs.postFixup or ""}
+        wrapProgram $out/bin/code --add-flags "--no-sandbox"
+    '';
+  });
 in
 {
   imports = [
@@ -390,46 +390,46 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # (my-vscode-no-sandbox.override {
-    #   vscodeExtensions =
-    #     with vscode-extensions;
-    #     [
-    #       arrterian.nix-env-selector
-    #       bbenoist.nix
-    #       charliermarsh.ruff # python linter
-    #       github.codespaces
-    #       github.copilot
-    #       github.copilot-chat
-    #       jnoortheen.nix-ide
-    #       kamadorueda.alejandra
-    #       mechatroner.rainbow-csv
-    #       mkhl.direnv
-    #       ms-azuretools.vscode-docker
-    #       ms-python.debugpy
-    #       ms-python.python
-    #       ms-python.vscode-pylance
-    #       # ms-python.vscode-python-envs
-    #       ms-vscode-remote.remote-containers
-    #       ms-vscode-remote.remote-ssh
-    #       ms-vscode-remote.remote-ssh-edit
-    #       ms-vscode.cpptools
-    #       redhat.vscode-xml
-    #       rust-lang.rust-analyzer
-    #       sumneko.lua
-    #       tamasfe.even-better-toml
-    #       tauri-apps.tauri-vscode
-    #       thenuprojectcontributors.vscode-nushell-lang
-    #       usernamehw.errorlens
-    #     ]
-    #     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-    #       {
-    #         name = "qml";
-    #         publisher = "bbenoist";
-    #         version = "1.0.0";
-    #         sha256 = "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk=";
-    #       }
-    #     ];
-    # })
+    (my-vscode-no-sandbox.override {
+      vscodeExtensions =
+        with vscode-extensions;
+        [
+          arrterian.nix-env-selector
+          bbenoist.nix
+          charliermarsh.ruff # python linter
+          github.codespaces
+          github.copilot
+          github.copilot-chat
+          jnoortheen.nix-ide
+          kamadorueda.alejandra
+          mechatroner.rainbow-csv
+          mkhl.direnv
+          ms-azuretools.vscode-docker
+          ms-python.debugpy
+          ms-python.python
+          ms-python.vscode-pylance
+          # ms-python.vscode-python-envs
+          ms-vscode-remote.remote-containers
+          ms-vscode-remote.remote-ssh
+          ms-vscode-remote.remote-ssh-edit
+          ms-vscode.cpptools
+          redhat.vscode-xml
+          rust-lang.rust-analyzer
+          sumneko.lua
+          tamasfe.even-better-toml
+          tauri-apps.tauri-vscode
+          thenuprojectcontributors.vscode-nushell-lang
+          usernamehw.errorlens
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "qml";
+            publisher = "bbenoist";
+            version = "1.0.0";
+            sha256 = "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk=";
+          }
+        ];
+    })
 
     # brave
     # mullvad-browser
