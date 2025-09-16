@@ -1,3 +1,6 @@
+# /home/stschiff/.nixos/zen4/configuration.nix
+# nh os build --file '<nixpkgs/nixos>' -k -- -I nixos-config=/home/stschiff/.nixos/zen4/configuration.nix
+
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
@@ -31,6 +34,14 @@ in
       ];
     };
     overlays = [
+      (final: prev: {
+        mkDerivation = args: prev.mkDerivation (args // { doCheck = false; });
+      })
+      (self: super: {
+        assimp = super.assimp.overrideAttrs (_: {
+          doCheck = false;
+        }); # Fails check on zen4
+      })
       # (import /etc/nixos/overlays/plain-pkgs.nix)
     ];
   };
@@ -107,7 +118,7 @@ in
   # Enable networking
   networking.networkmanager.enable = true;
 
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -245,7 +256,8 @@ in
     '';
     settings = {
       system-features = [
-        "gccarch-znver5"
+        "gccarch-znver4"
+        # "gccarch-znver5"
         "nixos-test"
         "benchmark"
         "big-parallel"
@@ -264,7 +276,7 @@ in
     # ];
   };
 
-  programs.partition-manager.enable = true;
+  # programs.partition-manager.enable = true;
 
   fonts.enableDefaultPackages = true; # https://wiki.nixos.org/wiki/Fonts#Default_fonts
   fonts.packages = with pkgs; [
@@ -282,7 +294,7 @@ in
   #     "steam-run"
   #   ];
 
-  programs.gamemode.enable = true; # https://wiki.nixos.org/wiki/GameMode
+  # programs.gamemode.enable = true; # https://wiki.nixos.org/wiki/GameMode
 
   hardware.graphics = {
     enable = true;
@@ -378,160 +390,160 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    (my-vscode-no-sandbox.override {
-      vscodeExtensions =
-        with vscode-extensions;
-        [
-          arrterian.nix-env-selector
-          bbenoist.nix
-          charliermarsh.ruff # python linter
-          github.codespaces
-          github.copilot
-          github.copilot-chat
-          jnoortheen.nix-ide
-          kamadorueda.alejandra
-          mechatroner.rainbow-csv
-          mkhl.direnv
-          ms-azuretools.vscode-docker
-          ms-python.debugpy
-          ms-python.python
-          ms-python.vscode-pylance
-          # ms-python.vscode-python-envs
-          ms-vscode-remote.remote-containers
-          ms-vscode-remote.remote-ssh
-          ms-vscode-remote.remote-ssh-edit
-          ms-vscode.cpptools
-          redhat.vscode-xml
-          rust-lang.rust-analyzer
-          sumneko.lua
-          tamasfe.even-better-toml
-          tauri-apps.tauri-vscode
-          thenuprojectcontributors.vscode-nushell-lang
-          usernamehw.errorlens
-        ]
-        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          {
-            name = "qml";
-            publisher = "bbenoist";
-            version = "1.0.0";
-            sha256 = "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk=";
-          }
-        ];
-    })
+    # (my-vscode-no-sandbox.override {
+    #   vscodeExtensions =
+    #     with vscode-extensions;
+    #     [
+    #       arrterian.nix-env-selector
+    #       bbenoist.nix
+    #       charliermarsh.ruff # python linter
+    #       github.codespaces
+    #       github.copilot
+    #       github.copilot-chat
+    #       jnoortheen.nix-ide
+    #       kamadorueda.alejandra
+    #       mechatroner.rainbow-csv
+    #       mkhl.direnv
+    #       ms-azuretools.vscode-docker
+    #       ms-python.debugpy
+    #       ms-python.python
+    #       ms-python.vscode-pylance
+    #       # ms-python.vscode-python-envs
+    #       ms-vscode-remote.remote-containers
+    #       ms-vscode-remote.remote-ssh
+    #       ms-vscode-remote.remote-ssh-edit
+    #       ms-vscode.cpptools
+    #       redhat.vscode-xml
+    #       rust-lang.rust-analyzer
+    #       sumneko.lua
+    #       tamasfe.even-better-toml
+    #       tauri-apps.tauri-vscode
+    #       thenuprojectcontributors.vscode-nushell-lang
+    #       usernamehw.errorlens
+    #     ]
+    #     ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    #       {
+    #         name = "qml";
+    #         publisher = "bbenoist";
+    #         version = "1.0.0";
+    #         sha256 = "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk=";
+    #       }
+    #     ];
+    # })
 
     # brave
     # mullvad-browser
     # ungoogled-chromium
-    (chromium.override {
-      enableWideVine = true;
-      commandLineArgs = [
-        "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
-        "--disable-new-avatar-menu"
-      ];
-    })
-    widevine-cdm # streaming codec for chromium
+    # (chromium.override {
+    #   enableWideVine = true;
+    #   commandLineArgs = [
+    #     "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
+    #     "--disable-new-avatar-menu"
+    #   ];
+    # })
+    # widevine-cdm # streaming codec for chromium
     # vivaldi # crashes after a while https://github.com/NixOS/nixpkgs/issues/307424
 
-    kdePackages.kate # editor with sudo
-    thunderbird
+    # kdePackages.kate # editor with sudo
+    # thunderbird
     # my-vscode
     # bitwarden
 
-    vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
-    teamspeak3
-    alsa-utils # amixer
-    pamixer
+    # vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
+    # teamspeak3
+    # alsa-utils # amixer
+    # pamixer
 
-    dolphin-emu
+    # dolphin-emu
     # lutris # gaming launcher -> added as system package
     # heroic # gaming launcher (epic)
     # libstrangle # frame limiter: steam command: strangle 140 %command%
     # gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
     # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
-    mangohud
-    goverlay # mangohud manager
+    # mangohud
+    # goverlay # mangohud manager
 
-    (lib.hiPrio uutils-coreutils-noprefix) # https://wiki.nixos.org/wiki/Uutils
+    # (lib.hiPrio uutils-coreutils-noprefix) # https://wiki.nixos.org/wiki/Uutils
     # alacritty # https://alacritty.org/config-alacritty.html
     # kitty
     wezterm # link .wezterm.lua to ~/.wezterm.lua
     starship
     # nushell
     zsh # link .zshrc to ~/.zshrc
-    carapace
-    tealdeer # tldr
-    fastfetch
-    stow
-    devenv # meh
-    direnv
-    nix-direnv # https://github.com/nix-community/nix-direnv?tab=readme-ov-file#usage-example
-    nvd
-    stress
-    pciutils
-    btop
-    bottom
-    htop
+    # carapace
+    # tealdeer # tldr
+    # fastfetch
+    # stow
+    # devenv # meh
+    # direnv
+    # nix-direnv # https://github.com/nix-community/nix-direnv?tab=readme-ov-file#usage-example
+    # nvd
+    # stress
+    # pciutils
+    # btop
+    # bottom
+    # htop
     # warp-terminal
     # zellij # ctrl p n for new pane
-    eza # ls replacement
-    dysk # df replacement
+    # eza # ls replacement
+    # dysk # df replacement
 
     nh # nix os helper
     nix-tree
     nix-output-monitor
 
-    p7zip # 7zip
-    unrar
-    k4dirstat # windirstat clone
+    # p7zip # 7zip
+    # unrar
+    # k4dirstat # windirstat clone
 
-    nil # nix lsp
-    alejandra # nix formatter
-    nixfmt-rfc-style
-    ruff
+    # nil # nix lsp
+    # alejandra # nix formatter
+    # nixfmt-rfc-style
+    # ruff
 
-    obsidian
-    libreoffice
-    pinta # graphic
+    # obsidian
+    # libreoffice
+    # pinta # graphic
 
     # for rustdev: use devenv
     # devenv init
     # -> copy file from ststat
     # devenv shell
-    rustup
+    # rustup
 
-    vlc
-    streamlink-twitch-gui-bin
-    ffmpeg-full
+    # vlc
+    # streamlink-twitch-gui-bin
+    # ffmpeg-full
 
     # kdePackages.kalk # wrong calculator!
-    gnome-calculator
-    transmission_4-qt
-    krusader # file manager (like total commander) and ftp
-    kde-rounded-corners
+    # gnome-calculator
+    # transmission_4-qt
+    # krusader # file manager (like total commander) and ftp
+    # kde-rounded-corners
 
     # waydroid # also enable virtualisation.waydroid.enable
 
-    git
-    ntfs3g # allow read write ntfs mounts
-    docker-compose
+    # git
+    # ntfs3g # allow read write ntfs mounts
+    # docker-compose
 
-    steam
-    protontricks
-    (lutris.override {
-      extraPkgs = pkgs: [
-        umu-launcher
-      ];
-    })
-    wineWowPackages.stable
-    winetricks
-    prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
-    protonup-rs
+    # steam
+    # protontricks
+    # (lutris.override {
+    #   extraPkgs = pkgs: [
+    #     umu-launcher
+    #   ];
+    # })
+    # wineWowPackages.stable
+    # winetricks
+    # prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
+    # protonup-rs
 
     # brlaser # printer
 
     # Orca segfaults if not run with mesa: https://github.com/SoftFever/OrcaSlicer/issues/6433#issuecomment-2552029299
     # __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json orca-slicer
-    orca-slicer # broken cuda
+    # orca-slicer # broken cuda
 
     # bambu-studio # broken cuda
     # prusa-slicer # expensive to build o.o
@@ -539,10 +551,10 @@ in
     # appimage-run # for cura
     # unstable.cura-appimage
 
-    smartgit
-    github-desktop
+    # smartgit
+    # github-desktop
 
-    webkitgtk_6_0
+    # webkitgtk_6_0
 
     # swtpm # tpm emulator for qemu
 
@@ -550,88 +562,88 @@ in
 
     # onedrivegui # ist unnötig, siehe onedrive-wiki
 
-    sqlitestudio
+    # sqlitestudio
 
-    gnome-software # for flatpaks
+    # gnome-software # for flatpaks
 
-    lm_sensors
-    linuxKernel.packages.linux_xanmod_latest.turbostat
-    sysstat
+    # lm_sensors
+    # linuxKernel.packages.linux_xanmod_latest.turbostat
+    # sysstat
 
-    geekbench
+    # geekbench
 
-    variety # wallpaper changer
+    # variety # wallpaper changer
 
-    firefox-wayland
+    # firefox-wayland
 
-    adwaita-icon-theme
-    gtk3
+    # adwaita-icon-theme
+    # gtk3
 
-    minion
+    # minion
 
     # cudaPackages.cudatoolkit
 
-    rclone
-    restic
-    # restic-browser # depends on webkit, takes forever to build
-    backrest
+    # rclone
+    # restic
+    # # restic-browser # depends on webkit, takes forever to build
+    # backrest
 
-    libnotify # enables notify-send
+    # libnotify # enables notify-send
 
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
-    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
+    # (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
     # plasmusic-toolbar
     # kurve
 
-    yt-dlp
-    mp3gain
-    scdl # soundcloud-dl
+    # yt-dlp
+    # mp3gain
+    # scdl # soundcloud-dl
 
     # attempt gpu fix for orca-slicer
-    mesa
-    libglvnd
+    # mesa
+    # libglvnd
 
-    heynote
+    # heynote
 
-    flameshot # screenshot tool
+    # flameshot # screenshot tool
   ];
 
   # Enable GNOME settings manager
-  programs.dconf.enable = true;
-  programs.steam = {
-    enable = true;
-    # package = unstable.steam;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true;
-  };
+  # programs.dconf.enable = true;
+  # programs.steam = {
+  #   enable = true;
+  #   # package = unstable.steam;
+  #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  #   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  #   localNetworkGameTransfers.openFirewall = true;
+  # };
 
-  programs.firefox = {
-    enable = true;
-    package = pkgs.firefox-wayland;
-  };
+  # programs.firefox = {
+  #   enable = true;
+  #   package = pkgs.firefox-wayland;
+  # };
 
-  programs.chromium = {
-    extraOpts = {
-      "ExtensionManifestV2Availability" = 2;
-    };
-  };
+  # programs.chromium = {
+  #   extraOpts = {
+  #     "ExtensionManifestV2Availability" = 2;
+  #   };
+  # };
 
   # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
-  programs.firefox.preferences = {
-    "gfx.webrender.all" = true;
-    # "gfx.x11-egl.force-enabled" = true;
-    "media.av1.enabled" = true;
-    "media.ffmpeg.vaapi.enabled" = true;
-    "media.ffvpx.enabled" = false;
-    "media.hardware-video-decoding.enabled" = true;
-    "media.hardware-video-decoding.force-enabled" = true;
-    "media.rdd-ffmpeg.enabled" = true;
-    "media.rdd-vpx.enabled" = true;
-    "widget.dmabuf.force-enabled" = true;
-  };
+  # programs.firefox.preferences = {
+  #   "gfx.webrender.all" = true;
+  #   # "gfx.x11-egl.force-enabled" = true;
+  #   "media.av1.enabled" = true;
+  #   "media.ffmpeg.vaapi.enabled" = true;
+  #   "media.ffvpx.enabled" = false;
+  #   "media.hardware-video-decoding.enabled" = true;
+  #   "media.hardware-video-decoding.force-enabled" = true;
+  #   "media.rdd-ffmpeg.enabled" = true;
+  #   "media.rdd-vpx.enabled" = true;
+  #   "widget.dmabuf.force-enabled" = true;
+  # };
 
   # programs.tuxclocker.enable = true;
   # programs.tuxclocker.enabledNVIDIADevices = [
@@ -655,14 +667,14 @@ in
   };
 
   services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
-  services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
+  # services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
 
-  services.udev.packages = with pkgs; [
-    # pkgs.platformio-core # embedded dev
-    openocd # embedded debugger
-    dolphin-emu
-    ddcutil
-  ];
+  # services.udev.packages = with pkgs; [
+  #   # pkgs.platformio-core # embedded dev
+  #   openocd # embedded debugger
+  #   dolphin-emu
+  #   ddcutil
+  # ];
 
   systemd.services.make_cpu_energy_readable = {
     description = "Make energy_uj readable for all users to allow displaying cpu power usage in ststat";
@@ -709,28 +721,28 @@ in
   };
 
   # defaults to port 9898
-  systemd.services.backrest = {
-    description = "Launch backrest to take care of backups";
-    wantedBy = [ "graphical.target" ];
-    requires = [ "network-online.target" ];
-    script = "backrest";
-    path = [
-      pkgs.backrest
-      pkgs.rclone
-    ];
-    environment = {
-      BACKREST_PORT = "0.0.0.0:9898";
-    };
-    serviceConfig = {
-      Type = "simple";
-      User = "stschiff";
-      AmbientCapabilities = "CAP_DAC_READ_SEARCH";
-      CapabilityBoundingSet = "CAP_DAC_READ_SEARCH";
-      # ExecStart = "backrest";
-      # It’s often a good idea to mark the service active after the command finishes.
-      # RemainAfterExit = true;
-    };
-  };
+  # systemd.services.backrest = {
+  #   description = "Launch backrest to take care of backups";
+  #   wantedBy = [ "graphical.target" ];
+  #   requires = [ "network-online.target" ];
+  #   script = "backrest";
+  #   path = [
+  #     pkgs.backrest
+  #     pkgs.rclone
+  #   ];
+  #   environment = {
+  #     BACKREST_PORT = "0.0.0.0:9898";
+  #   };
+  #   serviceConfig = {
+  #     Type = "simple";
+  #     User = "stschiff";
+  #     AmbientCapabilities = "CAP_DAC_READ_SEARCH";
+  #     CapabilityBoundingSet = "CAP_DAC_READ_SEARCH";
+  #     # ExecStart = "backrest";
+  #     # It’s often a good idea to mark the service active after the command finishes.
+  #     # RemainAfterExit = true;
+  #   };
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -742,7 +754,7 @@ in
 
   # List services that you want to enable:
 
-  programs.kdeconnect.enable = true;
+  # programs.kdeconnect.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

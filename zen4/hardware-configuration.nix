@@ -94,9 +94,16 @@
   # https://github.com/NixOS/nixpkgs/blob/master/lib/systems/architectures.nix
   # https://wiki.nixos.org/wiki/Build_flags#Building_the_whole_system_on_NixOS
   nixpkgs.hostPlatform = {
-    # gcc.arch = "znver5";
-    # gcc.tune = "znver5";
+    gcc.arch = "znver4";
+    gcc.tune = "znver4";
     system = "x86_64-linux";
+    system-features = [
+      "gccarch-znver4"
+      # "gccarch-znver5"
+      "nixos-test"
+      "benchmark"
+      "big-parallel"
+    ];
   };
 
   # hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;

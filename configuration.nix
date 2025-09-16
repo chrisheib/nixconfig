@@ -245,6 +245,7 @@ in
     '';
     settings = {
       system-features = [
+        "gccarch-znver4"
         "gccarch-znver5"
         "nixos-test"
         "benchmark"
@@ -611,26 +612,25 @@ in
   programs.firefox = {
     enable = true;
     package = pkgs.firefox-wayland;
+    # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
+    preferences = {
+      "gfx.webrender.all" = true;
+      # "gfx.x11-egl.force-enabled" = true;
+      "media.av1.enabled" = true;
+      "media.ffmpeg.vaapi.enabled" = true;
+      "media.ffvpx.enabled" = false;
+      "media.hardware-video-decoding.enabled" = true;
+      "media.hardware-video-decoding.force-enabled" = true;
+      "media.rdd-ffmpeg.enabled" = true;
+      "media.rdd-vpx.enabled" = true;
+      "widget.dmabuf.force-enabled" = true;
+    };
   };
 
   programs.chromium = {
     extraOpts = {
       "ExtensionManifestV2Availability" = 2;
     };
-  };
-
-  # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
-  programs.firefox.preferences = {
-    "gfx.webrender.all" = true;
-    # "gfx.x11-egl.force-enabled" = true;
-    "media.av1.enabled" = true;
-    "media.ffmpeg.vaapi.enabled" = true;
-    "media.ffvpx.enabled" = false;
-    "media.hardware-video-decoding.enabled" = true;
-    "media.hardware-video-decoding.force-enabled" = true;
-    "media.rdd-ffmpeg.enabled" = true;
-    "media.rdd-vpx.enabled" = true;
-    "widget.dmabuf.force-enabled" = true;
   };
 
   # programs.tuxclocker.enable = true;
