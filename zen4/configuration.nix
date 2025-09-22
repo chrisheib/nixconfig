@@ -41,6 +41,9 @@ in
         assimp = super.assimp.overrideAttrs (_: {
           doCheck = false;
         }); # Fails check on zen4
+        libreoffice = super.libreoffice.overrideAttrs (_: {
+          doCheck = false;
+        }); # Fails check on zen4
       })
       # (import /etc/nixos/overlays/plain-pkgs.nix)
     ];
@@ -257,7 +260,7 @@ in
     settings = {
       system-features = [
         "gccarch-znver4"
-        # "gccarch-znver5"
+        "gccarch-znver5"
         "nixos-test"
         "benchmark"
         "big-parallel"
@@ -276,7 +279,7 @@ in
     # ];
   };
 
-  # programs.partition-manager.enable = true;
+  programs.partition-manager.enable = true;
 
   fonts.enableDefaultPackages = true; # https://wiki.nixos.org/wiki/Fonts#Default_fonts
   fonts.packages = with pkgs; [
@@ -341,13 +344,6 @@ in
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.beta;
-    #  {
-    #   version = "570.133.07"; # use new 570 drivers
-    #   sha256_64bit = "sha256-LUPmTFgb5e9VTemIixqpADfvbUX1QoTT2dztwI3E3CY="; # "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # .run.drv
-    #   openSha256 = "sha256-9l8N83Spj0MccA8+8R1uqiXBS0Ag4JrLPjrU3TaXHnM=";
-    #   settingsSha256 = "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # src.drv
-    #   usePersistenced = false;
-    # };
 
     modesetting.enable = lib.mkDefault true;
     # Power management is nearly always required to get nvidia GPUs to
@@ -434,34 +430,33 @@ in
     # brave
     # mullvad-browser
     # ungoogled-chromium
-    # (chromium.override {
-    #   enableWideVine = true;
-    #   commandLineArgs = [
-    #     "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
-    #     "--disable-new-avatar-menu"
-    #   ];
-    # })
+    (chromium.override {
+      enableWideVine = true;
+      commandLineArgs = [
+        "--disable-features=ExtensionManifestV2Unsupported,ExtensionManifestV2Disabled"
+        "--disable-new-avatar-menu"
+      ];
+    })
     # widevine-cdm # streaming codec for chromium
     # vivaldi # crashes after a while https://github.com/NixOS/nixpkgs/issues/307424
 
-    # kdePackages.kate # editor with sudo
-    # thunderbird
-    # my-vscode
-    # bitwarden
+    kdePackages.kate # editor with sudo
+    thunderbird
 
-    # vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
-    # teamspeak3
-    # alsa-utils # amixer
-    # pamixer
+    vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
+    teamspeak3
+    teamspeak6-client
+    alsa-utils # amixer
+    pamixer
 
-    # dolphin-emu
+    dolphin-emu
     # lutris # gaming launcher -> added as system package
     # heroic # gaming launcher (epic)
     # libstrangle # frame limiter: steam command: strangle 140 %command%
     # gamescope # https://www.reddit.com/r/HuntShowdown/comments/1hdyetz/comment/m22pkci
     # gamescope -H 1440 -f -b --force-grab-cursor -- %command%
-    # mangohud
-    # goverlay # mangohud manager
+    mangohud
+    goverlay # mangohud manager
 
     # (lib.hiPrio uutils-coreutils-noprefix) # https://wiki.nixos.org/wiki/Uutils
     # alacritty # https://alacritty.org/config-alacritty.html
@@ -470,50 +465,50 @@ in
     starship
     # nushell
     zsh # link .zshrc to ~/.zshrc
-    # carapace
-    # tealdeer # tldr
-    # fastfetch
-    # stow
+    carapace
+    tealdeer # tldr
+    fastfetch
+    stow
     # devenv # meh
-    # direnv
-    # nix-direnv # https://github.com/nix-community/nix-direnv?tab=readme-ov-file#usage-example
-    # nvd
-    # stress
-    # pciutils
-    # btop
-    # bottom
-    # htop
+    direnv
+    nix-direnv # https://github.com/nix-community/nix-direnv?tab=readme-ov-file#usage-example
+    nvd
+    stress
+    pciutils
+    btop
+    bottom
+    htop
     # warp-terminal
     # zellij # ctrl p n for new pane
-    # eza # ls replacement
-    # dysk # df replacement
+    eza # ls replacement
+    dysk # df replacement
 
     nh # nix os helper
     nix-tree
     nix-output-monitor
 
-    # p7zip # 7zip
-    # unrar
-    # k4dirstat # windirstat clone
+    p7zip # 7zip
+    unrar
+    k4dirstat # windirstat clone
 
-    # nil # nix lsp
-    # alejandra # nix formatter
-    # nixfmt-rfc-style
-    # ruff
+    nil # nix lsp
+    alejandra # nix formatter
+    nixfmt-rfc-style
+    ruff
 
-    # obsidian
-    # libreoffice
-    # pinta # graphic
+    obsidian
+    libreoffice
+    pinta # graphic
 
     # for rustdev: use devenv
     # devenv init
     # -> copy file from ststat
     # devenv shell
-    # rustup
+    rustup
 
-    # vlc
-    # streamlink-twitch-gui-bin
-    # ffmpeg-full
+    vlc
+    streamlink-twitch-gui-bin
+    ffmpeg-full
 
     # kdePackages.kalk # wrong calculator!
     # gnome-calculator

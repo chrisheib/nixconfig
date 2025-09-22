@@ -440,6 +440,7 @@ in
 
     vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
     teamspeak3
+    teamspeak6-client
     alsa-utils # amixer
     pamixer
 
@@ -518,6 +519,7 @@ in
 
     steam
     protontricks
+    steamtinkerlaunch
     (lutris.override {
       extraPkgs = pkgs: [
         umu-launcher
@@ -607,6 +609,7 @@ in
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true;
+    protontricks.enable = true;
   };
 
   programs.firefox = {

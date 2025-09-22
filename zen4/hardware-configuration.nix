@@ -99,7 +99,7 @@
     system = "x86_64-linux";
     system-features = [
       "gccarch-znver4"
-      # "gccarch-znver5"
+      "gccarch-znver5"
       "nixos-test"
       "benchmark"
       "big-parallel"
