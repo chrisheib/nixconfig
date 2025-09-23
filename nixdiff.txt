@@ -1,27 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #01  btop                 1.4.4 -> 1.4.5
-[U*]  #02  cpupower             6.16.7 -> 6.16.8
-[U.]  #03  cubeb                0-unstable-2025-08-21-lib -> 0-unstable-2025-09-17-lib
-[U*]  #04  dolphin-emu          2506a -> 2509
-[U.]  #05  initrd-linux-xanmod  6.16.7 -> 6.16.8
-[U*]  #06  kurve                0.4.0 -> 2.0.0
-[U.]  #07  linux-xanmod         6.16.7, 6.16.7-modules x2, 6.16.7-modules-shrunk -> 6.16.8, 6.16.8-modules x2, 6.16.8-modules-shrunk
-[C*]  #08  nix                  2.28.5, 2.28.5-doc, 2.28.5-man, 2.31pre20250712_b1245123 -> 2.28.5, 2.28.5-doc, 2.28.5-man, 2.32pre20250919_07b96c1d
-[U.]  #09  nix-cmd              2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #10  nix-expr             2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #11  nix-fetchers         2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #12  nix-flake            2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #13  nix-main             2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #14  nix-store            2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #15  nix-util             2.31pre20250712_b1245123 -> 2.32pre20250919_07b96c1d
-[U.]  #16  nixos-system-nixos   25.11pre864002.8eaee1103447 -> 25.11pre864611.554be6495561
-[U.]  #17  nvidia-open          6.16.7-580.82.09 -> 6.16.8-580.82.09
-[U*]  #18  nvidia-x11           580.82.09-6.16.7, 580.82.09-6.16.7-bin, 580.82.09-6.16.7-firmware, 580.82.09-6.16.7-lib32 -> 580.82.09-6.16.8, 580.82.09-6.16.8-bin, 580.82.09-6.16.8-firmware, 580.82.09-6.16.8-lib32
-[U*]  #19  turbostat            6.16.7 -> 6.16.8
-Added packages:
-[A.]  #1  minizip-ng  4.0.9
-Removed packages:
-[R.]  #1  dumb  2.0.3
-Closure size: 2978 -> 2978 (83 paths added, 83 paths removed, delta +0, disk usage +12.4MiB).
+No version or selection state changes.
+Closure size: 2978 -> 2978 (13 paths added, 13 paths removed, delta +0, disk usage -304B).
