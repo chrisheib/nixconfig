@@ -93,13 +93,28 @@ in
       "nvidia_drm"
       "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
       "i2c-dev" # for ddc/ci support, see ddcutil
+      "ntsync"
     ];
 
     kernel.sysctl = {
       "vm.dirty_bytes" = 67108864; # File transfer buffer -> Lower to imrpove write-to-usb feedback. 64 * 1024 * 1024 = 67108864
       "vm.swappiness" = 10; # default is 60, lower to reduce swap usage https://wiki.nixos.org/wiki/Swap#Adjusting_swap_usage_behaviour
+      "kernel.numa_balancing" = 0; # Make sure NUMA auto balancing is off (good for games on single-socket)
     };
   };
+
+  # enable transparent hugepages
+  systemd.tmpfiles.rules = [
+    # Mode
+    "w /sys/kernel/mm/transparent_hugepage/enabled - - - - madvise"
+    # Defrag policy for THP page faults
+    "w /sys/kernel/mm/transparent_hugepage/defrag - - - - defer+madvise"
+    # khugepaged tunables (scanning background compaction)
+    "w /sys/kernel/mm/transparent_hugepage/khugepaged/defrag - - - - 1"
+    # Optional: control how aggressively khugepaged scans
+    "w /sys/kernel/mm/transparent_hugepage/khugepaged/scan_sleep_millisecs - - - - 10000" # 10s
+    "w /sys/kernel/mm/transparent_hugepage/khugepaged/alloc_sleep_millisecs - - - - 500" # 0.5s
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
