@@ -1,4 +1,32 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2978 -> 2978 (13 paths added, 13 paths removed, delta +0, disk usage +392B).
+Version changes:
+[U*]  #01  backrest                              1.8.1 -> 1.9.2
+[U*]  #02  bcache-tools                          1.0.8 -> 1.1
+[U*]  #03  carapace                              1.4.1 -> 1.5.0
+[U.]  #04  cava                                  0.10.4 -> 0.10.6
+[U*]  #05  chromium                              140.0.7339.185, 140.0.7339.185-sandbox -> 140.0.7339.207, 140.0.7339.207-sandbox
+[U.]  #06  chromium-unwrapped                    140.0.7339.185, 140.0.7339.185-sandbox, 140.0.7339.185-wv -> 140.0.7339.207, 140.0.7339.207-sandbox, 140.0.7339.207-wv
+[U*]  #07  docker                                28.3.3 -> 28.4.0
+[U.]  #08  docker-containerd                     28.3.3 -> 28.4.0
+[U.]  #09  docker-init                           28.3.3 -> 28.4.0
+[U.]  #10  docker-runc                           28.3.3 -> 28.4.0
+[U.]  #11  electron                              37.4.0 -> 37.5.1
+[U.]  #12  electron-unwrapped                    37.4.0 -> 37.5.1
+[U*]  #13  fastfetch                             2.52.0, 2.52.0-man -> 2.53.0, 2.53.0-man
+[U.]  #14  freerdp                               3.17.0 -> 3.17.1
+[U.]  #15  moby                                  28.3.3 -> 28.4.0
+[U.]  #16  nilfs-utils                           2.2.11 -> 2.2.12
+[U.]  #17  nixos-system-nixos                    25.11pre864611.554be6495561 -> 25.11pre866707.e643668fd71b
+[U*]  #18  restic                                0.18.0 -> 0.18.1
+[U.]  #19  sfml                                  3.0.1 -> 3.0.2
+[U*]  #20  smartgit                              24.1.4 -> 24.1.5
+[U.]  #21  tevent                                0.17.0 x2 -> 0.17.1 x2
+[U.]  #22  uriparser                             0.9.8 -> 0.9.9
+[U.]  #23  vscode-extension-github-copilot       1.350.0 -> 1.372.0
+[U.]  #24  vscode-extension-github-copilot-chat  0.30.1 -> 0.31.0
+[U*]  #25  webkitgtk                             2.48.6+abi=4.1, 2.48.6+abi=6.0 -> 2.50.0+abi=4.1, 2.50.0+abi=6.0
+[U*]  #26  yt-dlp                                2025.09.05 -> 2025.09.23
+Added packages:
+[A.]  #1  extra-utils  <none>
+Closure size: 2978 -> 2979 (137 paths added, 136 paths removed, delta +1, disk usage -55.8MiB).
