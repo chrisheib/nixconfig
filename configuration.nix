@@ -94,6 +94,7 @@ in
       "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
       "i2c-dev" # for ddc/ci support, see ddcutil
       "ntsync"
+      "digimend"
     ];
 
     kernel.sysctl = {

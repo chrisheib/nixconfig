@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  xf86-input-wacom  1.2.3
-Closure size: 3007 -> 3008 (13 paths added, 12 paths removed, delta +1, disk usage +302.9KiB).
+No version or selection state changes.
+Closure size: 3008 -> 3008 (6 paths added, 6 paths removed, delta +0, disk usage +8B).
