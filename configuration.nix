@@ -614,6 +614,7 @@ in
     osu-lazer-bin
     kdePackages.wacomtablet
     libwacom
+    xf86_input_wacom
 
     heynote
 
