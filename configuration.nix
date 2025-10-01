@@ -613,6 +613,7 @@ in
     libglvnd
     osu-lazer-bin
     kdePackages.wacomtablet
+    libwacom
 
     heynote
 
