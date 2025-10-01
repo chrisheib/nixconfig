@@ -94,7 +94,6 @@ in
       "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
       "i2c-dev" # for ddc/ci support, see ddcutil
       "ntsync"
-      "digimend"
     ];
 
     kernel.sysctl = {
@@ -163,8 +162,8 @@ in
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-  services.displayManager.defaultSession = "plasmax11";
+  # services.xserver.enable = true;
+  # services.displayManager.defaultSession = "plasmax11";
   programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
@@ -612,10 +611,6 @@ in
     # attempt gpu fix for orca-slicer
     mesa
     libglvnd
-    osu-lazer-bin
-    kdePackages.wacomtablet
-    libwacom
-    xf86_input_wacom
 
     heynote
 
