@@ -615,6 +615,10 @@ in
     heynote
 
     flameshot # screenshot tool
+
+    libGL
+    wayland
+    wayland-protocols
   ];
 
   # Enable GNOME settings manager
