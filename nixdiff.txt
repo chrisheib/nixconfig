@@ -1,22 +1,6 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #01  cpupower               6.16.8 -> 6.16.9
-[U*]  #02  docker-compose         2.39.1 -> 2.39.4
-[U.]  #03  espeak-ng              1.52.0 -> 1.52.0.1-unstable-2025-09-09
-[U*]  #04  firefox                143.0 x2 -> 143.0.1 x2
-[U.]  #05  firefox-unwrapped      143.0 -> 143.0.1
-[U.]  #06  initrd-linux-xanmod    6.16.8 -> 6.16.9
-[U.]  #07  linux-xanmod           6.16.8, 6.16.8-modules x2, 6.16.8-modules-shrunk -> 6.16.9, 6.16.9-modules x2, 6.16.9-modules-shrunk
-[U.]  #08  nixos-system-nixos     25.11pre866707.e643668fd71b -> 25.11pre868392.e9f00bd89398
-[U.]  #09  nvidia-open            6.16.8-580.82.09 -> 6.16.9-580.82.09
-[U*]  #10  nvidia-x11             580.82.09-6.16.8, 580.82.09-6.16.8-bin, 580.82.09-6.16.8-firmware, 580.82.09-6.16.8-lib32 -> 580.82.09-6.16.9, 580.82.09-6.16.9-bin, 580.82.09-6.16.9-firmware, 580.82.09-6.16.9-lib32
-[U.]  #11  python3.13-truststore  0.10.1 -> 0.10.4
-[U*]  #12  rclone                 1.71.0, 1.71.0-man -> 1.71.1, 1.71.1-man
-[U*]  #13  thunderbird            143.0 -> 143.0.1
-[U.]  #14  thunderbird-unwrapped  143.0 -> 143.0.1
-[U*]  #15  turbostat              6.16.8 -> 6.16.9
-[U*]  #16  yt-dlp                 2025.09.23 -> 2025.09.26
 Added packages:
-[A+]  #1  shutdown_or_switch-unstable  2025-09-29
-Closure size: 2979 -> 2980 (111 paths added, 110 paths removed, delta +1, disk usage +553.9KiB).
+[A+]  #1  osu-lazer-bin  2025.912.0, 2025.912.0-bwrap, 2025.912.0-extracted, 2025.912.0-fhsenv-profile, 2025.912.0-fhsenv-rootfs, 2025.912.0-init
+[A+]  #2  wacomtablet    6.4.5
+Closure size: 2980 -> 2987 (19 paths added, 12 paths removed, delta +7, disk usage +284.2MiB).

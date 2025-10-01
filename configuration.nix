@@ -611,6 +611,8 @@ in
     # attempt gpu fix for orca-slicer
     mesa
     libglvnd
+    osu-lazer-bin
+    kdePackages.wacomtablet
 
     heynote
 
