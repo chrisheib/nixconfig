@@ -1,7 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C+]  #1  wayland  1.24.0 x2, 1.24.0-dev x2, 1.24.0-man -> 1.24.0 x2, 1.24.0-dev x2, 1.24.0-doc, 1.24.0-man
-Selection state changes:
-[C+]  #1  wayland-protocols  1.45 x2
-Closure size: 2980 -> 2981 (13 paths added, 12 paths removed, delta +1, disk usage +659.8KiB).
+No version or selection state changes.
+Closure size: 3012 -> 3012 (0 paths added, 0 paths removed, delta +0, disk usage +0B).

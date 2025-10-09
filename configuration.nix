@@ -229,6 +229,7 @@ in
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
       nrs = "() {up && nh os switch --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrb = "() {up && nh os boot --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc && onedrivefix }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
@@ -454,10 +455,10 @@ in
     # bitwarden
 
     vesktop # change autostart Exec to: Exec=sleep 5  && vesktop
-    teamspeak3
+    # teamspeak3
     teamspeak6-client
     alsa-utils # amixer
-    pamixer
+    # pamixer
 
     dolphin-emu
     # lutris # gaming launcher -> added as system package
@@ -619,6 +620,10 @@ in
     libGL
     wayland
     wayland-protocols
+
+    masterpdfeditor4
+
+    protonvpn-gui
   ];
 
   # Enable GNOME settings manager
