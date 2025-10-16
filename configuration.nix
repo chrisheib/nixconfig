@@ -237,11 +237,11 @@ in
       gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
       up = "sudo nix-channel --update && nh os build --file '<nixpkgs/nixos>' && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
-      gc = "nh clean all --keep 5 --keep-since 7d && fixicons";
+      gc = "nh clean all --keep 5 --keep-since 7d --quiet && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
-      fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && sudo systemctl restart --user plasma-plasmashell";
+      fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell && echo 'Iconfix!\n\n'";
       nt = "nix-tree /nix/var/nix/profiles/system";
-      onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service";
+      onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service && echo 'Onedrivefix!\n\n";
       df = "dysk"; # better df
     };
 
@@ -601,7 +601,7 @@ in
     # cava # audio visualizer
     # qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
-    (callPackage /home/stschiff/.nixos/tempderivation.nix { })
+    # (callPackage /home/stschiff/.nixos/tempderivation.nix { })
     # plasmusic-toolbar
     # kurve
 

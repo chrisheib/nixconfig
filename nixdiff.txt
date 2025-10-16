@@ -1,4 +1,168 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3012 -> 3012 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
+Version changes:
+[U*]  #001  akonadi                                    25.08.1 -> 25.08.2
+[U.]  #002  akonadi-calendar                           25.08.1 -> 25.08.2
+[U.]  #003  akonadi-contacts                           25.08.1 -> 25.08.2
+[U.]  #004  akonadi-mime                               25.08.1 -> 25.08.2
+[U.]  #005  akonadi-search                             25.08.1 -> 25.08.2
+[U*]  #006  ark                                        25.08.1 -> 25.08.2
+[C.]  #007  attica                                     5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[U*]  #008  baloo                                      6.18.0 -> 6.19.0
+[U*]  #009  baloo-widgets                              25.08.1 -> 25.08.2
+[U*]  #010  bluez-qt                                   6.18.0 -> 6.19.0
+[U*]  #011  bottom                                     0.11.1 -> 0.11.2
+[C*]  #012  breeze-icons                               5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U*]  #013  chromium                                   141.0.7390.65, 141.0.7390.65-sandbox -> 141.0.7390.76, 141.0.7390.76-sandbox
+[U.]  #014  chromium-unwrapped                         141.0.7390.65, 141.0.7390.65-sandbox, 141.0.7390.65-wv -> 141.0.7390.76, 141.0.7390.76-sandbox, 141.0.7390.76-wv
+[U*]  #015  devenv                                     1.9.1 -> 1.10
+[U.]  #016  docker-buildx                              0.29.0 -> 0.29.1
+[U*]  #017  dolphin                                    25.08.1 -> 25.08.2
+[U*]  #018  dolphin-plugins                            25.08.1 -> 25.08.2
+[U.]  #019  electron                                   37.6.0 -> 38.2.2
+[U.]  #020  electron-unwrapped                         37.6.0 -> 38.2.2
+[U*]  #021  elisa                                      25.08.1 -> 25.08.2
+[U.]  #022  extra-cmake-modules                        6.18.0 -> 6.19.0
+[U*]  #023  ffmpegthumbs                               25.08.1 -> 25.08.2
+[U*]  #024  firefox                                    143.0.4 x2 -> 144.0 x2
+[U.]  #025  firefox-unwrapped                          143.0.4 -> 144.0
+[C*]  #026  frameworkintegration                       5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[C.]  #027  gcr                                        3.41.2, 4.4.0.1 -> 3.41.2
+[U.]  #028  gnome-settings-daemon                      48.1 -> 48.1-gsettings-schemas
+[U.]  #029  grantleetheme                              25.08.1 -> 25.08.2
+[U*]  #030  gwenview                                   25.08.1 -> 25.08.2
+[U.]  #031  imagemagick                                7.1.2-5, 7.1.2-5-dev, 7.1.2-5-doc -> 7.1.2-6, 7.1.2-6-dev, 7.1.2-6-doc
+[U.]  #032  kaccounts-integration                      25.08.1 -> 25.08.2
+[C.]  #033  karchive                                   5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U*]  #034  kate                                       25.08.1 -> 25.08.2
+[C*]  #035  kauth                                      5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C.]  #036  kbookmarks                                 5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U.]  #037  kcalendarcore                              6.18.0 -> 6.19.0
+[U.]  #038  kcalutils                                  25.08.1 -> 25.08.2
+[U*]  #039  kcmutils                                   6.18.0 -> 6.19.0
+[C.]  #040  kcodecs                                    5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U.]  #041  kcolorscheme                               6.18.0, 6.18.0-dev -> 6.19.0, 6.19.0-dev
+[C.]  #042  kcompletion                                5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C.]  #043  kconfig                                    5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C.]  #044  kconfigwidgets                             5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U.]  #045  kcontacts                                  6.18.0 -> 6.19.0
+[C*]  #046  kcoreaddons                                5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[C.]  #047  kcrash                                     5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U.]  #048  kdav                                       6.18.0 -> 6.19.0
+[C.]  #049  kdbusaddons                                5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U*]  #050  kde-inotify-survey                         25.08.1 -> 25.08.2
+[U.]  #051  kdeclarative                               6.18.0 -> 6.19.0
+[U*]  #052  kdeconnect-kde                             25.08.1 -> 25.08.2
+[C*]  #053  kded                                       5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[U.]  #054  kdegraphics-mobipocket                     25.08.1 -> 25.08.2
+[U*]  #055  kdegraphics-thumbnailers                   25.08.1 -> 25.08.2
+[U*]  #056  kdepim-runtime                             25.08.1 -> 25.08.2
+[U.]  #057  kdesu                                      6.18.0 -> 6.19.0
+[C.]  #058  kdnssd                                     5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[C.]  #059  kdoctools                                  5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U*]  #060  kfilemetadata                              6.18.0 -> 6.19.0
+[C.]  #061  kglobalaccel                               5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C*]  #062  kguiaddons                                 5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U*]  #063  khelpcenter                                25.08.1 -> 25.08.2
+[U.]  #064  kholidays                                  6.18.0 -> 6.19.0
+[C.]  #065  ki18n                                      5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[C*]  #066  kiconthemes                                5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U.]  #067  kidentitymanagement                        25.08.1 -> 25.08.2
+[U.]  #068  kidletime                                  6.18.0 -> 6.19.0
+[U*]  #069  kimageformats                              6.18.0 -> 6.19.0
+[U.]  #070  kimap                                      25.08.1 -> 25.08.2
+[C*]  #071  kio                                        5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[U*]  #072  kio-admin                                  25.08.1 -> 25.08.2
+[U*]  #073  kio-extras                                 25.08.1 -> 25.08.2
+[U*]  #074  kio-fuse                                   5.1.0 -> 5.1.1
+[U.]  #075  kirigami                                   6.18.0 -> 6.19.0
+[U.]  #076  kitemmodels                                6.18.0 -> 6.19.0
+[C.]  #077  kitemviews                                 5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C.]  #078  kjobwidgets                                5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U.]  #079  kldap                                      25.08.1 -> 25.08.2
+[U.]  #080  kmailtransport                             25.08.1 -> 25.08.2
+[U.]  #081  kmbox                                      25.08.1 -> 25.08.2
+[U.]  #082  kmime                                      25.08.1 -> 25.08.2
+[C.]  #083  knewstuff                                  5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[C.]  #084  knotifications                             5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U.]  #085  knotifyconfig                              6.18.0 -> 6.19.0
+[U*]  #086  konsole                                    25.08.1 -> 25.08.2
+[C*]  #087  kpackage                                   5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[U.]  #088  kparts                                     6.18.0, 6.18.0-dev -> 6.19.0, 6.19.0-dev
+[U.]  #089  kpeople                                    6.18.0 -> 6.19.0
+[U.]  #090  kpimtextedit                               25.08.1 -> 25.08.2
+[U*]  #091  kpmcore                                    25.08.1 -> 25.08.2
+[U.]  #092  kpty                                       6.18.0 -> 6.19.0
+[U.]  #093  kquickcharts                               6.18.0 -> 6.19.0
+[U.]  #094  krunner                                    6.18.0 -> 6.19.0
+[C*]  #095  kservice                                   5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U.]  #096  ksmtp                                      25.08.1 -> 25.08.2
+[U.]  #097  kstatusnotifieritem                        6.18.0, 6.18.0-dev -> 6.19.0, 6.19.0-dev
+[U.]  #098  ksvg                                       6.18.0 -> 6.19.0
+[U.]  #099  ktextaddons                                1.7.1 -> 1.8.0
+[U*]  #100  ktexteditor                                6.18.0 -> 6.19.0
+[U.]  #101  ktexttemplate                              6.18.0 -> 6.19.0
+[C.]  #102  ktextwidgets                               5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U*]  #103  kunifiedpush                               25.08.1 -> 25.08.2
+[U.]  #104  kunitconversion                            6.18.0 -> 6.19.0
+[U*]  #105  kurve                                      2.0.0 -> 2.1.0
+[U.]  #106  kuserfeedback                              6.18.0 -> 6.19.0
+[C*]  #107  kwallet                                    5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U*]  #108  kwalletmanager                             25.08.1 -> 25.08.2
+[C.]  #109  kwidgetsaddons                             5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C.]  #110  kwindowsystem                              5.116.0, 6.18.0, 6.18.0-dev -> 5.116.0, 6.19.0, 6.19.0-dev
+[C.]  #111  kxmlgui                                    5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[U.]  #112  libgravatar                                25.08.1 -> 25.08.2
+[U.]  #113  libkdcraw                                  25.08.1 -> 25.08.2
+[U.]  #114  libkdepim                                  25.08.1 -> 25.08.2
+[U.]  #115  libkexiv2                                  25.08.1 -> 25.08.2
+[U.]  #116  libkgapi                                   25.08.1 -> 25.08.2
+[U.]  #117  libkleo                                    25.08.1 -> 25.08.2
+[U.]  #118  libqalculate                               5.7.0 -> 5.8.0
+[U.]  #119  linux-firmware                             20250917-zstd -> 20251011-zstd
+[C.]  #120  mbedtls                                    2.28.10, 3.6.4 x2 -> 3.6.4 x2
+[U.]  #121  messagelib                                 25.08.1 -> 25.08.2
+[U.]  #122  modemmanager-qt                            6.18.0 -> 6.19.0
+[U.]  #123  networkmanager-qt                          6.18.0 -> 6.19.0
+[U.]  #124  nixos-system-nixos                         25.11pre874821.837076de579c -> 25.11pre878036.3ce5398bca4f
+[C.]  #125  nss                                        3.112.1 x2, 3.112.1-dev, 3.112.1-man, 3.115.1 -> 3.112.1 x2, 3.112.1-dev, 3.112.1-man, 3.115.1, 3.117
+[U*]  #126  okular                                     25.08.1 -> 25.08.2
+[U*]  #127  partitionmanager                           25.08.1 -> 25.08.2
+[U.]  #128  pimcommon                                  25.08.1 -> 25.08.2
+[U.]  #129  prison                                     6.18.0 -> 6.19.0
+[U.]  #130  purpose                                    6.18.0 -> 6.19.0
+[U.]  #131  pv                                         1.9.34 -> 1.9.42
+[C.]  #132  python3                                    3.10.18, 3.11.13, 3.12.11, 3.13.7 x2, 3.13.7-env x6 -> 3.10.19, 3.11.14, 3.12.11, 3.13.7 x2, 3.13.7-env x6
+[U*]  #133  qqc2-desktop-style                         6.18.0 -> 6.19.0
+[U*]  #134  ruff                                       0.13.1 -> 0.14.0
+[C*]  #135  solid                                      5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[C.]  #136  sonnet                                     5.116.0, 5.116.0-bin, 6.18.0, 6.18.0-dev -> 5.116.0, 5.116.0-bin, 6.19.0, 6.19.0-dev
+[C.]  #137  syndication                                5.116.0, 6.18.0 -> 5.116.0, 6.19.0
+[C.]  #138  syntax-highlighting                        5.116.0, 5.116.0-bin, 6.18.0 -> 5.116.0, 5.116.0-bin, 6.19.0
+[U*]  #139  tealdeer                                   1.7.2 -> 1.8.0
+[U.]  #140  threadweaver                               6.18.0 -> 6.19.0
+[C.]  #141  udev-rules                                 <none> -> <none> x2
+[U.]  #142  vscode                                     1.104.3 -> 1.105.0
+[U.]  #143  vscode-extension-MS-python-vscode-pylance  2025.8.2 -> 2025.8.3
+[U.]  #144  vscode-extension-charliermarsh-ruff        2025.26.0 -> 2025.28.0
+[U.]  #145  vscode-extension-jnoortheen-nix-ide        0.4.24 -> 0.5.0
+[U.]  #146  vscode-extension-mechatroner-rainbow-csv   3.22.0 -> 3.23.0
+[U*]  #147  vscode-with-extensions                     1.104.3 -> 1.105.0
+[U*]  #148  webkitgtk                                  2.50.0+abi=4.1, 2.50.0+abi=6.0 -> 2.50.1+abi=4.1, 2.50.1+abi=6.0
+[U*]  #149  wezterm                                    0-unstable-2025-08-14 -> 0-unstable-2025-10-05
+[U.]  #150  wireless-regdb                             2025.07.10-zstd -> 2025.10.07-zstd
+[U*]  #151  wireplumber                                0.5.11, 0.5.11-doc -> 0.5.12, 0.5.12-doc
+Added packages:
+[A.]  #1  initrd-fsinfo  <none>
+[A.]  #2  keymap         <none>
+[A.]  #3  stage          1-init.sh
+Removed packages:
+[R.]  #1  colord                                   1.4.6
+[R.]  #2  geocode-glib                             3.26.4
+[R.]  #3  gnome-session-ctl                        47.0.1
+[R.]  #4  libgnomekbd                              3.28.1
+[R.]  #5  libgweather                              4.4.4
+[R.]  #6  libxklavier                              5.4
+[R-]  #7  shutdown_or_switch-unstable              2025-09-29
+[R.]  #8  unit-script-systemd-timesyncd-pre-start  <none>
+Closure size: 3012 -> 3007 (387 paths added, 392 paths removed, delta -5, disk usage -25.7MiB).
