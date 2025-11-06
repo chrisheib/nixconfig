@@ -27,7 +27,8 @@ in
       # Allow unfree packages
       allowUnfree = true;
       permittedInsecurePackages = [
-        "qtwebengine-5.15.19" # teamspeak
+        # "qtwebengine-5.15.19" # teamspeak
+        "gradle-7.6.6"
       ];
     };
     overlays = [
@@ -35,10 +36,22 @@ in
     ];
   };
 
+  # nixpkgs.config.packageOverrides = pkgs: {
+  #   freetype = pkgs.freetype.overrideAttrs (old: {
+  #     patches = (old.patches or [ ]) ++ [
+  #       (pkgs.fetchpatch {
+  #         url = "https://aur.archlinux.org/cgit/aur.git/plain/0004-QD-OLED-subpixel.patch?h=freetype2-qdoled";
+  #         hash = "sha256-XXXXXXX"; # you need to fill this
+  #       })
+  #     ];
+  #   });
+  # };
+
   # To switch to unstable nixpgks:
   # sudo nix-channel --list
   # sudo nix-channel --remove nixos
   # sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+  # sudo nix-channel --add https://nixos.org/channels/nixos-unstable-small nixos
   # Or as overlay: https://www.reddit.com/r/NixOS/comments/17v4o9i/comment/k9akqcv
 
   boot = {
@@ -307,7 +320,7 @@ in
       vdpauinfo # sudo vainfo
       libva-utils # sudo vainfo
       nvidia-vaapi-driver # nvidia-smi dmon
-      vaapiVdpau
+      libva-vdpau-driver
       # intel-media-driver
       # intel-vaapi-driver
       # intel-media-sdk
@@ -340,6 +353,13 @@ in
 
     LANGUAGE = "en_US.UTF-8";
     NIXOS_OZONE_WL = "1";
+
+    PROTON_ENABLE_HDR = "1";
+    PROTON_ENABLE_WAYLAND = "1";
+    PROTON_NO_WM_DECORATION = "1";
+    DXVK_HDR = "1";
+    ENABLE_HDR_WSI = "1";
+    # DISPLAY = "";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
@@ -545,6 +565,7 @@ in
     winetricks
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
     protonup-rs
+    r2modman # valheim mods
 
     # brlaser # printer
 
@@ -581,7 +602,7 @@ in
 
     variety # wallpaper changer
 
-    firefox-wayland
+    firefox
 
     adwaita-icon-theme
     gtk3
@@ -639,7 +660,7 @@ in
 
   programs.firefox = {
     enable = true;
-    package = pkgs.firefox-wayland;
+    # package = pkgs.firefox;
     # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
     preferences = {
       "gfx.webrender.all" = true;
