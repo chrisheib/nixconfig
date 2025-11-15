@@ -254,8 +254,13 @@ in
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell && echo 'Iconfix!\n\n'";
       nt = "nix-tree /nix/var/nix/profiles/system";
-      onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service && echo 'Onedrivefix!\n\n";
+      onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service && echo 'Onedrivefix!\n\n'";
       df = "dysk"; # better df
+
+      # Update flake.lock for nixpkgs (pins nixpkgs input to latest flake; commits lock)
+      nfl = "nix flake lock --update-input nixpkgs && git add flake.lock && git commit -m 'Update nixpkgs flake lock' || true";
+      # Short alias
+      pinpkgs = "nfl";
     };
 
     histSize = 50000;
