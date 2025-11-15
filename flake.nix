@@ -9,20 +9,21 @@
   outputs =
     inputs@{ self, ... }:
     let
-      nixpkgs = inputs.nixpkgs;
       system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      nixpkgs = inputs.nixpkgs;
+      # Import nixpkgs with the same nixpkgs.config settings you had in configuration.nix
+      # so flakes evaluation allows unfree packages and the same permitted insecure packages.
+      pkgs = import nixpkgs {
+        inherit system;
+        config = (import ./nixpkgs-config.nix);
+      };
     in
     {
-      # Export a top-level nixosConfigurations so `nixos-rebuild --flake /etc/nixos#nixos` works
       nixosConfigurations = {
         nixos = pkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./configuration.nix ];
-          specialArgs = {
-            inherit pkgs;
-            lib = pkgs.lib;
-          };
+          specialArgs = { inherit pkgs; };
         };
       };
     };

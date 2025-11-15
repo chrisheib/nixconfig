@@ -23,14 +23,8 @@ in
   ];
 
   nixpkgs = {
-    config = {
-      # Allow unfree packages
-      allowUnfree = true;
-      permittedInsecurePackages = [
-        # "qtwebengine-5.15.19" # teamspeak
-        "gradle-7.6.6"
-      ];
-    };
+    # Load shared import-time config so flakes and the module system agree.
+    config = import ./nixpkgs-config.nix;
     overlays = [
       # (import /etc/nixos/overlays/plain-pkgs.nix)
     ];
