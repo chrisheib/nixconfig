@@ -17,10 +17,14 @@
         inherit system;
         config = (import ./nixpkgs-config.nix);
       };
+      pkgsImport = import nixpkgs {
+        inherit system;
+        config = (import ./nixpkgs-config.nix);
+      };
     in
     {
       nixosConfigurations = {
-        nixos = pkgs.lib.nixosSystem {
+        nixos = pkgsImport.lib.nixosSystem {
           inherit system;
           modules = [ ./configuration.nix ];
           specialArgs = { inherit pkgs; };
