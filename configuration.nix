@@ -645,6 +645,8 @@ in
     masterpdfeditor4
 
     protonvpn-gui
+
+    kdePackages.kde-cli-tools
   ];
 
   # Enable GNOME settings manager
@@ -682,6 +684,12 @@ in
     };
   };
 
+  # https://wiki.nixos.org/wiki/Appimage
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   # programs.tuxclocker.enable = true;
   # programs.tuxclocker.enabledNVIDIADevices = [
   #   "0" # nvidia gpu
@@ -705,6 +713,14 @@ in
 
   services.flatpak.enable = true; # https://wiki.nixos.org/wiki/Flatpak
   services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
+
+  # https://wiki.nixos.org/wiki/Sunshine
+  services.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true; # only needed for Wayland -- omit this when using with Xorg
+    openFirewall = true;
+  };
 
   services.udev.packages = with pkgs; [
     # pkgs.platformio-core # embedded dev
