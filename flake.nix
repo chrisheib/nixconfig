@@ -7,23 +7,24 @@
   };
 
   outputs =
-    inputs@{ self, ... }:
+    { self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
-      nixpkgs = inputs.nixpkgs;
-      # Import nixpkgs with the same nixpkgs.config settings you had in configuration.nix
-      # so flakes evaluation allows unfree packages and the same permitted insecure packages.
-      pkgs = import nixpkgs {
+      # Use the `lib.nixosSystem` from the nixpkgs flake input (guaranteed to exist),
+      # and provide `pkgs` (imported with shared config) as a specialArg for modules.
+      pkgsForModules = import nixpkgs {
         inherit system;
         config = (import ./nixpkgs-config.nix);
       };
     in
     {
       nixosConfigurations = {
-        nixos = pkgs.nixosSystem {
+        nixos = nixpkgs.lib.nixosSystem {
           inherit system;
           modules = [ ./configuration.nix ];
-          specialArgs = { inherit pkgs; };
+          specialArgs = {
+            pkgs = pkgsForModules;
+          };
         };
       };
     };
