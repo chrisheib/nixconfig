@@ -235,15 +235,15 @@ in
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() { up && nh os switch --flake /etc/nixos#nixos && cur && gcp \"$1\" && gc && onedrivefix }";
-      nrb = "() { up && nh os boot --flake /etc/nixos#nixos && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrs = "() { up && nh os switch /etc/nixos -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrb = "() { up && nh os boot /etc/nixos -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
       gcp = "() {cd /etc/nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
-      up = "nfl && nh os build --flake /etc/nixos#nixos && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
+      up = "cd /etc/nixos && nfl && nh os build /etc/nixos -- --impure && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
       gc = "nh clean all --keep 5 --keep-since 7d --quiet && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell && echo 'Iconfix!\n\n'";
@@ -252,7 +252,7 @@ in
       df = "dysk"; # better df
 
       # Update flake.lock for nixpkgs (pins nixpkgs input to latest flake)
-      pinpkgs = "nix flake lock --update-input nixpkgs";
+      pinpkgs = "cd /etc/nixos && nix flake update";
       # Short alias
       nfl = "pinpkgs";
     };
@@ -606,7 +606,7 @@ in
     adwaita-icon-theme
     gtk3
 
-    minion
+    # minion
 
     # cudaPackages.cudatoolkit
 
@@ -643,7 +643,9 @@ in
 
     masterpdfeditor4
 
-    protonvpn-gui
+    # Temporarily remove protonvpn-gui to avoid a failing build in proton-core tests.
+    # Reintroduce after upstream fixes or a proper patch is applied.
+    # protonvpn-gui
 
     kdePackages.kde-cli-tools
   ];
@@ -687,6 +689,10 @@ in
   programs.appimage = {
     enable = true;
     binfmt = true;
+  };
+
+  programs.nh = {
+    enable = true;
   };
 
   # programs.tuxclocker.enable = true;
