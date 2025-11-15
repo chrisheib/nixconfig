@@ -241,15 +241,15 @@ in
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() {up && nh os switch --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc && onedrivefix }";
-      nrb = "() {up && nh os boot --file '<nixpkgs/nixos>' && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrs = "() { up && nh os switch --flake /etc/nixos#nixos && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrb = "() { up && nh os boot --flake /etc/nixos#nixos && cur && gcp \"$1\" && gc && onedrivefix }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
-      gcp = "() {cd ~/.nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
+      gcp = "() {cd /etc/nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
-      up = "sudo nix-channel --update && nh os build --file '<nixpkgs/nixos>' && nvd diff /run/current-system ./result | tee /home/stschiff/.nixos/nixdiff.txt && cat /home/stschiff/.nixos/nixdiff.txt";
+      up = "nfl && nh os build --flake /etc/nixos#nixos && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
       gc = "nh clean all --keep 5 --keep-since 7d --quiet && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell && echo 'Iconfix!\n\n'";
@@ -257,10 +257,10 @@ in
       onedrivefix = "systemctl --user enable onedrive.service && systemctl --user start onedrive.service && echo 'Onedrivefix!\n\n'";
       df = "dysk"; # better df
 
-      # Update flake.lock for nixpkgs (pins nixpkgs input to latest flake; commits lock)
-      nfl = "nix flake lock --update-input nixpkgs && git add flake.lock && git commit -m 'Update nixpkgs flake lock' || true";
+      # Update flake.lock for nixpkgs (pins nixpkgs input to latest flake)
+      pinpkgs = "nix flake lock --update-input nixpkgs";
       # Short alias
-      pinpkgs = "nfl";
+      nfl = "pinpkgs";
     };
 
     histSize = 50000;
@@ -627,7 +627,7 @@ in
     # cava # audio visualizer
     # qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
-    # (callPackage /home/stschiff/.nixos/tempderivation.nix { })
+    # (callPackage /etc/nixos/tempderivation.nix { })
     # plasmusic-toolbar
     # kurve
 
