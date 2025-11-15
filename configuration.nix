@@ -242,8 +242,9 @@ in
       nrsrepair = "sudo nixos-rebuild switch --repair";
       gut = "qdbus org.kde.Shutdown /Shutdown org.kde.Shutdown.logoutAndReboot";
       gcp = "() {cd /etc/nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
+      gcp_prepare = "() {cd /etc/nixos && git add . && git commit -m \"Prepare $1\"}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
-      up = "cd /etc/nixos && nfl && nh os build /etc/nixos -- --impure && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
+      up = "cd /etc/nixos && gcp_prepare && nfl && nh os build /etc/nixos -- --impure && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
       gc = "nh clean all --keep 5 --keep-since 7d --quiet && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell && echo 'Iconfix!\n\n'";
@@ -252,9 +253,7 @@ in
       df = "dysk"; # better df
 
       # Update flake.lock for nixpkgs (pins nixpkgs input to latest flake)
-      pinpkgs = "cd /etc/nixos && nix flake update";
-      # Short alias
-      nfl = "pinpkgs";
+      nfl = "cd /etc/nixos && nix flake update";
     };
 
     histSize = 50000;
