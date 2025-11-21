@@ -235,8 +235,8 @@ in
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() { up && nh os switch /etc/nixos -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
-      nrb = "() { up && nh os boot /etc/nixos -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrs = "() { up && nh os switch /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrb = "() { up && nh os boot /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
@@ -244,7 +244,7 @@ in
       gcp = "() {cd /etc/nixos && git add . && git commit -m \"Generation $(cur): $1\" && git push}";
       gcp_prepare = "() {cd /etc/nixos && git add . && git commit -m \"Prepare $1\"}";
       cur = "sudo nix-env --list-generations --profile /nix/var/nix/profiles/system | grep current | cut -d \" \" -f 2";
-      up = "cd /etc/nixos && gcp_prepare && nfl && nh os build /etc/nixos -- --impure && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
+      up = "cd /etc/nixos && nfl && nh os build /etc/nixos -- --impure && nvd diff /run/current-system ./result | tee /etc/nixos/nixdiff.txt && cat /etc/nixos/nixdiff.txt";
       gc = "nh clean all --keep 5 --keep-since 7d --quiet && fixicons";
       # https://github.com/NixOS/nixpkgs/issues/308252#issuecomment-2543048917
       fixicons = "sed -i 's/file:\\/\\/\\/nix\\/store\\/[^\\/]*\\/share\\/applications\\//applications:/gi' ~/.config/plasma-org.kde.plasma.desktop-appletsrc && systemctl restart --user plasma-plasmashell && echo 'Iconfix!\n\n'";
