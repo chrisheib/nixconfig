@@ -620,7 +620,7 @@ in
     # cava # audio visualizer
     # qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
-    # (callPackage /etc/nixos/tempderivation.nix { })
+    (callPackage /etc/nixos/tempderivation.nix { })
     # plasmusic-toolbar
     # kurve
 
