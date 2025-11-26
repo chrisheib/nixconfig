@@ -26,15 +26,22 @@ appimageTools.wrapType2 rec {
     else
       # If no desktop file exists, create a minimal one so the package is discoverable.
       mkdir -p $out/share/applications
+      mkdir -p $out/share/icons/hicolor/1024x1024/apps
+      # If the AppImage extraction produced an icon, copy it into the
+      # standard icons path so the desktop system can find it.
+      iconSrc=$(find "${appimageContents}" -type f -name 'exiled-exchange-2.png' | head -n1 || true)
+      if [ -n "$iconSrc" ]; then
+        install -D -m 644 "$iconSrc" "$out/share/icons/hicolor/1024x1024/apps/exiled-exchange-2.png"
+      fi
       cat > $out/share/applications/${pname}.desktop <<EOF
     [Desktop Entry]
     Type=Application
     Name=Exiled Exchange 2
     Exec=${pname}
-    Icon=$out/share/applications/icons/hicolor/1024x1024/apps/exiled-exchange-2.png
+    Icon=exiled-exchange-2
     Categories=Game;
     EOF
-    fi
+        fi
   '';
 
   meta = {
