@@ -13,15 +13,29 @@ let
     hash = "sha256-hGUmwyhFsM+8XTrFCuaLVYAA85jwrKCftkQ/wlViRHI=";
   };
 
-  # appimageContents = appimageTools.extract { inherit pname version src; };
+  appimageContents = appimageTools.extract { inherit pname version src; };
 in
 appimageTools.wrapType2 rec {
   inherit pname version src;
 
-  # extraInstallCommands = ''
-  #   substituteInPlace $out/share/applications/${pname}.desktop \
-  #     --replace-fail 'Exec=AppRun' 'Exec=${meta.mainProgram}'
-  # '';
+  extraInstallCommands = ''
+    # Find a .desktop file produced by the AppImage wrapper and patch its Exec line.
+    desktopPath=$(find $out -type f -name '*.desktop' | head -n1 || true)
+    if [ -n "$desktopPath" ]; then
+      substituteInPlace "$desktopPath" --replace-fail 'Exec=AppRun' "Exec=${pname}"
+    else
+      # If no desktop file exists, create a minimal one so the package is discoverable.
+      mkdir -p $out/share/applications
+      cat > $out/share/applications/${pname}.desktop <<EOF
+    [Desktop Entry]
+    Type=Application
+    Name=Exiled Exchange 2
+    Exec=${pname}
+    Icon=${pname}
+    Categories=Game;
+    EOF
+    fi
+  '';
 
   meta = {
     description = "Path of Exile 2 trading app for price checking";
