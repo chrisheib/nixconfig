@@ -31,7 +31,7 @@ appimageTools.wrapType2 rec {
     Type=Application
     Name=Exiled Exchange 2
     Exec=${pname}
-    Icon=${pname}
+    Icon=$out/share/applications/icons/hicolor/1024x1024/apps/exiled-exchange-2.png
     Categories=Game;
     EOF
     fi
