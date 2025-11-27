@@ -621,6 +621,7 @@ in
     # qt6.qtwebsockets
     (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
     (callPackage /etc/nixos/tempderivation.nix { })
+    (callPackage /home/stschiff/projects/krosshair/derivation.nix { })
     # plasmusic-toolbar
     # kurve
 
