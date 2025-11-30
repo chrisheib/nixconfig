@@ -1,37 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #01  Pinta                                3.0.4 -> 3.0.5
-[U*]  #02  cpupower                             6.17.8 -> 6.17.9
-[U*]  #03  devenv                               1.10 -> 1.11.1
-[U*]  #04  firefox                              145.0.1 x2 -> 145.0.2 x2
-[U.]  #05  firefox-unwrapped                    145.0.1 -> 145.0.2
-[U.]  #06  gpsd                                 3.26.1 -> 3.27
-[U.]  #07  initrd-linux-xanmod                  6.17.8 -> 6.17.9
-[U.]  #08  lcevcdec                             4.0.3-lib -> 4.0.4-lib
-[U.]  #09  libtraceevent                        1.8.5 -> 1.8.6
-[U.]  #10  libwacom                             2.16.1 -> 2.17.0
-[U.]  #11  linux-firmware                       20251111-zstd -> 20251125-zstd
-[U.]  #12  linux-xanmod                         6.17.8, 6.17.8-modules x2, 6.17.8-modules-shrunk -> 6.17.9, 6.17.9-modules x2, 6.17.9-modules-shrunk
-[C.]  #13  ngtcp2                               1.17.0 x3, 1.17.0-dev -> 1.17.0 x2, 1.17.0-dev, 1.18.0
-[U*]  #14  nixos-rebuild-ng                     25.11 -> 26.05
-[U.]  #15  nixos-system-nixos                   25.11.20251124.5ae3b07 -> 26.05.20251127.2fad6ea
-[U.]  #16  nvidia-open                          6.17.8-580.105.08 -> 6.17.9-580.105.08
-[U*]  #17  nvidia-x11                           580.105.08-6.17.8, 580.105.08-6.17.8-bin, 580.105.08-6.17.8-firmware, 580.105.08-6.17.8-lib32 -> 580.105.08-6.17.9, 580.105.08-6.17.9-bin, 580.105.08-6.17.9-firmware, 580.105.08-6.17.9-lib32
-[U*]  #18  obsidian                             1.10.3 -> 1.10.6
-[U*]  #19  ollama                               0.12.11 -> 0.13.0
-[U*]  #20  protontricks                         1.13.0 -> 1.13.1
-[U*]  #21  rclone                               1.71.2, 1.71.2-man -> 1.72.0, 1.72.0-man
-[U*]  #22  ruff                                 0.14.5 -> 0.14.6
-[U.]  #23  streamlink                           7.5.0 -> 8.0.0
-[U*]  #24  turbostat                            6.17.8 -> 6.17.9
-[U.]  #25  vscode-extension-charliermarsh-ruff  2025.28.0 -> 2025.30.0
-[U.]  #26  vscode-extension-github-codespaces   1.17.5 -> 1.18.0
-[U.]  #27  wayland-utils                        1.2.0 -> 1.3.0
-Added packages:
-[A.]  #1  auto-fix-elf-files          <none>
-[A.]  #2  getRunpathEntries           <none>
-[A.]  #3  isDeclaredArray             <none>
-[A.]  #4  nh-unwrapped                4.2.0
-[A.]  #5  removeStubsFromRunpathHook  <none>
-Closure size: 3011 -> 3016 (216 paths added, 211 paths removed, delta +5, disk usage +22.2MiB).
+No version or selection state changes.
+Closure size: 3016 -> 3016 (7 paths added, 7 paths removed, delta +0, disk usage +0B).

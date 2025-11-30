@@ -7,7 +7,7 @@
   ...
 }:
 {
-  # Set during insall: Loads bare metal redistributable firmware
+  # Set during install: Loads bare metal redistributable firmware
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -23,7 +23,7 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
@@ -56,7 +56,7 @@
     options = [ "nofail" ];
   };
 
-  fileSystems."/run/media/stschiff/F Alt-Alt-C" = {
+  fileSystems."/run/media/stschiff/F_Alt-Alt-C" = {
     device = "/dev/disk/by-uuid/366275AC6275720B";
     fsType = "ntfs-3g";
     options = [
