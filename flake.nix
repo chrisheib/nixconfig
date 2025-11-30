@@ -4,50 +4,38 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    # Local nixpkgs checkout containing the `kurve` package.
-    # localkurve.url = "path:/home/stschiff/projects/nixpkgs";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs =
     {
+      # self,
       nixpkgs,
-      # localkurve,
+      chaotic,
       ...
     }:
     let
       system = "x86_64-linux";
-      # Use the `lib.nixosSystem` from the nixpkgs flake input (guaranteed to exist),
-      # and provide `pkgs` (imported with shared config) as a specialArg for modules.
+
+      # preconfigured pkgs you want modules to use
       pkgsForModules = import nixpkgs {
         inherit system;
         config = (import ./nixpkgs-config.nix);
-        # Add an overlay that pulls the kurve package from the local checkout
-        # overlays = [
-        #   (
-        #     final: prev:
-        #     let
-        #       pythonPkgs = prev.python3Packages;
-        #     in
-        #     {
-        #       kurve = prev.callPackage ("${localkurve}/pkgs/by-name/ku/kurve/package.nix") { };
-        #       python3Packages = pythonPkgs // {
-        #         proton-core = pythonPkgs.proton-core.overrideAttrs (old: {
-        #           doCheck = false;
-        #         });
-        #       };
-        #     }
-        #   )
-        # ];
       };
     in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration.nix ];
-          specialArgs = {
-            pkgs = pkgsForModules;
-          };
+
+          # Make pkgsForModules available to modules as an extra arg.
+          # Do NOT try to set nixpkgs.pkgs here.
+          specialArgs = { inherit pkgsForModules chaotic; };
+
+          modules = [
+            chaotic.nixosModules.default
+            ./configuration.nix
+          ];
         };
       };
     };
