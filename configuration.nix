@@ -213,6 +213,7 @@ in
       "wheel"
       "libvirtd"
       "docker"
+      "gamemode"
     ];
     shell = pkgs.zsh;
   };
@@ -283,7 +284,7 @@ in
         "nix-command"
         "flakes"
       ];
-      cores = 16; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
+      cores = 24; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
       max-jobs = 4; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
     };
     # nixPath = [
@@ -311,7 +312,17 @@ in
   #     "steam-run"
   #   ];
 
-  programs.gamemode.enable = true; # https://wiki.nixos.org/wiki/GameMode
+  # https://wiki.nixos.org/wiki/GameMode
+  programs.gamemode = {
+    enable = true;
+    enableRenice = true;
+
+    settings = {
+      general = {
+        renice = 10;
+      };
+    };
+  };
 
   hardware.graphics = {
     enable = true;
