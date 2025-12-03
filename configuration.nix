@@ -592,6 +592,7 @@ in
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
     protonup-rs
     r2modman # valheim mods
+    rusty-path-of-building
 
     # brlaser # printer
 
@@ -676,6 +677,8 @@ in
     # protonvpn-gui
 
     kdePackages.kde-cli-tools
+
+    teams-for-linux
   ];
 
   # Enable GNOME settings manager

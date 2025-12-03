@@ -1,4 +1,16 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3025 -> 3025 (13 paths added, 13 paths removed, delta +0, disk usage +8B).
+Version changes:
+[C.]  #1  electron            38.7.1 -> 37.10.2, 38.7.1
+[C.]  #2  electron-unwrapped  38.7.1 -> 37.10.2, 38.7.1
+[C.]  #3  libuv               1.51.0 x2 -> 1.51.0 x2, 1.51.0-dev
+Added packages:
+[A.]  #1  lua5.1-lzip             0.2.8
+[A.]  #2  luajit                  2.1.1741730670
+[A.]  #3  luajit2.1-lua-curl      0.3.13-1
+[A.]  #4  luajit2.1-luasocket     3.1.0-1
+[A.]  #5  luajit2.1-luautf8       0.2.0-1
+[A.]  #6  nodejs                  22.21.1
+[A+]  #7  rusty-path-of-building  0.2.8
+[A+]  #8  teams-for-linux         2.6.17
+Closure size: 3025 -> 3036 (23 paths added, 12 paths removed, delta +11, disk usage +729.5MiB).
