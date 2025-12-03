@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Removed packages:
-[R.]  #1  security-wrapper-steam-x86_64-unknown-linux-musl  <none>
-Closure size: 3026 -> 3025 (15 paths added, 16 paths removed, delta -1, disk usage -70.3KiB).
+No version or selection state changes.
+Closure size: 3025 -> 3025 (13 paths added, 13 paths removed, delta +0, disk usage +80B).

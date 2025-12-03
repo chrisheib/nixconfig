@@ -575,6 +575,8 @@ in
     # Wrapper that prioritizes Steam via systemd cgroup CPU weight
     (writeShellScriptBin "steam" ''
       #!/bin/sh
+      # Change to home directory to avoid sandbox issues with /etc/nixos
+      cd ~ || cd /tmp
       # Use systemd-run to apply CPU and IO scheduling priority (works unprivileged)
       exec ${pkgs.systemd}/bin/systemd-run --user --scope -p CPUWeight=200 -p IOWeight=200 ${pkgs.steam}/bin/steam "$@"
     '')
