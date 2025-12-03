@@ -574,7 +574,8 @@ in
 
     (writeShellScriptBin "steam" ''
       #!/bin/sh
-      exec nice -n -10 ${steam}/bin/steam "$@"
+      # Use sudo to apply negative niceness (requires passwordless sudo rule)
+      exec sudo -n nice -n -10 ${steam}/bin/steam "$@"
     '')
     protontricks
     steamtinkerlaunch
@@ -684,6 +685,19 @@ in
     localNetworkGameTransfers.openFirewall = true;
     protontricks.enable = true;
   };
+
+  # Allow stschiff to run nice with sudo -n (non-interactive) for Steam priority
+  security.sudo.extraRules = [
+    {
+      users = [ "stschiff" ];
+      commands = [
+        {
+          command = "${pkgs.coreutils}/bin/nice";
+          options = [ "NOPASSWD" ];
+        }
+      ];
+    }
+  ];
 
   programs.firefox = {
     enable = true;
