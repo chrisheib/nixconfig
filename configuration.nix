@@ -572,10 +572,11 @@ in
     ntfs3g # allow read write ntfs mounts
     docker-compose
 
-    # Wrapper that applies nice -10 to Steam (setcap'd by security.wrappers.steam)
+    # Wrapper that prioritizes Steam via systemd cgroup CPU weight
     (writeShellScriptBin "steam" ''
       #!/bin/sh
-      exec nice -n -10 /run/wrappers/bin/steam "$@"
+      # Use systemd-run to apply CPU and IO scheduling priority (works unprivileged)
+      exec ${pkgs.systemd}/bin/systemd-run --user --scope -p CPUWeight=200 -p IOWeight=200 ${pkgs.steam}/bin/steam "$@"
     '')
     protontricks
     steamtinkerlaunch
@@ -684,15 +685,6 @@ in
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true;
     protontricks.enable = true;
-  };
-
-  # Allow steam to run with negative niceness
-  security.wrappers.steam = {
-    setuid = false;
-    owner = "root";
-    group = "root";
-    capabilities = "cap_sys_nice+ep";
-    source = "${pkgs.steam}/bin/steam";
   };
 
   programs.firefox = {
