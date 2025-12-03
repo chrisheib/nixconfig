@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C*]  #1  steam  1.0.0.85, 1.0.0.85-bwrap, 1.0.0.85-fhsenv-profile, 1.0.0.85-fhsenv-rootfs, 1.0.0.85-init -> <none>, 1.0.0.85 x2, 1.0.0.85-bwrap x2, 1.0.0.85-fhsenv-profile, 1.0.0.85-fhsenv-rootfs x2, 1.0.0.85-init
-Closure size: 3021 -> 3025 (16 paths added, 12 paths removed, delta +4, disk usage +11.1MiB).
+No version or selection state changes.
+Closure size: 3025 -> 3025 (18 paths added, 18 paths removed, delta +0, disk usage -632B).
