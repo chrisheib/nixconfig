@@ -124,8 +124,6 @@ in
     # Optional: control how aggressively khugepaged scans
     "w /sys/kernel/mm/transparent_hugepage/khugepaged/scan_sleep_millisecs - - - - 10000" # 10s
     "w /sys/kernel/mm/transparent_hugepage/khugepaged/alloc_sleep_millisecs - - - - 500" # 0.5s
-    # Set SYS_NICE capability on steam binary to allow negative niceness
-    "C+ ${pkgs.steam}/bin/steam - - - - cap_sys_nice+ep"
   ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -574,9 +572,10 @@ in
     ntfs3g # allow read write ntfs mounts
     docker-compose
 
+    # Wrapper that applies nice -10 to Steam (setcap'd by security.wrappers.steam)
     (writeShellScriptBin "steam" ''
       #!/bin/sh
-      exec nice -n -10 ${steam}/bin/steam "$@"
+      exec nice -n -10 /run/wrappers/bin/steam "$@"
     '')
     protontricks
     steamtinkerlaunch
@@ -685,6 +684,15 @@ in
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true;
     protontricks.enable = true;
+  };
+
+  # Allow steam to run with negative niceness
+  security.wrappers.steam = {
+    setuid = false;
+    owner = "root";
+    group = "root";
+    capabilities = "cap_sys_nice+ep";
+    source = "${pkgs.steam}/bin/steam";
   };
 
   programs.firefox = {
