@@ -124,6 +124,8 @@ in
     # Optional: control how aggressively khugepaged scans
     "w /sys/kernel/mm/transparent_hugepage/khugepaged/scan_sleep_millisecs - - - - 10000" # 10s
     "w /sys/kernel/mm/transparent_hugepage/khugepaged/alloc_sleep_millisecs - - - - 500" # 0.5s
+    # Set SYS_NICE capability on steam binary to allow negative niceness
+    "C+ ${pkgs.steam}/bin/steam - - - - cap_sys_nice+ep"
   ];
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -574,8 +576,7 @@ in
 
     (writeShellScriptBin "steam" ''
       #!/bin/sh
-      # Use systemd-run to apply negative niceness without running as root
-      exec ${pkgs.systemd}/bin/systemd-run --scope -p CPUWeight=200 -p IOWeight=200 ${steam}/bin/steam "$@"
+      exec nice -n -10 ${steam}/bin/steam "$@"
     '')
     protontricks
     steamtinkerlaunch
