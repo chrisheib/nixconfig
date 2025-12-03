@@ -578,7 +578,7 @@ in
       # Change to home directory to avoid sandbox issues with /etc/nixos
       cd ~ || cd /tmp
       # Use systemd-run to apply CPU and IO scheduling priority (works unprivileged)
-      exec ${pkgs.systemd}/bin/systemd-run --user --scope -p CPUWeight=200 -p IOWeight=200 ${pkgs.steam}/bin/steam "$@"
+      exec ${pkgs.systemd}/bin/systemd-run --user --scope -p CPUWeight=2000 -p IOWeight=2000 ${pkgs.steam}/bin/steam "$@"
     '')
     protontricks
     steamtinkerlaunch
