@@ -1,17 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U.]  #01  freerdp                 3.17.2 -> 3.18.0
-[U*]  #02  fwupd                   2.0.16, 2.0.16-lib, 2.0.16-man -> 2.0.17, 2.0.17-lib, 2.0.17-man
-[C.]  #03  glew                    1.10.0, 2.2.0 x2, 2.2.0-bin -> 1.10.0, 2.2.0, 2.2.0-bin
-[U*]  #04  gnome-calculator        49.1.1 -> 49.2
-[U*]  #05  gnome-software          49.1 -> 49.2
-[D.]  #06  libwacom                2.17.0 -> 2.16.1
-[U*]  #07  mangohud                0.8.1 x2, 0.8.1-doc, 0.8.1-man -> 0.8.2 x2, 0.8.2-doc, 0.8.2-man
-[U.]  #08  nixos-system-nixos      26.05.20251127.2fad6ea -> 26.05.20251130.2d293cb
-[U*]  #09  orca                    49.4 -> 49.5
-[U.]  #10  vscode                  1.106.2 -> 1.106.3
-[U*]  #11  vscode-with-extensions  1.106.2 -> 1.106.3
-Added packages:
-[A.]  #1  parallel  20251122
-Closure size: 3030 -> 3030 (110 paths added, 110 paths removed, delta +0, disk usage +1.3MiB).
+No version or selection state changes.
+Closure size: 3021 -> 3021 (0 paths added, 0 paths removed, delta +0, disk usage +0B).

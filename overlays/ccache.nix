@@ -1,6 +1,25 @@
 # Ccache overlay for faster builds of kernel and nvidia drivers
 # Pass `config` as argument to access ccache settings
-config: self: super: {
+config: self: super:
+let
+  stdenvGcc = super.ccacheStdenv;
+  # ccache on top of clang stdenv (for LTO kernels that require clang)
+  stdenvClang = super.ccacheStdenv.override { stdenv = super.clangStdenv; };
+
+  # Helper: if a package set exposes a `kernel` attr, override that kernel;
+  # otherwise, try to call .override on the package itself when appropriate.
+  applyStdenvToPkg =
+    pkg: stdenv:
+    if pkg ? kernel then
+      pkg
+      // {
+        kernel = pkg.kernel.override { stdenv = stdenv; };
+      }
+    else
+      pkg.override { stdenv = stdenv; };
+
+in
+{
   ccacheWrapper = super.ccacheWrapper.override {
     extraConfig = ''
       export CCACHE_COMPRESS=1
@@ -24,30 +43,17 @@ config: self: super: {
       fi
     '';
   };
-  # Create a ccache-enabled Clang stdenv for cachyos-lto kernel
-  ccacheClangStdenv = super.ccacheStdenv.override {
-    stdenv = super.clangStdenv;
-  };
+
   # Enable ccache for the cachyos-lto kernel (needs clang)
-  linuxPackages_cachyos-lto = super.linuxPackages_cachyos-lto.override {
-    stdenv = self.ccacheClangStdenv;
-  };
-  # Enable ccache for nvidia driver
+  linuxPackages_cachyos-lto = applyStdenvToPkg super.linuxPackages_cachyos-lto stdenvClang;
+
+  # Enable ccache for xanmod; apply to its kernel when present
+  linuxPackages_xanmod_latest = applyStdenvToPkg super.linuxPackages_xanmod_latest stdenvGcc;
+
+  # Enable ccache for nvidia driver variants
   nvidiaPackages = super.nvidiaPackages // {
-    beta = (
-      super.nvidiaPackages.beta.override {
-        stdenv = super.ccacheStdenv;
-      }
-    );
-    stable = (
-      super.nvidiaPackages.stable.override {
-        stdenv = super.ccacheStdenv;
-      }
-    );
-    open = (
-      super.nvidiaPackages.open.override {
-        stdenv = super.ccacheStdenv;
-      }
-    );
+    beta = super.nvidiaPackages.beta.override { stdenv = stdenvGcc; };
+    stable = super.nvidiaPackages.stable.override { stdenv = stdenvGcc; };
+    open = super.nvidiaPackages.open.override { stdenv = stdenvGcc; };
   };
 }
