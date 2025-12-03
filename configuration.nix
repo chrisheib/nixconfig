@@ -571,7 +571,10 @@ in
     ntfs3g # allow read write ntfs mounts
     docker-compose
 
-    steam
+    (writeShellScriptBin "steam" ''
+      #!/bin/sh
+      exec nice -n -10 ${steam}/bin/steam "$@"
+    '')
     protontricks
     steamtinkerlaunch
     (lutris.override {
