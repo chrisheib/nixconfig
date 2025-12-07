@@ -38,7 +38,9 @@ in
 
         # undo the XDG_DATA_DIRS injection that is usually done in the qt wrapper
         # script and instead inject the path of the above helper package
+        # Also apply ccache stdenv via overrideAttrs for faster rebuilds
         derivedPkg = basePkg.overrideAttrs {
+          stdenv = stdenvWithCcache;
           preFixup = ''
             for index in "''${!qtWrapperArgs[@]}"; do
               if [[ ''${qtWrapperArgs[$((index+0))]} == "--prefix" ]] && [[ ''${qtWrapperArgs[$((index+1))]} == "XDG_DATA_DIRS" ]]; then
@@ -54,10 +56,7 @@ in
           '';
         };
 
-        # Apply ccache stdenv to the derived package for faster rebuilds
-        ccachePkg = derivedPkg.override { stdenv = stdenvWithCcache; };
-
       in
-      ccachePkg;
+      derivedPkg;
   };
 }
