@@ -11,24 +11,23 @@
   outputs =
     {
       # self,
-      nixpkgs,
       chaotic,
       preload-ng,
+      nixpkgs,
       ...
     }:
     let
-      system = "x86_64-linux";
+      # inherit nixpkgs;
+      # nixpkgs.hostPlatform = "x86_64-linux";
 
       # preconfigured pkgs you want modules to use
       pkgsForModules = import nixpkgs {
-        inherit system;
         config = (import ./nixpkgs-config.nix);
       };
     in
     {
       nixosConfigurations = {
         nixos = nixpkgs.lib.nixosSystem {
-          inherit system;
 
           # Make pkgsForModules available to modules as an extra arg.
           # Do NOT try to set nixpkgs.pkgs here.
