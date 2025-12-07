@@ -241,7 +241,7 @@ in
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
       nrs = "() { up && git add . && git commit -m \"Prepare: $1\" && nh os switch /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
-      nrb = "() { up && nh os boot /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrb = "() { up && git add . && git commit -m \"Prepare: $1\" && nh os boot /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
