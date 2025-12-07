@@ -302,6 +302,7 @@ in
   # Note: ccache for kernel and nvidia is handled via overlays using ccacheStdenv
   programs.ccache.packageNames = [
     "ollama"
+    "ollama-cuda"
   ];
 
   programs.partition-manager.enable = true;
@@ -836,7 +837,8 @@ in
 
   services.ollama = {
     enable = true;
-    acceleration = "cuda";
+    # acceleration = "cuda";
+    package = pkgs.ollama-cuda;
     loadModels = [ "qwen3-embedding:0.6b" ];
   };
 
