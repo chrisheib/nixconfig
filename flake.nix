@@ -5,6 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    preload-ng.url = "github:miguel-b-p/preload-ng";
   };
 
   outputs =
@@ -12,6 +13,7 @@
       # self,
       nixpkgs,
       chaotic,
+      preload-ng,
       ...
     }:
     let
@@ -35,6 +37,10 @@
           modules = [
             chaotic.nixosModules.default
             ./configuration.nix
+            preload-ng.nixosModules.default
+            {
+              services.preload-ng.enable = true;
+            }
           ];
         };
       };
