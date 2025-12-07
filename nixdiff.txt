@@ -1,16 +1,39 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #1  electron            38.7.1 -> 37.10.2, 38.7.1
-[C.]  #2  electron-unwrapped  38.7.1 -> 37.10.2, 38.7.1
-[C.]  #3  libuv               1.51.0 x2 -> 1.51.0 x2, 1.51.0-dev
-Added packages:
-[A.]  #1  lua5.1-lzip             0.2.8
-[A.]  #2  luajit                  2.1.1741730670
-[A.]  #3  luajit2.1-lua-curl      0.3.13-1
-[A.]  #4  luajit2.1-luasocket     3.1.0-1
-[A.]  #5  luajit2.1-luautf8       0.2.0-1
-[A.]  #6  nodejs                  22.21.1
-[A+]  #7  rusty-path-of-building  0.2.8
-[A+]  #8  teams-for-linux         2.6.17
-Closure size: 3025 -> 3036 (23 paths added, 12 paths removed, delta +11, disk usage +729.5MiB).
+[U*]  #01  chromium                            142.0.7444.175, 142.0.7444.175-sandbox -> 143.0.7499.40, 143.0.7499.40-sandbox
+[U.]  #02  chromium-unwrapped                  142.0.7444.175, 142.0.7444.175-sandbox, 142.0.7444.175-wv -> 143.0.7499.40, 143.0.7499.40-sandbox, 143.0.7499.40-wv
+[U*]  #03  cpupower                            6.17.9 -> 6.17.10
+[U*]  #04  devenv                              1.11.1 -> 1.11.2
+[U.]  #05  docker-buildx                       0.29.1 -> 0.30.1
+[U*]  #06  dysk                                3.4.0 -> 3.5.0
+[U*]  #07  fwupd                               2.0.17, 2.0.17-lib, 2.0.17-man -> 2.0.18, 2.0.18-lib, 2.0.18-man
+[U.]  #08  initrd-linux-xanmod                 6.17.9 -> 6.17.10
+[U.]  #09  libbytesize                         2.11 -> 2.12
+[U.]  #10  libvlc                              3.0.21 -> 3.0.22
+[U.]  #11  linux-xanmod                        6.17.9, 6.17.9-modules x2, 6.17.9-modules-shrunk -> 6.17.10, 6.17.10-modules x2, 6.17.10-modules-shrunk
+[U.]  #12  lowdown                             2.0.2-lib -> 2.0.4-lib
+[U.]  #13  lua5.1-lzip                         0.2.8 -> 0.2.9
+[U*]  #14  mesa                                25.3.0 x2 -> 25.3.1 x2
+[U.]  #15  nixos-system-nixos                  26.05.20251130.2d293cb -> 26.05.20251205.f61125a
+[U.]  #16  noto-fonts                          2025.11.01 -> 2025.12.01
+[U.]  #17  nvidia-open                         6.17.9-580.105.08 -> 6.17.10-590.44.01
+[U*]  #18  nvidia-settings                     580.105.08 -> 590.44.01
+[U*]  #19  nvidia-x11                          580.105.08-6.17.9, 580.105.08-6.17.9-bin, 580.105.08-6.17.9-firmware, 580.105.08-6.17.9-lib32 -> 590.44.01-6.17.10, 590.44.01-6.17.10-bin, 590.44.01-6.17.10-firmware, 590.44.01-6.17.10-lib32
+[U*]  #20  ollama                              0.13.0 -> 0.13.1
+[C*]  #21  plasma-workspace                    6.5.3 -> 6.5.3 x2, 6.5.3-xdgdata
+[U.]  #22  pv                                  1.10.1 -> 1.10.2
+[U*]  #23  ruff                                0.14.6 -> 0.14.7
+[U*]  #24  rusty-path-of-building              0.2.8 -> 0.2.9
+[U*]  #25  teams-for-linux                     2.6.17 -> 2.6.18
+[U*]  #26  turbostat                           6.17.9 -> 6.17.10
+[C.]  #27  udev-rules                          <none> x2 -> <none>
+[U*]  #28  vlc                                 3.0.21 -> 3.0.22
+[U.]  #29  vscode-extension-github-codespaces  1.18.0 -> 1.18.3
+Removed packages:
+[R.]  #1  extra-utils    <none>
+[R.]  #2  initrd-fsinfo  <none>
+[R.]  #3  keymap         <none>
+[R.]  #4  link-units     <none>
+[R.]  #5  stage          1-init.sh
+Closure size: 3036 -> 3032 (235 paths added, 239 paths removed, delta -4, disk usage +490.5MiB).

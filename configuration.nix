@@ -240,7 +240,7 @@ in
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() { up && nh os switch /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrs = "() { up && git add . && git commit -m \"Prepare: $1\" && nh os switch /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
       nrb = "() { up && nh os boot /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
@@ -303,6 +303,7 @@ in
   programs.ccache.packageNames = [
     "ollama"
     "ollama-cuda"
+    # "coreutils"
   ];
 
   programs.partition-manager.enable = true;
