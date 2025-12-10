@@ -4,22 +4,17 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     preload-ng.url = "github:miguel-b-p/preload-ng";
   };
 
   outputs =
     {
       # self,
-      chaotic,
       preload-ng,
       nixpkgs,
       ...
     }:
     let
-      # inherit nixpkgs;
-      # nixpkgs.hostPlatform = "x86_64-linux";
-
       # preconfigured pkgs you want modules to use
       pkgsForModules = import nixpkgs {
         config = (import ./nixpkgs-config.nix);
@@ -31,10 +26,9 @@
 
           # Make pkgsForModules available to modules as an extra arg.
           # Do NOT try to set nixpkgs.pkgs here.
-          specialArgs = { inherit pkgsForModules chaotic; };
+          specialArgs = { inherit pkgsForModules; };
 
           modules = [
-            chaotic.nixosModules.default
             ./configuration.nix
             preload-ng.nixosModules.default
             {

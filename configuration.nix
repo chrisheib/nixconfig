@@ -240,8 +240,8 @@ in
       l = "ls";
       ll = "ls";
       nrt = "sudo nixos-rebuild test";
-      nrs = "() { git add . && git commit -m \"Prepare: $1\" && up && nh os switch /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
-      nrb = "() { git add . && git commit -m \"Prepare: $1\" && up && nh os boot /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc }";
+      nrs = "() { git add . && git commit -m \"Prepare: $1\" || true && up && nh os switch /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc && onedrivefix }";
+      nrb = "() { git add . && git commit -m \"Prepare: $1\" || true && up && nh os boot /etc/nixos --diff never -- --impure && cur && gcp \"$1\" && gc }";
       nrsu = "sudo nix-channel --update && nrs \"System Update\"";
       nrsb = "nrs \"$1\" && gut";
       nrsrepair = "sudo nixos-rebuild switch --repair";
