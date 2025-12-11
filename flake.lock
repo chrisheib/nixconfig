@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1765318199,
-        "narHash": "sha256-ceN7pnO7PoGhLyru+Ga5Ty+/EyTHUmSGO+OgJOc+nWo=",
+        "lastModified": 1765421021,
+        "narHash": "sha256-Gz0iWoAZO9AwNiqkdqEoUsVmCFzDyfMqToCnKtPD5LE=",
         "owner": "miguel-b-p",
         "repo": "preload-ng",
-        "rev": "0183796d7418ca12668bb9f5bf62b64bcfdc491e",
+        "rev": "e0b03058aac47d9d61583b66418b5d69a6e9a98a",
         "type": "github"
       },
       "original": {
