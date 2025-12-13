@@ -1,6 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# Currently using: AMD 9950X3D + MSI 3080 TI + 64 GB DDR 5 + NVMe SSDs
 {
   config,
   pkgs,
@@ -71,6 +69,14 @@ in
         # Current monitor does not support it, but this is useful for
         # the future
         "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
+
+        # Enable Resizable BAR support
+        "NVreg_EnableResizableBar=1"
+
+        # disable screen dimming
+        "NVreg_EnableBacklightHandler=0"
+        # "drm.edid_firmware=DP-3:edid/no-dpms.bin"
+        # "drm.edid_firmware=DP-4:edid/no-dpms.bin"
       ];
     plymouth = {
       enable = true;
@@ -90,10 +96,9 @@ in
       "rd.systemd.show_status=auto"
       "zswap.enabled=1" # enables zswap https://wiki.nixos.org/wiki/Swap
 
-      # disable screen dimming
-      "NVreg_EnableBacklightHandler=0"
-      # "drm.edid_firmware=DP-3:edid/no-dpms.bin"
-      # "drm.edid_firmware=DP-4:edid/no-dpms.bin"
+      # Enable reBar/SAM
+      "pci=realloc"
+      "big_root_window"
     ];
 
     kernelModules = [
