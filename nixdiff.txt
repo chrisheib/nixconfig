@@ -1,136 +1,137 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U.]  #001  SDL_compat                          1.2.70 x2 -> 1.2.72 x2
-[U*]  #002  akonadi                             25.08.3 -> 25.12.0
-[U.]  #003  akonadi-calendar                    25.08.3 -> 25.12.0
-[U.]  #004  akonadi-contacts                    25.08.3 -> 25.12.0
-[U.]  #005  akonadi-mime                        25.08.3 -> 25.12.0
-[U.]  #006  akonadi-search                      25.08.3 -> 25.12.0
-[U*]  #007  ark                                 25.08.3 -> 25.12.0
-[U*]  #008  aurorae                             6.5.3 -> 6.5.4
-[U*]  #009  baloo-widgets                       25.08.3 -> 25.12.0
-[U*]  #010  bluedevil                           6.5.3 -> 6.5.4
-[U*]  #011  breeze                              6.5.3, 6.5.3-qt5 -> 6.5.4, 6.5.4-qt5
-[U*]  #012  breeze-gtk                          6.5.3 -> 6.5.4
-[U*]  #013  cpupower                            6.17.10 -> 6.17.11
-[U.]  #014  cubeb                               0-unstable-2025-09-17-lib -> 0-unstable-2025-12-04-lib
-[U*]  #015  discover                            6.5.3 -> 6.5.4
-[U*]  #016  docker                              28.5.1 -> 29.1.2
-[U*]  #017  docker-compose                      2.39.4 -> 5.0.0
-[U.]  #018  docker-containerd                   28.5.1 -> 29.1.2
-[U.]  #019  docker-runc                         28.5.1 -> 29.1.2
-[U.]  #020  docker-tini                         28.5.1 -> 29.1.2
-[U*]  #021  dolphin                             25.08.3 -> 25.12.0
-[U*]  #022  dolphin-plugins                     25.08.3 -> 25.12.0
-[U*]  #023  drkonqi                             6.5.3 -> 6.5.4
-[U*]  #024  elisa                               25.08.3 -> 25.12.0
-[U*]  #025  ffmpegthumbs                        25.08.3 -> 25.12.0
-[U*]  #026  firefox                             145.0.2 x2 -> 146.0 x2
-[U.]  #027  firefox-unwrapped                   145.0.2 -> 146.0
-[U*]  #028  flatpak-kcm                         6.5.3 -> 6.5.4
-[U.]  #029  grantleetheme                       25.08.3 -> 25.12.0
-[U*]  #030  gwenview                            25.08.3 -> 25.12.0
-[U.]  #031  initrd-linux-xanmod                 6.17.10 -> 6.17.11
-[U.]  #032  kaccounts-integration               25.08.3 -> 25.12.0
-[U*]  #033  kactivitymanagerd                   6.5.3 -> 6.5.4
-[U*]  #034  kate                                25.08.3 -> 25.12.0
-[U.]  #035  kcalutils                           25.08.3 -> 25.12.0
-[U*]  #036  kde-cli-tools                       6.5.3 -> 6.5.4
-[U*]  #037  kde-gtk-config                      6.5.3 -> 6.5.4
-[U*]  #038  kde-inotify-survey                  25.08.3 -> 25.12.0
-[U*]  #039  kdeconnect-kde                      25.08.3 -> 25.12.0
-[U.]  #040  kdecoration                         6.5.3 -> 6.5.4
-[U.]  #041  kdegraphics-mobipocket              25.08.3 -> 25.12.0
-[U*]  #042  kdegraphics-thumbnailers            25.08.3 -> 25.12.0
-[U*]  #043  kdepim-runtime                      25.08.3 -> 25.12.0
-[U*]  #044  kdeplasma-addons                    6.5.3 -> 6.5.4
-[U*]  #045  kglobalacceld                       6.5.3 -> 6.5.4
-[U*]  #046  khelpcenter                         25.08.3 -> 25.12.0
-[U.]  #047  kidentitymanagement                 25.08.3 -> 25.12.0
-[U.]  #048  kimap                               25.08.3 -> 25.12.0
-[U*]  #049  kinfocenter                         6.5.3 -> 6.5.4
-[U*]  #050  kio-admin                           25.08.3 -> 25.12.0
-[U*]  #051  kio-extras                          25.08.3 -> 25.12.0
-[U.]  #052  kldap                               25.08.3 -> 25.12.0
-[U.]  #053  kmailtransport                      25.08.3 -> 25.12.0
-[U.]  #054  kmbox                               25.08.3 -> 25.12.0
-[U*]  #055  kmenuedit                           6.5.3 -> 6.5.4
-[U.]  #056  kmime                               25.08.3 -> 25.12.0
-[U*]  #057  knighttime                          6.5.3 -> 6.5.4
-[U*]  #058  konsole                             25.08.3 -> 25.12.0
-[U.]  #059  kpimtextedit                        25.08.3 -> 25.12.0
-[U.]  #060  kpipewire                           6.5.3 -> 6.5.4
-[U*]  #061  kpmcore                             25.08.3 -> 25.12.0
-[U*]  #062  krdp                                6.5.3 -> 6.5.4
-[U*]  #063  kscreen                             6.5.3 -> 6.5.4
-[U*]  #064  kscreenlocker                       6.5.3 -> 6.5.4
-[U.]  #065  ksmtp                               25.08.3 -> 25.12.0
-[U*]  #066  ksystemstats                        6.5.3 -> 6.5.4
-[U*]  #067  kunifiedpush                        25.08.3 -> 25.12.0
-[U*]  #068  kwallet-pam                         6.5.3 -> 6.5.4
-[U*]  #069  kwalletmanager                      25.08.3 -> 25.12.0
-[C.]  #070  kwayland                            5.116.0, 6.5.3 -> 5.116.0, 6.5.4
-[U*]  #071  kwayland-integration                6.5.3 -> 6.5.4
-[U*]  #072  kwin                                6.5.3 -> 6.5.4
-[U*]  #073  kwin-x11                            6.5.3 -> 6.5.4
-[U*]  #074  kwrited                             6.5.3 -> 6.5.4
-[U.]  #075  layer-shell-qt                      6.5.3 -> 6.5.4
-[U.]  #076  libgravatar                         25.08.3 -> 25.12.0
-[U.]  #077  libkdcraw                           25.08.3 -> 25.12.0
-[U.]  #078  libkdepim                           25.08.3 -> 25.12.0
-[U.]  #079  libkexiv2                           25.08.3 -> 25.12.0
-[U.]  #080  libkgapi                            25.08.3 -> 25.12.0
-[U.]  #081  libkleo                             25.08.3 -> 25.12.0
-[U*]  #082  libkscreen                          6.5.3 -> 6.5.4
-[U*]  #083  libksysguard                        6.5.3 -> 6.5.4
-[U*]  #084  libplasma                           6.5.3 -> 6.5.4
-[U.]  #085  linux-xanmod                        6.17.10, 6.17.10-modules x2, 6.17.10-modules-shrunk -> 6.17.11, 6.17.11-modules x2, 6.17.11-modules-shrunk
-[U.]  #086  messagelib                          25.08.3 -> 25.12.0
-[U*]  #087  milou                               6.5.3 -> 6.5.4
-[U.]  #088  moby                                28.5.1 -> 29.1.2
-[U.]  #089  nixos-system-nixos                  26.05.20251208.addf7cf -> 26.05.20251211.2fbfb1d
-[C.]  #090  nss                                 3.112.2 x2, 3.112.2-dev, 3.112.2-man, 3.119 -> 3.112.2 x2, 3.112.2-dev, 3.112.2-man, 3.119.1
-[U.]  #091  nuspell                             5.1.6-lib -> 5.1.7-lib
-[U.]  #092  nvidia-open                         6.17.10-590.44.01 -> 6.17.11-590.44.01
-[U*]  #093  nvidia-x11                          590.44.01-6.17.10, 590.44.01-6.17.10-bin, 590.44.01-6.17.10-firmware, 590.44.01-6.17.10-lib32 -> 590.44.01-6.17.11, 590.44.01-6.17.11-bin, 590.44.01-6.17.11-firmware, 590.44.01-6.17.11-lib32
-[U*]  #094  ocean-sound-theme                   6.5.3 -> 6.5.4
-[U*]  #095  okular                              25.08.3 -> 25.12.0
-[U*]  #096  ollama                              0.13.1 -> 0.13.2
-[U*]  #097  partitionmanager                    25.08.3 -> 25.12.0
-[U.]  #098  pimcommon                           25.08.3 -> 25.12.0
-[U*]  #099  plasma-activities                   6.5.3 -> 6.5.4
-[U.]  #100  plasma-activities-stats             6.5.3 -> 6.5.4
-[U*]  #101  plasma-browser-integration          6.5.3 -> 6.5.4
-[U*]  #102  plasma-desktop                      6.5.3 -> 6.5.4
-[U*]  #103  plasma-integration                  6.5.3, 6.5.3-qt5 -> 6.5.4, 6.5.4-qt5
-[U.]  #104  plasma-nano                         6.5.3 -> 6.5.4
-[U*]  #105  plasma-nm                           6.5.3 -> 6.5.4
-[U*]  #106  plasma-pa                           6.5.3 -> 6.5.4
-[U*]  #107  plasma-systemmonitor                6.5.3 -> 6.5.4
-[U*]  #108  plasma-workspace                    6.5.3 x2, 6.5.3-xdgdata -> 6.5.4 x2, 6.5.4-xdgdata
-[U*]  #109  plasma-workspace-wallpapers         6.5.3 -> 6.5.4
-[U.]  #110  plasma5support                      6.5.3 -> 6.5.4
-[U*]  #111  polkit-kde-agent                    1-6.5.3 -> 1-6.5.4
-[U*]  #112  powerdevil                          6.5.3 -> 6.5.4
-[U*]  #113  print-manager                       6.5.3 -> 6.5.4
-[U.]  #114  python3.13-yt-dlp-ejs               0.3.1 -> 0.3.2
-[U*]  #115  qqc2-breeze-style                   6.5.3 -> 6.5.4
-[U.]  #116  rust-analyzer                       2025-10-28 -> 2025-12-08
-[U.]  #117  rust-analyzer-unwrapped             2025-10-28 -> 2025-12-08
-[U*]  #118  spectacle                           6.5.3 -> 6.5.4
-[U*]  #119  sqlitestudio                        3.4.17 -> 3.4.18
-[U.]  #120  sqlitestudio-plugins                3.4.17 -> 3.4.18
-[U*]  #121  strace                              6.17, 6.17-man -> 6.18, 6.18-man
-[U*]  #122  systemsettings                      6.5.3 -> 6.5.4
-[U*]  #123  turbostat                           6.17.10 -> 6.17.11
-[C.]  #124  udev-rules                          <none> x2 -> <none>
-[U.]  #125  vscode-extension-github-codespaces  1.18.3 -> 1.18.4
-[U*]  #126  xdg-desktop-portal-kde              6.5.3 -> 6.5.4
-[U*]  #127  yt-dlp                              2025.11.12 -> 2025.12.08
+[U*]  #001  Exiled-Exchange                     2-0.12.8, 2-0.12.8-bwrap, 2-0.12.8-extracted, 2-0.12.8-fhsenv-profile, 2-0.12.8-fhsenv-rootfs, 2-0.12.8-init -> 2-0.13.3, 2-0.13.3-bwrap, 2-0.13.3-extracted, 2-0.13.3-fhsenv-profile, 2-0.13.3-fhsenv-rootfs, 2-0.13.3-init
+[U.]  #002  SDL_compat                          1.2.70 x2 -> 1.2.72 x2
+[U*]  #003  akonadi                             25.08.3 -> 25.12.0
+[U.]  #004  akonadi-calendar                    25.08.3 -> 25.12.0
+[U.]  #005  akonadi-contacts                    25.08.3 -> 25.12.0
+[U.]  #006  akonadi-mime                        25.08.3 -> 25.12.0
+[U.]  #007  akonadi-search                      25.08.3 -> 25.12.0
+[U*]  #008  ark                                 25.08.3 -> 25.12.0
+[U*]  #009  aurorae                             6.5.3 -> 6.5.4
+[U*]  #010  baloo-widgets                       25.08.3 -> 25.12.0
+[U*]  #011  bluedevil                           6.5.3 -> 6.5.4
+[U*]  #012  breeze                              6.5.3, 6.5.3-qt5 -> 6.5.4, 6.5.4-qt5
+[U*]  #013  breeze-gtk                          6.5.3 -> 6.5.4
+[U*]  #014  cpupower                            6.17.10 -> 6.17.11
+[U.]  #015  cubeb                               0-unstable-2025-09-17-lib -> 0-unstable-2025-12-04-lib
+[U*]  #016  discover                            6.5.3 -> 6.5.4
+[U*]  #017  docker                              28.5.1 -> 29.1.2
+[U*]  #018  docker-compose                      2.39.4 -> 5.0.0
+[U.]  #019  docker-containerd                   28.5.1 -> 29.1.2
+[U.]  #020  docker-runc                         28.5.1 -> 29.1.2
+[U.]  #021  docker-tini                         28.5.1 -> 29.1.2
+[U*]  #022  dolphin                             25.08.3 -> 25.12.0
+[U*]  #023  dolphin-plugins                     25.08.3 -> 25.12.0
+[U*]  #024  drkonqi                             6.5.3 -> 6.5.4
+[U*]  #025  elisa                               25.08.3 -> 25.12.0
+[U*]  #026  ffmpegthumbs                        25.08.3 -> 25.12.0
+[U*]  #027  firefox                             145.0.2 x2 -> 146.0 x2
+[U.]  #028  firefox-unwrapped                   145.0.2 -> 146.0
+[U*]  #029  flatpak-kcm                         6.5.3 -> 6.5.4
+[U.]  #030  grantleetheme                       25.08.3 -> 25.12.0
+[U*]  #031  gwenview                            25.08.3 -> 25.12.0
+[U.]  #032  initrd-linux-xanmod                 6.17.10 -> 6.17.11
+[U.]  #033  kaccounts-integration               25.08.3 -> 25.12.0
+[U*]  #034  kactivitymanagerd                   6.5.3 -> 6.5.4
+[U*]  #035  kate                                25.08.3 -> 25.12.0
+[U.]  #036  kcalutils                           25.08.3 -> 25.12.0
+[U*]  #037  kde-cli-tools                       6.5.3 -> 6.5.4
+[U*]  #038  kde-gtk-config                      6.5.3 -> 6.5.4
+[U*]  #039  kde-inotify-survey                  25.08.3 -> 25.12.0
+[U*]  #040  kdeconnect-kde                      25.08.3 -> 25.12.0
+[U.]  #041  kdecoration                         6.5.3 -> 6.5.4
+[U.]  #042  kdegraphics-mobipocket              25.08.3 -> 25.12.0
+[U*]  #043  kdegraphics-thumbnailers            25.08.3 -> 25.12.0
+[U*]  #044  kdepim-runtime                      25.08.3 -> 25.12.0
+[U*]  #045  kdeplasma-addons                    6.5.3 -> 6.5.4
+[U*]  #046  kglobalacceld                       6.5.3 -> 6.5.4
+[U*]  #047  khelpcenter                         25.08.3 -> 25.12.0
+[U.]  #048  kidentitymanagement                 25.08.3 -> 25.12.0
+[U.]  #049  kimap                               25.08.3 -> 25.12.0
+[U*]  #050  kinfocenter                         6.5.3 -> 6.5.4
+[U*]  #051  kio-admin                           25.08.3 -> 25.12.0
+[U*]  #052  kio-extras                          25.08.3 -> 25.12.0
+[U.]  #053  kldap                               25.08.3 -> 25.12.0
+[U.]  #054  kmailtransport                      25.08.3 -> 25.12.0
+[U.]  #055  kmbox                               25.08.3 -> 25.12.0
+[U*]  #056  kmenuedit                           6.5.3 -> 6.5.4
+[U.]  #057  kmime                               25.08.3 -> 25.12.0
+[U*]  #058  knighttime                          6.5.3 -> 6.5.4
+[U*]  #059  konsole                             25.08.3 -> 25.12.0
+[U.]  #060  kpimtextedit                        25.08.3 -> 25.12.0
+[U.]  #061  kpipewire                           6.5.3 -> 6.5.4
+[U*]  #062  kpmcore                             25.08.3 -> 25.12.0
+[U*]  #063  krdp                                6.5.3 -> 6.5.4
+[U*]  #064  kscreen                             6.5.3 -> 6.5.4
+[U*]  #065  kscreenlocker                       6.5.3 -> 6.5.4
+[U.]  #066  ksmtp                               25.08.3 -> 25.12.0
+[U*]  #067  ksystemstats                        6.5.3 -> 6.5.4
+[U*]  #068  kunifiedpush                        25.08.3 -> 25.12.0
+[U*]  #069  kwallet-pam                         6.5.3 -> 6.5.4
+[U*]  #070  kwalletmanager                      25.08.3 -> 25.12.0
+[C.]  #071  kwayland                            5.116.0, 6.5.3 -> 5.116.0, 6.5.4
+[U*]  #072  kwayland-integration                6.5.3 -> 6.5.4
+[U*]  #073  kwin                                6.5.3 -> 6.5.4
+[U*]  #074  kwin-x11                            6.5.3 -> 6.5.4
+[U*]  #075  kwrited                             6.5.3 -> 6.5.4
+[U.]  #076  layer-shell-qt                      6.5.3 -> 6.5.4
+[U.]  #077  libgravatar                         25.08.3 -> 25.12.0
+[U.]  #078  libkdcraw                           25.08.3 -> 25.12.0
+[U.]  #079  libkdepim                           25.08.3 -> 25.12.0
+[U.]  #080  libkexiv2                           25.08.3 -> 25.12.0
+[U.]  #081  libkgapi                            25.08.3 -> 25.12.0
+[U.]  #082  libkleo                             25.08.3 -> 25.12.0
+[U*]  #083  libkscreen                          6.5.3 -> 6.5.4
+[U*]  #084  libksysguard                        6.5.3 -> 6.5.4
+[U*]  #085  libplasma                           6.5.3 -> 6.5.4
+[U.]  #086  linux-xanmod                        6.17.10, 6.17.10-modules x2, 6.17.10-modules-shrunk -> 6.17.11, 6.17.11-modules x2, 6.17.11-modules-shrunk
+[U.]  #087  messagelib                          25.08.3 -> 25.12.0
+[U*]  #088  milou                               6.5.3 -> 6.5.4
+[U.]  #089  moby                                28.5.1 -> 29.1.2
+[U.]  #090  nixos-system-nixos                  26.05.20251208.addf7cf -> 26.05.20251211.2fbfb1d
+[C.]  #091  nss                                 3.112.2 x2, 3.112.2-dev, 3.112.2-man, 3.119 -> 3.112.2 x2, 3.112.2-dev, 3.112.2-man, 3.119.1
+[U.]  #092  nuspell                             5.1.6-lib -> 5.1.7-lib
+[U.]  #093  nvidia-open                         6.17.10-590.44.01 -> 6.17.11-590.44.01
+[U*]  #094  nvidia-x11                          590.44.01-6.17.10, 590.44.01-6.17.10-bin, 590.44.01-6.17.10-firmware, 590.44.01-6.17.10-lib32 -> 590.44.01-6.17.11, 590.44.01-6.17.11-bin, 590.44.01-6.17.11-firmware, 590.44.01-6.17.11-lib32
+[U*]  #095  ocean-sound-theme                   6.5.3 -> 6.5.4
+[U*]  #096  okular                              25.08.3 -> 25.12.0
+[U*]  #097  ollama                              0.13.1 -> 0.13.2
+[U*]  #098  partitionmanager                    25.08.3 -> 25.12.0
+[U.]  #099  pimcommon                           25.08.3 -> 25.12.0
+[U*]  #100  plasma-activities                   6.5.3 -> 6.5.4
+[U.]  #101  plasma-activities-stats             6.5.3 -> 6.5.4
+[U*]  #102  plasma-browser-integration          6.5.3 -> 6.5.4
+[U*]  #103  plasma-desktop                      6.5.3 -> 6.5.4
+[U*]  #104  plasma-integration                  6.5.3, 6.5.3-qt5 -> 6.5.4, 6.5.4-qt5
+[U.]  #105  plasma-nano                         6.5.3 -> 6.5.4
+[U*]  #106  plasma-nm                           6.5.3 -> 6.5.4
+[U*]  #107  plasma-pa                           6.5.3 -> 6.5.4
+[U*]  #108  plasma-systemmonitor                6.5.3 -> 6.5.4
+[U*]  #109  plasma-workspace                    6.5.3 x2, 6.5.3-xdgdata -> 6.5.4 x2, 6.5.4-xdgdata
+[U*]  #110  plasma-workspace-wallpapers         6.5.3 -> 6.5.4
+[U.]  #111  plasma5support                      6.5.3 -> 6.5.4
+[U*]  #112  polkit-kde-agent                    1-6.5.3 -> 1-6.5.4
+[U*]  #113  powerdevil                          6.5.3 -> 6.5.4
+[U*]  #114  print-manager                       6.5.3 -> 6.5.4
+[U.]  #115  python3.13-yt-dlp-ejs               0.3.1 -> 0.3.2
+[U*]  #116  qqc2-breeze-style                   6.5.3 -> 6.5.4
+[U.]  #117  rust-analyzer                       2025-10-28 -> 2025-12-08
+[U.]  #118  rust-analyzer-unwrapped             2025-10-28 -> 2025-12-08
+[U*]  #119  spectacle                           6.5.3 -> 6.5.4
+[U*]  #120  sqlitestudio                        3.4.17 -> 3.4.18
+[U.]  #121  sqlitestudio-plugins                3.4.17 -> 3.4.18
+[U*]  #122  strace                              6.17, 6.17-man -> 6.18, 6.18-man
+[U*]  #123  systemsettings                      6.5.3 -> 6.5.4
+[U*]  #124  turbostat                           6.17.10 -> 6.17.11
+[C.]  #125  udev-rules                          <none> x2 -> <none>
+[U.]  #126  vscode-extension-github-codespaces  1.18.3 -> 1.18.4
+[U*]  #127  xdg-desktop-portal-kde              6.5.3 -> 6.5.4
+[U*]  #128  yt-dlp                              2025.11.12 -> 2025.12.08
 Removed packages:
 [R.]  #1  initrd-fsinfo  <none>
 [R.]  #2  keymap         <none>
 [R.]  #3  link-units     <none>
 [R.]  #4  stage          1-init.sh
-Closure size: 3042 -> 3037 (315 paths added, 320 paths removed, delta -5, disk usage -40.6MiB).
+Closure size: 3042 -> 3037 (321 paths added, 326 paths removed, delta -5, disk usage -40.4MiB).
