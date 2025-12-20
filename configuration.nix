@@ -71,6 +71,8 @@ in
         "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
 
         # Enable Resizable BAR support
+        # Check reBar (look for BAR 1 > 1GB):
+        # BUS=$(lspci | grep -E 'VGA|3D' | head -n1 | awk '{print $1}') && sudo lspci -vv -s "$BUS" | sed -n '/Resizable BAR/,+35p'
         "NVreg_EnableResizableBar=1"
 
         # disable screen dimming
@@ -96,9 +98,9 @@ in
       "rd.systemd.show_status=auto"
       "zswap.enabled=1" # enables zswap https://wiki.nixos.org/wiki/Swap
 
-      # Enable reBar/SAM
-      "pci=realloc"
-      "big_root_window"
+      # Enable reBar/SAM (shouldnt be necessary)
+      # "pci=realloc"
+      # "big_root_window"
     ];
 
     kernelModules = [
