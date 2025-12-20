@@ -5,7 +5,7 @@
 }:
 
 let
-  version = "0.13.3";
+  version = "0.13.7";
   pname = "Exiled-Exchange-2";
 
   src = fetchurl {
