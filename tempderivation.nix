@@ -5,7 +5,7 @@
 }:
 
 let
-  version = "0.13.7";
+  version = "0.13.8";
   pname = "Exiled-Exchange-2";
 
   src = fetchurl {
@@ -35,7 +35,7 @@ appimageTools.wrapType2 rec {
       "[Desktop Entry]" \
       "Type=Application" \
       "Name=Exiled Exchange 2" \
-      "Exec=${pname}" \
+      "Exec=${pname} --ozone-platform=x11" \
       "Icon=exiled-exchange-2" \
       "Categories=Game;" \
       > "$out/share/applications/${pname}.desktop"
