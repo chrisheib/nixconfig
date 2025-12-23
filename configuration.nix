@@ -114,6 +114,12 @@ in
       "ntsync"
     ];
 
+    # Nvidia problems in 6.18.2 https://github.com/NixOS/nixpkgs/issues/473350
+    blacklistedKernelModules = [
+      "nouveau"
+      "nova_core"
+    ];
+
     kernel.sysctl = {
       "vm.dirty_bytes" = 67108864; # File transfer buffer -> Lower to imrpove write-to-usb feedback. 64 * 1024 * 1024 = 67108864
       "vm.swappiness" = 10; # default is 60, lower to reduce swap usage https://wiki.nixos.org/wiki/Swap#Adjusting_swap_usage_behaviour
