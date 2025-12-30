@@ -104,7 +104,7 @@ in
     ];
 
     kernelModules = [
-      "amdgpu"
+      # "amdgpu"
       "nvidia"
       "nvidia_modeset"
       "nvidia_uvm"
@@ -401,32 +401,11 @@ in
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.beta;
-    #  {
-    #   version = "570.133.07"; # use new 570 drivers
-    #   sha256_64bit = "sha256-LUPmTFgb5e9VTemIixqpADfvbUX1QoTT2dztwI3E3CY="; # "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # .run.drv
-    #   openSha256 = "sha256-9l8N83Spj0MccA8+8R1uqiXBS0Ag4JrLPjrU3TaXHnM=";
-    #   settingsSha256 = "sha256-XMk+FvTlGpMquM8aE8kgYK2PIEszUZD2+Zmj2OpYrzU="; # src.drv
-    #   usePersistenced = false;
-    # };
-
     modesetting.enable = lib.mkDefault true;
-    # Power management is nearly always required to get nvidia GPUs to
-    # behave on suspend, due to firmware bugs.
-    powerManagement.enable = true;
+    powerManagement.enable = false; # try false due to blackscreen on boot
     # powerManagement.finegrained = true; # requires offload to be enabled
-    open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
-    # prime = {
-    # offload.enable = true;
-    # offload.enableOffloadCmd = true;
 
-    # intelBusId = "PCI:0:2:0";
-    # nvidiaBusId = "PCI:1:0:0";
-    # };
-    # prime = {
-    #   offload.enable = true;
-    #   nvidiaBusId = "PCI:1:0:0"; # Adjust based on your hardware
-    #   amdgpuBusId = "PCI:0:2:0"; # Adjust based on your hardware
-    # };
+    open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
   };
 
   hardware.bluetooth = {
