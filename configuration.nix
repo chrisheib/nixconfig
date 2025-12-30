@@ -118,6 +118,7 @@ in
     blacklistedKernelModules = [
       "nouveau"
       "nova_core"
+      "amdgpu"
     ];
 
     kernel.sysctl = {
