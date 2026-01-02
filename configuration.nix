@@ -100,7 +100,7 @@ in
       # "pci=realloc"
       # "big_root_window"s
 
-      "drm.edid_firmware=DP-2:/etc/nixos/msi-oled-edid.bin"
+      "drm.edid_firmware=DP-3:/etc/nixos/msi-oled-edid.bin"
     ];
 
     kernelModules = [
