@@ -79,7 +79,7 @@ in
         "NVreg_EnableBacklightHandler=0"
         # "drm.edid_firmware=DP-3:edid/no-dpms.bin"
         # "drm.edid_firmware=DP-4:edid/no-dpms.bin"
-        "drm.edid_firmware=DP-2:edid/1024x768.bin"
+        "drm.edid_firmware=DP-3:edid/1024x768.bin"
       ];
     plymouth = {
       enable = true;
