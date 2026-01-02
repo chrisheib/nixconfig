@@ -831,12 +831,12 @@ in
     };
   };
 
-  services.ollama = {
-    enable = true;
-    # acceleration = "cuda";
-    package = pkgs.ollama-cuda;
-    loadModels = [ "qwen3-embedding:0.6b" ];
-  };
+  # services.ollama = {
+  #   enable = true;
+  #   # acceleration = "cuda";
+  #   package = pkgs.ollama-cuda;
+  #   loadModels = [ "qwen3-embedding:0.6b" ];
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
