@@ -396,6 +396,8 @@ in
     DXVK_HDR = "1";
     ENABLE_HDR_WSI = "1";
     # DISPLAY = "";
+
+    KWIN_DRM_NO_AMS = "1"; # possible fix for display delay on startup
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
