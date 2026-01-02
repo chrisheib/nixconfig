@@ -79,6 +79,7 @@ in
         "NVreg_EnableBacklightHandler=0"
         # "drm.edid_firmware=DP-3:edid/no-dpms.bin"
         # "drm.edid_firmware=DP-4:edid/no-dpms.bin"
+        "drm.edid_firmware=DP-2:edid/1024x768.bin"
       ];
     plymouth = {
       enable = true;
@@ -399,6 +400,7 @@ in
 
     # KWIN_DRM_NO_AMS = "1"; # possible fix for display delay on startup
     KWIN_DRM_FORCE_FORMATS = "0x1"; # possible fix for display delay on startup
+
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
