@@ -1,4 +1,224 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3044 -> 3044 (4 paths added, 4 paths removed, delta +0, disk usage +144B).
+Version changes:
+[U*]  #01  at-spi2-core               2.58.1 x2, 2.58.1-dev -> 2.58.2 x2, 2.58.2-dev
+[U.]  #02  brotli                     1.1.0, 1.1.0-dev, 1.1.0-lib x2 -> 1.2.0, 1.2.0-dev, 1.2.0-lib x2
+[C.]  #03  c-ares                     1.34.5 x2, 1.34.5-dev -> 1.34.5
+[U.]  #04  clang                      21.1.2, 21.1.2-lib -> 21.1.7, 21.1.7-lib
+[U.]  #05  clang-tools                21.1.2 -> 21.1.7
+[U.]  #06  clang-wrapper              21.1.2 -> 21.1.7
+[U.]  #07  compiler-rt-libc           21.1.2, 21.1.2-dev -> 21.1.7, 21.1.7-dev
+[U*]  #08  cpupower                   6.17.12 -> 6.18.2
+[U*]  #09  cups                       2.4.14 x2, 2.4.14-dev, 2.4.14-lib x2, 2.4.14-man -> 2.4.16 x2, 2.4.16-dev, 2.4.16-lib x2, 2.4.16-man
+[U.]  #10  dmidecode                  3.6 -> 3.7
+[U.]  #11  ell                        0.80 x2 -> 0.81 x2
+[U.]  #12  fuse-overlayfs             1.15 -> 1.16
+[C.]  #13  gcc                        14.3.0, 14.3.0-lib x3, 14.3.0-libgcc x3, 14.3.0-man -> 14.3.0, 14.3.0-lib, 14.3.0-libgcc, 15.2.0, 15.2.0-lib x3, 15.2.0-libgcc x3, 15.2.0-man
+[C.]  #14  gcc-wrapper                14.3.0, 14.3.0-man -> 14.3.0, 15.2.0, 15.2.0-man
+[U.]  #15  gfortran                   14.3.0-lib, 14.3.0-libgcc -> 15.2.0-lib, 15.2.0-libgcc
+[U*]  #16  git                        2.51.2, 2.51.2-doc -> 2.52.0, 2.52.0-doc
+[U.]  #17  git-minimal                2.51.2 -> 2.52.0
+[U.]  #18  glib                       2.86.1 x2, 2.86.1-bin x2, 2.86.1-dev -> 2.86.3 x2, 2.86.3-bin x2, 2.86.3-dev
+[U.]  #19  gnutls                     3.8.10 x2, 3.8.10-bin, 3.8.10-man -> 3.8.11 x2, 3.8.11-bin, 3.8.11-man
+[U.]  #20  gpgme                      1.24.3 x3 -> 2.0.1
+[U.]  #21  harfbuzz                   12.1.0 x2, 12.1.0-dev -> 12.2.0 x2, 12.2.0-dev
+[U.]  #22  harfbuzz-icu               12.1.0 -> 12.2.0
+[U.]  #23  hwdata                     0.401 x2 -> 0.402 x2
+[U.]  #24  imagemagick                7.1.2-8, 7.1.2-8-dev, 7.1.2-8-doc -> 7.1.2-11, 7.1.2-11-dev, 7.1.2-11-doc
+[U.]  #25  initrd-linux-xanmod        6.17.12 -> 6.18.2
+[U*]  #26  iproute2                   6.17.0 -> 6.18.0
+[C.]  #27  isl                        0.20 -> 0.20 x2
+[U.]  #28  libadwaita                 1.8.1 x2 -> 1.8.2 x2
+[U.]  #29  libarchive                 3.8.2, 3.8.2-lib x2 -> 3.8.4, 3.8.4-lib x2
+[U.]  #30  libbluray                  1.3.4 x2 -> 1.4.0 x2
+[U.]  #31  libcamera                  0.5.2 x2 -> 0.6.0 x2
+[U.]  #32  libdrm                     2.4.128 x2, 2.4.128-bin x2, 2.4.128-dev x2 -> 2.4.129 x2, 2.4.129-bin x2, 2.4.129-dev x2
+[U.]  #33  libdvdread                 6.1.3 x2 -> 7.0.1 x2
+[U.]  #34  libimagequant              4.4.0 -> 4.4.1
+[U.]  #35  libjpeg-turbo              3.1.2 x2, 3.1.2-bin, 3.1.2-dev, 3.1.2-man -> 3.1.3 x2, 3.1.3-bin, 3.1.3-dev, 3.1.3-man
+[U.]  #36  libnftnl                   1.3.0 x2 -> 1.3.1 x2
+[C.]  #37  libpng                     1.2.59, 1.2.59-man, 1.6.50 -> 1.2.59, 1.2.59-man, 1.6.52
+[U.]  #38  libpng-apng                1.6.50 x2, 1.6.50-dev, 1.6.50-man -> 1.6.52 x2, 1.6.52-dev, 1.6.52-man
+[U.]  #39  libxslt                    1.1.43 x2, 1.1.43-bin, 1.1.43-dev -> 1.1.45 x2, 1.1.45-bin, 1.1.45-dev
+[U.]  #40  linux-xanmod               6.17.12, 6.17.12-modules x2, 6.17.12-modules-shrunk -> 6.18.2, 6.18.2-modules x2, 6.18.2-modules-shrunk
+[U.]  #41  llvm                       21.1.2, 21.1.2-lib x2 -> 21.1.7, 21.1.7-lib x2
+[U*]  #42  lvm2                       2.03.35, 2.03.35-bin, 2.03.35-lib x2, 2.03.35-man -> 2.03.37, 2.03.37-bin, 2.03.37-lib x2, 2.03.37-man
+[U.]  #43  nasm                       2.16.03 -> 3.01
+[U.]  #44  neon                       0.35.0 x2 -> 0.36.0 x2
+[U.]  #45  nftables                   1.1.5 x2 -> 1.1.6 x2
+[U.]  #46  nghttp3                    1.12.0 x2, 1.12.0-dev -> 1.13.1 x2, 1.13.1-dev
+[C.]  #47  ngtcp2                     1.17.0 x2, 1.17.0-dev, 1.18.0 -> 1.18.0 x3, 1.18.0-dev
+[U.]  #48  nixos-system-nixos         26.05.20251228.c0b0e0f -> 26.05.20251230.cad22e7
+[U.]  #49  nodejs                     22.21.1 -> 24.12.0
+[U.]  #50  nss-cacert                 3.115, 3.115-p11kit -> 3.117, 3.117-p11kit
+[U.]  #51  nvidia-open                6.17.12-590.48.01 -> 6.18.2-590.48.01
+[U*]  #52  nvidia-x11                 590.48.01-6.17.12, 590.48.01-6.17.12-bin, 590.48.01-6.17.12-firmware, 590.48.01-6.17.12-lib32 -> 590.48.01-6.18.2, 590.48.01-6.18.2-bin, 590.48.01-6.18.2-firmware, 590.48.01-6.18.2-lib32
+[U*]  #53  perl                       5.40.0 x2, 5.40.0-env x4, 5.40.0-man -> 5.42.0 x2, 5.42.0-env x4, 5.42.0-man
+[U.]  #54  psqlodbc                   17.00.0006 -> 17.00.0007
+[U.]  #55  publicsuffix-list          0-unstable-2025-10-08 x2 -> 0-unstable-2025-11-14 x2
+[U.]  #56  python3                    3.13.9 x2, 3.13.9-env x7 -> 3.13.11 x2, 3.13.11-env x7
+[U.]  #57  python3.13-anyio           4.11.0 -> 4.12.0
+[U.]  #58  python3.13-attrs           25.3.0 -> 25.4.0
+[U.]  #59  python3.13-backports-zstd  1.0.0 -> 1.1.0
+[U.]  #60  python3.13-beautifulsoup4  4.13.4 -> 4.14.3
+[U.]  #61  python3.13-cattrs          25.1.1 -> 25.3.0
+[U.]  #62  python3.13-cryptography    46.0.2 -> 46.0.3
+[U.]  #63  python3.13-debugpy         1.8.17 -> 1.8.19
+[U.]  #64  python3.13-markdown        3.9.0 x2 -> 3.10.0 x2
+[U.]  #65  python3.13-parso           0.8.4 -> 0.8.5
+[U.]  #66  python3.13-propcache       0.3.2 -> 0.4.1
+[U.]  #67  python3.13-protobuf        6.33.1 -> 6.33.2
+[U.]  #68  python3.13-psutil          7.1.2 -> 7.1.3
+[U.]  #69  python3.13-sentry-sdk      2.43.0 -> 2.44.0
+[U.]  #70  python3.13-toolz           1.0.0 -> 1.1.0
+[U.]  #71  python3.13-trio            0.31.0 -> 0.32.0
+[U.]  #72  python3.13-urllib3         2.5.0 -> 2.6.0
+[C*]  #73  qtwayland                  5.15.18, 5.15.18-bin, 6.10.1, 6.10.1-only-plugins-qml -> 5.15.18, 5.15.18-bin, 6.10.1
+[U.]  #74  sdl2-compat                2.32.58 x2 -> 2.32.60 x2
+[U.]  #75  sdl3                       3.2.26-lib x3 -> 3.2.28-lib x3
+[U.]  #76  shine                      3.1.1 -> 3.1.1-unstable-2023-01-01
+[U.]  #77  spdlog                     1.15.3 x2 -> 1.16.0 x2
+[U.]  #78  sqlite                     3.50.4 x2, 3.50.4-bin, 3.50.4-dev, 3.50.4-man -> 3.51.1 x2, 3.51.1-bin, 3.51.1-dev, 3.51.1-man
+[U.]  #79  sqlite-connector-odbc      0.9993 -> 0.99991
+[U*]  #80  turbostat                  6.17.12 -> 6.18.2
+[U.]  #81  unbound                    1.24.1-lib x2 -> 1.24.2-lib x2
+[U.]  #82  vulkan-headers             1.4.328.0 -> 1.4.335.0
+[U.]  #83  vulkan-loader              1.4.328.0 x2, 1.4.328.0-dev -> 1.4.335.0 x2, 1.4.335.0-dev
+[U.]  #84  vulkan-tools               1.4.328.0 -> 1.4.335
+[U*]  #85  wayland-protocols          1.45 x2 -> 1.46 x2
+[U.]  #86  xdpyinfo                   1.3.4 -> 1.4.0
+[U.]  #87  xgcc                       14.3.0-libgcc x2 -> 15.2.0-libgcc x2
+[U.]  #88  xkbcomp                    1.4.7 -> 1.5.0
+Added packages:
+[A.]  #01  extra-utils                                                                                <none>
+[A.]  #02  font-util                                                                                  1.4.1
+[A.]  #03  gpgmepp                                                                                    2.0.0
+[A.]  #04  libxpresent                                                                                1.0.2
+[A.]  #05  perl5.42.0-Authen-SASL                                                                     2.1900
+[A.]  #06  perl5.42.0-CGI                                                                             4.59
+[A.]  #07  perl5.42.0-CGI-Fast                                                                        2.16
+[A.]  #08  perl5.42.0-Capture-Tiny                                                                    0.48
+[A.]  #09  perl5.42.0-Clone                                                                           0.46 x2
+[A.]  #10  perl5.42.0-Config-IniFiles                                                                 3.000003
+[A.]  #11  perl5.42.0-Crypt-URandom                                                                   0.54
+[A.]  #12  perl5.42.0-DBD-MariaDB                                                                     1.23
+[A.]  #13  perl5.42.0-DBI                                                                             1.644
+[A.]  #14  perl5.42.0-Devel-CheckLib                                                                  1.16
+[A.]  #15  perl5.42.0-Digest-HMAC                                                                     1.05
+[A.]  #16  perl5.42.0-Encode-Locale                                                                   1.05 x2
+[A.]  #17  perl5.42.0-FCGI                                                                            0.82
+[A.]  #18  perl5.42.0-FCGI-ProcManager                                                                0.28
+[A.]  #19  perl5.42.0-File-BaseDir                                                                    0.09 x2
+[A.]  #20  perl5.42.0-File-DesktopEntry                                                               0.22 x2
+[A.]  #21  perl5.42.0-File-Listing                                                                    6.16 x2
+[A.]  #22  perl5.42.0-File-MimeInfo                                                                   0.33 x2
+[A.]  #23  perl5.42.0-File-Slurp                                                                      9999.32
+[A.]  #24  perl5.42.0-HTML-Parser                                                                     3.81 x2
+[A.]  #25  perl5.42.0-HTML-TagCloud                                                                   0.38
+[A.]  #26  perl5.42.0-HTML-Tagset                                                                     3.20 x2
+[A.]  #27  perl5.42.0-HTTP-CookieJar                                                                  0.014 x2
+[A.]  #28  perl5.42.0-HTTP-Cookies                                                                    6.10 x2
+[A.]  #29  perl5.42.0-HTTP-Daemon                                                                     6.16 x2
+[A.]  #30  perl5.42.0-HTTP-Date                                                                       6.06 x2
+[A.]  #31  perl5.42.0-HTTP-Message                                                                    6.45 x2
+[A.]  #32  perl5.42.0-HTTP-Negotiate                                                                  6.01 x2
+[A.]  #33  perl5.42.0-IO-HTML                                                                         1.004 x2
+[A.]  #34  perl5.42.0-IO-Socket-SSL                                                                   2.083
+[A.]  #35  perl5.42.0-IO-Stringy                                                                      2.113
+[A.]  #36  perl5.42.0-IPC-System-Simple                                                               1.30 x2
+[A.]  #37  perl5.42.0-JSON                                                                            4.10
+[A.]  #38  perl5.42.0-LWP-MediaTypes                                                                  6.04 x2
+[A.]  #39  perl5.42.0-Mock-Config                                                                     0.03
+[A.]  #40  perl5.42.0-Module-Manifest                                                                 1.09
+[A.]  #41  perl5.42.0-Mozilla-CA                                                                      20230821
+[A.]  #42  perl5.42.0-Net-DBus                                                                        1.2.0 x2
+[A.]  #43  perl5.42.0-Net-HTTP                                                                        6.23 x2
+[A.]  #44  perl5.42.0-Net-SMTP-SSL                                                                    1.04
+[A.]  #45  perl5.42.0-Net-SSLeay                                                                      1.92
+[A.]  #46  perl5.42.0-Params-Util                                                                     1.102
+[A.]  #47  perl5.42.0-TermReadKey                                                                     2.38
+[A.]  #48  perl5.42.0-Test-Deep                                                                       1.204
+[A.]  #49  perl5.42.0-Test-DistManifest                                                               1.014
+[A.]  #50  perl5.42.0-Test-Fatal                                                                      0.017 x2
+[A.]  #51  perl5.42.0-Test-Needs                                                                      0.002010 x2
+[A.]  #52  perl5.42.0-Test-Pod                                                                        1.52
+[A.]  #53  perl5.42.0-Test-RequiresInternet                                                           0.05 x2
+[A.]  #54  perl5.42.0-TimeDate                                                                        2.33 x2
+[A.]  #55  perl5.42.0-Try-Tiny                                                                        0.31 x2
+[A.]  #56  perl5.42.0-URI                                                                             5.21 x2
+[A.]  #57  perl5.42.0-WWW-RobotRules                                                                  6.02 x2
+[A.]  #58  perl5.42.0-X11-Protocol                                                                    0.56 x2
+[A.]  #59  perl5.42.0-XML-Parser                                                                      2.46 x2
+[A.]  #60  perl5.42.0-XML-Twig                                                                        3.52 x2
+[A.]  #61  perl5.42.0-libnet                                                                          3.15
+[A.]  #62  perl5.42.0-libwww-perl                                                                     6.72 x2
+[A.]  #63  qgpgme                                                                                     2.0.0
+[A.]  #64  security-wrapper-d3136xdb4by2dfri6hg06bcqncr08zkv-nix-ccache.pl-x86_64-unknown-linux-musl  <none>
+Removed packages:
+[R.]  #01  keymap                                 <none>
+[R-]  #02  ollama                                 0.13.5
+[R.]  #03  parallel                               20251222
+[R.]  #04  perl5.40.0-Authen-SASL                 2.1900
+[R.]  #05  perl5.40.0-CGI                         4.59
+[R.]  #06  perl5.40.0-CGI-Fast                    2.16
+[R.]  #07  perl5.40.0-Capture-Tiny                0.48
+[R.]  #08  perl5.40.0-Clone                       0.46 x2
+[R.]  #09  perl5.40.0-Config-IniFiles             3.000003
+[R.]  #10  perl5.40.0-Crypt-URandom               0.54
+[R.]  #11  perl5.40.0-DBD-MariaDB                 1.23
+[R.]  #12  perl5.40.0-DBI                         1.644
+[R.]  #13  perl5.40.0-Devel-CheckLib              1.16
+[R.]  #14  perl5.40.0-Digest-HMAC                 1.05
+[R.]  #15  perl5.40.0-Encode-Locale               1.05 x2
+[R.]  #16  perl5.40.0-FCGI                        0.82
+[R.]  #17  perl5.40.0-FCGI-ProcManager            0.28
+[R.]  #18  perl5.40.0-File-BaseDir                0.09 x2
+[R.]  #19  perl5.40.0-File-DesktopEntry           0.22 x2
+[R.]  #20  perl5.40.0-File-Listing                6.16 x2
+[R.]  #21  perl5.40.0-File-MimeInfo               0.33 x2
+[R.]  #22  perl5.40.0-File-Slurp                  9999.32
+[R.]  #23  perl5.40.0-HTML-Parser                 3.81 x2
+[R.]  #24  perl5.40.0-HTML-TagCloud               0.38
+[R.]  #25  perl5.40.0-HTML-Tagset                 3.20 x2
+[R.]  #26  perl5.40.0-HTTP-CookieJar              0.014 x2
+[R.]  #27  perl5.40.0-HTTP-Cookies                6.10 x2
+[R.]  #28  perl5.40.0-HTTP-Daemon                 6.16 x2
+[R.]  #29  perl5.40.0-HTTP-Date                   6.06 x2
+[R.]  #30  perl5.40.0-HTTP-Message                6.45 x2
+[R.]  #31  perl5.40.0-HTTP-Negotiate              6.01 x2
+[R.]  #32  perl5.40.0-IO-HTML                     1.004 x2
+[R.]  #33  perl5.40.0-IO-Socket-SSL               2.083
+[R.]  #34  perl5.40.0-IO-Stringy                  2.113
+[R.]  #35  perl5.40.0-IPC-System-Simple           1.30 x2
+[R.]  #36  perl5.40.0-JSON                        4.10
+[R.]  #37  perl5.40.0-LWP-MediaTypes              6.04 x2
+[R.]  #38  perl5.40.0-Mock-Config                 0.03
+[R.]  #39  perl5.40.0-Module-Manifest             1.09
+[R.]  #40  perl5.40.0-Mozilla-CA                  20230821
+[R.]  #41  perl5.40.0-Net-DBus                    1.2.0 x2
+[R.]  #42  perl5.40.0-Net-HTTP                    6.23 x2
+[R.]  #43  perl5.40.0-Net-SMTP-SSL                1.04
+[R.]  #44  perl5.40.0-Net-SSLeay                  1.92
+[R.]  #45  perl5.40.0-Params-Util                 1.102
+[R.]  #46  perl5.40.0-TermReadKey                 2.38
+[R.]  #47  perl5.40.0-Test-Deep                   1.204
+[R.]  #48  perl5.40.0-Test-DistManifest           1.014
+[R.]  #49  perl5.40.0-Test-Fatal                  0.017 x2
+[R.]  #50  perl5.40.0-Test-Needs                  0.002010 x2
+[R.]  #51  perl5.40.0-Test-Pod                    1.52
+[R.]  #52  perl5.40.0-Test-RequiresInternet       0.05 x2
+[R.]  #53  perl5.40.0-TimeDate                    2.33 x2
+[R.]  #54  perl5.40.0-Try-Tiny                    0.31 x2
+[R.]  #55  perl5.40.0-URI                         5.21 x2
+[R.]  #56  perl5.40.0-WWW-RobotRules              6.02 x2
+[R.]  #57  perl5.40.0-X11-Protocol                0.56 x2
+[R.]  #58  perl5.40.0-XML-Parser                  2.46 x2
+[R.]  #59  perl5.40.0-XML-Twig                    3.52 x2
+[R.]  #60  perl5.40.0-libnet                      3.15
+[R.]  #61  perl5.40.0-libwww-perl                 6.72 x2
+[R.]  #62  python3.13-zstandard                   0.23.0
+[R.]  #63  security-wrapper                       81g63krf409hz4zdn50qgid8bghsxq0i-nix-ccache.pl-x86_64-unknown-linux-musl
+[R.]  #64  unit-ollama-model-loader.service       <none>
+[R.]  #65  unit-ollama.service                    <none>
+[R.]  #66  unit-script-ollama-model-loader-start  <none>
+Closure size: 3044 -> 3042 (3014 paths added, 3016 paths removed, delta -2, disk usage -884.7MiB).
