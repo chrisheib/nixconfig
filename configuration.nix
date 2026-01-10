@@ -85,6 +85,14 @@ in
     # decrease display time of systemd-boot menu
     loader.timeout = 1;
 
+    hardware.firmware = [
+      pkgs.linux_firmware
+      (pkgs.runCommand "edid-firmware" { } ''
+        mkdir -p $out/lib/firmware/edid
+        cp ${./msi-oled-edid.bin} $out/lib/firmware/edid/msi-oled.bin
+      '')
+    ];
+
     # Enable "Silent boot"
     consoleLogLevel = 3;
     initrd.verbose = false;
@@ -100,8 +108,12 @@ in
       # "pci=realloc"
       # "big_root_window"s
 
-      "drm.edid_firmware=DP-3:edid/1920x1080.bin"
-      # "drm.edid_firmware=DP-3:/etc/nixos/msi-oled-edid.bin"
+      # "drm.edid_firmware=DP-3:1024x768.bin"
+      # "drm.edid_firmware=DP-3:edid/1024x768.bin"
+      # "drm.edid_firmware=DP-3:edid/1920x1080.bin"
+      "drm.edid_firmware=DP-3:edid/msi-oled.bin"
+
+      "clearcpuid=rdseed" # https://discussion.fedoraproject.org/t/rdseed32-is-broken-disabling-the-corresponding-cpuid-bit-rdseed-failure-on-amd-processors/173204/8
     ];
 
     kernelModules = [
