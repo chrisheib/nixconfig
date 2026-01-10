@@ -100,10 +100,10 @@ in
       # "pci=realloc"
       # "big_root_window"s
 
-      # "drm.edid_firmware=DP-3:1024x768.bin"
+      "drm.edid_firmware=DP-3:1024x768.bin"
       # "drm.edid_firmware=DP-3:edid/1024x768.bin"
       # "drm.edid_firmware=DP-3:edid/1920x1080.bin"
-      "drm.edid_firmware=DP-3:edid/msi-oled.bin"
+      # "drm.edid_firmware=DP-3:edid/msi-oled.bin"
 
       "clearcpuid=rdseed" # https://discussion.fedoraproject.org/t/rdseed32-is-broken-disabling-the-corresponding-cpuid-bit-rdseed-failure-on-amd-processors/173204/8
     ];
