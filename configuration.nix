@@ -85,14 +85,6 @@ in
     # decrease display time of systemd-boot menu
     loader.timeout = 1;
 
-    hardware.firmware = [
-      pkgs.linux-firmware
-      (pkgs.runCommand "edid-firmware" { } ''
-        mkdir -p $out/lib/firmware/edid
-        cp ${./msi-oled-edid.bin} $out/lib/firmware/edid/msi-oled.bin
-      '')
-    ];
-
     # Enable "Silent boot"
     consoleLogLevel = 3;
     initrd.verbose = false;
@@ -140,6 +132,14 @@ in
       "kernel.numa_balancing" = 0; # Make sure NUMA auto balancing is off (good for games on single-socket)
     };
   };
+
+  hardware.firmware = [
+    pkgs.linux-firmware
+    (pkgs.runCommand "edid-firmware" { } ''
+      mkdir -p $out/lib/firmware/edid
+      cp ${./msi-oled-edid.bin} $out/lib/firmware/edid/msi-oled.bin
+    '')
+  ];
 
   # enable transparent hugepages
   systemd.tmpfiles.rules = [
