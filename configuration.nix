@@ -556,7 +556,7 @@ in
 
     nil # nix lsp
     alejandra # nix formatter
-    nixfmt-rfc-style
+    nixfmt
     ruff
 
     obsidian

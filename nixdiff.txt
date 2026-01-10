@@ -1,4 +1,106 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3042 -> 3042 (1 paths added, 1 paths removed, delta +0, disk usage -16B).
+Version changes:
+[U*]  #01  akonadi                              25.12.0 -> 25.12.1
+[U.]  #02  akonadi-calendar                     25.12.0 -> 25.12.1
+[U.]  #03  akonadi-contacts                     25.12.0 -> 25.12.1
+[U.]  #04  akonadi-mime                         25.12.0 -> 25.12.1
+[U.]  #05  akonadi-search                       25.12.0 -> 25.12.1
+[U*]  #06  ark                                  25.12.0 -> 25.12.1
+[U*]  #07  baloo-widgets                        25.12.0 -> 25.12.1
+[U*]  #08  bind                                 9.20.16-host, 9.20.16-lib, 9.20.16-man -> 9.20.17-host, 9.20.17-lib, 9.20.17-man
+[U*]  #09  bottom                               0.11.4 -> 0.12.3
+[U.]  #10  busybox                              1.36.1 -> 1.37.0
+[U*]  #11  chromium                             143.0.7499.169, 143.0.7499.169-sandbox -> 143.0.7499.192, 143.0.7499.192-sandbox
+[U.]  #12  chromium-unwrapped                   143.0.7499.169, 143.0.7499.169-sandbox, 143.0.7499.169-wv -> 143.0.7499.192, 143.0.7499.192-sandbox, 143.0.7499.192-wv
+[C*]  #13  direnv                               2.37.1 x2 -> 2.37.1
+[U*]  #14  docker-compose                       5.0.0 -> 5.0.1
+[U*]  #15  dolphin                              25.12.0 -> 25.12.1
+[U*]  #16  dolphin-emu                          2509 -> 2512
+[U*]  #17  dolphin-plugins                      25.12.0 -> 25.12.1
+[U*]  #18  dysk                                 3.5.0 -> 3.6.0b
+[U*]  #19  elisa                                25.12.0 -> 25.12.1
+[U*]  #20  ffmpegthumbs                         25.12.0 -> 25.12.1
+[U*]  #21  goverlay                             1.6.7, 1.6.7-man -> 1.6.8, 1.6.8-man
+[U.]  #22  gpsd                                 3.27.2 -> 3.27.3
+[U.]  #23  grantleetheme                        25.12.0 -> 25.12.1
+[U.]  #24  gspell                               1.14.0 -> 1.14.2
+[U*]  #25  gwenview                             25.12.0 -> 25.12.1
+[U*]  #26  heynote                              2.6.2, 2.6.2-bwrap, 2.6.2-extracted, 2.6.2-fhsenv-profile, 2.6.2-fhsenv-rootfs, 2.6.2-init -> 2.7.0, 2.7.0-bwrap, 2.7.0-extracted, 2.7.0-fhsenv-profile, 2.7.0-fhsenv-rootfs, 2.7.0-init
+[U.]  #27  kaccounts-integration                25.12.0 -> 25.12.1
+[U*]  #28  kate                                 25.12.0 -> 25.12.1
+[U.]  #29  kcalutils                            25.12.0 -> 25.12.1
+[U*]  #30  kde-inotify-survey                   25.12.0 -> 25.12.1
+[U*]  #31  kdeconnect-kde                       25.12.0 -> 25.12.1
+[U.]  #32  kdegraphics-mobipocket               25.12.0 -> 25.12.1
+[U*]  #33  kdegraphics-thumbnailers             25.12.0 -> 25.12.1
+[U*]  #34  kdepim-runtime                       25.12.0 -> 25.12.1
+[U*]  #35  khelpcenter                          25.12.0 -> 25.12.1
+[U.]  #36  kidentitymanagement                  25.12.0 -> 25.12.1
+[U.]  #37  kimap                                25.12.0 -> 25.12.1
+[U*]  #38  kio-admin                            25.12.0 -> 25.12.1
+[U*]  #39  kio-extras                           25.12.0 -> 25.12.1
+[U.]  #40  kirigami-addons                      1.10.0 -> 1.11.0
+[U.]  #41  kldap                                25.12.0 -> 25.12.1
+[U.]  #42  kmailtransport                       25.12.0 -> 25.12.1
+[U.]  #43  kmbox                                25.12.0 -> 25.12.1
+[U.]  #44  kmime                                25.12.0 -> 25.12.1
+[U*]  #45  konsole                              25.12.0 -> 25.12.1
+[U.]  #46  kpimtextedit                         25.12.0 -> 25.12.1
+[U*]  #47  kpmcore                              25.12.0 -> 25.12.1
+[U.]  #48  ksmtp                                25.12.0 -> 25.12.1
+[U.]  #49  ktextaddons                          1.8.0 -> 1.9.0
+[U*]  #50  kunifiedpush                         25.12.0 -> 25.12.1
+[U*]  #51  kwalletmanager                       25.12.0 -> 25.12.1
+[C.]  #52  libbluray                            1.4.0 x2 -> 1.4.0 x3
+[U.]  #53  libgphoto2                           2.5.32 x2 -> 2.5.33 x2
+[U.]  #54  libgravatar                          25.12.0 -> 25.12.1
+[U.]  #55  libkdcraw                            25.12.0 -> 25.12.1
+[U.]  #56  libkdepim                            25.12.0 -> 25.12.1
+[U.]  #57  libkexiv2                            25.12.0 -> 25.12.1
+[U.]  #58  libkgapi                             25.12.0 -> 25.12.1
+[U.]  #59  libkleo                              25.12.0 -> 25.12.1
+[U.]  #60  libtraceevent                        1.8.6 -> 1.8.7
+[U.]  #61  libtracefs                           1.8.2 -> 1.8.3
+[U.]  #62  libwacom                             2.16.1 -> 2.17.0
+[U.]  #63  mcpp                                 2.7.2.2 -> 2.7.2.3
+[U*]  #64  mesa                                 25.3.2 x2 -> 25.3.3 x2
+[U.]  #65  messagelib                           25.12.0 -> 25.12.1
+[C.]  #66  ngtcp2                               1.18.0 x3, 1.18.0-dev -> 1.18.0 x2, 1.18.0-dev, 1.19.0
+[C*]  #67  nix                                  2.28.5, 2.28.5-man, 2.30.4, 2.31.2+1 x2, 2.31.2+1-doc, 2.31.2+1-man -> 2.28.5, 2.28.5-man, 2.30.4+1, 2.31.2+2 x2, 2.31.2+2-doc, 2.31.2+2-man
+[C.]  #68  nix-cmd                              2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[C.]  #69  nix-expr                             2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[C.]  #70  nix-fetchers                         2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[C.]  #71  nix-flake                            2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[C.]  #72  nix-main                             2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[U.]  #73  nix-manual                           2.31.2+1, 2.31.2+1-man -> 2.31.2+2, 2.31.2+2-man
+[C.]  #74  nix-store                            2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[C.]  #75  nix-util                             2.30.4, 2.31.2+1 -> 2.30.4+1, 2.31.2+2
+[U.]  #76  nixos-system-nixos                   26.05.20251230.cad22e7 -> 26.05.20260108.3497aa5
+[U.]  #77  noto-fonts                           2025.12.01 -> 2026.01.01
+[U*]  #78  okular                               25.12.0 -> 25.12.1
+[U*]  #79  partitionmanager                     25.12.0 -> 25.12.1
+[U.]  #80  pimcommon                            25.12.0 -> 25.12.1
+[U*]  #81  prismlauncher                        9.4 -> 10.0.1
+[U.]  #82  prismlauncher-unwrapped              9.4 -> 10.0.1
+[U*]  #83  protonup-rs                          0.9.2 -> 0.9.3
+[U*]  #84  rtkit                                0.13 -> 0.14
+[U*]  #85  ruff                                 0.14.9 -> 0.14.10
+[U.]  #86  rust-analyzer                        2025-12-22 -> 2025-12-29
+[U.]  #87  rust-analyzer-unwrapped              2025-12-22 -> 2025-12-29
+[U*]  #88  sqlitestudio                         3.4.19 -> 3.4.20
+[U.]  #89  sqlitestudio-plugins                 3.4.19 -> 3.4.20
+[U*]  #90  starship                             1.24.1 -> 1.24.2
+[U*]  #91  vesktop                              1.6.1 -> 1.6.3
+[U.]  #92  vscode-extension-jnoortheen-nix-ide  0.5.0 -> 0.5.5
+[U*]  #93  wezterm                              0-unstable-2025-10-14 -> 0-unstable-2025-10-23
+Added packages:
+[A.]  #1  edid-firmware-zstd          <none>
+[A.]  #2  glslang                     16.1.0
+[A.]  #3  libaacs                     0.11.1
+[A.]  #4  switch-inhibitors           <none>
+[A.]  #5  unit-xfs_scrub_all.service  <none>
+Removed packages:
+[R.]  #1  extra-utils  <none>
+[R.]  #2  quazip       1.5
+Closure size: 3042 -> 3045 (318 paths added, 315 paths removed, delta +3, disk usage -16.2MiB).
