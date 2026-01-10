@@ -141,6 +141,8 @@ in
     '')
   ];
 
+  hardware.enableAllFirmware = true;
+
   # enable transparent hugepages
   systemd.tmpfiles.rules = [
     # Mode
