@@ -415,6 +415,8 @@ in
     # KWIN_DRM_NO_AMS = "1"; # possible fix for display delay on startup
     KWIN_DRM_FORCE_FORMATS = "0x1"; # possible fix for display delay on startup
 
+    __GL_SHADER_DISK_CACHE = "1"; # enable shader cache
+    __GL_SHADER_DISK_CACHE_SIZE = "53687091200"; # 50 GB
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
