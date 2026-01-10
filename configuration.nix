@@ -86,7 +86,7 @@ in
     loader.timeout = 1;
 
     hardware.firmware = [
-      pkgs.linux_firmware
+      pkgs.linux-firmware
       (pkgs.runCommand "edid-firmware" { } ''
         mkdir -p $out/lib/firmware/edid
         cp ${./msi-oled-edid.bin} $out/lib/firmware/edid/msi-oled.bin
