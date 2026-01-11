@@ -1,4 +1,5 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3051 -> 3051 (5 paths added, 5 paths removed, delta +0, disk usage +80B).
+Version changes:
+[U*]  #1  kurve  2.2.0 -> 3.4.0
+Closure size: 3051 -> 3051 (16 paths added, 16 paths removed, delta +0, disk usage +68.6KiB).
