@@ -665,7 +665,7 @@ in
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
-    (callPackage /etc/nixos/derivation/exiled-exchange-2.nix { })
+    (callPackage /etc/nixos/derivations/exiled-exchange-2.nix { })
     (callPackage /etc/nixos/derivations/kurve.nix { })
     (callPackage /home/stschiff/projects/krosshair/derivation.nix { })
     # plasmusic-toolbar
