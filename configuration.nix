@@ -413,7 +413,7 @@ in
     # DISPLAY = "";
 
     # KWIN_DRM_NO_AMS = "1"; # possible fix for display delay on startup
-    KWIN_DRM_FORCE_FORMATS = "0x1"; # possible fix for display delay on startup
+    # KWIN_DRM_FORCE_FORMATS = "0x1"; # possible fix for display delay on startup
 
     __GL_SHADER_DISK_CACHE = "1"; # enable shader cache
     __GL_SHADER_DISK_CACHE_SIZE = "53687091200"; # 50 GB
@@ -665,8 +665,8 @@ in
     # (python3.withPackages (ps: [ps.websockets]))
     # cava # audio visualizer
     # qt6.qtwebsockets
-    (callPackage /home/stschiff/projects/nixpkgs/pkgs/by-name/ku/kurve/package.nix { })
-    (callPackage /etc/nixos/tempderivation.nix { })
+    (callPackage /etc/nixos/derivation/exiled-exchange-2.nix { })
+    (callPackage /etc/nixos/derivations/kurve.nix { })
     (callPackage /home/stschiff/projects/krosshair/derivation.nix { })
     # plasmusic-toolbar
     # kurve
