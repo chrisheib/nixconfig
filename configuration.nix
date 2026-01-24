@@ -106,6 +106,7 @@ in
       # "drm.edid_firmware=DP-3:edid/msi-oled.bin"
 
       "clearcpuid=rdseed" # https://discussion.fedoraproject.org/t/rdseed32-is-broken-disabling-the-corresponding-cpuid-bit-rdseed-failure-on-amd-processors/173204/8
+      "amdgpu.modeset=0" # disable amdgpu kernel driver to avoid conflicts with nvidia
     ];
 
     kernelModules = [
@@ -207,6 +208,9 @@ in
   programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
+  # Enable automatic login for the user.
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "stschiff";
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -434,10 +438,6 @@ in
     enable = true;
     # settings.General.Experimental = true;
   };
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "stschiff";
 
   # build packages with cuda support
   # nixpkgs.config.cudaSupport = true;
