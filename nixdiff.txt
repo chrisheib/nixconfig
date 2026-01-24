@@ -1,4 +1,17 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3046 -> 3046 (1 paths added, 1 paths removed, delta +0, disk usage +40B).
+Selection state changes:
+[C-]  #1  nixos-icons  0-unstable-2025-06-28
+Removed packages:
+[R.]  #01  desktops                           <none>
+[R.]  #02  etc-X11-xorg.conf.d                00-keyboard.conf
+[R.]  #03  sddm-autologin.pam                 <none>
+[R.]  #04  sddm-greeter.pam                   <none>
+[R.]  #05  sddm-unwrapped                     0.21.0, 0.21.0-man
+[R-]  #06  sddm-wrapped                       <none>
+[R-]  #07  sddm-wrapped-man                   <none>
+[R.]  #08  sddm.conf                          <none>
+[R.]  #09  sddm.pam                           <none>
+[R.]  #10  unit-display-manager.service       <none>
+[R.]  #11  unit-script-display-manager-start  <none>
+Closure size: 3046 -> 3034 (21 paths added, 33 paths removed, delta -12, disk usage -5.8MiB).
