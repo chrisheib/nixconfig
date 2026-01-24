@@ -1,4 +1,4 @@
-# Currently using: AMD 9950X3D + MSI 3080 TI + 64 GB DDR 5 + NVMe SSDs
+# Currently using: AMD 9950X3D + MSI X670E Gaming Plus WIFI + MSI 3080 TI + 64 GB DDR 5 + NVMe SSDs
 {
   config,
   pkgs,
@@ -100,7 +100,7 @@ in
       # "pci=realloc"
       # "big_root_window"s
 
-      "drm.edid_firmware=DP-3:1024x768.bin"
+      # "drm.edid_firmware=DP-3:1024x768.bin"
       # "drm.edid_firmware=DP-3:edid/1024x768.bin"
       # "drm.edid_firmware=DP-3:edid/1920x1080.bin"
       # "drm.edid_firmware=DP-3:edid/msi-oled.bin"
@@ -788,7 +788,7 @@ in
     wantedBy = [ "multi-user.target" ];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" ''chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj''}";
+      ExecStart = "${pkgs.writeShellScript "make_cpu_energy_readable" "chmod a+r /sys/class/powercap/intel-rapl:0/energy_uj"}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };
@@ -803,7 +803,7 @@ in
     serviceConfig = {
       Type = "oneshot";
       user = "root";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" ''nvidia-smi -pl 250''}";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" "nvidia-smi -pl 250"}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };
@@ -821,7 +821,7 @@ in
       Type = "oneshot";
       user = "root";
       Environment = "LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.beta}/lib";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" ''/etc/nixos/py_nvid_oc 125 800''}";
+      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" "/etc/nixos/py_nvid_oc 125 800"}";
       # It’s often a good idea to mark the service active after the command finishes.
       RemainAfterExit = true;
     };
