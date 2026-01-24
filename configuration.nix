@@ -211,7 +211,7 @@ in
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "stschiff";
-  services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.enable = true; # maybe not needed due to autologin
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
