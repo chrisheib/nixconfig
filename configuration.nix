@@ -203,15 +203,15 @@ in
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  # services.xserver.enable = true;
-  # services.displayManager.defaultSession = "plasmax11";
+  services.xserver.enable = true;
+  services.displayManager.defaultSession = "plasmax11";
   programs.xwayland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   # Enable automatic login for the user.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "stschiff";
-  # services.displayManager.sddm.enable = true; # maybe not needed due to autologin
+  services.displayManager.sddm.enable = true; # maybe not needed due to autologin -> definitely needed
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
