@@ -109,7 +109,7 @@ in
     ];
 
     kernelModules = [
-      # "amdgpu"
+      "amdgpu"
       "nvidia"
       "nvidia_modeset"
       "nvidia_uvm"
@@ -121,9 +121,9 @@ in
 
     # Nvidia problems in 6.18.2 https://github.com/NixOS/nixpkgs/issues/473350
     blacklistedKernelModules = [
-      "nouveau"
-      "nova_core"
-      "amdgpu"
+      # "nouveau"
+      # "nova_core"
+      # "amdgpu"
     ];
 
     kernel.sysctl = {
@@ -481,6 +481,7 @@ in
           tauri-apps.tauri-vscode
           thenuprojectcontributors.vscode-nushell-lang
           usernamehw.errorlens
+          geequlim.godot-tools
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
