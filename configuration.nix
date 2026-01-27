@@ -599,7 +599,8 @@ in
       exec ${pkgs.systemd}/bin/systemd-run --user --scope -p CPUWeight=2000 -p IOWeight=2000 ${pkgs.steam}/bin/steam "$@"
     '')
     protontricks
-    steamtinkerlaunch
+    protonplus
+    steamtinkerlaunch # This is the important one! add as `steamtinkertlaunch %command%` in steam launch options
     (lutris.override {
       extraPkgs = pkgs: [
         umu-launcher
