@@ -345,6 +345,7 @@ in
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     google-fonts
+    freetype
   ];
   fonts.fontDir.enable = true; # https://wiki.nixos.org/wiki/Fonts#Flatpak_applications_can't_find_system_fonts
 
@@ -612,6 +613,7 @@ in
     protonup-rs
     r2modman # valheim mods
     rusty-path-of-building
+    freetype
 
     # brlaser # printer
 
