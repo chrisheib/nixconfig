@@ -495,7 +495,7 @@ in
             name = "vscode-starcraft";
             publisher = "stephanzlatarev";
             version = "1.0.0";
-            sha256 = "";
+            sha256 = "sha256-4ocC/QXmDaDyoBRNDZdxUYtPlv7EeoimtzyqRqBBdE0=";
           }
         ];
     })
