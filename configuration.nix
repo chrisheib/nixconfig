@@ -483,6 +483,7 @@ in
           thenuprojectcontributors.vscode-nushell-lang
           usernamehw.errorlens
           geequlim.godot-tools
+          stephanzlatarev.vscode-starcraft
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
