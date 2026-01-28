@@ -483,7 +483,6 @@ in
           thenuprojectcontributors.vscode-nushell-lang
           usernamehw.errorlens
           geequlim.godot-tools
-          stephanzlatarev.vscode-starcraft
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {
@@ -491,6 +490,12 @@ in
             publisher = "bbenoist";
             version = "1.0.0";
             sha256 = "sha256-tphnVlD5LA6Au+WDrLZkAxnMJeTCd3UTyTN1Jelditk=";
+          }
+          {
+            name = "vscode-starcraft";
+            publisher = "stephanzlatarev";
+            version = "1.0.0";
+            sha256 = "sha256-1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef";
           }
         ];
     })
