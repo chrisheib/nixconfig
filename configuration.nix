@@ -107,6 +107,11 @@ in
 
       "clearcpuid=rdseed" # https://discussion.fedoraproject.org/t/rdseed32-is-broken-disabling-the-corresponding-cpuid-bit-rdseed-failure-on-amd-processors/173204/8
       "amdgpu.modeset=0" # disable amdgpu kernel driver to avoid conflicts with nvidia
+
+      # IOMMU for GPU passthrough
+      "amd_iommu=on"
+      "iommu=pt"
+      "vfio-pci.ids=1002:13c0,1002:1640"
     ];
 
     kernelModules = [
@@ -118,6 +123,14 @@ in
       "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
       "i2c-dev" # for ddc/ci support, see ddcutil
       "ntsync"
+      "kvm-amd"
+    ];
+
+    # Setup for GPU passthrough
+    initrd.kernelModules = [
+      "vfio"
+      "vfio_pci"
+      "vfio_iommu_type1"
     ];
 
     # Nvidia problems in 6.18.2 https://github.com/NixOS/nixpkgs/issues/473350
@@ -714,6 +727,8 @@ in
     kdePackages.kde-cli-tools
 
     teams-for-linux
+
+    moonlight-qt
   ];
 
   # Enable GNOME settings manager
