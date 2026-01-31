@@ -165,6 +165,12 @@ in
 
   virtualisation.docker.enable = true;
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  # optional but useful
+  virtualisation.spiceUSBRedirection.enable = true;
+
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
 
@@ -250,6 +256,8 @@ in
       "libvirtd"
       "docker"
       "gamemode"
+      "libvirtd"
+      "kvm"
     ];
     shell = pkgs.zsh;
   };
