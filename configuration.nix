@@ -271,6 +271,7 @@ in
       "gamemode"
       "libvirtd"
       "kvm"
+      "dialout" # for serial devices, e.g. esp32
     ];
     shell = pkgs.zsh;
   };
