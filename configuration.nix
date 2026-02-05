@@ -730,6 +730,8 @@ in
     teams-for-linux
 
     moonlight-qt
+
+    esphome
   ];
 
   # Enable GNOME settings manager
