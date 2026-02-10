@@ -723,7 +723,7 @@ in
 
     # Temporarily remove protonvpn-gui to avoid a failing build in proton-core tests.
     # Reintroduce after upstream fixes or a proper patch is applied.
-    # protonvpn-gui
+    protonvpn-gui
 
     kdePackages.kde-cli-tools
 
@@ -918,6 +918,10 @@ in
     # Risk of Rain 2013
     11100
   ];
+
+  # Required for ProtonVPN
+  networking.firewall.checkReversePath = false;
+
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
