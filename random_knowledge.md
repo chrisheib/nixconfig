@@ -5,3 +5,12 @@ nmcli connection import type wireguard file Downloads/protonvpn.conf
 ## Starting virtuald network
 
 sudo virsh net-start default
+
+## Helldivers 2:
+
+/home/stschiff/.local/share/Steam/steamapps/common/Helldivers 2/bin/GameGuard löschen
+(läuft mit protonge-10-21)
+
+## Nixpkgs PR Tracker
+
+https://nixpkgs-tracker.ocfox.me/?pr=479797
