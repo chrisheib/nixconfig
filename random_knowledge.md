@@ -14,3 +14,8 @@ sudo virsh net-start default
 ## Nixpkgs PR Tracker
 
 https://nixpkgs-tracker.ocfox.me/?pr=479797
+
+## Filter ANSI Terminal Control Characters
+
+nix-shell -p ansifilter
+command | ansifilter > log.txt
