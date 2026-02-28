@@ -636,7 +636,7 @@
         umu-launcher
       ];
     })
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
     protonup-rs
