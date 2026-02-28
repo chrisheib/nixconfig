@@ -27,7 +27,7 @@
       # (import /etc/nixos/overlays/plain-pkgs.nix)
       (import ./overlays/ccache.nix config)
       (import ./overlays/steam-desktop.nix)
-      (import ./overlays/coreutils/cureutils-sighup.nix)
+      # (import ./overlays/coreutils/cureutils-sighup.nix)
       # (import ./overlays/plasma-workspace.nix)
     ];
   };
