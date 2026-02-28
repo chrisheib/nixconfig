@@ -27,6 +27,7 @@
       # (import /etc/nixos/overlays/plain-pkgs.nix)
       (import ./overlays/ccache.nix config)
       (import ./overlays/steam-desktop.nix)
+      (import ./overlays/coreutils/cureutils-sighup.nix)
       # (import ./overlays/plasma-workspace.nix)
     ];
   };
@@ -811,12 +812,15 @@
   services.onedrive.enable = true; # https://wiki.nixos.org/wiki/OneDrive
 
   # https://wiki.nixos.org/wiki/Sunshine
-  services.sunshine = {
-    enable = true;
-    autoStart = false;
-    capSysAdmin = true; # only needed for Wayland -- omit this when using with Xorg
-    openFirewall = true;
-  };
+  # sunshine> CMake Warning at cmake/macros/common.cmake:27 (_find_package):
+  # sunshine>   Could not find a configuration file for package "Boost" that exactly
+  # sunshine>   matches requested version "1.87.0".
+  # services.sunshine = {
+  #   enable = true;
+  #   autoStart = false;
+  #   capSysAdmin = true; # only needed for Wayland -- omit this when using with Xorg
+  #   openFirewall = true;
+  # };
 
   services.udev.packages = with pkgs; [
     # pkgs.platformio-core # embedded dev
