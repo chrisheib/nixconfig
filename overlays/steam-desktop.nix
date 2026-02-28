@@ -3,9 +3,11 @@ self: super: {
     nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ super.gnused ];
     postInstall = ''
       ${old.postInstall or ""}
-      # Rewrite Exec line in desktop file so it uses the wrapper from PATH
       if [ -f "$out/share/applications/steam.desktop" ]; then
-        ${super.gnused}/bin/sed -i 's|^Exec=.*|Exec=steam %U|' "$out/share/applications/steam.desktop" || true
+        substituteInPlace "$out/share/applications/steam.desktop" \
+          --replace-fail \
+          "$(grep '^Exec=' "$out/share/applications/steam.desktop")" \
+          "Exec=steam %U" || true
       fi
     '';
   });
