@@ -1,6 +1,6 @@
 self: super: {
   steam = super.steam.overrideAttrs (old: {
-    nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ super.gnused ];
+    nativeBuildInputs = (old.nativeBuildInputs or [ ]);
     postInstall = ''
       ${old.postInstall or ""}
       if [ -f "$out/share/applications/steam.desktop" ]; then
