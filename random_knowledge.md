@@ -19,3 +19,7 @@ https://nixpkgs-tracker.ocfox.me/?pr=479797
 
 nix-shell -p ansifilter
 command | ansifilter > log.txt
+
+## ffmpeg m4a/m4b to mp3
+
+ffmpeg -v warning -fflags +discardcorrupt+genpts -err_detect ignore_err -i source.m4b -c:a libmp3lame -q:a 2 target.mp3
