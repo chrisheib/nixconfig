@@ -476,6 +476,8 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
 
+    vscode-fhs
+
     # (my-vscode-no-sandbox.override {
     #   vscodeExtensions =
     #     with vscode-extensions;
@@ -781,11 +783,11 @@
     enable = true;
   };
 
-  programs.vscode = {
-    enable = true;
-    defaultEditor = true;
-    package = pkgs.vscode-fhs;
-  };
+  # programs.vscode = {
+  #   enable = true;
+  #   defaultEditor = true;
+  #   package = pkgs.vscode-fhs;
+  # };
 
   # programs.tuxclocker.enable = true;
   # programs.tuxclocker.enabledNVIDIADevices = [
