@@ -598,7 +598,7 @@
     ruff
 
     obsidian
-    # libreoffice # noto fonts bug https://nixpkgs-tracker.ocfox.me/?pr=494721
+    libreoffice # noto fonts bug https://nixpkgs-tracker.ocfox.me/?pr=494721
     pinta # graphic
 
     # for rustdev: use devenv
