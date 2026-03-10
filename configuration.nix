@@ -659,7 +659,9 @@
     # appimage-run # for cura
     # unstable.cura-appimage
 
-    smartgit
+    # smartgit
+    (callPackage /etc/nixos/derivations/smartgit-22-1.nix { })
+
     github-desktop
 
     webkitgtk_6_0
