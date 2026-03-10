@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   src = fetchurl {
     url = "https://download.smartgit.dev/smartgit/archive/smartgit-linux-22_1_8.tar.gz";
-    hash = "sha256-YqueTbwA9KcXEJG5TeWkPzzNyAnnJQ1+VQYsqZKS2/I=";
+    hash = "sha256-5AMy8QsWBsACKSWOoJRVtKu7vvYS11gEqH/1qTfGUzU=";
   };
 
   nativeBuildInputs = [ wrapGAppsHook3 ];
