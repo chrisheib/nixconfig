@@ -2,7 +2,7 @@
   description = "NixOS configuration (flake) for stschiff";
 
   inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixos-unstable";
+    nixpkgs.url = "https://channels.nixos.org/";
     flake-utils.url = "github:numtide/flake-utils";
     preload-ng.url = "github:miguel-b-p/preload-ng";
   };
