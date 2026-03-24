@@ -615,7 +615,7 @@
     gnome-calculator
     transmission_4-qt
     krusader # file manager (like total commander) and ftp
-    # kde-rounded-corners
+    kde-rounded-corners
 
     # waydroid # also enable virtualisation.waydroid.enable
 
