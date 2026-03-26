@@ -1,270 +1,93 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U.]  #001  abseil-cpp                         20250814.1 x2, 20250814.1-dev -> 20260107.1 x2, 20260107.1-dev
-[U.]  #002  ada                                3.4.2 -> 3.4.3
-[U.]  #003  alsa-lib                           1.2.15.1 x2, 1.2.15.1-dev -> 1.2.15.3 x2, 1.2.15.3-dev
-[U.]  #004  alsa-ucm-conf                      1.2.15.1 x2 -> 1.2.15.3 x2
-[C.]  #005  attica                             5.116.0, 6.23.0 -> 5.116.0, 6.24.0
-[U*]  #006  aurorae                            6.6.2 -> 6.6.3
-[U*]  #007  baloo                              6.23.0 -> 6.24.0
-[U*]  #008  bluedevil                          6.6.2 -> 6.6.3
-[U*]  #009  bluez-qt                           6.23.0 -> 6.24.0
-[U.]  #010  boehm-gc                           8.2.8 x2 -> 8.2.12 x2
-[U*]  #011  breeze                             6.6.2, 6.6.2-qt5 -> 6.6.3, 6.6.3-qt5
-[U*]  #012  breeze-gtk                         6.6.2 -> 6.6.3
-[C*]  #013  breeze-icons                       5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #014  cachix                             1.10.1-bin -> 1.11.0-bin
-[U*]  #015  carapace                           1.6.0 -> 1.6.3
-[U.]  #016  ccache                             4.12.3 -> 4.13.1
-[U*]  #017  chromium                           145.0.7632.159, 145.0.7632.159-sandbox -> 146.0.7680.153, 146.0.7680.153-sandbox
-[U.]  #018  chromium-unwrapped                 145.0.7632.159, 145.0.7632.159-sandbox, 145.0.7632.159-wv -> 146.0.7680.153, 146.0.7680.153-sandbox, 146.0.7680.153-wv
-[U*]  #019  code                               1.109.5, 1.109.5-bwrap, 1.109.5-fhsenv-profile, 1.109.5-fhsenv-rootfs, 1.109.5-init -> 1.111.0, 1.111.0-bwrap, 1.111.0-fhsenv-profile, 1.111.0-fhsenv-rootfs, 1.111.0-init
-[U*]  #020  cpupower                           6.19.6 -> 6.19.8
-[U.]  #021  cubeb                              0-unstable-2026-01-23-lib -> 0-unstable-2026-03-14-lib
-[U.]  #022  ddcutil                            2.2.3 -> 2.2.6
-[U*]  #023  devenv                             2.0.3 -> 2.0.5
-[U*]  #024  discover                           6.6.2 -> 6.6.3
-[U*]  #025  docker                             29.2.1 -> 29.3.0
-[U.]  #026  docker-containerd                  29.2.1 -> 29.3.0
-[U.]  #027  docker-runc                        29.2.1 -> 29.3.0
-[U.]  #028  docker-tini                        29.2.1 -> 29.3.0
-[U*]  #029  dolphin-emu                        2512 -> 2603
-[U.]  #030  dotnet-runtime                     8.0.24 -> 8.0.25
-[U.]  #031  dotnet-runtime-wrapped             8.0.24 -> 8.0.25
-[U*]  #032  drkonqi                            6.6.2 -> 6.6.3
-[U.]  #033  ed                                 1.22.4 -> 1.22.5
-[C.]  #034  electron                           38.8.4, 39.7.0, 40.6.1 -> 39.8.2, 40.8.2, 41.0.2
-[C.]  #035  electron-unwrapped                 38.8.4, 39.7.0, 40.6.1 -> 39.8.2, 40.8.2, 41.0.2
-[U.]  #036  ell                                0.81 x2 -> 0.82 x2
-[U.]  #037  extra-cmake-modules                6.23.0 -> 6.24.0
-[U*]  #038  firefox                            148.0 x2 -> 148.0.2 x2
-[U.]  #039  firefox-unwrapped                  148.0 -> 148.0.2
-[U*]  #040  flatpak-kcm                        6.6.2 -> 6.6.3
-[U.]  #041  fluidsynth                         2.5.2 x2, 2.5.2-man -> 2.5.3 x2, 2.5.3-man
-[C*]  #042  frameworkintegration               5.116.0, 5.116.0-bin, 6.23.0 -> 5.116.0, 5.116.0-bin, 6.24.0
-[U.]  #043  freerdp                            3.23.0 -> 3.24.1
-[C*]  #044  getent-glibc                       2.42-51 x2 -> 2.42-51
-[C*]  #045  glibc                              2.42-51 x2, 2.42-51-bin x2, 2.42-51-dev, 2.42-51-getent x2 -> 2.42-51 x2, 2.42-51-bin x2, 2.42-51-dev, 2.42-51-getent
-[C-]  #046  hicolor-icon-theme                 0.18 -> 0.18, 0.18-dev
-[U.]  #047  hwdata                             0.404 x2 -> 0.405 x2
-[U.]  #048  hwloc                              2.12.2-lib -> 2.13.0-lib
-[U.]  #049  imagemagick                        7.1.2-13, 7.1.2-13-dev, 7.1.2-13-doc -> 7.1.2-17, 7.1.2-17-dev, 7.1.2-17-doc
-[U.]  #050  initrd-linux-xanmod                6.19.6 -> 6.19.8
-[U*]  #051  iproute2                           6.18.0 -> 6.19.0
-[U*]  #052  iptables                           1.8.11 x2, 1.8.11-lib x2, 1.8.11-man -> 1.8.12 x2, 1.8.12-lib x2, 1.8.12-man
-[U.]  #053  ipxe                               1.21.1-unstable-2026-01-30 -> 2.0.0
-[U*]  #054  kactivitymanagerd                  6.6.2 -> 6.6.3
-[C.]  #055  karchive                           5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[C*]  #056  kauth                              5.116.0, 6.23.0 -> 5.116.0, 6.24.0
-[C.]  #057  kbookmarks                         5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #058  kcalendarcore                      6.23.0 -> 6.24.0
-[U*]  #059  kcmutils                           6.23.0 -> 6.24.0
-[C.]  #060  kcodecs                            5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #061  kcolorscheme                       6.23.0, 6.23.0-dev -> 6.24.0, 6.24.0-dev
-[C.]  #062  kcompletion                        5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[C*]  #063  kconfig                            5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[C.]  #064  kconfigwidgets                     5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #065  kcontacts                          6.23.0 -> 6.24.0
-[C*]  #066  kcoreaddons                        5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[C.]  #067  kcrash                             5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #068  kdav                               6.23.0 -> 6.24.0
-[C.]  #069  kdbusaddons                        5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U*]  #070  kde-cli-tools                      6.6.2 -> 6.6.3
-[U*]  #071  kde-gtk-config                     6.6.2 -> 6.6.3
-[U.]  #072  kdeclarative                       6.23.0 -> 6.24.0
-[U.]  #073  kdecoration                        6.6.2 -> 6.6.3
-[C*]  #074  kded                               5.116.0, 6.23.0 -> 5.116.0, 6.24.0
-[U*]  #075  kdeplasma-addons                   6.6.2 -> 6.6.3
-[U.]  #076  kdesu                              6.23.0 -> 6.24.0
-[C.]  #077  kdnssd                             5.116.0, 6.23.0 -> 5.116.0, 6.24.0
-[C.]  #078  kdoctools                          5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U*]  #079  kfilemetadata                      6.23.0 -> 6.24.0
-[C.]  #080  kglobalaccel                       5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U*]  #081  kglobalacceld                      6.6.2 -> 6.6.3
-[C*]  #082  kguiaddons                         5.116.0, 6.23.1, 6.23.1-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #083  kholidays                          6.23.0 -> 6.24.0
-[C.]  #084  ki18n                              5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[C*]  #085  kiconthemes                        5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U.]  #086  kidletime                          6.23.0 -> 6.24.0
-[U*]  #087  kimageformats                      6.23.0 -> 6.24.0
-[U*]  #088  kinfocenter                        6.6.2 -> 6.6.3
-[C*]  #089  kio                                5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #090  kirigami                           6.23.1 -> 6.24.0
-[U.]  #091  kitemmodels                        6.23.0 -> 6.24.0
-[C.]  #092  kitemviews                         5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[C.]  #093  kjobwidgets                        5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U*]  #094  kmenuedit                          6.6.2 -> 6.6.3
-[C.]  #095  knewstuff                          5.116.0, 5.116.0-bin, 6.23.0 -> 5.116.0, 5.116.0-bin, 6.24.0
-[U*]  #096  knighttime                         6.6.2 -> 6.6.3
-[C.]  #097  knotifications                     5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U.]  #098  knotifyconfig                      6.23.0 -> 6.24.0
-[C*]  #099  kpackage                           5.116.0, 5.116.0-bin, 6.23.0 -> 5.116.0, 5.116.0-bin, 6.24.0
-[U.]  #100  kparts                             6.23.0, 6.23.0-dev -> 6.24.0, 6.24.0-dev
-[U.]  #101  kpeople                            6.23.0 -> 6.24.0
-[U.]  #102  kpipewire                          6.6.2 -> 6.6.3
-[U.]  #103  kpty                               6.23.0 -> 6.24.0
-[U.]  #104  kquickcharts                       6.23.0 -> 6.24.0
-[U*]  #105  krdp                               6.6.2 -> 6.6.3
-[U.]  #106  krunner                            6.23.0 -> 6.24.0
-[U*]  #107  kscreen                            6.6.2 -> 6.6.3
-[U*]  #108  kscreenlocker                      6.6.2 -> 6.6.3
-[C*]  #109  kservice                           5.116.0, 5.116.0-bin, 6.23.1, 6.23.1-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U.]  #110  kstatusnotifieritem                6.23.0, 6.23.0-dev -> 6.24.0, 6.24.0-dev
-[U.]  #111  ksvg                               6.23.0 -> 6.24.0
-[U*]  #112  ksystemstats                       6.6.2 -> 6.6.3
-[U.]  #113  ktextaddons                        2.0.0 -> 2.0.1
-[U*]  #114  ktexteditor                        6.23.0 -> 6.24.0
-[U.]  #115  ktexttemplate                      6.23.0 -> 6.24.0
-[C.]  #116  ktextwidgets                       5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U.]  #117  kunitconversion                    6.23.0 -> 6.24.0
-[U.]  #118  kuserfeedback                      6.23.0 -> 6.24.0
-[C*]  #119  kwallet                            5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U*]  #120  kwallet-pam                        6.6.2 -> 6.6.3
-[C.]  #121  kwayland                           5.116.0, 5.116.0-bin, 6.6.2 -> 5.116.0, 5.116.0-bin, 6.6.3
-[U*]  #122  kwayland-integration               6.6.2 -> 6.6.3
-[C.]  #123  kwidgetsaddons                     5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U*]  #124  kwin                               6.6.2 -> 6.6.3
-[U*]  #125  kwin-x11                           6.6.2 -> 6.6.3
-[C.]  #126  kwindowsystem                      5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U*]  #127  kwrited                            6.6.2 -> 6.6.3
-[C.]  #128  kxmlgui                            5.116.0, 6.23.0, 6.23.0-dev -> 5.116.0, 6.24.0, 6.24.0-dev
-[U.]  #129  layer-shell-qt                     6.6.2 -> 6.6.3
-[U*]  #130  less                               691, 691-man -> 692, 692-man
-[C.]  #131  libXNVCtrl                         390.157, 580.126.18 -> 390.157, 580.142
-[U.]  #132  libbluray                          1.4.0 x3 -> 1.4.1 x3
-[U.]  #133  libfyaml                           0.9.4 x2 -> 0.9.5 x2
-[U.]  #134  libgpg-error                       1.55 x2, 1.55-dev -> 1.58 x2, 1.58-dev
-[U.]  #135  libheif                            1.20.2, 1.20.2-bin, 1.20.2-dev, 1.20.2-lib -> 1.21.2, 1.21.2-bin, 1.21.2-dev, 1.21.2-lib
-[U*]  #136  libkscreen                         6.6.2 -> 6.6.3
-[U*]  #137  libksysguard                       6.6.2 -> 6.6.3
-[U*]  #138  libplasma                          6.6.2 -> 6.6.3
-[U.]  #139  libpq                              18.1 -> 18.2
-[U.]  #140  librsvg                            2.61.3 x2, 2.61.3-dev -> 2.61.4 x2, 2.61.4-dev
-[U.]  #141  libselinux                         3.8.1 x2, 3.8.1-bin, 3.8.1-dev, 3.8.1-man -> 3.10 x2, 3.10-bin, 3.10-dev, 3.10-man
-[U.]  #142  libsepol                           3.8.1, 3.8.1-bin, 3.8.1-dev -> 3.10, 3.10-bin, 3.10-dev
-[U.]  #143  libsodium                          1.0.21-unstable-2026-01-22 x2 -> 1.0.21-unstable-2026-02-11 x2
-[U.]  #144  libsoup                            3.6.5 x2 -> 3.6.6 x2
-[U.]  #145  libtraceevent                      1.8.7 -> 1.9
-[U.]  #146  liburing                           2.13 x2 -> 2.14 x2
-[U.]  #147  libuv                              1.51.0 x2, 1.51.0-dev -> 1.52.0 x2, 1.52.0-dev
-[U.]  #148  libvpx                             1.15.2 x2, 1.15.2-bin -> 1.16.0 x2, 1.16.0-bin
-[U.]  #149  libx11                             1.8.12 x2, 1.8.12-dev, 1.8.12-man -> 1.8.13 x2, 1.8.13-dev, 1.8.13-man
-[U.]  #150  libxkbcommon                       1.11.0 x2, 1.11.0-dev -> 1.13.1 x2, 1.13.1-dev
-[U.]  #151  linux-firmware                     20260221-zstd -> 20260309-zstd
-[U.]  #152  linux-xanmod                       6.19.6, 6.19.6-modules x2 -> 6.19.8, 6.19.8-modules x2
-[U.]  #153  llhttp                             9.3.0, 9.3.0-dev -> 9.3.1, 9.3.1-dev
-[U.]  #154  lua5.1-lzip                        0.2.11 -> 0.2.14
-[C*]  #155  lvm2                               2.03.38, 2.03.38-bin, 2.03.38-lib x2, 2.03.38-man -> 2.03.38, 2.03.38-bin, 2.03.38-lib x2, 2.03.38-man, 2.03.38-scripts
-[U*]  #156  mesa                               26.0.1 x2 -> 26.0.3 x2
-[U*]  #157  milou                              6.6.2 -> 6.6.3
-[U.]  #158  minizip                            1.3.1 -> 1.3.2
-[U.]  #159  moby                               29.2.1 -> 29.3.0
-[U.]  #160  modemmanager-qt                    6.23.0 -> 6.24.0
-[U.]  #161  networkmanager-qt                  6.23.0 -> 6.24.0
-[U.]  #162  nfs-utils                          2.8.6, 2.8.6-lib -> 2.8.7, 2.8.7-lib
-[U.]  #163  nixos-system-nixos                 26.05.20260308.9dcb002 -> 26.05.20260321.6c9a78c
-[U.]  #164  nodejs                             24.13.0 -> 24.14.0
-[U.]  #165  nodejs-slim                        24.13.0, 24.13.0-corepack, 24.13.0-npm -> 24.14.0, 24.14.0-corepack, 24.14.0-npm
-[U.]  #166  noto-fonts                         2026.02.01 -> 2026.03.01
-[C.]  #167  nss                                3.112.2 x2, 3.112.2-dev, 3.112.2-man, 3.121 -> 3.112.3 x2, 3.112.3-dev, 3.112.3-man, 3.121
-[U.]  #168  nss-cacert                         3.119.1, 3.119.1-p11kit -> 3.121, 3.121-p11kit
-[U.]  #169  nvidia-open                        6.19.6-595.45.04 -> 6.19.8-595.45.04
-[U*]  #170  nvidia-x11                         595.45.04-6.19.6, 595.45.04-6.19.6-bin, 595.45.04-6.19.6-firmware, 595.45.04-6.19.6-lib32 -> 595.45.04-6.19.8, 595.45.04-6.19.8-bin, 595.45.04-6.19.8-firmware, 595.45.04-6.19.8-lib32
-[U*]  #171  ocean-sound-theme                  6.6.2 -> 6.6.3
-[U.]  #172  openapv                            0.2.1.0 x2 -> 0.2.1.1 x2
-[U.]  #173  openblas                           0.3.30 -> 0.3.31
-[C*]  #174  pciutils                           3.14.0 -> 3.14.0, 3.14.0-man
-[U.]  #175  perl5.42.0-Crypt-URandom           0.54 -> 0.55
-[U*]  #176  pipewire                           1.4.10 x2, 1.4.10-dev, 1.4.10-doc, 1.4.10-man -> 1.6.2 x2, 1.6.2-dev, 1.6.2-doc, 1.6.2-man
-[U*]  #177  plasma-activities                  6.6.2 -> 6.6.3
-[U.]  #178  plasma-activities-stats            6.6.2 -> 6.6.3
-[U*]  #179  plasma-browser-integration         6.6.2 -> 6.6.3
-[U*]  #180  plasma-desktop                     6.6.2 -> 6.6.3
-[U*]  #181  plasma-integration                 6.6.2, 6.6.2-qt5 -> 6.6.3, 6.6.3-qt5
-[U.]  #182  plasma-nano                        6.6.2 -> 6.6.3
-[U*]  #183  plasma-nm                          6.6.2 -> 6.6.3
-[U*]  #184  plasma-pa                          6.6.2 -> 6.6.3
-[U.]  #185  plasma-sdk                         6.6.2 -> 6.6.3
-[U*]  #186  plasma-systemmonitor               6.6.2 -> 6.6.3
-[U*]  #187  plasma-workspace                   6.6.2 -> 6.6.3
-[U*]  #188  plasma-workspace-wallpapers        6.6.2 -> 6.6.3
-[U.]  #189  plasma5support                     6.6.2 -> 6.6.3
-[U*]  #190  polkit-kde-agent                   1-6.6.2 -> 1-6.6.3
-[U*]  #191  powerdevil                         6.6.2 -> 6.6.3
-[U*]  #192  print-manager                      6.6.2 -> 6.6.3
-[U.]  #193  prison                             6.23.0 -> 6.24.0
-[U.]  #194  protobuf                           33.5 -> 34.0
-[U*]  #195  protonplus                         0.5.15 -> 0.5.17
-[U*]  #196  protonvpn-gui                      4.14.1 -> 4.15.0
-[U.]  #197  publicsuffix-list                  0-unstable-2026-01-25 x2 -> 0-unstable-2026-03-02 x2
-[U.]  #198  purpose                            6.23.0 -> 6.24.0
-[U.]  #199  pv                                 1.10.3 -> 1.10.4
-[U.]  #200  python3.13-cryptography            46.0.4 -> 46.0.5
-[U.]  #201  python3.13-evdev                   1.9.2 -> 1.9.3
-[U.]  #202  python3.13-markdown                3.10.1 x2 -> 3.10.2 x2
-[U.]  #203  python3.13-pillow                  12.1.0 -> 12.1.1
-[U.]  #204  python3.13-protobuf                6.33.5 -> 7.34.0
-[U.]  #205  python3.13-proton-vpn-api-core     4.14.3 -> 4.16.0
-[U.]  #206  python3.13-proton-vpn-local-agent  1.6.0 -> 1.6.1
-[U.]  #207  python3.13-pycountry               24.6.1 -> 26.2.16
-[U.]  #208  python3.13-rich                    14.2.0 -> 14.3.3
-[U.]  #209  python3.13-tabulate                0.9.0 -> 0.10.0
-[U.]  #210  python3.13-yt-dlp-ejs              0.5.0 -> 0.8.0
-[U.]  #211  qpdf                               12.2.0-lib -> 12.3.2-lib
-[U*]  #212  qqc2-breeze-style                  6.6.2 -> 6.6.3
-[U*]  #213  qqc2-desktop-style                 6.23.0 -> 6.24.0
-[U*]  #214  rclone                             1.73.1, 1.73.1-man -> 1.73.2, 1.73.2-man
-[U*]  #215  ruff                               0.15.5 -> 0.15.6
-[U*]  #216  rusty-path-of-building             0.2.11 -> 0.2.14
-[U.]  #217  sbc                                2.1 x2 -> 2.2 x2
-[U.]  #218  sdl3                               3.4.0-lib x3 -> 3.4.2-lib x3
-[U*]  #219  shadow                             4.19.3, 4.19.3-man, 4.19.3-su -> 4.19.4, 4.19.4-man, 4.19.4-su
-[U.]  #220  simdjson                           4.2.4 -> 4.3.1
-[U.]  #221  socat                              1.8.1.0 -> 1.8.1.1
-[U.]  #222  sof-firmware                       2025.05.1-zstd -> 2025.12.2-zstd
-[C*]  #223  solid                              5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[C.]  #224  sonnet                             5.116.0, 5.116.0-bin, 6.23.0, 6.23.0-dev -> 5.116.0, 5.116.0-bin, 6.24.0, 6.24.0-dev
-[U*]  #225  spectacle                          6.6.2 -> 6.6.3
-[U.]  #226  streamlink                         8.2.0 -> 8.2.1
-[C.]  #227  syndication                        5.116.0, 6.23.0 -> 5.116.0, 6.24.0
-[C.]  #228  syntax-highlighting                5.116.0, 5.116.0-bin, 6.23.0 -> 5.116.0, 5.116.0-bin, 6.24.0
-[C*]  #229  systemd                            <none>, 259 x2, 259-dev, 259-man -> <none>, 259.3 x2, 259.3-dev, 259.3-man
-[U.]  #230  systemd-minimal                    259 x2 -> 259.3 x2
-[U.]  #231  systemd-minimal-libs               259 x2, 259-dev -> 259.3 x2, 259.3-dev
-[U*]  #232  systemsettings                     6.6.2 -> 6.6.3
-[U*]  #233  teams-for-linux                    2.7.9 -> 2.7.12
-[U.]  #234  threadweaver                       6.23.0 -> 6.24.0
-[U*]  #235  thunderbird                        148.0 -> 148.0.1
-[U.]  #236  thunderbird-unwrapped              148.0 -> 148.0.1
-[U.]  #237  tinyxxd                            1.3.10 -> 1.3.11
-[U*]  #238  turbostat                          6.19.6 -> 6.19.8
-[U.]  #239  tzdata                             2025c x2 -> 2026a x2
-[U*]  #240  uutils-coreutils                   0.6.0 -> 0.7.0
-[U.]  #241  vscode                             1.109.5 -> 1.111.0
-[U.]  #242  wavpack                            5.8.1 x2, 5.8.1-man -> 5.9.0 x2, 5.9.0-man
-[U*]  #243  webkitgtk                          2.50.5+abi=4.1, 2.50.5+abi=6.0 -> 2.50.6+abi=4.1, 2.50.6+abi=6.0
-[C*]  #244  which                              2.23 x2 -> 2.23 x2, 2.23-info, 2.23-man
-[U*]  #245  xdg-desktop-portal-kde             6.6.2 -> 6.6.3
-[C*]  #246  xdg-user-dirs                      0.19 x2 -> 0.19 x2, 0.19-lib x2, 0.19-man
-[U.]  #247  xkeyboard-config                   2.46 x2 -> 2.47 x2
-[U.]  #248  xxd-tinyxxd                        1.3.10 -> 1.3.11
-[U*]  #249  yt-dlp                             2026.03.03 -> 2026.03.17
-[U.]  #250  zlib                               1.3.1 x2, 1.3.1-dev, 1.3.1-static x2 -> 1.3.2 x2, 1.3.2-dev, 1.3.2-static x2
+[U.]  #01  SDL_net                 1.2.8-unstable-2025-04-21 -> 1.2.8-unstable-2026-03-17
+[U.]  #02  brltty                  6.8 -> 6.9
+[U*]  #03  chromium                146.0.7680.153, 146.0.7680.153-sandbox -> 146.0.7680.164, 146.0.7680.164-sandbox
+[U.]  #04  chromium-unwrapped      146.0.7680.153, 146.0.7680.153-sandbox, 146.0.7680.153-wv -> 146.0.7680.164, 146.0.7680.164-sandbox, 146.0.7680.164-wv
+[U*]  #05  code                    1.111.0, 1.111.0-bwrap, 1.111.0-fhsenv-profile, 1.111.0-fhsenv-rootfs, 1.111.0-init -> 1.112.0, 1.112.0-bwrap, 1.112.0-fhsenv-profile, 1.112.0-fhsenv-rootfs, 1.112.0-init
+[U*]  #06  cpupower                6.19.8 -> 6.19.9
+[U.]  #07  cuda-merged             12.8 -> 12.9
+[U.]  #08  curl-impersonate        1.4.3 -> 1.5.1
+[U*]  #09  devenv                  2.0.5 -> 2.0.6
+[C.]  #10  dotnet-runtime          8.0.25 -> 8.0.25, 10.0.5
+[C.]  #11  dotnet-runtime-wrapped  8.0.25 -> 8.0.25, 10.0.5
+[U*]  #12  esphome                 2026.2.4 -> 2026.3.0
+[U*]  #13  firefox                 148.0.2 x2 -> 149.0 x2
+[U.]  #14  firefox-unwrapped       148.0.2 -> 149.0
+[U.]  #15  initrd-linux-xanmod     6.19.8 -> 6.19.9
+[U.]  #16  linux-xanmod            6.19.8, 6.19.8-modules x2 -> 6.19.9, 6.19.9-modules x2
+[U.]  #17  lua5.1-lzip             0.2.14 -> 0.2.15
+[U.]  #18  nixos-system-nixos      26.05.20260321.6c9a78c -> 26.05.20260324.46db2e0
+[C.]  #19  nss                     3.112.3 x2, 3.112.3-dev, 3.112.3-man, 3.121 -> 3.112.3 x2, 3.112.3-dev, 3.112.3-man, 3.122
+[U.]  #20  nvidia-open             6.19.8-595.45.04 -> 6.19.9-595.45.04
+[U*]  #21  nvidia-x11              595.45.04-6.19.8, 595.45.04-6.19.8-bin, 595.45.04-6.19.8-firmware, 595.45.04-6.19.8-lib32 -> 595.45.04-6.19.9, 595.45.04-6.19.9-bin, 595.45.04-6.19.9-firmware, 595.45.04-6.19.9-lib32
+[U.]  #22  onnxruntime             1.23.2 -> 1.24.4
+[U*]  #23  orca-slicer             2.3.1 -> 2.3.2
+[U*]  #24  protontricks            1.13.1 -> 1.14.0
+[U.]  #25  pv                      1.10.4 -> 1.10.5
+[U*]  #26  rusty-path-of-building  0.2.14 -> 0.2.15
+[U.]  #27  squashfs                4.7.4 -> 4.7.5
+[U*]  #28  turbostat               6.19.8 -> 6.19.9
+[U.]  #29  vscode                  1.111.0 -> 1.112.0
+[U*]  #30  webkitgtk               2.50.6+abi=4.1, 2.50.6+abi=6.0 -> 2.52.0+abi=4.1, 2.52.0+abi=6.0
 Added packages:
-[A.]  #1  cdparanoia-iii                                                                             10.2 x2
-[A.]  #2  google-fonts                                                                               0-unstable-2026-03-13
-[A+]  #3  kde-rounded-corners                                                                        0.8.7
-[A.]  #4  libdbusmenu-qt5                                                                            0.9.3+16
-[A.]  #5  libldac-dec                                                                                0.0.2-unstable-2024-11-12 x2
-[A.]  #6  security-wrapper-qw13rjmnzzwbj1qp4zxcx8i4ihr4sd35-nix-ccache.pl-x86_64-unknown-linux-musl  <none>
-[A.]  #7  unit-script-pre-shutdown-start                                                             <none>
-[A.]  #8  unit-script-pre-sleep-start                                                                <none>
-[A.]  #9  unixobcd                                                                                   2.3.12 x2
+[A.]  #01  cuda12.9-cuda_cccl             12.9.27
+[A.]  #02  cuda12.9-cuda_cudart           12.9.79
+[A.]  #03  cuda12.9-cuda_cuobjdump        12.9.82
+[A.]  #04  cuda12.9-cuda_cupti            12.9.79, 12.9.79-include, 12.9.79-lib, 12.9.79-samples
+[A.]  #05  cuda12.9-cuda_cuxxfilt         12.9.82-bin, 12.9.82-include
+[A.]  #06  cuda12.9-cuda_gdb              12.9.79, 12.9.79-bin
+[A.]  #07  cuda12.9-cuda_nvcc             12.9.86
+[A.]  #08  cuda12.9-cuda_nvdisasm         12.9.88
+[A.]  #09  cuda12.9-cuda_nvml_dev         12.9.79, 12.9.79-dev, 12.9.79-include, 12.9.79-stubs
+[A.]  #10  cuda12.9-cuda_nvprune          12.9.82
+[A.]  #11  cuda12.9-cuda_nvrtc            12.9.86-dev, 12.9.86-include, 12.9.86-lib, 12.9.86-stubs
+[A.]  #12  cuda12.9-cuda_nvtx             12.9.79-include, 12.9.79-lib
+[A.]  #13  cuda12.9-cuda_profiler_api     12.9.79-include
+[A.]  #14  cuda12.9-cuda_sanitizer_api    12.9.79
+[A.]  #15  cuda12.9-libcublas             12.9.1.4, 12.9.1.4-dev, 12.9.1.4-include, 12.9.1.4-lib, 12.9.1.4-stubs
+[A.]  #16  cuda12.9-libcufft              11.4.1.4-dev, 11.4.1.4-include, 11.4.1.4-lib, 11.4.1.4-stubs
+[A.]  #17  cuda12.9-libcurand             10.3.10.19-dev, 10.3.10.19-include, 10.3.10.19-lib, 10.3.10.19-stubs
+[A.]  #18  cuda12.9-libcusolver           11.7.5.82-dev, 11.7.5.82-include, 11.7.5.82-lib, 11.7.5.82-stubs
+[A.]  #19  cuda12.9-libcusparse           12.5.10.65, 12.5.10.65-dev, 12.5.10.65-include, 12.5.10.65-lib, 12.5.10.65-stubs
+[A.]  #20  cuda12.9-libnpp                12.4.1.87-dev, 12.4.1.87-include, 12.4.1.87-lib, 12.4.1.87-stubs
+[A.]  #21  cuda12.9-libnvjitlink          12.9.86-lib
+[A.]  #22  draco                          1.5.7
+[A+]  #23  libation                       13.3.2
+[A.]  #24  passt                          2025_09_19.623dbf6
+[A+]  #25  proton-vpn                     4.15.0
+[A.]  #26  python3.13-annotated-types     0.7.0
+[A.]  #27  python3.13-async-timeout       5.0.1
+[A.]  #28  python3.13-crcmod              1.7
+[A.]  #29  python3.13-eval-type-backport  0.3.1
+[A.]  #30  python3.13-pydantic            2.12.5
+[A.]  #31  python3.13-pydantic-core       2.41.5
+[A.]  #32  python3.13-smp                 4.0.2
+[A.]  #33  python3.13-smpclient           6.0.0
+[A.]  #34  python3.13-typing-inspection   0.4.2
 Removed packages:
-[R.]  #1  cdparanoia-III                                                                             10.2 x2
-[R.]  #2  google-fonts-unstable                                                                      2024-06-21
-[R.]  #3  qtbase6-setup-hook                                                                         <none>
-[R.]  #4  security-wrapper-ad81wivid21ipzcvb6aqcavpw0xxggmf-nix-ccache.pl-x86_64-unknown-linux-musl  <none>
-[R.]  #5  unixODBC                                                                                   2.3.12 x2
-Closure size: 3213 -> 3224 (3195 paths added, 3184 paths removed, delta +11, disk usage +648.4MiB).
+[R.]  #01  cuda12.8-cuda_cccl           12.8.90
+[R.]  #02  cuda12.8-cuda_cudart         12.8.90
+[R.]  #03  cuda12.8-cuda_cuobjdump      12.8.90
+[R.]  #04  cuda12.8-cuda_cupti          12.8.90, 12.8.90-include, 12.8.90-lib, 12.8.90-samples
+[R.]  #05  cuda12.8-cuda_cuxxfilt       12.8.90-bin, 12.8.90-include
+[R.]  #06  cuda12.8-cuda_gdb            12.8.90, 12.8.90-bin
+[R.]  #07  cuda12.8-cuda_nvcc           12.8.93
+[R.]  #08  cuda12.8-cuda_nvdisasm       12.8.90
+[R.]  #09  cuda12.8-cuda_nvml_dev       12.8.90, 12.8.90-dev, 12.8.90-include, 12.8.90-stubs
+[R.]  #10  cuda12.8-cuda_nvprune        12.8.90
+[R.]  #11  cuda12.8-cuda_nvrtc          12.8.93-dev, 12.8.93-include, 12.8.93-lib, 12.8.93-stubs
+[R.]  #12  cuda12.8-cuda_nvtx           12.8.90-dev, 12.8.90-include, 12.8.90-lib
+[R.]  #13  cuda12.8-cuda_profiler_api   12.8.90-include
+[R.]  #14  cuda12.8-cuda_sanitizer_api  12.8.93
+[R.]  #15  cuda12.8-libcublas           12.8.4.1, 12.8.4.1-dev, 12.8.4.1-include, 12.8.4.1-lib, 12.8.4.1-stubs
+[R.]  #16  cuda12.8-libcufft            11.3.3.83-dev, 11.3.3.83-include, 11.3.3.83-lib, 11.3.3.83-stubs
+[R.]  #17  cuda12.8-libcurand           10.3.9.90-dev, 10.3.9.90-include, 10.3.9.90-lib, 10.3.9.90-stubs
+[R.]  #18  cuda12.8-libcusolver         11.7.3.90-dev, 11.7.3.90-include, 11.7.3.90-lib, 11.7.3.90-stubs
+[R.]  #19  cuda12.8-libcusparse         12.5.8.93, 12.5.8.93-dev, 12.5.8.93-include, 12.5.8.93-lib, 12.5.8.93-stubs
+[R.]  #20  cuda12.8-libnpp              12.3.3.100-dev, 12.3.3.100-include, 12.3.3.100-lib, 12.3.3.100-stubs
+[R.]  #21  cuda12.8-libnvjitlink        12.8.93-lib
+[R-]  #22  protonvpn-gui                4.15.0
+[R.]  #23  woff2                        1.0.2-lib
+Closure size: 3224 -> 3236 (219 paths added, 207 paths removed, delta +12, disk usage +576.5MiB).
