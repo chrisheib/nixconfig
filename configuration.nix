@@ -738,6 +738,8 @@
     moonlight-qt
 
     esphome
+
+    libation
   ];
 
   # Enable GNOME settings manager
