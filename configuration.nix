@@ -344,7 +344,7 @@
         "flakes"
       ];
       cores = 24; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
-      max-jobs = 4; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
+      max-jobs = 6; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
       extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
     };
     # nixPath = [
@@ -740,6 +740,8 @@
     esphome
 
     libation
+
+    esbuild
   ];
 
   # Enable GNOME settings manager
