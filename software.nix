@@ -25,7 +25,7 @@
   boot.kernelModules = ["88XXau"];
   boot.supportedFilesystems = ["ntfs"];
   boot.extraModulePackages = with config.boot.kernelPackages; [
-    rtl88xxau-aircrack
+    # rtl88xxau-aircrack
   ];
   boot.plymouth.enable = true;
   boot.loader.timeout = 1;
@@ -46,7 +46,7 @@
   environment.systemPackages = with pkgs; [
     nvtopPackages.intel # nvtop
     git
-    neofetch
+    fastfetch
     # firefox-vaapi
     libva-utils
     google-chrome

@@ -47,7 +47,7 @@
     #setLdLibraryPath = true;
     extraPackages = with pkgs; [
       nvidia-vaapi-driver
-      vaapiVdpau
+      libva-vdpau-driver
       # intel-media-driver
       libvdpau-va-gl
     ];
