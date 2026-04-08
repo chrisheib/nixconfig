@@ -729,7 +729,7 @@
 
     # Temporarily remove protonvpn-gui to avoid a failing build in proton-core tests.
     # Reintroduce after upstream fixes or a proper patch is applied.
-    protonvpn-gui
+    proton-vpn
 
     kdePackages.kde-cli-tools
 
