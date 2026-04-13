@@ -583,6 +583,7 @@
     # zellij # ctrl p n for new pane
     eza # ls replacement
     dysk # df replacement
+    ripgrep
 
     nh # nix os helper
     nix-tree
