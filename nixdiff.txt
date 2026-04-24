@@ -1,4 +1,4 @@
 <<< /run/current-system
 >>> result
 No version or selection state changes.
-Closure size: 3059 -> 3059 (6 paths added, 6 paths removed, delta +0, disk usage -462.3KiB).
+Closure size: 3059 -> 3059 (1 paths added, 1 paths removed, delta +0, disk usage +56B).
