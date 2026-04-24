@@ -1,4 +1,10 @@
-# Currently using: AMD 9950X3D + MSI X670E Gaming Plus WIFI + MSI 3080 TI + 64 GB DDR 5 + NVMe SSDs
+# Currently using:
+# AMD 9950X3D
+# MSI X670E Gaming Plus WIFI
+# Sapphire Pure Radeon RX 9070 XT 16 GB
+# 64 GB DDR 5
+# NVMe SSDs
+
 {
   config,
   pkgs,
@@ -58,27 +64,27 @@
     # cachyos: https://www.nyx.chaotic.cx/
     kernelPackages = pkgs.linuxPackages_xanmod_latest;
     # kernelPackages = pkgs.linuxPackages_cachyos-lto;
-    extraModprobeConfig =
-      "options nvidia "
-      + lib.concatStringsSep " " [
-        # nvidia assume that by default your CPU does not support PAT,
-        # but this is effectively never the case in 2023
-        "NVreg_UsePageAttributeTable=1"
-        # This is sometimes needed for ddc/ci support, see
-        # https://www.ddcutil.com/nvidia/
-        #
-        # Current monitor does not support it, but this is useful for
-        # the future
-        "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
+    # extraModprobeConfig =
+    #   "options nvidia "
+    #   + lib.concatStringsSep " " [
+    #     # nvidia assume that by default your CPU does not support PAT,
+    #     # but this is effectively never the case in 2023
+    #     "NVreg_UsePageAttributeTable=1"
+    #     # This is sometimes needed for ddc/ci support, see
+    #     # https://www.ddcutil.com/nvidia/
+    #     #
+    #     # Current monitor does not support it, but this is useful for
+    #     # the future
+    #     "NVreg_RegistryDwords=RMUseSwI2c=0x01;RMI2cSpeed=100"
 
-        # Enable Resizable BAR support
-        # Check reBar (look for BAR 1 > 1GB):
-        # BUS=$(lspci | grep -E 'VGA|3D' | head -n1 | awk '{print $1}') && sudo lspci -vv -s "$BUS" | sed -n '/Resizable BAR/,+35p'
-        "NVreg_EnableResizableBar=1"
+    #     # Enable Resizable BAR support
+    #     # Check reBar (look for BAR 1 > 1GB):
+    #     # BUS=$(lspci | grep -E 'VGA|3D' | head -n1 | awk '{print $1}') && sudo lspci -vv -s "$BUS" | sed -n '/Resizable BAR/,+35p'
+    #     "NVreg_EnableResizableBar=1"
 
-        # disable screen dimming
-        "NVreg_EnableBacklightHandler=0"
-      ];
+    #     # disable screen dimming
+    #     "NVreg_EnableBacklightHandler=0"
+    #   ];
     plymouth = {
       enable = true;
     };
@@ -117,11 +123,11 @@
 
     kernelModules = [
       "amdgpu"
-      "nvidia"
-      "nvidia_modeset"
-      "nvidia_uvm"
-      "nvidia_drm"
-      "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
+      # "nvidia"
+      # "nvidia_modeset"
+      # "nvidia_uvm"
+      # "nvidia_drm"
+      # "i2c-nvidia-gpu" # for ddc/ci support, see ddcutil
       "i2c-dev" # for ddc/ci support, see ddcutil
       "ntsync"
       "kvm-amd"
@@ -398,7 +404,7 @@
     extraPackages = with pkgs; [
       vdpauinfo # sudo vainfo
       libva-utils # sudo vainfo
-      nvidia-vaapi-driver # nvidia-smi dmon
+      # nvidia-vaapi-driver # nvidia-smi dmon
       libva-vdpau-driver
       # intel-media-driver
       # intel-vaapi-driver
@@ -411,11 +417,12 @@
     # LIBVA_DRIVER_NAME = "i965";
     # LIBVA_DRIVER_NAME = "iHD";
 
-    LIBVA_DRIVER_NAME = "nvidia";
-    VDPAU_DRIVER = "nvidia";
+    LIBVA_DRIVER_NAME = "radeonsi";
+    # VDPAU_DRIVER = "va_gl"; # Maybe better for amd
+    VDPAU_DRIVER = "radeonsi";
 
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    GBM_BACKEND = "drm";
+    __GLX_VENDOR_LIBRARY_NAME = "mesa";
 
     # LIBVA_DRIVER_NAME = "radeonsi";
     # VDPAU_DRIVER = "radeonsi";
@@ -448,15 +455,22 @@
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia = {
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
-    modesetting.enable = lib.mkDefault true;
-    powerManagement.enable = false; # try false due to blackscreen on boot
-    # powerManagement.finegrained = true; # requires offload to be enabled
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  # hardware.nvidia = {
+  #   package = config.boot.kernelPackages.nvidiaPackages.beta;
+  #   modesetting.enable = lib.mkDefault true;
+  #   powerManagement.enable = false; # try false due to blackscreen on boot
+  #   # powerManagement.finegrained = true; # requires offload to be enabled
 
-    open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
+  #   open = true; # Set to false for proprietary drivers -> https://download.nvidia.com/XFree86/Linux-x86_64/565.77/README/kernel_open.html
+  # };
+
+  hardware.amdgpu = {
+    enable = true; # amdgpu is enabled by default if the kernel detects compatible hardware
+    initrd.enable = true; # include amdgpu in initrd to avoid black screen on boot
+    overdrive.enable = true; # enable overdrive for gpu overclocking
   };
+  services.lact.enable = true; # AMD OC tool
 
   hardware.bluetooth = {
     enable = true;
@@ -849,38 +863,38 @@
     };
   };
 
-  systemd.services.limit_gpu_power = {
-    description = "Limit GPU power limit";
-    wantedBy = [ "graphical.target" ];
-    path = [
-      config.boot.kernelPackages.nvidiaPackages.beta
-    ];
-    serviceConfig = {
-      Type = "oneshot";
-      user = "root";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" "nvidia-smi -pl 250"}";
-      # It’s often a good idea to mark the service active after the command finishes.
-      RemainAfterExit = true;
-    };
-  };
+  # systemd.services.limit_gpu_power = {
+  #   description = "Limit GPU power limit";
+  #   wantedBy = [ "graphical.target" ];
+  #   path = [
+  #     config.boot.kernelPackages.nvidiaPackages.beta
+  #   ];
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     user = "root";
+  #     ExecStart = "${pkgs.writeShellScript "set_gpu_powerlimit" "nvidia-smi -pl 250"}";
+  #     # It’s often a good idea to mark the service active after the command finishes.
+  #     RemainAfterExit = true;
+  #   };
+  # };
 
-  systemd.services.gpu_overclock = {
-    # See https://github.com/chrisheib/py_nvid_oc
-    # Compile and put py_nvid_oc in /etc/nixos
-    description = "GPU overclock";
-    wantedBy = [ "graphical.target" ];
-    path = [
-      config.boot.kernelPackages.nvidiaPackages.beta
-    ];
-    serviceConfig = {
-      Type = "oneshot";
-      user = "root";
-      Environment = "LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.beta}/lib";
-      ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" "/etc/nixos/py_nvid_oc 125 800"}";
-      # It’s often a good idea to mark the service active after the command finishes.
-      RemainAfterExit = true;
-    };
-  };
+  # systemd.services.gpu_overclock = {
+  #   # See https://github.com/chrisheib/py_nvid_oc
+  #   # Compile and put py_nvid_oc in /etc/nixos
+  #   description = "GPU overclock";
+  #   wantedBy = [ "graphical.target" ];
+  #   path = [
+  #     config.boot.kernelPackages.nvidiaPackages.beta
+  #   ];
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     user = "root";
+  #     Environment = "LD_LIBRARY_PATH=${config.boot.kernelPackages.nvidiaPackages.beta}/lib";
+  #     ExecStart = "${pkgs.writeShellScript "set_gpu_overclock" "/etc/nixos/py_nvid_oc 125 800"}";
+  #     # It’s often a good idea to mark the service active after the command finishes.
+  #     RemainAfterExit = true;
+  #   };
+  # };
 
   # defaults to port 9898
   systemd.services.backrest = {
