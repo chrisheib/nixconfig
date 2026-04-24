@@ -118,7 +118,7 @@
       # IOMMU for GPU passthrough
       "amd_iommu=on"
       "iommu=pt"
-      "drm.edid_firmware=DP-2:edid/EDID_60hz.bin"
+      "drm.edid_firmware=DP-2:edid/EDID_144hz.bin"
       "video=DP-2:1920x1080@120e"
       # "vfio-pci.ids=1002:13c0,1002:1640"
     ];
