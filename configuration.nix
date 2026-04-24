@@ -118,7 +118,7 @@
       # IOMMU for GPU passthrough
       "amd_iommu=on"
       "iommu=pt"
-      "vfio-pci.ids=1002:13c0,1002:1640"
+      # "vfio-pci.ids=1002:13c0,1002:1640"
     ];
 
     kernelModules = [
@@ -156,10 +156,10 @@
 
   hardware.firmware = [
     pkgs.linux-firmware
-    (pkgs.runCommand "edid-firmware" { } ''
-      mkdir -p $out/lib/firmware/edid
-      cp ${./msi-oled-edid.bin} $out/lib/firmware/edid/msi-oled.bin
-    '')
+    # (pkgs.runCommand "edid-firmware" { } ''
+    #   mkdir -p $out/lib/firmware/edid
+    #   cp ${./msi-oled-edid.bin} $out/lib/firmware/edid/msi-oled.bin
+    # '')
   ];
 
   hardware.enableAllFirmware = true;
