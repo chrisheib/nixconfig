@@ -650,11 +650,11 @@
     protontricks
     protonplus
     steamtinkerlaunch # This is the important one! add as `steamtinkertlaunch %command%` in steam launch options
-    (lutris.override {
-      extraPkgs = pkgs: [
-        umu-launcher
-      ];
-    })
+    # (lutris.override {
+    #   extraPkgs = pkgs: [
+    #     umu-launcher
+    #   ];
+    # })
     wineWow64Packages.stable
     winetricks
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
