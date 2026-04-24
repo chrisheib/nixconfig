@@ -430,7 +430,7 @@
     NVD_BACKEND = "direct";
     EGL_PLATFORM = "wayland";
     WLR_NO_HARDWARE_CURSORS = "1";
-    MANGOHUD_CONFIG = "fps_limit=100,no_display";
+    MANGOHUD_CONFIG = "fps_limit=110,no_display,fps_limit_method=early";
     MANGOHUD = "1";
     KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
 
@@ -466,7 +466,6 @@
   # };
 
   hardware.amdgpu = {
-    enable = true; # amdgpu is enabled by default if the kernel detects compatible hardware
     initrd.enable = true; # include amdgpu in initrd to avoid black screen on boot
     overdrive.enable = true; # enable overdrive for gpu overclocking
   };
