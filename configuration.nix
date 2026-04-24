@@ -157,10 +157,10 @@
 
   hardware.firmware = [
     pkgs.linux-firmware
-    # (pkgs.runCommand "edid-firmware" { } ''
-    #   mkdir -p $out/lib/firmware/edid
-    #   cp ${./monitor.edid} $out/lib/firmware/edid/monitor.bin
-    # '')
+    (pkgs.runCommand "edid-firmware" { } ''
+      mkdir -p $out/lib/firmware/edid
+      cp ${./edid/1920x1080.bin} $out/lib/firmware/edid/1920x1080.bin
+    '')
   ];
 
   hardware.enableAllFirmware = true;
