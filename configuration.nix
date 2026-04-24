@@ -113,7 +113,7 @@
       # "drm.edid_firmware=DP-3:edid/msi-oled.bin"
 
       "clearcpuid=rdseed" # https://discussion.fedoraproject.org/t/rdseed32-is-broken-disabling-the-corresponding-cpuid-bit-rdseed-failure-on-amd-processors/173204/8
-      "amdgpu.modeset=0" # disable amdgpu kernel driver to avoid conflicts with nvidia
+      # "amdgpu.modeset=0" # disable amdgpu kernel driver to avoid conflicts with nvidia
 
       # IOMMU for GPU passthrough
       "amd_iommu=on"
@@ -401,6 +401,7 @@
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       vdpauinfo # sudo vainfo
       libva-utils # sudo vainfo
