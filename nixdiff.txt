@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Removed packages:
-[R.]  #1  edid-firmware-zstd  <none>
-Closure size: 3233 -> 3232 (5 paths added, 6 paths removed, delta -1, disk usage -83.4KiB).
+No version or selection state changes.
+Closure size: 3232 -> 3232 (1 paths added, 1 paths removed, delta +0, disk usage +96B).
