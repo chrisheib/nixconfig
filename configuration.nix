@@ -901,8 +901,10 @@
   # defaults to port 9898
   systemd.services.backrest = {
     description = "Launch backrest to take care of backups";
-    wantedBy = [ "graphical.target" ];
-    requires = [ "network-online.target" ];
+    # Do NOT enable the service directly; a timer will start it instead
+    # service will wait for network-online.target when started
+    wants = [ "network-online.target" ];
+    after = [ "network-online.target" "graphical.target" ];
     script = "backrest";
     path = [
       pkgs.backrest
@@ -916,9 +918,16 @@
       User = "stschiff";
       AmbientCapabilities = "CAP_DAC_READ_SEARCH";
       CapabilityBoundingSet = "CAP_DAC_READ_SEARCH";
-      # ExecStart = "backrest";
       # It’s often a good idea to mark the service active after the command finishes.
-      # RemainAfterExit = true;
+    };
+  };
+
+  systemd.timers.backrest-timer = {
+    description = "Start backrest shortly after the graphical session is up";
+    wantedBy = [ "graphical.target" ];
+    timerConfig = {
+      OnActiveSec = "10s"; # wait 10s after the timer becomes active (graphical.target)
+      Unit = "backrest.service";
     };
   };
 
