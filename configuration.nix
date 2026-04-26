@@ -124,7 +124,7 @@
       "drm.edid_firmware=DP-1:edid/EDID_144hz.bin,DP-2:edid/EDID_144hz.bin"
       # Disable MPO in amdgpu display core (DC_DISABLE_MPO = 0x40).
       # Useful for intermittent 5-10s blackscreen recoveries on Wayland.
-      "amdgpu.dcdebugmask=0x40"
+      # "amdgpu.dcdebugmask=0x40"
       # "video=DP-2:1920x1080@120e"
       # "vfio-pci.ids=1002:13c0,1002:1640"
     ];
