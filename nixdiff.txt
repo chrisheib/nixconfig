@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  unit-backrest-timer.timer  <none>
-Closure size: 3059 -> 3060 (5 paths added, 4 paths removed, delta +1, disk usage +768B).
+No version or selection state changes.
+Closure size: 3060 -> 3060 (5 paths added, 5 paths removed, delta +0, disk usage -32B).
