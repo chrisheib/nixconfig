@@ -118,8 +118,13 @@
       # IOMMU for GPU passthrough
       "amd_iommu=on"
       "iommu=pt"
+      
+      # Required to get the AOC G2460PG (Gysnc) to work with amdgpu
       "drm.edid_firmware=DP-2:edid/EDID_144hz.bin"
-      "video=DP-2:1920x1080@120e"
+      # Disable MPO in amdgpu display core (DC_DISABLE_MPO = 0x40).
+      # Useful for intermittent 5-10s blackscreen recoveries on Wayland.
+      "amdgpu.dcdebugmask=0x40"
+      # "video=DP-2:1920x1080@120e"
       # "vfio-pci.ids=1002:13c0,1002:1640"
     ];
 
@@ -435,7 +440,8 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     MANGOHUD_CONFIG = "fps_limit=110,no_display,fps_limit_method=early";
     MANGOHUD = "1";
-    KWIN_DRM_USE_EGL_STREAMS = "1"; # Wayland GPU accel
+    # NVIDIA EGLStreams knob; keep disabled on AMD.
+    # KWIN_DRM_USE_EGL_STREAMS = "1";
 
     WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
     CUDA_TOOLKIT_ROOT_DIR = "${pkgs.cudaPackages.cudatoolkit}";
@@ -471,6 +477,7 @@
   hardware.amdgpu = {
     initrd.enable = true; # include amdgpu in initrd to avoid black screen on boot
     overdrive.enable = true; # enable overdrive for gpu overclocking
+    overdrive.ppfeaturemask = "0xfffd7fff"; # keep overdrive but avoid the riskier all-features mask
   };
   services.lact.enable = true; # AMD OC tool
 
@@ -904,7 +911,10 @@
     # Do NOT enable the service directly; a timer will start it instead
     # service will wait for network-online.target when started
     wants = [ "network-online.target" ];
-    after = [ "network-online.target" "graphical.target" ];
+    after = [
+      "network-online.target"
+      "graphical.target"
+    ];
     script = "backrest";
     path = [
       pkgs.backrest
