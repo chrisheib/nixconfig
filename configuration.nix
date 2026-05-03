@@ -441,6 +441,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     MANGOHUD_CONFIG = "fps_limit=110,no_display,fps_limit_method=early";
     MANGOHUD = "1";
+
     # NVIDIA EGLStreams knob; keep disabled on AMD.
     # KWIN_DRM_USE_EGL_STREAMS = "1";
 
@@ -450,9 +451,12 @@
     LANGUAGE = "en_US.UTF-8";
     NIXOS_OZONE_WL = "1";
 
+    DXVK_CONFIG_FILE = "/home/stschiff/.config/dxvk/dxvk.conf";
+
     PROTON_ENABLE_HDR = "1";
     PROTON_ENABLE_WAYLAND = "1";
     PROTON_NO_WM_DECORATION = "1";
+    VKD3D_VRAM_BUDGET_OVERRIDE = "15032385536";
     DXVK_HDR = "1";
     ENABLE_HDR_WSI = "1";
     # DISPLAY = "";
