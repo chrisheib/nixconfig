@@ -456,7 +456,7 @@
     PROTON_ENABLE_HDR = "1";
     PROTON_ENABLE_WAYLAND = "1";
     PROTON_NO_WM_DECORATION = "1";
-    VKD3D_VRAM_BUDGET_OVERRIDE = "15032385536";
+    VKD3D_VRAM_BUDGET_OVERRIDE = "15032385536"; # 14 GB, override vram budget
     DXVK_HDR = "1";
     ENABLE_HDR_WSI = "1";
     # DISPLAY = "";
@@ -649,6 +649,7 @@
     # waydroid # also enable virtualisation.waydroid.enable
 
     git
+    git-lfs
     ntfs3g # allow read write ntfs mounts
     docker-compose
 
