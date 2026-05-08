@@ -1,5 +1,38 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  git-lfs  3.7.1
-Closure size: 3063 -> 3063 (12 paths added, 12 paths removed, delta +0, disk usage +11.5KiB).
+Version changes:
+[U*]  #01  btop                          1.4.6 -> 1.4.7
+[U.]  #02  ccache                        4.13.2 -> 4.13.5
+[U.]  #03  cfitsio                       4.6.3 -> 4.6.4
+[U.]  #04  deno                          2.7.13 -> 2.7.14
+[U*]  #05  esphome                       2026.3.3 -> 2026.4.3
+[C.]  #06  libXNVCtrl                    390.157, 595.58.03 -> 390.157, 595.71.05
+[U.]  #07  lp_solve                      5.5.2.11 -> 5.5.2.14
+[U*]  #08  mesa                          26.0.5 x2 -> 26.0.6 x2
+[U*]  #09  nix                           2.34.6 x2, 2.34.6-doc, 2.34.6-man -> 2.34.7 x2, 2.34.7-doc, 2.34.7-man
+[C.]  #10  nix-cmd                       2.30.4+1, 2.32, 2.34.6 -> 2.30.5+1, 2.32, 2.34.7
+[C.]  #11  nix-expr                      2.30.4+1, 2.32, 2.34.6 -> 2.30.5+1, 2.32, 2.34.7
+[C.]  #12  nix-fetchers                  2.30.4+1, 2.32, 2.34.6 -> 2.30.5+1, 2.32, 2.34.7
+[C.]  #13  nix-flake                     2.30.4+1, 2.32, 2.34.6 -> 2.30.5+1, 2.32, 2.34.7
+[C.]  #14  nix-main                      2.30.4+1, 2.32, 2.34.6 -> 2.30.5+1, 2.32, 2.34.7
+[U.]  #15  nix-manual                    2.34.6, 2.34.6-man -> 2.34.7, 2.34.7-man
+[U.]  #16  nix-nswrapper                 2.34.6 -> 2.34.7
+[C.]  #17  nix-store                     2.30.4+1, 2.31.4, 2.32, 2.34.6 -> 2.30.5+1, 2.31.5, 2.32, 2.34.7
+[C.]  #18  nix-util                      2.30.4+1, 2.31.4, 2.32, 2.34.6 -> 2.30.5+1, 2.31.5, 2.32, 2.34.7
+[U.]  #19  nixos-system-nixos            26.05.20260430.15f4ee4 -> 26.05.20260505.549bd84
+[C.]  #20  openjdk-minimal-jre           21.0.10+7 -> 21.0.10+7 x2
+[U.]  #21  python3.13-esp-idf-size       2.1.0 -> 2.2.0
+[U.]  #22  python3.13-esphome-dashboard  20260210.0 -> 20260408.1
+[U.]  #23  python3.13-sentry-sdk         2.58.0 -> 2.59.0
+[U.]  #24  python3.13-soundcloud-v2      1.6.2 -> 1.7.0
+[U*]  #25  rclone                        1.73.5, 1.73.5-man -> 1.74.0, 1.74.0-man
+[U*]  #26  starship                      1.25.0 -> 1.25.1
+[U*]  #27  thunderbird                   150.0 -> 150.0.1
+[U.]  #28  thunderbird-unwrapped         150.0 -> 150.0.1
+[U*]  #29  unrar                         7.2.5 -> 7.2.6
+Added packages:
+[A.]  #1  security-wrapper  38xglwfv7ybx27552ha185vzgylnsnbp-nix-ccache.pl-x86_64-unknown-linux-musl
+Removed packages:
+[R.]  #1  openjdk-headless-minimal-jre                                                               21.0.10+7
+[R.]  #2  security-wrapper-mxvdb6vwlppiqa4431kwialbzyp6ivhb-nix-ccache.pl-x86_64-unknown-linux-musl  <none>
+Closure size: 3063 -> 3063 (159 paths added, 159 paths removed, delta +0, disk usage +4.7MiB).
