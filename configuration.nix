@@ -437,9 +437,11 @@
     # VDPAU_DRIVER = "radeonsi";
 
     NVD_BACKEND = "direct";
-    EGL_PLATFORM = "wayland";
+    # EGL_PLATFORM = "wayland";
+
     WLR_NO_HARDWARE_CURSORS = "1";
-    MANGOHUD_CONFIG = "fps_limit=110,no_display,fps_limit_method=early";
+    MANGOHUD_CONFIG = "fps_limit=90,no_display";
+    # MANGOHUD_CONFIG = "fps_limit=90,no_display,fps_limit_method=early";
     MANGOHUD = "1";
 
     # NVIDIA EGLStreams knob; keep disabled on AMD.
@@ -454,7 +456,7 @@
     DXVK_CONFIG_FILE = "/home/stschiff/.config/dxvk/dxvk.conf";
 
     PROTON_ENABLE_HDR = "1";
-    PROTON_ENABLE_WAYLAND = "1";
+    # PROTON_ENABLE_WAYLAND = "1";
     PROTON_NO_WM_DECORATION = "1";
     VKD3D_VRAM_BUDGET_OVERRIDE = "15032385536"; # 14 GB, override vram budget
     DXVK_HDR = "1";
