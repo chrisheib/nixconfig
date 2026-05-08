@@ -721,7 +721,7 @@
     adwaita-icon-theme
     gtk3
 
-    # minion
+    minion
 
     # cudaPackages.cudatoolkit
 
