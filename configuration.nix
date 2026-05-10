@@ -951,7 +951,8 @@
 
   services.ollama = {
     enable = true;
-    acceleration = "rocm";
+    # acceleration = "rocm";
+    package = pkgs.ollama-rocm;
     # Wichtig: Explizites Target für RDNA4 (9070 XT)
     # rocmPackages = pkgs.rocmPackages_sdk;
   };
