@@ -949,6 +949,18 @@
     };
   };
 
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+    # Wichtig: Explizites Target für RDNA4 (9070 XT)
+    # rocmPackages = pkgs.rocmPackages_sdk;
+  };
+
+  # Erzwinge die Erkennung der GPU-Architektur
+  # systemd.services.ollama.environment = {
+  #   HSA_OVERRIDE_GFX_VERSION = "12.0.1"; # Gfx-Version für 9070 XT
+  # };
+
   # services.ollama = {
   #   enable = true;
   #   # acceleration = "cuda";
