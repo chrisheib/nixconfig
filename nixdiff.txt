@@ -1,7 +1,34 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[C.]  #1  openjdk  8u472-b08, 8u472-b08-jre, 17.0.18+8, 21.0.10+7, 25.0.2+10 -> 8u472-b08, 8u472-b08-jre, 17.0.18+8, 21.0.10+7 x2, 25.0.2+10
+[C.]  #1  llvm  21.1.8-lib x2 -> 21.1.8-lib x2, 22.0.0-rocm, 22.0.0-rocm-lib
 Added packages:
-[A+]  #1  minion  3.0.12
-Closure size: 3063 -> 3065 (14 paths added, 12 paths removed, delta +2, disk usage +761.0MiB).
+[A.]  #01  clang                  22.0.0-rocm-lib
+[A.]  #02  clr                    7.2.2
+[A.]  #03  compiler-rt-libc       22.0.0-rocm
+[A.]  #04  gcc-prefix             <none>
+[A.]  #05  gcc-prefix-headers     <none>
+[A.]  #06  hipClang               <none>
+[A.]  #07  hipblas                7.2.2
+[A.]  #08  hipblas-common         7.2.2
+[A.]  #09  hipblaslt              7.2.2
+[A.]  #10  libpfm                 4.13.0
+[A.]  #11  lld                    22.0.0-rocm
+[A.]  #12  llvm-binutils          22.0.0-rocm
+[A.]  #13  llvm-binutils-wrapper  22.0.0-rocm
+[A+]  #14  ollama                 0.22.1
+[A.]  #15  openmp                 22.0.0-rocm
+[A.]  #16  rocblas                7.2.2
+[A.]  #17  rocm-comgr             22.0.0-rocm
+[A.]  #18  rocm-core              7.2.2
+[A.]  #19  rocm-device-libs       22.0.0-rocm
+[A.]  #20  rocm-path              <none>
+[A.]  #21  rocm-runtime           7.2.2
+[A.]  #22  rocm-smi               7.2.2
+[A.]  #23  rocm-toolchain         <none>
+[A.]  #24  rocminfo               7.2.2
+[A.]  #25  rocprofiler-register   7.2.2
+[A.]  #26  rocsolver              7.2.2
+[A.]  #27  rocsparse              7.2.2
+[A.]  #28  unit-ollama.service    <none>
+Closure size: 3065 -> 3095 (42 paths added, 12 paths removed, delta +30, disk usage +3.2GiB).
