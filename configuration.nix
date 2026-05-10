@@ -955,6 +955,9 @@
     package = pkgs.ollama-rocm;
     # Wichtig: Explizites Target für RDNA4 (9070 XT)
     # rocmPackages = pkgs.rocmPackages_sdk;
+    environment = {
+      OLLAMA_FLASH_ATTENTION = "1"; # Enable Flash Attention for better performance on RDNA4 GPUs
+    };
   };
 
   # Erzwinge die Erkennung der GPU-Architektur
