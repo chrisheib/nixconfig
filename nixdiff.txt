@@ -1,6 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A+]  #1  maccel-cli   0.6.0
-[A.]  #2  maccel-dkms  0.5.9
-Closure size: 3095 -> 3097 (29 paths added, 27 paths removed, delta +2, disk usage +9.9MiB).
+No version or selection state changes.
+Closure size: 3097 -> 3097 (4 paths added, 4 paths removed, delta +0, disk usage +31.4KiB).
