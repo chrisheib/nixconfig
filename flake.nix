@@ -12,6 +12,7 @@
     {
       # self,
       preload-ng,
+      maccel,
       nixpkgs,
       ...
     }:
@@ -27,7 +28,9 @@
 
           # Make pkgsForModules available to modules as an extra arg.
           # Do NOT try to set nixpkgs.pkgs here.
-          specialArgs = { inherit pkgsForModules; };
+          specialArgs = {
+            inherit pkgsForModules maccel;
+          };
 
           modules = [
             ./configuration.nix

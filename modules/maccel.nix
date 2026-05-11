@@ -1,7 +1,7 @@
-{ inputs, ... }:
+{ maccel, ... }:
 {
   imports = [
-    inputs.maccel.nixosModules.default
+    maccel.nixosModules.default
   ];
 
   hardware.maccel = {
