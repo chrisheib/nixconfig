@@ -5,6 +5,7 @@
     nixpkgs.url = "tarball+https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
     flake-utils.url = "github:numtide/flake-utils";
     preload-ng.url = "github:miguel-b-p/preload-ng";
+    maccel.url = "github:Gnarus-G/maccel";
   };
 
   outputs =
@@ -30,6 +31,7 @@
 
           modules = [
             ./configuration.nix
+            ./modules/maccel.nix
             preload-ng.nixosModules.default
             {
               services.preload-ng.enable = true;
