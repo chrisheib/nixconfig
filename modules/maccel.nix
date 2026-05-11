@@ -10,21 +10,23 @@
 
     parameters = {
       # Common (all modes)
-      sensMultiplier = 1.0;
       yxRatio = 1.0;
       inputDpi = 1000.0;
       angleRotation = 0.0;
-      mode = "linear";
 
       # Linear mode
-      acceleration = 0.3;
-      offset = 2.0;
-      outputCap = 2.0;
+      # mode = "linear";
+      # sensMultiplier = 0.8;
+      # acceleration = 0.025;
+      # offset = 5.0;
+      # outputCap = 2.0;
 
-      # # Natural mode
-      # decayRate = 0.1;
-      # offset = 2.0;
-      # limit = 1.5;
+      # Natural mode
+      mode = "natural";
+      sensMultiplier = 0.6;
+      decayRate = 0.2;
+      offset = 5.0;
+      limit = 1.8;
 
       # # Synchronous mode
       # gamma = 1.0;
