@@ -704,7 +704,7 @@
 
     # onedrivegui # ist unnötig, siehe onedrive-wiki
 
-    sqlitestudio
+    # sqlitestudio
 
     gnome-software # for flatpaks
 
@@ -712,7 +712,7 @@
     linuxKernel.packages.linux_xanmod_latest.turbostat
     sysstat
 
-    geekbench
+    # geekbench
 
     variety # wallpaper changer
 
@@ -751,11 +751,12 @@
 
     heynote
 
-    flameshot # screenshot tool
+    # flameshot # screenshot tool
 
     libGL
     wayland
     wayland-protocols
+    wl-clipboard-rs # wl-copy, wl-clip and wl-paste
 
     masterpdfeditor4
 
