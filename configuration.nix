@@ -950,42 +950,19 @@
     };
   };
 
-  services.ollama = {
-    enable = true;
-    # acceleration = "rocm";
-    package = pkgs.ollama-rocm;
-    # Wichtig: Explizites Target für RDNA4 (9070 XT)
-    # rocmPackages = pkgs.rocmPackages_sdk;
-    environmentVariables = {
-      OLLAMA_FLASH_ATTENTION = "1"; # Enable Flash Attention for better performance on RDNA4 GPUs
-    };
-  };
-
-  # Erzwinge die Erkennung der GPU-Architektur
-  # systemd.services.ollama.environment = {
-  #   HSA_OVERRIDE_GFX_VERSION = "12.0.1"; # Gfx-Version für 9070 XT
-  # };
-
   # services.ollama = {
   #   enable = true;
-  #   # acceleration = "cuda";
-  #   package = pkgs.ollama-cuda;
-  #   loadModels = [ "qwen3-embedding:0.6b" ];
+  #   # acceleration = "rocm";
+  #   package = pkgs.ollama-rocm;
+  #   # Wichtig: Explizites Target für RDNA4 (9070 XT)
+  #   # rocmPackages = pkgs.rocmPackages_sdk;
+  #   environmentVariables = {
+  #     OLLAMA_FLASH_ATTENTION = "1"; # Enable Flash Attention for better performance on RDNA4 GPUs
+  #   };
   # };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
 
   programs.kdeconnect.enable = true;
 
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
 
