@@ -621,7 +621,7 @@
 
     p7zip # 7zip
     unrar
-    k4dirstat # windirstat clone
+    qdirstat # windirstat clone
 
     nil # nix lsp
     alejandra # nix formatter
