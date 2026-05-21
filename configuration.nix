@@ -127,6 +127,10 @@
       # "amdgpu.dcdebugmask=0x40"
       "video=DP-2:1920x1080@120e"
       # "vfio-pci.ids=1002:13c0,1002:1640"
+
+      # avoid amdgpu black screen
+      "amdgpu.gfxoff=0"
+      "amdgpu.aspm=0"
     ];
 
     kernelModules = [
@@ -468,6 +472,8 @@
 
     __GL_SHADER_DISK_CACHE = "1"; # enable shader cache
     __GL_SHADER_DISK_CACHE_SIZE = "53687091200"; # 50 GB
+
+    KROSSHAIR_IMG = "/home/stschiff/projects/krosshair/crosshairs/OPDot.png";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
