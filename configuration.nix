@@ -337,6 +337,10 @@
 
     histSize = 50000;
     histFile = "$HOME/.zsh_history";
+    interactiveShellInit = ''
+      bindkey "^[[1;5D" backward-word
+      bindkey "^[[1;5C" forward-word
+    '';
     setOptions = [
       "HIST_IGNORE_ALL_DUPS"
       "INC_APPEND_HISTORY"
