@@ -62,6 +62,7 @@
     loader.systemd-boot.configurationLimit = 5;
     loader.efi.canTouchEfiVariables = true;
     # cachyos: https://www.nyx.chaotic.cx/
+    kernelPackages = pkgs.linuxPackages_linux_latest;
     # kernelPackages = pkgs.linuxPackages_xanmod_latest;
     # kernelPackages = pkgs.linuxPackages_cachyos-lto;
     # extraModprobeConfig =
