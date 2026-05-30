@@ -15,4 +15,4 @@
 # fi
 
 # spectacle --background --region --copy-image --nonotify
-spectacle --background --region --nonotify --output /tmp/screen.png && wl-copy < /tmp/screen.png
+spectacle -p --background --region --nonotify --output /tmp/screen.png && wl-copy < /tmp/screen.png

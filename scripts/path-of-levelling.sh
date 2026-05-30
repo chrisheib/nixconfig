@@ -1,0 +1,1 @@
+./Path-Of-Levelling-2-0.1.45.AppImage --ozone-platform=x11
