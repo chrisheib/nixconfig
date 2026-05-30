@@ -1,4 +1,149 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3066 -> 3066 (3 paths added, 3 paths removed, delta +0, disk usage +64B).
+Version changes:
+[U.]  #001  SDL2_image                     2.8.8 -> 2.8.12
+[U*]  #002  adwaita-icon-theme             49.0 -> 50.0
+[U*]  #003  at-spi2-core                   2.58.3 x2, 2.58.3-dev -> 2.60.1 x2, 2.60.1-dev
+[U.]  #004  aws-c-event-stream             0.5.7 -> 0.7.0
+[U*]  #005  bind                           9.20.22-host, 9.20.22-lib, 9.20.22-man -> 9.20.23-host, 9.20.23-lib, 9.20.23-man
+[U.]  #006  bubblewrap                     0.11.1 -> 0.11.2
+[U.]  #007  chafa                          1.18.1 -> 1.18.2
+[U*]  #008  chromium                       148.0.7778.167, 148.0.7778.167-sandbox -> 148.0.7778.178, 148.0.7778.178-sandbox
+[U.]  #009  chromium-unwrapped             148.0.7778.167, 148.0.7778.167-sandbox, 148.0.7778.167-wv -> 148.0.7778.178, 148.0.7778.178-sandbox, 148.0.7778.178-wv
+[U.]  #010  coreutils                      9.10 x2 -> 9.11 x2
+[U*]  #011  coreutils-full                 9.10, 9.10-info -> 9.11, 9.11-info
+[D*]  #012  cpupower                       7.0.7 -> 6.18.33
+[U*]  #013  cups                           2.4.16, 2.4.16-dev, 2.4.16-lib x2, 2.4.16-man -> 2.4.19, 2.4.19-dev, 2.4.19-lib x2, 2.4.19-man
+[U*]  #014  curl                           8.19.0 x4, 8.19.0-bin x3, 8.19.0-dev, 8.19.0-man x2 -> 8.20.0 x4, 8.20.0-bin x3, 8.20.0-dev, 8.20.0-man x2
+[U.]  #015  dash                           0.5.13.2 -> 0.5.13.3
+[U*]  #016  docker                         29.4.3 -> 29.5.1
+[U*]  #017  docker-compose                 5.1.3 -> 5.1.4
+[U.]  #018  docker-containerd              29.4.3 -> 29.5.1
+[U.]  #019  docker-runc                    29.4.3 -> 29.5.1
+[U.]  #020  docker-tini                    29.4.3 -> 29.5.1
+[U.]  #021  dotnet-runtime                 8.0.26 -> 8.0.27
+[U.]  #022  dotnet-runtime-wrapped         8.0.26 -> 8.0.27
+[C.]  #023  electron                       39.8.9, 40.9.2, 41.3.0 -> 40.10.0, 41.6.1
+[C.]  #024  electron-unwrapped             39.8.9, 40.9.2, 41.3.0 -> 40.10.0, 41.6.1
+[U*]  #025  esphome                        2026.4.5 -> 2026.5.0
+[U.]  #026  ethtool                        6.19 x2 -> 7.0 x2
+[U.]  #027  expat                          2.7.5 x2, 2.7.5-dev -> 2.8.0 x2, 2.8.0-dev
+[C.]  #028  ffmpeg                         7.1.3-data, 7.1.3-lib, 8.0.1-bin, 8.0.1-data, 8.0.1-lib -> 7.1.3-data, 7.1.3-lib, 8.1-bin, 8.1-data, 8.1-lib
+[U*]  #029  ffmpeg-full                    8.0.1-bin, 8.0.1-data, 8.0.1-doc, 8.0.1-lib, 8.0.1-man -> 8.1-bin, 8.1-data, 8.1-doc, 8.1-lib, 8.1-man
+[U.]  #030  ffmpeg-headless                8.0.1-bin, 8.0.1-data x2, 8.0.1-lib x2 -> 8.1-bin, 8.1-data x2, 8.1-lib x2
+[U.]  #031  file                           5.45 x3, 5.45-dev, 5.45-man -> 5.47 x3, 5.47-dev, 5.47-man
+[U*]  #032  firefox                        150.0.3 x2 -> 151.0.1 x2
+[U.]  #033  firefox-unwrapped              150.0.3 -> 151.0.1
+[U.]  #034  gdk-pixbuf                     2.44.5 x2, 2.44.5-dev, 2.44.5-man -> 2.44.6 x2, 2.44.6-dev, 2.44.6-man
+[U.]  #035  ghostscript-with-X             10.06.0, 10.06.0-fonts -> 10.07.0, 10.07.0-fonts
+[U*]  #036  git                            2.53.0, 2.53.0-doc -> 2.54.0, 2.54.0-doc
+[U.]  #037  git-minimal                    2.53.0 -> 2.54.0
+[U.]  #038  glib                           2.86.3 x2, 2.86.3-bin x2, 2.86.3-dev -> 2.88.1 x2, 2.88.1-bin x2, 2.88.1-dev
+[U*]  #039  gnome-calculator               49.2 -> 50.0
+[U.]  #040  gnome-settings-daemon          49.1-gsettings-schemas -> 50.1-gsettings-schemas
+[U*]  #041  gnome-software                 49.3 -> 50.1
+[C.]  #042  gnupg                          2.4.9 x3 -> 2.4.9
+[C*]  #043  gnutar                         1.35 x3, 1.35-info -> 1.35 x2, 1.35-info
+[U.]  #044  gnutls                         3.8.12 x2, 3.8.12-bin, 3.8.12-dev -> 3.8.13 x2, 3.8.13-bin, 3.8.13-dev
+[U.]  #045  gsettings-desktop-schemas      49.1 x2 -> 50.1 x2
+[U.]  #046  gtk4                           4.20.3 -> 4.22.4
+[C.]  #047  gtksourceview                  4.8.4, 5.18.0 -> 4.8.4, 5.20.0
+[U.]  #048  harfbuzz                       12.3.0 x2, 12.3.0-dev -> 13.2.1 x2, 13.2.1-dev
+[U.]  #049  harfbuzz-icu                   12.3.0 -> 13.2.1
+[U.]  #050  hiredis                        1.2.0 -> 1.3.0
+[U.]  #051  ijs                            10.06.0 -> 10.07.0
+[U.]  #052  imagemagick                    7.1.2-19, 7.1.2-19-dev, 7.1.2-19-doc -> 7.1.2-23, 7.1.2-23-dev, 7.1.2-23-doc
+[U*]  #053  iproute2                       6.19.0 -> 7.0.0
+[U.]  #054  jemalloc                       5.3.0-unstable-2025-09-12 x2 -> 5.3.1 x2
+[U.]  #055  kirigami-addons                1.12.0 -> 1.12.1
+[U.]  #056  lcevcdec                       4.0.5-lib -> 4.1.0-lib
+[U.]  #057  libadwaita                     1.8.5.1 -> 1.9.0
+[U.]  #058  libarchive                     3.8.6, 3.8.6-lib x2 -> 3.8.7, 3.8.7-lib x2
+[C.]  #059  libassuan                      3.0.2 x2 -> 3.0.2
+[U.]  #060  libbpf                         1.6.3 x2 -> 1.7.0 x2
+[U.]  #061  libcap-ng                      0.9.2 x2 -> 0.9.3 x2
+[U.]  #062  libdrm                         2.4.131 x2, 2.4.131-bin x2, 2.4.131-dev x2 -> 2.4.133 x2, 2.4.133-bin x2, 2.4.133-dev x2
+[U.]  #063  libexif                        0.6.25 -> 0.6.26
+[U.]  #064  libfido2                       1.16.0 x2 -> 1.17.0 x2
+[U.]  #065  libodfgen                      0.1.7 -> 0.1.8
+[U.]  #066  libpq                          18.2 -> 18.4
+[U.]  #067  libraqm                        0.10.4 -> 0.10.5
+[U.]  #068  libraw                         0.22.0, 0.22.0-dev, 0.22.0-lib -> 0.22.1, 0.22.1-dev, 0.22.1-lib
+[U.]  #069  librsvg                        2.61.4, 2.61.4-dev -> 2.62.1, 2.62.1-dev
+[U.]  #070  libsodium                      1.0.21-unstable-2026-03-29 -> 1.0.22-unstable-2026-04-09
+[U.]  #071  libsysprof-capture             49.0 -> 50.0
+[U.]  #072  libxml2                        2.15.1 x3, 2.15.1-bin x2, 2.15.1-dev x2, 2.15.1-py -> 2.15.2 x3, 2.15.2-bin x2, 2.15.2-dev x2, 2.15.2-py
+[U.]  #073  libxpm                         3.5.18 -> 3.5.19
+[U.]  #074  linux-firmware                 20260410-zstd -> 20260519-zstd
+[U.]  #075  llhttp                         9.3.1, 9.3.1-dev -> 9.4.1, 9.4.1-dev
+[U.]  #076  luajit                         2.1.1741730670 -> 2.1.1774638290
+[U*]  #077  lvm2                           2.03.38, 2.03.38-bin, 2.03.38-lib x2, 2.03.38-man, 2.03.38-scripts -> 2.03.39, 2.03.39-bin, 2.03.39-lib x2, 2.03.39-man, 2.03.39-scripts
+[U.]  #078  mbedtls                        3.6.5 x2 -> 3.6.6 x2
+[U*]  #079  mesa                           26.1.0 x2 -> 26.1.1 x2
+[U.]  #080  moby                           29.4.3 -> 29.5.1
+[U.]  #081  nghttp2                        1.68.1 x2, 1.68.1-dev x2, 1.68.1-lib x3 -> 1.69.0, 1.69.0-dev, 1.69.0-lib x2
+[C.]  #082  ngtcp2                         1.22.0 x2, 1.22.0-dev, 1.22.1 -> 1.22.1 x3, 1.22.1-dev
+[U*]  #083  nix-direnv                     3.1.1 -> 3.1.2
+[U.]  #084  nixos-system-nixos             26.05.20260515.d233902 -> 26.05.20260523.64c08a7
+[U.]  #085  nodejs                         24.14.1 -> 24.15.0
+[U.]  #086  nodejs-slim                    24.14.1, 24.14.1-corepack, 24.14.1-npm -> 24.15.0, 24.15.0-corepack, 24.15.0-npm
+[C.]  #087  npth                           1.8 x2 -> 1.8
+[U.]  #088  nspr                           4.38.2, 4.38.2-dev -> 4.39, 4.39-dev
+[C.]  #089  nss                            3.112.3, 3.112.3-dev, 3.112.3-man, 3.123.1 -> 3.112.5, 3.112.5-dev, 3.112.5-man, 3.124
+[U.]  #090  nss-cacert                     3.121, 3.121-p11kit -> 3.123, 3.123-p11kit
+[U.]  #091  openexr                        3.3.8, 3.3.8-bin, 3.3.8-dev -> 3.4.10, 3.4.10-bin, 3.4.10-dev
+[C.]  #092  openjdk                        8u472-b08, 8u472-b08-jre, 17.0.18+8, 21.0.10+7 x2, 25.0.2+10 -> 8u502-b01, 8u502-b01-jre, 17.0.20+2, 21.0.12+2 x2, 25.0.4+1
+[U.]  #093  openjdk-minimal-jre            21.0.10+7 x2 -> 21.0.12+2 x2
+[U.]  #094  openssl                        3.6.1 x2, 3.6.1-bin, 3.6.1-dev, 3.6.1-man -> 3.6.2 x2, 3.6.2-bin, 3.6.2-dev, 3.6.2-man
+[U*]  #095  orca                           49.5 -> 50.1.2
+[U.]  #096  oxygen-icons                   6.1.0 -> 6.2.0
+[U.]  #097  pango                          1.57.0 x2, 1.57.0-bin, 1.57.0-dev -> 1.57.1 x2, 1.57.1-bin, 1.57.1-dev
+[U*]  #098  pciutils                       3.14.0, 3.14.0-man -> 3.15.0, 3.15.0-man
+[U*]  #099  pipewire                       1.6.3 x2, 1.6.3-dev, 1.6.3-doc, 1.6.3-man -> 1.6.5 x2, 1.6.5-dev, 1.6.5-doc, 1.6.5-man
+[U.]  #100  plutosvg                       0.0.7 -> 0.0.8
+[U.]  #101  plutovg                        1.3.2 -> 1.3.3
+[U*]  #102  plymouth                       24.004.60 -> 26.134.222
+[U.]  #103  psqlodbc                       17.00.0008 -> 18.00.0001
+[U.]  #104  python3                        3.13.12 x2, 3.13.12-env x8 -> 3.13.13 x2, 3.13.13-env x8
+[U.]  #105  python3.13-aioesphomeapi       44.23.0 -> 45.0.2
+[U.]  #106  python3.13-aiohttp             3.13.4 -> 3.13.5
+[U.]  #107  python3.13-attrs               25.4.0 -> 26.1.0
+[U.]  #108  python3.13-charset-normalizer  3.4.4 -> 3.4.7
+[U.]  #109  python3.13-cryptography        46.0.6 -> 48.0.0
+[U.]  #110  python3.13-esphome-dashboard   20260408.1 -> 20260425.0
+[U.]  #111  python3.13-idna                3.11 -> 3.13
+[U.]  #112  python3.13-packaging           25.0 -> 26.1
+[U.]  #113  python3.13-pygobject           3.54.5, 3.54.5-dev -> 3.56.2, 3.56.2-dev
+[U.]  #114  python3.13-pyopenssl           25.3.0, 25.3.0-dev -> 26.0.0, 26.0.0-dev
+[U.]  #115  python3.13-resvg-py            0.3.1 -> 0.3.2
+[U.]  #116  python3.13-smpclient           6.0.0 -> 7.0.1
+[U.]  #117  python3.13-tzdata              2026.1 -> 2026.2
+[U*]  #118  r2modman                       3.2.15 -> 3.2.16
+[U*]  #119  ruff                           0.15.13 -> 0.15.14
+[U.]  #120  sdl2-compat                    2.32.66, 2.32.66-dev -> 2.32.68, 2.32.68-dev
+[U.]  #121  sdl3                           3.4.2-lib x2 -> 3.4.8-lib x2
+[C.]  #122  simdutf                        6.5.0, 8.1.0 -> 6.5.0, 9.0.0
+[U.]  #123  tinysparql                     3.10.1 x2 -> 3.11.1 x2
+[U.]  #124  tzdata                         2026a x2 -> 2026b x2
+[U.]  #125  unbound                        1.24.2-lib x2 -> 1.25.0-lib x2
+[C.]  #126  util-linux-minimal             2.42 x2, 2.42-bin, 2.42-lib x2, 2.42-login x2, 2.42-man, 2.42-mount x2, 2.42-swap x2 -> 2.42, 2.42-bin, 2.42-lib x2, 2.42-login x2, 2.42-man, 2.42-mount x2, 2.42-swap x2
+[U.]  #127  vte                            0.82.3 -> 0.84.0
+[U*]  #128  wayland                        1.24.0 x2, 1.24.0-dev, 1.24.0-doc, 1.24.0-man -> 1.25.0 x2, 1.25.0-dev, 1.25.0-doc, 1.25.0-man
+[U.]  #129  wayland-scanner                1.24.0, 1.24.0-bin, 1.24.0-dev -> 1.25.0, 1.25.0-bin, 1.25.0-dev
+[U.]  #130  xdg-dbus-proxy                 0.1.6 -> 0.1.7
+[U*]  #131  xdg-user-dirs                  0.19 x2, 0.19-lib x2, 0.19-man -> 0.20 x2, 0.20-lib x2, 0.20-man
+[U.]  #132  xrandr                         1.5.3 -> 1.5.4
+Added packages:
+[A.]  #1  OVMF-xen                                                                                   202602-fd
+[A.]  #2  etc-environment.d                                                                          50-systemd-path.conf
+[A.]  #3  initrd-linux                                                                               6.18.33
+[A.]  #4  libaec                                                                                     1.1.6
+[A.]  #5  linux                                                                                      6.18.33, 6.18.33-modules x2
+[A.]  #6  security-wrapper-mdfvxq1y1plxaqn877jfjpxmqn1h8cd1-nix-ccache.pl-x86_64-unknown-linux-musl  <none>
+Removed packages:
+[R.]  #1  OVMF                                                                                       202602-fd
+[R.]  #2  initrd-linux-xanmod                                                                        7.0.7
+[R.]  #3  linux-xanmod                                                                               7.0.7, 7.0.7-modules x2
+[R.]  #4  security-wrapper-vz7ckzcvrjj2qd5xm7dknqacc3k1k1jz-nix-ccache.pl-x86_64-unknown-linux-musl  <none>
+[R-]  #5  turbostat                                                                                  7.0.7
+Closure size: 3066 -> 3056 (3027 paths added, 3037 paths removed, delta -10, disk usage -265.8MiB).
