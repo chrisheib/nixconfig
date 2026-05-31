@@ -1,7 +1,5 @@
 <<< /run/current-system
 >>> result
 Version changes:
-[U*]  #1  cpupower      6.18.33 -> 7.0.10
-[U.]  #2  initrd-linux  6.18.33 -> 7.0.10
-[U.]  #3  linux         6.18.33, 6.18.33-modules x2 -> 7.0.10, 7.0.10-modules x2
-Closure size: 3056 -> 3056 (20 paths added, 20 paths removed, delta +0, disk usage +4.5MiB).
+[U*]  #1  Exiled-Exchange  2-0.13.8, 2-0.13.8-bwrap, 2-0.13.8-extracted, 2-0.13.8-fhsenv-profile, 2-0.13.8-fhsenv-rootfs, 2-0.13.8-init -> 2-0.15.2, 2-0.15.2-bwrap, 2-0.15.2-extracted, 2-0.15.2-fhsenv-profile, 2-0.15.2-fhsenv-rootfs, 2-0.15.2-init
+Closure size: 3056 -> 3056 (18 paths added, 18 paths removed, delta +0, disk usage +8.2MiB).
