@@ -1,5 +1,7 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[U*]  #1  Exiled-Exchange  2-0.13.8, 2-0.13.8-bwrap, 2-0.13.8-extracted, 2-0.13.8-fhsenv-profile, 2-0.13.8-fhsenv-rootfs, 2-0.13.8-init -> 2-0.15.2, 2-0.15.2-bwrap, 2-0.15.2-extracted, 2-0.15.2-fhsenv-profile, 2-0.15.2-fhsenv-rootfs, 2-0.15.2-init
-Closure size: 3056 -> 3056 (18 paths added, 18 paths removed, delta +0, disk usage +8.2MiB).
+Added packages:
+[A.]  #1  smartd-notify.sh     <none>
+[A.]  #2  smartd.conf          <none>
+[A.]  #3  unit-smartd.service  <none>
+Closure size: 3056 -> 3059 (14 paths added, 11 paths removed, delta +3, disk usage +2.8KiB).
