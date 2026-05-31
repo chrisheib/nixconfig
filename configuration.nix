@@ -123,11 +123,16 @@
       # Required to get the AOC G2460PG (Gysnc) to work with amdgpu.
       # Map to common connector names because numbering can change after cable swaps.
       "drm.edid_firmware=DP-2:edid/EDID_144hz.bin"
+      "video=DP-2:1920x1080@120e"
+      # "vfio-pci.ids=1002:13c0,1002:1640"
+
       # Disable MPO in amdgpu display core (DC_DISABLE_MPO = 0x40).
       # Useful for intermittent 5-10s blackscreen recoveries on Wayland.
       # "amdgpu.dcdebugmask=0x40"
-      "video=DP-2:1920x1080@120e"
-      # "vfio-pci.ids=1002:13c0,1002:1640"
+
+      # Disable DC power optimizations (DC_DISABLE_POWERSAVE = 0x10) and DC debug logging (DC_DISABLE_DEBUG_OUTPUT = 0x02) to avoid black screen on resume and improve stability on Wayland.
+      # https://www.reddit.com/r/linux/comments/1ts9xok/comment/oovkt16
+      "amdgpu.dcdebugmask=0x12"
 
       # avoid amdgpu black screen
       "amdgpu.gfxoff=0"
@@ -369,6 +374,7 @@
       cores = 24; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
       max-jobs = 6; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
       extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
+      auto-optimise-store = true; # automatically optimize the Nix store after builds
     };
     # nixPath = [
     # "nixpkgs=/home/stschiff/projects/nixpkgs"
@@ -497,7 +503,21 @@
     overdrive.enable = true; # enable overdrive for gpu overclocking
     overdrive.ppfeaturemask = "0xfffd7fff"; # keep overdrive but avoid the riskier all-features mask
   };
+
   services.lact.enable = true; # AMD OC tool
+
+  services.fstrim.enable = true; # enable automatic fstrim timer for SSDs
+
+  services.smartd.enable = true; # enable smartd for monitoring drive health
+
+  # Limit journald log size to prevent filling up the disk with logs.
+  services.journald.extraConfig = ''
+    SystemMaxUse=1G
+    RuntimeMaxUse=256M
+    MaxRetentionSec=14day
+  '';
+
+  services.fwupd.enable = true; # enable fwupd for firmware updates
 
   hardware.bluetooth = {
     enable = true;
