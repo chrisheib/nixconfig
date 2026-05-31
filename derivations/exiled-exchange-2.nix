@@ -10,7 +10,7 @@ let
 
   src = fetchurl {
     url = "https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v${version}/Exiled-Exchange-2-${version}.AppImage";
-    hash = "sha256-jA/VXMi+VJmRcHRBgnt71PLvGrSBe2S2KmUtrQlIFjk=";
+    hash = "sha256-LNXiVZvPIrPbrmpiS4g+iBGi0+Jn2lott8fsy+uJnfw=";
   };
 
   appimageContents = appimageTools.extract { inherit pname version src; };
