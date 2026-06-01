@@ -1,7 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  smartd-notify.sh     <none>
-[A.]  #2  smartd.conf          <none>
-[A.]  #3  unit-smartd.service  <none>
-Closure size: 3056 -> 3059 (14 paths added, 11 paths removed, delta +3, disk usage +2.8KiB).
+No version or selection state changes.
+Closure size: 3059 -> 3059 (1 paths added, 1 paths removed, delta +0, disk usage -56B).
