@@ -132,7 +132,7 @@
 
       # Disable DC power optimizations (DC_DISABLE_POWERSAVE = 0x10) and DC debug logging (DC_DISABLE_DEBUG_OUTPUT = 0x02) to avoid black screen on resume and improve stability on Wayland.
       # https://www.reddit.com/r/linux/comments/1ts9xok/comment/oovkt16
-      "amdgpu.dcdebugmask=0x12"
+      # "amdgpu.dcdebugmask=0x12"
 
       # avoid amdgpu black screen
       "amdgpu.gfxoff=0"
