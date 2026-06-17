@@ -991,6 +991,29 @@
   #     OLLAMA_FLASH_ATTENTION = "1"; # Enable Flash Attention for better performance on RDNA4 GPUs
   #   };
   # };
+  services.llama-cpp = {
+    enable = true;
+    package = pkgs.llama-cpp-rocm;
+    # extraFlags = [
+    #   "--n-gpu-layers" "-1"
+    # ];
+    openFirewall = true;
+    settings = {
+      host = "0.0.0.0";
+      port = 11444;
+      # batch-size = 512;
+      # ctx-size = 252144;
+      # flash-attn = "on";
+      model = "unsloth/Qwen3.5-9B-GGUF:Q4_1";
+      # model = "/mnt/llms/Foo3.6-27B-UD-Q4_K_XL.gguf";
+      # spec-draft-n-max = 2;
+      # spec-type = "draft-mtp";
+      # temp = 0.6;
+      # top-k = 20;
+      # top-p = 0.95;
+      # ubatch-size = 256;
+    };
+  };
 
   programs.kdeconnect.enable = true;
 
