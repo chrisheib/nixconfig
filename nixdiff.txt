@@ -1,11 +1,4 @@
 <<< /run/current-system
 >>> result
-Selection state changes:
-[C+]  #1  llama-cpp  9608
-Added packages:
-[A+]  #1  llama-swap                    224
-[A.]  #2  unit-llama-swap.service       <none>
-[A.]  #3  unit-script-llama-swap-start  <none>
-Removed packages:
-[R.]  #1  unit-llama-cpp.service  <none>
-Closure size: 3075 -> 3077 (18 paths added, 16 paths removed, delta +2, disk usage +30.5MiB).
+No version or selection state changes.
+Closure size: 3077 -> 3077 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
