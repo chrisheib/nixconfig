@@ -806,6 +806,9 @@
     # libation
 
     esbuild
+
+    llama-cpp-rocm # start on demand: scripts/start-llama-server.sh
+    llama-swap    # multi-model proxy: scripts/start-llama-swap.sh
   ];
 
   # Enable GNOME settings manager
@@ -981,6 +984,29 @@
     };
   };
 
+  # llama-swap: lightweight proxy that only loads models (and uses VRAM) on demand.
+  # Manage with: systemctl {start,stop,restart,status} llama-swap
+  systemd.services.llama-swap = {
+    description = "llama-swap model proxy";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "network.target" ];
+    script = ''
+      exec ${pkgs.llama-swap}/bin/llama-swap \
+        --config /home/stschiff/.nixos/scripts/llama-swap-config.yaml \
+        --listen 0.0.0.0:11444
+    '';
+    path = [ pkgs.llama-cpp-rocm ];
+    environment = {
+      LLAMA_CACHE = "/home/stschiff/projects/llm/.cache";
+    };
+    serviceConfig = {
+      Type = "simple";
+      User = "stschiff";
+      Restart = "on-failure";
+      RestartSec = 5;
+    };
+  };
+
   # services.ollama = {
   #   enable = true;
   #   # acceleration = "rocm";
@@ -991,28 +1017,29 @@
   #     OLLAMA_FLASH_ATTENTION = "1"; # Enable Flash Attention for better performance on RDNA4 GPUs
   #   };
   # };
-  services.llama-cpp = {
-    enable = true;
-    package = pkgs.llama-cpp-rocm;
-    openFirewall = true;
-    settings = {
-      host = "0.0.0.0";
-      port = 11444;
-      n-gpu-layers = -1;
-      hf-repo = "unsloth/Qwen3.5-9B-GGUF:Q4_1";
-      # batch-size = 512;
-      # ctx-size = 252144;
-      # flash-attn = "on";
-      # model = "/home/stschiff/projects/llm/Qwen3.5-9B-Q4_1.gguf";
-      # model = "/mnt/llms/Foo3.6-27B-UD-Q4_K_XL.gguf";
-      # spec-draft-n-max = 2;
-      # spec-type = "draft-mtp";
-      # temp = 0.6;
-      # top-k = 20;
-      # top-p = 0.95;
-      # ubatch-size = 256;
-    };
-  };
+  # services.llama-cpp — disabled; start on demand via scripts/start-llama-server.sh
+  # services.llama-cpp = {
+  #   enable = true;
+  #   package = pkgs.llama-cpp-rocm;
+  #   openFirewall = true;
+  #   settings = {
+  #     host = "0.0.0.0";
+  #     port = 11444;
+  #     n-gpu-layers = -1;
+  #     hf-repo = "unsloth/Qwen3.5-9B-GGUF:Q4_1";
+  #     # batch-size = 512;
+  #     # ctx-size = 252144;
+  #     # flash-attn = "on";
+  #     # model = "/home/stschiff/projects/llm/Qwen3.5-9B-Q4_1.gguf";
+  #     # model = "/mnt/llms/Foo3.6-27B-UD-Q4_K_XL.gguf";
+  #     # spec-draft-n-max = 2;
+  #     # spec-type = "draft-mtp";
+  #     # temp = 0.6;
+  #     # top-k = 20;
+  #     # top-p = 0.95;
+  #     # ubatch-size = 256;
+  #   };
+  # };
 
   programs.kdeconnect.enable = true;
 

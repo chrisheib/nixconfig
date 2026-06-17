@@ -1,0 +1,27 @@
+# llama-swap configuration
+# Docs: https://github.com/mostlygeek/llama-swap
+#
+# Usage: start-llama-swap.sh
+# Web UI: http://localhost:11444/ui
+# API:    http://localhost:11444/v1/chat/completions
+
+models:
+
+  qwen3.5-9b:
+    cmd: llama-server --port ${PORT} --n-gpu-layers -1 -hf unsloth/Qwen3.5-9B-GGUF:Q4_1
+    env:
+      LLAMA_CACHE: /home/stschiff/projects/llm/models
+    ttl: 120  # unload after 2 minutes of inactivity
+
+  qwen3.5-27b:
+    cmd: llama-server --port ${PORT} --n-gpu-layers -1 -hf unsloth/Qwen3.5-27B-GGUF:Q3_K_S
+    env:
+      LLAMA_CACHE: /home/stschiff/projects/llm/models
+    ttl: 120  # unload after 2 minutes of inactivity
+
+  # Example: add more models below
+  # some-other-model:
+  #   cmd: llama-server --port ${PORT} --n-gpu-layers -1 --hf-repo unsloth/SomeModel-GGUF:Q4_K_M
+  #   env:
+  #     LLAMA_CACHE: /home/stschiff/projects/llm/models
+  #   ttl: 300
