@@ -999,7 +999,7 @@
       host = "0.0.0.0";
       port = 11444;
       n-gpu-layers = -1;
-      hf = "unsloth/Qwen3.5-9B-GGUF:Q4_1";
+      hf-repo = "unsloth/Qwen3.5-9B-GGUF:Q4_1";
       # batch-size = 512;
       # ctx-size = 252144;
       # flash-attn = "on";
