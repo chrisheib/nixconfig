@@ -645,6 +645,7 @@
     eza # ls replacement
     dysk # df replacement
     ripgrep
+    nurl # get nix urls and hashes
 
     nh # nix os helper
     nix-tree
@@ -808,7 +809,7 @@
     esbuild
 
     llama-cpp-rocm # start on demand: scripts/start-llama-server.sh
-    llama-swap    # multi-model proxy: scripts/start-llama-swap.sh
+    llama-swap # multi-model proxy: scripts/start-llama-swap.sh
   ];
 
   # Enable GNOME settings manager

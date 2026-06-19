@@ -8,20 +8,20 @@
 models:
 
   qwen3.5-9b:
-    cmd: llama-server --port ${PORT} --n-gpu-layers -1 -hf unsloth/Qwen3.5-9B-GGUF:Q4_1
+    cmd: llama-server --port ${PORT} --max-tokens 1500 --stats --flash-attn --repeat-penalty 1.2 -hf unsloth/Qwen3.5-9B-GGUF:Q4_1
     env:
-      LLAMA_CACHE: /home/stschiff/projects/llm/models
-    ttl: 120  # unload after 2 minutes of inactivity
+      - LLAMA_CACHE=/home/stschiff/projects/llm/models
+    ttl: 240  # unload after 2 minutes of inactivity
 
   qwen3.5-27b:
-    cmd: llama-server --port ${PORT} --n-gpu-layers -1 -hf unsloth/Qwen3.5-27B-GGUF:Q3_K_S
+    cmd: llama-server --port ${PORT} --max-tokens 1500 --stats --flash-attn --repeat-penalty 1.2 -hf unsloth/Qwen3.5-27B-GGUF:Q3_K_S
     env:
-      LLAMA_CACHE: /home/stschiff/projects/llm/models
-    ttl: 120  # unload after 2 minutes of inactivity
+      - LLAMA_CACHE=/home/stschiff/projects/llm/models
+    ttl: 240  # unload after 2 minutes of inactivity
 
   # Example: add more models below
   # some-other-model:
   #   cmd: llama-server --port ${PORT} --n-gpu-layers -1 --hf-repo unsloth/SomeModel-GGUF:Q4_K_M
   #   env:
-  #     LLAMA_CACHE: /home/stschiff/projects/llm/models
+  #     - LLAMA_CACHE=/home/stschiff/projects/llm/models
   #   ttl: 300
