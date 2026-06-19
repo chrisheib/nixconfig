@@ -1,4 +1,12 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 3077 -> 3077 (0 paths added, 0 paths removed, delta +0, disk usage +0B).
+Version changes:
+[U*]  #1  Exiled-Exchange  2-0.15.5, 2-0.15.5-bwrap, 2-0.15.5-extracted, 2-0.15.5-fhsenv-profile, 2-0.15.5-fhsenv-rootfs, 2-0.15.5-init -> 2-0.15.7, 2-0.15.7-bwrap, 2-0.15.7-extracted, 2-0.15.7-fhsenv-profile, 2-0.15.7-fhsenv-rootfs, 2-0.15.7-init
+Added packages:
+[A.]  #1  mercurial              7.1.2
+[A+]  #2  nurl                   0.4.0
+[A.]  #3  pybind11-setup-hook    <none>
+[A.]  #4  python3.13-google-re2  1.1.20251105
+[A.]  #5  python3.13-pybind11    3.0.4
+[A.]  #6  re2                    2025-11-05
+Closure size: 3077 -> 3083 (24 paths added, 18 paths removed, delta +6, disk usage +51.6MiB).
