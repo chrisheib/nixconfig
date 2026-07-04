@@ -6,10 +6,51 @@ let
   # https://github.com/NixOS/nixpkgs/issues/345590#issuecomment-2964363446
   orcaSlicerDesktopItem = pkgs.makeDesktopItem {
     name = "orca-slicer-dri";
-    desktopName = "OrcaSlicer (DRI)";
+    desktopName = "OrcaSlicer (X11/Zink)";
     genericName = "3D Printing Software";
     icon = "OrcaSlicer";
-    exec = "__GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json LC_ALL=en_US.UTF-8 QT_QPA_PLATFORM=xcb GBM_BACKEND=dri ${pkgs.orca-slicer}/bin/orca-slicer %U";
+    # Keep Orca on a stable XWayland/mesa path to avoid intermittent
+    # preview rendering failures on Wayland + AMD.
+    exec = "env -u GBM_BACKEND -u NIXOS_OZONE_WL LC_ALL=en_US.UTF-8 QT_QPA_PLATFORM=xcb GDK_BACKEND=x11 __GLX_VENDOR_LIBRARY_NAME=mesa __EGL_VENDOR_LIBRARY_FILENAMES=/run/opengl-driver/share/glvnd/egl_vendor.d/50_mesa.json MESA_LOADER_DRIVER_OVERRIDE=zink GALLIUM_DRIVER=zink WEBKIT_DISABLE_COMPOSITING_MODE=1 WEBKIT_DISABLE_DMABUF_RENDERER=1 MANGOHUD=0 ${pkgs.orca-slicer}/bin/orca-slicer %U";
+    terminal = false;
+    type = "Application";
+    mimeTypes = [
+      "model/stl"
+      "model/3mf"
+      "application/vnd.ms-3mfdocument"
+      "application/prs.wavefront-obj"
+      "application/x-amf"
+      "x-scheme-handler/orcaslicer"
+    ];
+    categories = [
+      "Graphics"
+      "3DGraphics"
+      "Engineering"
+    ];
+    keywords = [
+      "3D"
+      "Printing"
+      "Slicer"
+      "slice"
+      "3D"
+      "printer"
+      "convert"
+      "gcode"
+      "stl"
+      "obj"
+      "amf"
+      "SLA"
+    ];
+    startupNotify = false;
+    startupWMClass = "orca-slicer";
+  };
+
+  orcaSlicerNativeDesktopItem = pkgs.makeDesktopItem {
+    name = "orca-slicer-native";
+    desktopName = "OrcaSlicer (Native)";
+    genericName = "3D Printing Software";
+    icon = "OrcaSlicer";
+    exec = "LC_ALL=en_US.UTF-8 ${pkgs.orca-slicer}/bin/orca-slicer %U";
     terminal = false;
     type = "Application";
     mimeTypes = [
@@ -66,6 +107,7 @@ in
   environment.systemPackages = with pkgs; [
     orca-slicer
     orcaSlicerDesktopItem
+    orcaSlicerNativeDesktopItem
   ];
 
   environment.etc."xdg/mimeapps.list".source = orcaSlicerMimeappsList;

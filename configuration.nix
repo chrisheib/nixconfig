@@ -59,8 +59,8 @@
   boot = {
     # Bootloader.
     loader.systemd-boot.enable = true;
-    loader.systemd-boot.configurationLimit = 5;
     loader.efi.canTouchEfiVariables = true;
+    loader.systemd-boot.configurationLimit = 5;
     # cachyos: https://www.nyx.chaotic.cx/
     kernelPackages = pkgs.linuxPackages_latest;
     # kernelPackages = pkgs.linuxPackages_xanmod_latest;
