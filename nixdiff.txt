@@ -1,5 +1,4 @@
 <<< /run/current-system
 >>> result
-Added packages:
-[A.]  #1  etc-sane.d-net.conf  <none>
-Closure size: 3104 -> 3105 (17 paths added, 16 paths removed, delta +1, disk usage +2.7KiB).
+No version or selection state changes.
+Closure size: 3105 -> 3105 (3 paths added, 3 paths removed, delta +0, disk usage +600B).
