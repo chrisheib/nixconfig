@@ -810,7 +810,16 @@
 
     llama-cpp-rocm # start on demand: scripts/start-llama-server.sh
     llama-swap # multi-model proxy: scripts/start-llama-swap.sh
+
+    # scanner
+    simple-scan
+    sane-backends
   ];
+
+  hardware.sane = {
+    enable = true;
+    netConf = "raspi.local";
+  };
 
   # Enable GNOME settings manager
   programs.dconf.enable = true;
