@@ -1,11 +1,4 @@
 <<< /run/current-system
 >>> result
-Version changes:
-[C+]  #1  sane-backends  1.4.0 -> 1.4.0, 1.4.0-doc, 1.4.0-man
-Added packages:
-[A.]  #1  colord       1.4.8
-[A.]  #2  ksanecore    26.04.2
-[A.]  #3  sane-config  <none>
-[A+]  #4  simple-scan  50.0
-[A+]  #5  skanpage     26.04.2
-Closure size: 3097 -> 3104 (32 paths added, 25 paths removed, delta +7, disk usage +17.0MiB).
+No version or selection state changes.
+Closure size: 3104 -> 3104 (17 paths added, 17 paths removed, delta +0, disk usage +0B).
