@@ -827,6 +827,11 @@
     mode = "0644";
   };
 
+  environment.etc."sane.d/dll.conf" = {
+    text = "net\n";
+    mode = "0644";
+  };
+
   # Enable GNOME settings manager
   programs.dconf.enable = true;
   programs.steam = {
