@@ -818,7 +818,7 @@
 
   hardware.sane = {
     enable = true;
-    netConf = "raspi.local";
+    netConf = "192.168.2.229";
   };
 
   # Enable GNOME settings manager
