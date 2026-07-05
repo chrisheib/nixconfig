@@ -822,7 +822,10 @@
     extraBackends = [ pkgs.sane-backends ];
   };
 
-  environment.etc."sane.d/net.conf".text = "${config.hardware.sane.netConf}";
+  environment.etc."sane.d/net.conf" = {
+    text = "${config.hardware.sane.netConf}\n";
+    mode = "0644";
+  };
 
   # Enable GNOME settings manager
   programs.dconf.enable = true;
