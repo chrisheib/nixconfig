@@ -819,7 +819,10 @@
   hardware.sane = {
     enable = true;
     netConf = "192.168.2.229";
+    extraBackends = [ pkgs.sane-backends ];
   };
+
+  environment.etc."sane.d/net.conf".text = "${config.hardware.sane.netConf}";
 
   # Enable GNOME settings manager
   programs.dconf.enable = true;
