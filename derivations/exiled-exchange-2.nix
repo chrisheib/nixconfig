@@ -5,7 +5,7 @@
 }:
 
 let
-  version = "0.15.7";
+  version = "0.15.8";
   pname = "Exiled-Exchange-2";
   # nurl https://github.com/Kvan7/Exiled-Exchange-2/releases/download/v0.15.7/Exiled-Exchange-2-0.15.7.AppImage
   src = fetchurl {
