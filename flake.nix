@@ -2,7 +2,8 @@
   description = "NixOS configuration (flake) for stschiff";
 
   inputs = {
-    nixpkgs.url = "tarball+https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
+    nixpkgs.url = "https://flakehub.com/f/DeterminateSystems/nixpkgs-weekly/0.1";
+    # nixpkgs.url = "tarball+https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
     flake-utils.url = "github:numtide/flake-utils";
     preload-ng.url = "github:miguel-b-p/preload-ng";
     maccel.url = "github:Gnarus-G/maccel";
