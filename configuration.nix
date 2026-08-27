@@ -746,7 +746,7 @@
 
     # geekbench
 
-    variety # wallpaper changer
+    # variety # wallpaper changer
 
     firefox
 

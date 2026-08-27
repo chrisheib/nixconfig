@@ -27,3 +27,13 @@ ffmpeg -v warning -fflags +discardcorrupt+genpts -err_detect ignore_err -i sourc
 ## ffmpeg fix movie
 
 ffmpeg -i input.mp4 -c:v copy -c:a aac -b:a 192k fixed.mp4
+
+
+## Slow KDE workaround
+
+https://github.com/NixOS/nixpkgs/issues/363068#issuecomment-5209282821
+
+```
+mkdir -p ~/.local/share/plasma/desktoptheme/default/translucent
+touch ~/.local/share/plasma/desktoptheme/default/translucent/colors
+```
