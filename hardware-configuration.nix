@@ -42,7 +42,7 @@
 
   fileSystems."/run/media/stschiff/D" = {
     device = "/dev/disk/by-uuid/C4CA75E0CA75CEE4";
-    fsType = "ntfs-3g";
+    fsType = "ntfs";
     options = [
       "rw"
       "uid=1000"
@@ -58,7 +58,7 @@
 
   fileSystems."/run/media/stschiff/F_Alt-Alt-C" = {
     device = "/dev/disk/by-uuid/366275AC6275720B";
-    fsType = "ntfs-3g";
+    fsType = "ntfs";
     options = [
       "rw"
       "uid=1000"
@@ -68,7 +68,7 @@
 
   fileSystems."/run/media/stschiff/win-2025-05" = {
     device = "/dev/disk/by-uuid/7C248AD4248A9136";
-    fsType = "ntfs-3g";
+    fsType = "ntfs";
     options = [
       "rw"
       "uid=1000"
