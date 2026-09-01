@@ -485,6 +485,10 @@
     __GL_SHADER_DISK_CACHE_SIZE = "53687091200"; # 50 GB
 
     KROSSHAIR_IMG = "/home/stschiff/projects/krosshair/crosshairs/OPDot.png";
+
+    # Force software cursor for KWin to avoid screen freezes: https://github.com/CachyOS/distribution/issues/547
+    # dmesg: [drm] *ERROR* Unsupported screen format RA24 little-endian (0x34324152)
+    KWIN_FORCE_SW_CURSOR = "1";
   };
 
   # https://wiki.nixos.org/wiki/NVIDIA
