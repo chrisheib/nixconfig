@@ -849,6 +849,9 @@
 
   programs.firefox = {
     enable = true;
+    nativeMessagingHosts.packages = [
+      pkgs.kdePackages.kdeconnect
+    ];
     # package = pkgs.firefox;
     # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
     preferences = {
