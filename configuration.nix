@@ -373,7 +373,7 @@
       ];
       cores = 24; # threads per build job https://search.nixos.org/options?channel=unstable&show=nix.settings.cores&query=nix.settings
       max-jobs = 6; # parallel build jobs https://search.nixos.org/options?channel=unstable&show=nix.settings.max-jobs&query=nix.settings
-      extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
+      # extra-sandbox-paths = [ config.programs.ccache.cacheDir ];
       auto-optimise-store = true; # automatically optimize the Nix store after builds
     };
     # nixPath = [
@@ -383,13 +383,13 @@
     # ];
   };
 
-  programs.ccache.enable = true;
-  # Note: ccache for kernel and nvidia is handled via overlays using ccacheStdenv
-  programs.ccache.packageNames = [
-    "ollama"
-    "ollama-cuda"
-    # "coreutils"
-  ];
+  # programs.ccache.enable = true;
+  # # Note: ccache for kernel and nvidia is handled via overlays using ccacheStdenv
+  # programs.ccache.packageNames = [
+  #   "ollama"
+  #   "ollama-cuda"
+  #   # "coreutils"
+  # ];
 
   programs.partition-manager.enable = true;
 
