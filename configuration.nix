@@ -849,23 +849,24 @@
 
   programs.firefox = {
     enable = true;
+    nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
     # nativeMessagingHosts.packages = [
     #   pkgs.kdePackages.kdeconnect-kde
     # ];
     # package = pkgs.firefox;
     # https://github.com/TLATER/dotfiles/blob/master/nixos-modules/nvidia/default.nix
-    preferences = {
-      "gfx.webrender.all" = true;
-      # "gfx.x11-egl.force-enabled" = true;
-      "media.av1.enabled" = true;
-      "media.ffmpeg.vaapi.enabled" = true;
-      "media.ffvpx.enabled" = false;
-      "media.hardware-video-decoding.enabled" = true;
-      "media.hardware-video-decoding.force-enabled" = true;
-      "media.rdd-ffmpeg.enabled" = true;
-      "media.rdd-vpx.enabled" = true;
-      "widget.dmabuf.force-enabled" = true;
-    };
+    # preferences = {
+    #   "gfx.webrender.all" = true;
+    #   # "gfx.x11-egl.force-enabled" = true;
+    #   "media.av1.enabled" = true;
+    #   "media.ffmpeg.vaapi.enabled" = true;
+    #   "media.ffvpx.enabled" = false;
+    #   "media.hardware-video-decoding.enabled" = true;
+    #   "media.hardware-video-decoding.force-enabled" = true;
+    #   "media.rdd-ffmpeg.enabled" = true;
+    #   "media.rdd-vpx.enabled" = true;
+    #   "widget.dmabuf.force-enabled" = true;
+    # };
   };
 
   programs.chromium = {
