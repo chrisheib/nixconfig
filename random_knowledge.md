@@ -37,3 +37,19 @@ https://github.com/NixOS/nixpkgs/issues/363068#issuecomment-5209282821
 mkdir -p ~/.local/share/plasma/desktoptheme/default/translucent
 touch ~/.local/share/plasma/desktoptheme/default/translucent/colors
 ```
+
+## Burn ISO to USB:
+sudo fdisk -l
+sudo dd bs=4M if=Downloads/Win11_25H2_German_x64_v2.iso of=/dev/sdX status=progress oflag=sync
+
+
+## Steam Launch Options for modded launchers
+sed 's/Terraria\.exe/TerrariaInjector.exe/' <<< "%command%" | sh
+
+
+## Burn movie to dvd
+ffmpeg -i input_av1.mkv -target pal-dvd -aspect 16:9 output.mpg
+dvdauthor -o dvd_fs -t output.mpg
+dvdauthor -o dvd_fs -T
+genisoimage -dvd-video -o movie_pal.iso dvd_fs
+growisofs -dvd-compat -Z /dev/sr0=movie_pal.iso
