@@ -605,6 +605,7 @@
     # vivaldi # crashes after a while https://github.com/NixOS/nixpkgs/issues/307424
 
     kdePackages.kate # editor with sudo
+    kdePackages.plasma-browser-integration
     thunderbird
     # my-vscode
     # bitwarden
@@ -752,7 +753,7 @@
 
     # variety # wallpaper changer
 
-    firefox
+    # firefox
 
     adwaita-icon-theme
     gtk3
