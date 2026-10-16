@@ -675,7 +675,7 @@
     rustup
 
     vlc
-    streamlink-twitch-gui-bin
+    # streamlink-twitch-gui-bin
     ffmpeg-full
 
     # kdePackages.kalk # wrong calculator!
