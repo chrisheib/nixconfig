@@ -515,11 +515,11 @@
   services.smartd.enable = true; # enable smartd for monitoring drive health
 
   # Limit journald log size to prevent filling up the disk with logs.
-  services.journald.extraConfig = ''
-    SystemMaxUse=1G
-    RuntimeMaxUse=256M
-    MaxRetentionSec=14day
-  '';
+  services.journald.settings.Journal = {
+    SystemMaxUse = "1G";
+    RuntimeMaxUse = "256M";
+    MaxRetentionSec = "14day";
+  };
 
   services.fwupd.enable = true; # enable fwupd for firmware updates
 
@@ -1070,6 +1070,7 @@
   # };
 
   programs.kdeconnect.enable = true;
+  programs.kde-pim.enable = false;
 
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
