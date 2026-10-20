@@ -23,15 +23,16 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1785636477,
-        "narHash": "sha256-MCiEvAuwmg7pe8OzztV+H3EOK7LduaFpqiwOh4j0smo=",
+        "lastModified": 1792523697,
+        "narHash": "sha256-pZ69LQOIzqGS6oXX3dpWY3t67+R0zpsjjVUL4ZdYE9A=",
         "owner": "chrisheib",
         "repo": "maccel",
-        "rev": "e398002eb6df8c7dcf0fe3fad66d0d05d6dcf1e2",
+        "rev": "0d16625d24f3b8c3d1d82d839599f5bd3be1852c",
         "type": "github"
       },
       "original": {
         "owner": "chrisheib",
+        "ref": "fix/nixos-kernel-module-install",
         "repo": "maccel",
         "type": "github"
       }

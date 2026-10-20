@@ -802,7 +802,7 @@
     wayland-protocols
     wl-clipboard-rs # wl-copy, wl-clip and wl-paste
 
-    masterpdfeditor4
+    # masterpdfeditor4
 
     # Temporarily remove protonvpn-gui to avoid a failing build in proton-core tests.
     # Reintroduce after upstream fixes or a proper patch is applied.
