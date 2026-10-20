@@ -464,7 +464,7 @@
     # KWIN_DRM_USE_EGL_STREAMS = "1";
 
     WEBKIT_DISABLE_DMABUF_RENDERER = "1"; # try to fix orca
-    CUDA_TOOLKIT_ROOT_DIR = "${pkgs.cudaPackages.cudatoolkit}";
+    # CUDA_TOOLKIT_ROOT_DIR = "${pkgs.cudaPackages.cudatoolkit}";
 
     LANGUAGE = "en_US.UTF-8";
     NIXOS_OZONE_WL = "1";
