@@ -544,11 +544,11 @@
 
     # vscode-fhs
     # fix for https://github.com/NixOS/nixpkgs/issues/573021
-    (vscode-fhs.overrideAttrs (oldAttrs: {
+    (vscode.overrideAttrs (oldAttrs: {
       postFixup = (oldAttrs.postFixup or "") + ''
         chmod +x "$out/lib/vscode/resources/app/node_modules.asar.unpacked/@github/copilot-sdk-linux-x64/prebuilds/linux-x64/copilot-runtime"
       '';
-    }))
+    })).fhs
 
     # (my-vscode-no-sandbox.override {
     #   vscodeExtensions =
