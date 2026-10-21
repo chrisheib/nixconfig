@@ -437,8 +437,8 @@
     ];
   };
 
-  environment.variables = {
-    MOZ_DISABLE_RDD_SANDBOX = "1";
+  environment.sessionVariables = {
+    # MOZ_DISABLE_RDD_SANDBOX = "1";
     # LIBVA_DRIVER_NAME = "i965";
     # LIBVA_DRIVER_NAME = "iHD";
 
