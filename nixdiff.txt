@@ -1,4 +1,109 @@
 <<< /run/current-system
 >>> result
-No version or selection state changes.
-Closure size: 2932 -> 2932 (6 paths added, 6 paths removed, delta +0, disk usage +808B).
+Version changes:
+[U*]  #01  alejandra                    4.0.0 -> 4.1.0
+[U*]  #02  aurorae                      6.8.0 -> 6.8.1
+[U*]  #03  bind                         9.20.29-host, 9.20.29-lib, 9.20.29-man -> 9.20.30-host, 9.20.30-lib, 9.20.30-man
+[U*]  #04  bluedevil                    6.8.0 -> 6.8.1
+[U*]  #05  breeze                       6.8.0, 6.8.0-qt5 -> 6.8.1, 6.8.1-qt5
+[U*]  #06  breeze-gtk                   6.8.0 -> 6.8.1
+[U*]  #07  btop                         1.4.7 -> 1.4.8
+[U*]  #08  chromium                     155.0.8059.84, 155.0.8059.84-sandbox -> 156.0.8078.47, 156.0.8078.47-sandbox
+[U.]  #09  chromium-unwrapped           155.0.8059.84-sandbox, 155.0.8059.84-wv -> 156.0.8078.47-sandbox, 156.0.8078.47-wv
+[U*]  #10  discover                     6.8.0 -> 6.8.1
+[U*]  #11  drkonqi                      6.8.0 -> 6.8.1
+[U.]  #12  electron                     43.7.11 -> 43.8.3, 44.9.3
+[U.]  #13  electron-unwrapped           43.7.11 -> 43.8.3, 44.9.3
+[C.]  #14  ffmpeg                       7.1.5-data, 7.1.5-lib, 8.1.3-data, 8.1.3-lib, 9.0.2-data, 9.0.2-lib -> 7.1.5-data, 7.1.5-lib, 9.0.2-data, 9.0.2-lib
+[U*]  #15  firefox                      158.0 -> 158.0.1
+[U.]  #16  firefox-unwrapped            158.0 -> 158.0.1
+[U*]  #17  flatpak-kcm                  6.8.0 -> 6.8.1
+[C*]  #18  fuse                         2.9.9-bin, 2.9.9-man, 3.18.2, 3.18.2-bin, 3.18.2-man -> 3.18.2, 3.18.2-bin, 3.18.2-man
+[U*]  #19  fwupd                        2.1.8, 2.1.8-lib, 2.1.8-man -> 2.1.9, 2.1.9-lib, 2.1.9-man
+[U*]  #20  git-lfs                      3.8.0 -> 3.8.1
+[U*]  #21  kactivitymanagerd            6.8.0 -> 6.8.1
+[U*]  #22  kde-cli-tools                6.8.0 -> 6.8.1
+[U*]  #23  kde-gtk-config               6.8.0 -> 6.8.1
+[U*]  #24  kde-rounded-corners          0.10.0 -> 0.11.0
+[U.]  #25  kdecoration                  6.8.0 -> 6.8.1
+[U*]  #26  kdeplasma-addons             6.8.0 -> 6.8.1
+[U*]  #27  kglobalacceld                6.8.0 -> 6.8.1
+[U*]  #28  kinfocenter                  6.8.0 -> 6.8.1
+[U*]  #29  kmenuedit                    6.8.0 -> 6.8.1
+[U*]  #30  knighttime                   6.8.0 -> 6.8.1
+[U.]  #31  kpipewire                    6.8.0 -> 6.8.1
+[U*]  #32  krdp                         6.8.0 -> 6.8.1
+[U*]  #33  kscreen                      6.8.0 -> 6.8.1
+[U*]  #34  kscreenlocker                6.8.0 -> 6.8.1
+[U*]  #35  ksystemstats                 6.8.0 -> 6.8.1
+[U*]  #36  kwallet-pam                  6.8.0 -> 6.8.1
+[C.]  #37  kwayland                     5.116.0, 6.8.0 -> 5.116.0, 6.8.1
+[U*]  #38  kwayland-integration         6.8.0 -> 6.8.1
+[U*]  #39  kwin                         6.8.0 -> 6.8.1
+[U*]  #40  kwrited                      6.8.0 -> 6.8.1
+[U.]  #41  layer-shell-qt               6.8.0 -> 6.8.1
+[U.]  #42  lcevcdec                     4.2.2-lib -> 4.3.0-lib
+[C.]  #43  libXNVCtrl                   390.157, 595.104.02 -> 390.157, 595.112.07
+[U.]  #44  libcdio-paranoia             2.0.2 -> 10.2+2.0.2
+[C.]  #45  libgcrypt                    1.12.4-bin, 1.12.4-lib -> 1.12.4-lib
+[U*]  #46  libkscreen                   6.8.0 -> 6.8.1
+[U*]  #47  libksysguard                 6.8.0 -> 6.8.1
+[U*]  #48  libplasma                    6.8.0 -> 6.8.1
+[C.]  #49  libpng                       1.2.59, 1.2.59-man, 1.6.59 -> 1.6.59
+[U.]  #50  libtraceevent                1.9.0 -> 1.9.1
+[U.]  #51  libx11                       1.8.13 x2, 1.8.13-dev, 1.8.13-man -> 1.8.14 x2, 1.8.14-dev, 1.8.14-man
+[U.]  #52  libxi                        1.8.3 x2, 1.8.3-dev, 1.8.3-man -> 1.8.4 x2, 1.8.4-dev, 1.8.4-man
+[U.]  #53  libxpm                       3.5.19 -> 3.5.20
+[U.]  #54  libxrender                   0.9.12 x2, 0.9.12-dev -> 0.9.13 x2, 0.9.13-dev
+[U*]  #55  llama-cpp                    0.6.0 x2, 0.6.0-dev -> 0.7.0 x2, 0.7.0-dev
+[U*]  #56  milou                        6.8.0 -> 6.8.1
+[U*]  #57  moonlight-qt                 6.1.0 -> 6.2.0
+[U.]  #58  mupdf                        1.27.2, 1.27.2-bin -> 1.28.5, 1.28.5-bin
+[U*]  #59  nano                         9.2, 9.2-doc, 9.2-info, 9.2-man -> 9.3, 9.3-doc, 9.3-info, 9.3-man
+[U.]  #60  nixos-system-nixos           26.11.20261020.02c087f -> 26.11.20261027.31ecbac
+[C.]  #61  nss                          3.112.5, 3.112.5-dev, 3.112.5-man, 3.131 -> 3.112.5, 3.112.5-dev, 3.112.5-man, 3.132
+[U.]  #62  nss-cacert                   3.126 x2, 3.126-p11kit -> 3.131.1 x2, 3.131.1-p11kit
+[U*]  #63  obsidian                     1.14.4 -> 1.14.5
+[U*]  #64  ocean-sound-theme            6.8.0 -> 6.8.1
+[U*]  #65  onedrive                     2.5.11, 2.5.11-doc, 2.5.11-man -> 2.5.12, 2.5.12-doc, 2.5.12-man
+[U*]  #66  plasma-activities            6.8.0 -> 6.8.1
+[U.]  #67  plasma-activities-stats      6.8.0 -> 6.8.1
+[U*]  #68  plasma-browser-integration   6.8.0 -> 6.8.1
+[U*]  #69  plasma-desktop               6.8.0 -> 6.8.1
+[U*]  #70  plasma-integration           6.8.0, 6.8.0-qt5 -> 6.8.1, 6.8.1-qt5
+[U*]  #71  plasma-keyboard              6.8.0 -> 6.8.1
+[U.]  #72  plasma-nano                  6.8.0 -> 6.8.1
+[U*]  #73  plasma-nm                    6.8.0 -> 6.8.1
+[U*]  #74  plasma-pa                    6.8.0 -> 6.8.1
+[U.]  #75  plasma-sdk                   6.8.0 -> 6.8.1
+[U*]  #76  plasma-systemmonitor         6.8.0 -> 6.8.1
+[U*]  #77  plasma-workspace             6.8.0, 6.8.0-sessions -> 6.8.1, 6.8.1-sessions
+[U*]  #78  plasma-workspace-wallpapers  6.8.0 -> 6.8.1
+[U.]  #79  plasma5support               6.8.0 -> 6.8.1
+[U*]  #80  polkit-kde-agent             1-6.8.0 -> 1-6.8.1
+[U*]  #81  powerdevil                   6.8.0 -> 6.8.1
+[U*]  #82  print-manager                6.8.0 -> 6.8.1
+[U*]  #83  qqc2-breeze-style            6.8.0 -> 6.8.1
+[U*]  #84  r2modman                     3.2.18 -> 3.2.20
+[U*]  #85  ruff                         0.17.1 -> 0.17.2
+[U*]  #86  rustup                       1.29.1 -> 1.29.2
+[U*]  #87  rusty-path-of-building       0.2.18 -> 0.3.1
+[U.]  #88  slirp4netns                  1.3.5 -> 1.3.6
+[U*]  #89  spectacle                    6.8.0 -> 6.8.1
+[U*]  #90  strace                       7.2, 7.2-man -> 7.3, 7.3-man
+[U*]  #91  systemsettings               6.8.0 -> 6.8.1
+[U*]  #92  tealdeer                     1.9.0 -> 1.9.1
+[U*]  #93  teams-for-linux              2.25.0 -> 2.27.0
+[U*]  #94  transmission                 4.1.3 -> 4.1.4
+[U*]  #95  union                        6.8.0 -> 6.8.1
+[U*]  #96  vesktop                      1.6.7 -> 1.6.8
+[U*]  #97  xdg-desktop-portal-kde       6.8.0 -> 6.8.1
+[U*]  #98  yt-dlp                       2026.08.19 x2, 2026.08.19-doc, 2026.08.19-man -> 2026.10.21 x2, 2026.10.21-doc, 2026.10.21-man
+Removed packages:
+[R.]  #1  dart-sass                                              1.105.1
+[R.]  #2  lua5.1-lzip                                            0.2.18
+[R.]  #3  luajit2.1-lua-curl                                     0.3.13-1
+[R.]  #4  luajit2.1-luasocket                                    3.1.0-1
+[R.]  #5  luajit2.1-luautf8                                      0.2.1-1
+[R.]  #6  security-wrapper-fusermount-x86_64-unknown-linux-musl  <none>
+Closure size: 2932 -> 2921 (1458 paths added, 1469 paths removed, delta -11, disk usage -218.2MiB).
