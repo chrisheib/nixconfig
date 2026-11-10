@@ -826,7 +826,7 @@
     simple-scan
     sane-backends
 
-    bwrap
+    bubblewrap
   ];
 
   hardware.sane = {
