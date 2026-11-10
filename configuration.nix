@@ -717,9 +717,9 @@
     wineWow64Packages.stable
     winetricks
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
-    # protonup-rs
+    # protonup-rs # https://nixpkgs-tracker.ocfox.me/?pr=586109
     r2modman # valheim mods
-    rusty-path-of-building
+    # rusty-path-of-building # https://github.com/NixOS/nixpkgs/issues/570938
     freetype
 
     # brlaser # printer
