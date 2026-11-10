@@ -53,3 +53,7 @@ dvdauthor -o dvd_fs -t output.mpg
 dvdauthor -o dvd_fs -T
 genisoimage -dvd-video -o movie_pal.iso dvd_fs
 growisofs -dvd-compat -Z /dev/sr0=movie_pal.iso
+
+# Obsidian empty window
+https://github.com/NixOS/nixpkgs/issues/578970
+rm -rf "$HOME/.config/obsidian/"{Cache,Code\ Cache,GPUCache}

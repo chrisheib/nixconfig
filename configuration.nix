@@ -825,6 +825,8 @@
     # scanner
     simple-scan
     sane-backends
+
+    bwrap
   ];
 
   hardware.sane = {
