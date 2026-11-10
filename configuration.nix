@@ -717,7 +717,7 @@
     wineWow64Packages.stable
     winetricks
     prismlauncher # minecraft https://wiki.nixos.org/wiki/Prism_Launcher
-    protonup-rs
+    # protonup-rs
     r2modman # valheim mods
     rusty-path-of-building
     freetype
