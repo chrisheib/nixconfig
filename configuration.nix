@@ -32,6 +32,7 @@
     overlays = [
       # (import /etc/nixos/overlays/plain-pkgs.nix)
       # (import ./overlays/ccache.nix config)
+      (import ./overlays/firefox-audio.nix)
       (import ./overlays/steam-desktop.nix)
       # (import ./overlays/coreutils/cureutils-sighup.nix)
       # (import ./overlays/plasma-workspace.nix)
@@ -859,6 +860,10 @@
   programs.firefox = {
     enable = true;
     nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+    preferences = {
+      "media.audio_engine" = "signalsmith-stretch";
+    };
+    preferencesStatus = "locked";
     # nativeMessagingHosts.packages = [
     #   pkgs.kdePackages.kdeconnect-kde
     # ];
